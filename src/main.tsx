@@ -15,6 +15,10 @@ import Resume from "./pages/resume/components/Resume.tsx";
 import Projects from "./pages/projects/components/Projects.tsx";
 import Contact from "./pages/contact/components/Contact.tsx";
 
+// content
+
+import { aboutDataEn } from "./pages/about/data/aboutData.en.tsx";
+
 // router creation
 
 const router = createBrowserRouter([
@@ -23,7 +27,7 @@ const router = createBrowserRouter([
     children : [
       {
         path: "/",
-        element: <About />
+        element: <About aboutDataList={aboutDataEn} />
       },
       {
         path: "/resume",

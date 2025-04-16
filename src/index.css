@@ -1,7 +1,18 @@
 :root {
   font-family: system-ui, Avenir, Helvetica, Arial, sans-serif;
-  line-height: 1.5;
+  line-height: 1.5rem;
   font-weight: 400;
+
+  --light-text-color: rgba(0, 0, 0, 1);
+  --light-background-color: rgba(255, 255, 255, 1);
+  --light-bloc-bg-color: rgba(243, 226, 179, 0.6);
+  --light-bloc-border-color: rgba(243, 226, 179, 1);
+
+  --dark-text-color: rgba(255, 255, 255, 1);
+  --dark-background-color: rgba(0, 0, 0, 1);
+  --dark-bloc-bg-color: rgba(52, 59, 95, 0.6);
+  --dark-bloc-border-color: rgba(52, 59, 95, 1);
+
 /* 
   color-scheme: light dark;
   color: rgba(255, 255, 255, 0.87);
