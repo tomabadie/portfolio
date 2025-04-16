@@ -1,0 +1,7 @@
+.dark-toggle-wrapper {
+  height: 30px;
+  width: 30px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}

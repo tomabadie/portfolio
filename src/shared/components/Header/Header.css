@@ -1,15 +1,32 @@
 header {
-    border: 1px solid red;
+  padding: 0 1rem;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  border: 1px solid red;
+  background-color: pink;
+}
 
-    nav {
-        ul {
-            li {
-                list-style: none;
-                a {
-                    text-decoration: none;
-                }
-            }
-        }
-    }
-    
+.nav-list {
+  padding: 0;
+  display: flex;
+  gap: 1rem;
+  border: 1px solid blue;
+}
+
+.nav-item {
+  list-style: none;
+
+  a {
+    padding: 0.5rem;
+    text-decoration: none;
+    color: var(--light-text-color);
+    border: 1px solid var(--light-bloc-border-color);
+  }
+}
+
+.toggle-container {
+  display: flex;
+  gap: 0.5rem;
+  border: 1px solid green;
 }
