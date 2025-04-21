@@ -1,13 +1,11 @@
-import { useState } from "react";
-import { GrLanguage } from "react-icons/gr";
-
-import "./LanguageToggle.css";
+import { useState } from 'react';
+import { GrLanguage } from 'react-icons/gr';
 
 const LanguageToggle = () => {
-  const [language, setLanguage] = useState("english");
+  const [language, setLanguage] = useState('english');
 
   return (
-    <div className="lang-toggle-wrapper">
+    <div className="flex content-center justify-center">
       <GrLanguage size={24} />
     </div>
   );

@@ -1,52 +1,16 @@
-:root {
-  font-family: system-ui, Avenir, Helvetica, Arial, sans-serif;
-  line-height: 1.5rem;
-  font-weight: 400;
+@import 'tailwindcss';
+@import './styles/fonts.css';
 
-  --light-text-color: rgba(0, 0, 0, 1);
-  --light-background-color: rgba(255, 255, 255, 1);
-  --light-bloc-bg-color: rgba(243, 226, 179, 0.6);
-  --light-bloc-border-color: rgba(243, 226, 179, 1);
-
-  --dark-text-color: rgba(255, 255, 255, 1);
-  --dark-background-color: rgba(0, 0, 0, 1);
-  --dark-bloc-bg-color: rgba(52, 59, 95, 0.6);
-  --dark-bloc-border-color: rgba(52, 59, 95, 1);
-
-/* 
-  color-scheme: light dark;
-  color: rgba(255, 255, 255, 0.87);
-  background-color: #242424;
-   */
-
-/*   font-synthesis: none;
-  text-rendering: optimizeLegibility;
-  -webkit-font-smoothing: antialiased;
-  -moz-osx-font-smoothing: grayscale; */
+@theme {
+  --font-heading: 'Satoshi-Variable', 'sans-serif';
+  --font-body: 'Inter', 'sans-serif';
+  --font-alt: 'Geist', 'sans-serif';
+  --font-bis: 'Montserrat', 'sans-serif';
 }
 
-* {
-  box-sizing: border-box;
+/* Faire toutes les couleurs dans theme */
+@theme {
+  --color-primary-light: #ffffff;
+  --color-primary-dark: #05151e;
+  --color-debug: #ff00ff;
 }
-
-body {
-  margin: 0;
-  padding: 0;
-  min-height: 100vh;
-  border: 1px solid purple;
-}
-
-/* 
-@media (prefers-color-scheme: light) {
-  :root {
-    color: #213547;
-    background-color: #ffffff;
-  }
-  a:hover {
-    color: #747bff;
-  }
-  button {
-    background-color: #f9f9f9;
-  }
-}
- */

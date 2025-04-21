@@ -1,11 +1,9 @@
-import "./Footer.css"
-
 const Footer = () => {
-    return (
-        <footer>
-            <p>Footer</p>
-        </footer>
-    )
-}
+  return (
+    <footer className="bg-lime-200">
+      <p>Footer</p>
+    </footer>
+  );
+};
 
 export default Footer;
