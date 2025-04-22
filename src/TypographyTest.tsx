@@ -1,18 +1,18 @@
 const fonts = [
   {
-    label: 'Heading (Satoshi)',
+    label: 'heading',
     className: 'font-heading',
   },
   {
-    label: 'Body (Inter)',
+    label: 'body',
     className: 'font-body',
   },
   {
-    label: 'Alt (Geist)',
+    label: 'bis',
     className: 'font-alt',
   },
   {
-    label: 'Bis (Montserrat)',
+    label: 'ter',
     className: 'font-bis',
   },
 ];

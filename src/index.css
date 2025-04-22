@@ -2,15 +2,48 @@
 @import './styles/fonts.css';
 
 @theme {
-  --font-heading: 'Satoshi-Variable', 'sans-serif';
-  --font-body: 'Inter', 'sans-serif';
-  --font-alt: 'Geist', 'sans-serif';
-  --font-bis: 'Montserrat', 'sans-serif';
+  /* Fonts */
+  --font-heading: 'Montserrat', sans-serif;
+  --font-body: 'Inter', sans-serif;
+  --font-bis: 'Geist', sans-serif;
+  --font-ter: 'Satoshi-Variable', sans-serif;
+
+  /* Colors */
+  --color-primary-light: white;
+  --color-primary-dark: black;
+
+  --color-secondary-light: #fafafa;
+  --color-secondary-dark: oklch(20.8% 0.042 265.755);
+
+  --color-tertiary-light: #e4f9ff;
+  --color-tertiary-dark: #02475e;
+
+  /* Text Colors */
+  --text-primary-light: #ffffff;
+  --text-primary-dark: #05151e;
+
+  --text-secondary-light: #fafafa;
+  --text-secondary-dark: #121e26;
+
+  --text-tertiary-light: #e4f9ff;
+  --text-tertiary-dark: #02475e;
+
+  /* Border Colors */
+  --border-primary-light: #e5e7eb;
+  --border-primary-dark: #373f51;
 }
 
-/* Faire toutes les couleurs dans theme */
-@theme {
-  --color-primary-light: #ffffff;
-  --color-primary-dark: #05151e;
-  --color-debug: #ff00ff;
+@layer base {
+  * {
+    font-family: var(--font-body);
+  }
+
+  h1,
+  h2,
+  h3,
+  h4,
+  h5,
+  h6 {
+    font-family: var(--font-heading);
+  }
 }

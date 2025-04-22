@@ -7,8 +7,8 @@ import type { NavigationListProps } from './data/headerType.en';
 
 const Header = ({ navList }: NavigationListProps) => {
   return (
-    <header className="flex items-center justify-between bg-pink-300 px-4">
-      <h1>Thomas Abadie</h1>
+    <header className="bg-secondary-dark flex items-center justify-between px-4">
+      <h1 className="font-extrabold">Thomas Abadie</h1>
       <nav>
         <ul className="flex gap-4 border p-0">
           {navList.map((item) => (
