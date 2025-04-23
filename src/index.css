@@ -9,28 +9,18 @@
   --font-ter: 'Satoshi-Variable', sans-serif;
 
   /* Colors */
-  --color-primary-light: white;
-  --color-primary-dark: black;
+  --color-primary-light: oklch(21% 0.006 285.885); /* zinc900 */
+  --color-secondary-light: oklch(70.5% 0.015 286.067); /* zinc-400 */
+  --color-accent-light: oklch(37% 0.013 285.805); /* zinc-700 */
+  --color-bg-light: oklch(98.5% 0 0); /* zinc-50 */
+  --color-border-light: oklch(92% 0.004 286.32); /* zinc-200 */
 
-  --color-secondary-light: #fafafa;
-  --color-secondary-dark: oklch(20.8% 0.042 265.755);
-
-  --color-tertiary-light: #e4f9ff;
-  --color-tertiary-dark: #02475e;
-
-  /* Text Colors */
-  --text-primary-light: #ffffff;
-  --text-primary-dark: #05151e;
-
-  --text-secondary-light: #fafafa;
-  --text-secondary-dark: #121e26;
-
-  --text-tertiary-light: #e4f9ff;
-  --text-tertiary-dark: #02475e;
-
-  /* Border Colors */
-  --border-primary-light: #e5e7eb;
-  --border-primary-dark: #373f51;
+  --color-primary-dark: oklch(96.7% 0.001 286.375); /* zinc-100 */
+  --color-secondary-dark: oklch(87.1% 0.006 286.286); /* zinc-300 */
+  --color-accent-dark: oklch(87.1% 0.006 286.286); /* zinc-300 */
+  /* --color-accent-dark: oklch(70% 0.08 210);  */ /* alt version - cold blue */
+  --color-bg-dark: oklch(14.1% 0.005 285.823); /* zinc-950 */
+  --color-border-dark: oklch(44.2% 0.017 285.786); /* zinc-600 */
 }
 
 @layer base {
