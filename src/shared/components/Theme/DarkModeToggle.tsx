@@ -1,5 +1,5 @@
-import { DarkModeSwitch } from 'react-toggle-dark-mode';
 import { useState } from 'react';
+import { DarkModeSwitch } from 'react-toggle-dark-mode';
 
 const DarkModeToggle = () => {
   const [isDarkMode, setDarkMode] = useState(false);
@@ -15,7 +15,7 @@ const DarkModeToggle = () => {
       checked={isDarkMode}
       onChange={toggleDarkMode}
       size={24}
-      moonColor="white"
+      moonColor="purple"
       sunColor="black"
     />
   );

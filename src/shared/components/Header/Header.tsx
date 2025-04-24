@@ -1,26 +1,26 @@
 import { Link } from 'react-router';
 
-import DarkModeToggle from '../Theme/DarkModeToggle';
 import LanguageToggle from '../Language/LanguageToggle';
+import DarkModeToggle from '../Theme/DarkModeToggle';
 
 import type { NavigationListProps } from './data/headerType.en';
 
 const Header = ({ navList }: NavigationListProps) => {
   return (
-    <header className="bg-secondary-dark flex items-center justify-between px-4">
-      <h1 className="font-extrabold">Thomas Abadie</h1>
+    <header className="bg-bg-light border-border-light flex items-center justify-between border px-4">
+      <h1 className="text-text-light py-4 text-3xl font-extrabold">Thomas Abadie</h1>
       <nav>
-        <ul className="flex gap-4 border p-0">
+        <ul className="flex gap-4 p-0">
           {navList.map((item) => (
-            <li key={item.id} className="nav-item uppercase">
-              <Link to={item.path} className="p-2 font-semibold text-pink-800">
+            <li key={item.id} className="uppercase">
+              <Link to={item.path} className="text-text-light p-2 text-xl font-semibold">
                 {item.name}
               </Link>
             </li>
           ))}
         </ul>
       </nav>
-      <div className="flex gap-2 border">
+      <div className="flex gap-4">
         <DarkModeToggle />
         <LanguageToggle />
       </div>
