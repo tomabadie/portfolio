@@ -6,7 +6,6 @@ import { RouterProvider, createBrowserRouter } from 'react-router';
 
 // page components
 
-/* import './styles.css'; */
 import './index.css';
 
 import App from './app/App.tsx';
