@@ -1,11 +1,9 @@
-import "./Footer.css"
-
 const Footer = () => {
-    return (
-        <footer>
-            <p>Footer</p>
-        </footer>
-    )
-}
+  return (
+    <footer className="bg-global-primary border-primary flex items-center justify-between border-t px-4">
+      <p className="text-primary">Footer</p>
+    </footer>
+  );
+};
 
 export default Footer;

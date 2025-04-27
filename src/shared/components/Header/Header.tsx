@@ -1,26 +1,31 @@
-import { Link } from "react-router";
+import { Link } from 'react-router';
 
-import "./Header.css"
+import LanguageToggle from '../Language/LanguageToggle';
+import DarkModeToggle from '../Theme/DarkModeToggle';
 
-import type { NavigationListProps } from "./data/headerType.en";
+import type { NavigationListProps } from './data/headerType.en';
 
-const Header = ({navList} : NavigationListProps ) => {
-    return (
-        <header>
-            <h1>Thomas Abadie</h1>
-            <nav>
-                <ul>
-                {navList.map((item) => (
-                    <li key={item.id}>
-                        <Link to={item.path} >
-                            {item.name}
-                        </Link>
-                    </li>
-                ))}
-                </ul>
-            </nav>
-        </header>
-    )
-}
+const Header = ({ navList }: NavigationListProps) => {
+  return (
+    <header className="bg-global-primary border-primary flex items-center justify-between border-b px-4">
+      <h1 className="text-primary py-4 text-3xl font-extrabold">Thomas Abadie</h1>
+      <nav>
+        <ul className="flex gap-4 p-0">
+          {navList.map((item) => (
+            <li key={item.id} className="uppercase">
+              <Link to={item.path} className="text-primary p-2 text-xl font-semibold">
+                {item.name}
+              </Link>
+            </li>
+          ))}
+        </ul>
+      </nav>
+      <div className="flex gap-4">
+        <DarkModeToggle />
+        <LanguageToggle />
+      </div>
+    </header>
+  );
+};
 
 export default Header;
