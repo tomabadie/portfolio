@@ -8,6 +8,14 @@ const DarkModeToggle = () => {
     setDarkMode(checked);
   };
 
+  const primaryLightColor = getComputedStyle(document.documentElement)
+    .getPropertyValue('--color-primary-light')
+    .trim();
+
+  const primaryDarkColor = getComputedStyle(document.documentElement)
+    .getPropertyValue('--color-primary-dark')
+    .trim();
+
   return (
     <DarkModeSwitch
       className="flex content-center justify-center"
@@ -15,8 +23,8 @@ const DarkModeToggle = () => {
       checked={isDarkMode}
       onChange={toggleDarkMode}
       size={24}
-      moonColor="purple"
-      sunColor="black"
+      moonColor="black"
+      sunColor="lightgray"
     />
   );
 };

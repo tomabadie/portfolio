@@ -1,7 +1,7 @@
 const Footer = () => {
   return (
-    <footer className="bg-bg-light border-border-light border">
-      <p className="text-text-light">Footer</p>
+    <footer className="bg-global-primary border-primary flex items-center justify-between border-t px-4">
+      <p className="text-primary">Footer</p>
     </footer>
   );
 };
