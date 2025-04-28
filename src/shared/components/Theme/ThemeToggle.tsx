@@ -8,7 +8,7 @@ const ThemeToggle: React.FC = () => {
   return (
     <Within
       type="button"
-      className="text-primary border border-amber-400 text-3xl"
+      className="text-primary text-3xl"
       toggled={theme === 'dark'}
       toggle={toggleTheme}
       duration={1250}

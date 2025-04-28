@@ -20,9 +20,9 @@ const Header = ({ navList }: NavigationListProps) => {
           ))}
         </ul>
       </nav>
-      <div className="flex gap-4">
-        <ThemeToggle />
+      <div className="flex items-center gap-4">
         <LanguageToggle />
+        <ThemeToggle />
       </div>
     </header>
   );
