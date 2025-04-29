@@ -21,6 +21,7 @@
   --color-bg-global-secondary-light: oklch(96.7% 0.001 286.375); /* zinc-100 */
   --color-border-primary-light: oklch(87.1% 0.006 286.286); /* zinc-300 */
   --color-toggle-light: var(--color-primary-light);
+  --color-btn-primary-hover-light: oklch(85% 0.015 270);
 
   --color-text-primary-dark: var(--color-primary-dark); /* zinc-100 */
   --color-text-secondary-dark: oklch(70.5% 0.015 286.067); /* zinc-400 */
@@ -33,6 +34,7 @@
   --color-bg-global-secondary-dark: oklch(21% 0.006 285.885); /* zinc-900 */
   --color-border-primary-dark: oklch(44.2% 0.017 285.786); /* zinc-600 */
   --color-toggle-dark: var(--color-primary-dark);
+  --color-btn-primary-hover-dark: oklch(40% 0.15 250);
 
   /* Colors extra - cf notes mac */
 }
@@ -141,7 +143,7 @@
   }
 
   .btn-primary:hover {
-    background-color: oklch(85% 0.015 270);
+    background-color: var(--color-btn-primary-hover-light);
     color: var(--color-primary-light);
   }
 
@@ -152,7 +154,7 @@
   }
 
   .dark .btn-primary:hover {
-    background-color: oklch(40% 0.15 250);
+    background-color: var(--color-btn-primary-hover-dark);
     color: var(--color-text-invert-light);
   }
 
