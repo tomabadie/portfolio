@@ -4,6 +4,9 @@ import { StrictMode } from 'react';
 import ReactDOM from 'react-dom/client';
 import { RouterProvider, createBrowserRouter } from 'react-router';
 
+import { LanguageProvider } from './shared/components/Language/LanguageContext.tsx';
+import { ThemeProvider } from './shared/components/Theme/ThemeContext.tsx';
+
 // page components
 
 import './index.css';
@@ -55,6 +58,10 @@ if (rootElement == null) {
 
 ReactDOM.createRoot(rootElement).render(
   <StrictMode>
-    <RouterProvider router={router} />
+    <LanguageProvider>
+      <ThemeProvider>
+        <RouterProvider router={router} />
+      </ThemeProvider>
+    </LanguageProvider>
   </StrictMode>
 );
