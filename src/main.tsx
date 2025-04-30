@@ -21,6 +21,7 @@ import Resume from './pages/resume/components/Resume.tsx';
 // content
 
 import { aboutDataEn } from './pages/about/data/aboutData.en.tsx';
+import { aboutDataFr } from './pages/about/data/aboutData.fr.tsx';
 
 // router creation
 
@@ -30,7 +31,7 @@ const router = createBrowserRouter([
     children: [
       {
         path: '/',
-        element: <About aboutDataList={aboutDataEn} />,
+        element: <About en={aboutDataEn} fr={aboutDataFr} />,
       },
       {
         path: '/resume',

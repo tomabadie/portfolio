@@ -10,5 +10,6 @@ export interface AboutItemProps {
 }
 
 export interface AboutProps {
-  aboutDataList: AboutItemProps[];
+  en: AboutItemProps[];
+  fr: AboutItemProps[];
 }
