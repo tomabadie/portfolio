@@ -9,14 +9,14 @@ import { navDataFr } from '../shared/components/Header/data/navData.fr';
 
 function App() {
   return (
-    <>
+    <div className="grid grid-cols-12 grid-rows-[auto_auto_auto_auto] gap-4">
       <Header en={navDataEn} fr={navDataFr} />
       <main className="bg-global-primary min-h-[calc(100vh-68px-24px)] py-8">
         <Social />
         <Outlet />
       </main>
       <Footer />
-    </>
+    </div>
   );
 }
 

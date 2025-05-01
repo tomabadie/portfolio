@@ -11,7 +11,7 @@ const Header = (headerData: HeaderProps) => {
   const navList = headerData[language];
 
   return (
-    <header className="bg-global-primary border-primary flex items-center justify-between border-b px-4">
+    <header className="bg-global-primary border-primary col-span-12 flex items-center justify-between border-b px-4">
       <h1 className="text-primary py-4 text-2xl font-extrabold">Thomas Abadie</h1>
       <nav>
         <ul className="flex gap-4 p-0">
