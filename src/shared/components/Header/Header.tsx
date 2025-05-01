@@ -3,12 +3,16 @@ import { Link } from 'react-router';
 import LanguageToggle from '../Language/LanguageToggle';
 import ThemeToggle from '../Theme/ThemeToggle';
 
-import type { NavigationListProps } from './data/headerType.en';
+import { useLanguage } from '../Language/LanguageContext';
+import type { HeaderProps } from './data/headerType';
 
-const Header = ({ navList }: NavigationListProps) => {
+const Header = (headerData: HeaderProps) => {
+  const { language } = useLanguage();
+  const navList = headerData[language];
+
   return (
     <header className="bg-global-primary border-primary flex items-center justify-between border-b px-4">
-      <h1 className="text-primary py-4 text-3xl font-extrabold">Thomas Abadie</h1>
+      <h1 className="text-primary py-4 text-2xl font-extrabold">Thomas Abadie</h1>
       <nav>
         <ul className="flex gap-4 p-0">
           {navList.map((item) => (
