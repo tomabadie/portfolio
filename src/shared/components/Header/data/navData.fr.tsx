@@ -1,19 +1,19 @@
 import type { NavigationItemProps } from './headerType';
 
-export const navDataEn: NavigationItemProps[] = [
+export const navDataFr: NavigationItemProps[] = [
   {
     id: 'nav-1',
-    name: 'About',
+    name: 'À propos',
     path: '/',
   },
   {
     id: 'nav-2',
-    name: 'Resume',
+    name: 'CV',
     path: '/resume',
   },
   {
     id: 'nav-3',
-    name: 'Projects',
+    name: 'Projets',
     path: '/projects',
   },
   {

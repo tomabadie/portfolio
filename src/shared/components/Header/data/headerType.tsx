@@ -4,6 +4,7 @@ export interface NavigationItemProps {
   path: string;
 }
 
-export interface NavigationListProps {
-  navList: NavigationItemProps[];
+export interface HeaderProps {
+  en: NavigationItemProps[];
+  fr: NavigationItemProps[];
 }
