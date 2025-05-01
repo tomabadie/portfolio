@@ -4,6 +4,9 @@ import { StrictMode } from 'react';
 import ReactDOM from 'react-dom/client';
 import { RouterProvider, createBrowserRouter } from 'react-router';
 
+import { LanguageProvider } from './shared/components/Language/LanguageContext.tsx';
+import { ThemeProvider } from './shared/components/Theme/ThemeContext.tsx';
+
 // page components
 
 import './index.css';
@@ -18,6 +21,7 @@ import Resume from './pages/resume/components/Resume.tsx';
 // content
 
 import { aboutDataEn } from './pages/about/data/aboutData.en.tsx';
+import { aboutDataFr } from './pages/about/data/aboutData.fr.tsx';
 
 // router creation
 
@@ -27,7 +31,7 @@ const router = createBrowserRouter([
     children: [
       {
         path: '/',
-        element: <About aboutDataList={aboutDataEn} />,
+        element: <About en={aboutDataEn} fr={aboutDataFr} />,
       },
       {
         path: '/resume',
@@ -55,6 +59,10 @@ if (rootElement == null) {
 
 ReactDOM.createRoot(rootElement).render(
   <StrictMode>
-    <RouterProvider router={router} />
+    <LanguageProvider>
+      <ThemeProvider>
+        <RouterProvider router={router} />
+      </ThemeProvider>
+    </LanguageProvider>
   </StrictMode>
 );

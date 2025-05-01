@@ -12,10 +12,7 @@ function App() {
       <Header navList={navigationItemList} />
       <main className="bg-global-primary min-h-[calc(100vh-68px-24px)] py-8">
         <Social />
-        <section>
-          {' '}
-          <Outlet />{' '}
-        </section>
+        <Outlet />
       </main>
       <Footer />
     </>

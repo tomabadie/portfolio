@@ -11,7 +11,7 @@
 
   /* Colors */
 
-  --color-text-primary-light: oklch(21% 0.006 285.885); /* zinc-900 */
+  --color-text-primary-light: var(--color-primary-light); /* zinc-900 */
   --color-text-secondary-light: oklch(37% 0.013 285.805); /* zinc-700 */
   --color-text-invert-light: oklch(96.7% 0.001 286.375); /* zinc-100 */
   --color-primary-light: oklch(21% 0.006 285.885); /* zinc-900 */
@@ -20,9 +20,11 @@
   --color-bg-global-primary-light: oklch(98.5% 0 0); /* zinc-50 */
   --color-bg-global-secondary-light: oklch(96.7% 0.001 286.375); /* zinc-100 */
   --color-border-primary-light: oklch(87.1% 0.006 286.286); /* zinc-300 */
+  --color-toggle-light: var(--color-primary-light);
+  --color-btn-primary-hover-light: oklch(85% 0.015 270);
 
-  --color-text-primary-dark: oklch(96.7% 0.001 286.375); /* zinc-100 */
-  --color-text-primary-dark: oklch(70.5% 0.015 286.067); /* zinc-400 */
+  --color-text-primary-dark: var(--color-primary-dark); /* zinc-100 */
+  --color-text-secondary-dark: oklch(70.5% 0.015 286.067); /* zinc-400 */
   --color-text-invert-dark: oklch(21% 0.006 285.885); /* zinc-900 */
   --color-primary-dark: oklch(96.7% 0.001 286.375); /* zinc-100 */
   --color-secondary-dark: oklch(87.1% 0.006 286.286); /* zinc-300 */
@@ -31,6 +33,8 @@
   --color-bg-global-primary-dark: oklch(14.1% 0.005 285.823); /* zinc-950 */
   --color-bg-global-secondary-dark: oklch(21% 0.006 285.885); /* zinc-900 */
   --color-border-primary-dark: oklch(44.2% 0.017 285.786); /* zinc-600 */
+  --color-toggle-dark: var(--color-primary-dark);
+  --color-btn-primary-hover-dark: oklch(40% 0.15 250);
 
   /* Colors extra - cf notes mac */
 }
@@ -38,6 +42,15 @@
 @layer base {
   html {
     font-family: var(--font-body);
+    transition:
+      background-color 0.3s ease,
+      color 0.3s ease;
+  }
+
+  body {
+    transition:
+      background-color 0.3s ease,
+      color 0.3s ease;
   }
 
   h1,
@@ -130,7 +143,7 @@
   }
 
   .btn-primary:hover {
-    background-color: oklch(85% 0.015 270);
+    background-color: var(--color-btn-primary-hover-light);
     color: var(--color-primary-light);
   }
 
@@ -141,7 +154,7 @@
   }
 
   .dark .btn-primary:hover {
-    background-color: oklch(40% 0.15 250);
+    background-color: var(--color-btn-primary-hover-dark);
     color: var(--color-text-invert-light);
   }
 

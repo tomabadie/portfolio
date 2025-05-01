@@ -1,7 +1,7 @@
 import { Link } from 'react-router';
 
 import LanguageToggle from '../Language/LanguageToggle';
-import DarkModeToggle from '../Theme/DarkModeToggle';
+import ThemeToggle from '../Theme/ThemeToggle';
 
 import type { NavigationListProps } from './data/headerType.en';
 
@@ -20,9 +20,9 @@ const Header = ({ navList }: NavigationListProps) => {
           ))}
         </ul>
       </nav>
-      <div className="flex gap-4">
-        <DarkModeToggle />
+      <div className="flex items-center gap-4">
         <LanguageToggle />
+        <ThemeToggle />
       </div>
     </header>
   );

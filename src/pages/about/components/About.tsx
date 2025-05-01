@@ -1,7 +1,10 @@
-/* import "./About.css" */
+import { useLanguage } from '../../../shared/components/Language/LanguageContext';
 import type { AboutProps } from '../data/aboutType';
 
-const About = ({ aboutDataList }: AboutProps) => {
+const About = (aboutData: AboutProps) => {
+  const { language } = useLanguage();
+  const aboutDataList = aboutData[language];
+
   return (
     <>
       <section className="bg-global-secondary border-primary text-primary mx-auto flex w-1/2 flex-col items-center justify-around gap-3 rounded-2xl border py-3">
