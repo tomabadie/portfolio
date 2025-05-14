@@ -1,4 +1,5 @@
 import { useLanguage } from '../../../shared/components/Language/LanguageContext';
+import SocialAbout from '../../../shared/components/SocialAbout/components/SocialAbout';
 import type { AboutProps } from '../data/aboutType';
 
 const About = (aboutData: AboutProps) => {
@@ -7,6 +8,7 @@ const About = (aboutData: AboutProps) => {
 
   return (
     <>
+      <SocialAbout />
       <section className="bg-global-secondary border-primary text-primary mx-auto flex w-1/2 flex-col items-center justify-around gap-3 rounded-2xl border py-3">
         <h2 className="my-2 text-center text-xl font-bold">About me</h2>
         {aboutDataList.map((item) => (
