@@ -1,6 +1,6 @@
 const SocialAbout = () => {
   return (
-    <section className="flex flex-col border">
+    <section className="bg-global-secondary border-primary text-primary flex w-3xs flex-col items-center gap-4 rounded-2xl border py-4">
       <div className="mask-radial-from-40% mask-radial-at-center">
         <img
           src="/assets/img/avatar/IMG-20250327-WA0039.jpg"
