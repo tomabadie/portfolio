@@ -1,4 +1,4 @@
-type VariantsProps = 'primary' | 'secondary';
+export type VariantsProps = 'primary' | 'secondary';
 
 const iconVariants: Record<VariantsProps, string> = {
   primary:
