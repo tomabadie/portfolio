@@ -2,8 +2,8 @@ export type VariantsProps = 'primary' | 'secondary';
 
 const iconVariants: Record<VariantsProps, string> = {
   primary:
-    'text-primary bg-primary hover:bg-btn-primary-hover-light hover:dark:hover:bg-btn-primary-hover-dark border-primary border',
-  secondary: 'btn-primary',
+    'text-primary hover:bg-btn-primary-hover-light hover:dark:hover:bg-btn-primary-hover-dark border-primary border',
+  secondary: '',
 };
 
 export type IconWrapperProps = React.PropsWithChildren<{
@@ -11,11 +11,11 @@ export type IconWrapperProps = React.PropsWithChildren<{
   className?: string;
 }>;
 
-const IconWrapper: React.FC<IconWrapperProps> = ({ variant = 'primary', className, children }) => {
+const IconWrapper: React.FC<IconWrapperProps> = ({ variant = 'primary', children }) => {
   return (
     <>
       <span
-        className={`${className} flex h-9 w-9 cursor-pointer items-center justify-center rounded-lg ${iconVariants[variant]}`}
+        className={`flex h-8 w-8 cursor-pointer items-center justify-center rounded-lg ${iconVariants[variant]}`}
       >
         {children}
       </span>
