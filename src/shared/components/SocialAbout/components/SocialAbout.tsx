@@ -1,5 +1,5 @@
-import type { SocialLinkProps } from '../../../elements/SocialLinksAbout';
-import SocialLinksAbout from '../../../elements/SocialLinksAbout';
+import type { SocialLinkProps } from '../../../elements/SocialLinks';
+import SocialLinks from '../../../elements/SocialLinks';
 
 const socialLinksList: SocialLinkProps[] = [
   {
@@ -78,9 +78,10 @@ const SocialAbout = () => {
           className="h-50"
         />
       </div>
-      <SocialLinksAbout
+      <SocialLinks
+        aboutPage={true}
         socialLinksList={socialLinksList}
-        socialLinksClassName="flex flex-col gap-3"
+        socialLinksClassName="flex flex-col gap-3 items-center"
       />
     </section>
   );
