@@ -11,7 +11,9 @@ const SocialLinks = ({
       {socialLinksList.map((link, index) => (
         <>
           <a key={link.id} href={link.href} target="_blank" rel="noopener noreferrer">
-            <IconWrapper variant={link.iconVariant}>{link.iconSvg}</IconWrapper>
+            <IconWrapper variant={link.iconVariant} wrapperClassName="h-8 w-8 cursor-pointer">
+              {link.iconSvg}
+            </IconWrapper>
           </a>
           {aboutPage === true && index === 2 && (
             <p key={link.id} className="font-semibold">
