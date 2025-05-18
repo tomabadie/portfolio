@@ -1,5 +1,5 @@
-import MeteoAbout from '../../../elements/MeteoAbout';
 import SocialLinks from '../../../elements/SocialLinks';
+import WeatherAbout from '../../../elements/WeatherAbout';
 import { socialLinksList } from '../../../elements/socialLinksData';
 
 const SocialAbout = () => {
@@ -18,7 +18,7 @@ const SocialAbout = () => {
         socialLinksClassName="flex flex-col gap-3 items-center"
       />
       <hr className="border-primary my-2 w-2/3" />
-      <MeteoAbout />
+      <WeatherAbout />
     </section>
   );
 };
