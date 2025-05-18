@@ -11,7 +11,10 @@ const SocialLinks = ({
       {socialLinksList.map((link, index) => (
         <>
           <a key={link.id} href={link.href} target="_blank" rel="noopener noreferrer">
-            <IconWrapper variant={link.iconVariant} wrapperClassName="h-8 w-8 cursor-pointer">
+            <IconWrapper
+              variant={link.iconVariant}
+              wrapperClassName="h-8 w-8 cursor-pointer inset-shadow-sm/30 dark:inset-shadow-sm/50 dark:inset-shadow-btn-primary-hover-dark"
+            >
               {link.iconSvg}
             </IconWrapper>
           </a>
