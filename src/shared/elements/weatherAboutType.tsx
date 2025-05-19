@@ -41,24 +41,34 @@ export interface WeatherResponse {
   };
 }
 
-export interface WeatherIconsListProps {
-  sun: WeatherIconProps;
-  moon: WeatherIconProps;
-  cloud: WeatherIconProps;
-  smog: WeatherIconProps;
-  icicles: WeatherIconProps;
-  'cloud-sun-rain': WeatherIconProps;
-  'cloud-moon-rain': WeatherIconProps;
-  'cloud-sun': WeatherIconProps;
-  'cloud-moon': WeatherIconProps;
-  'cloud-showers-heavy': WeatherIconProps;
-  'cloud-rain': WeatherIconProps;
-  'cloud-meatball': WeatherIconProps;
-  'cloud-bolt': WeatherIconProps;
-}
+export type WeatherIconNames =
+  | 'cloud-sun-rain'
+  | 'cloud-moon-rain'
+  | 'cloud-sun'
+  | 'cloud-moon'
+  | 'cloud-rain'
+  | 'cloud-meatball'
+  | 'cloud-bolt'
+  | 'sun'
+  | 'moon'
+  | 'cloud'
+  | 'smog'
+  | 'icicles'
+  | 'cloud-showers-heavy'
+  | 'snowflake';
 
 export interface WeatherIconProps {
-  id: string;
+  id: WeatherIconNames;
   iconSvg: React.ReactElement<SVGProps<SVGSVGElement>>;
   iconVariant?: VariantsProps;
 }
+
+export type WeatherIconFn = (code: number, isDay: number) => WeatherIconNames;
+
+export type WeatherContentProps = {
+  [language in 'en' | 'fr']: {
+    title: string;
+    dayTime: string;
+    nightTime: string;
+  };
+};

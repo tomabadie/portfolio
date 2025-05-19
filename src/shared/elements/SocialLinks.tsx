@@ -13,7 +13,7 @@ const SocialLinks = ({
           <a key={link.id} href={link.href} target="_blank" rel="noopener noreferrer">
             <IconWrapper
               variant={link.iconVariant}
-              wrapperClassName="h-8 w-8 cursor-pointer inset-shadow-sm/30 dark:inset-shadow-sm/50 dark:inset-shadow-btn-primary-hover-dark"
+              wrapperClassName="h-8 w-8 cursor-pointer inset-shadow-sm/30 dark:inset-shadow-sm/50 dark:inset-shadow-btn-primary-hover-dark border"
             >
               {link.iconSvg}
             </IconWrapper>
