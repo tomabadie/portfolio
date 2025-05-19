@@ -1,7 +1,7 @@
 import { useEffect, useState } from 'react';
 import { useLanguage } from '../components/Language/LanguageContext';
 import IconWrapper from './IconWrapper';
-import { weatherContent, weatherIconsList } from './weatherAboutData';
+import { mapSvg, weatherContent, weatherIconsList } from './weatherAboutData';
 import type { WeatherIconFn, WeatherIconProps, WeatherResponse } from './weatherAboutType';
 
 const getWeatherIconName: WeatherIconFn = (code, isDay) => {
@@ -46,6 +46,9 @@ const WeatherAbout = () => {
           <p className="text-center font-semibold">
             {weatherContent[language].title} <br /> Mimizan (France)
           </p>
+          <IconWrapper variant="basic" wrapperClassName="h-40">
+            {mapSvg}
+          </IconWrapper>
           <IconWrapper variant={weatherIcon?.iconVariant} wrapperClassName={weatherIconSize}>
             {weatherIcon?.iconSvg}
           </IconWrapper>
