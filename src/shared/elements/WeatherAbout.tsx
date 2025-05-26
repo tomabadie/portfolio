@@ -19,7 +19,7 @@ const getWeatherIconName: WeatherIconFn = (code, isDay) => {
   return 'cloud';
 };
 
-const weatherIconSize = 'h-17 w-17';
+const weatherIconSize = 'h-14 w-14 md:h-16 md:w-16';
 
 const WeatherAbout = () => {
   const { language } = useLanguage();
@@ -40,7 +40,7 @@ const WeatherAbout = () => {
   }, []);
 
   return (
-    <section className="hidden flex-col items-center sm:flex">
+    <section className="hidden flex-col items-center gap-2 sm:flex">
       {weather ? (
         <>
           <p className="text-center font-semibold">

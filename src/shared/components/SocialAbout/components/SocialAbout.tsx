@@ -4,12 +4,12 @@ import { socialLinksList } from '../../../elements/socialLinksData';
 
 const SocialAbout = () => {
   return (
-    <section className="bg-global-secondary border-primary text-primary flex w-3xs flex-col items-center gap-4 rounded-2xl border py-4">
+    <section className="bg-global-secondary border-primary text-primary flex w-3xs flex-col items-center gap-4 rounded-2xl border py-4 sm:px-2">
       <div className="mask-radial-from-40% mask-radial-at-center">
         <img
           src="/assets/img/avatar/IMG-20250327-WA0039.jpg"
           alt="Thomas Abadie"
-          className="h-50"
+          className="w-36 md:w-40"
         />
       </div>
       <SocialLinks
