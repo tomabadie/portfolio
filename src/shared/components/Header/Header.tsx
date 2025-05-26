@@ -12,12 +12,12 @@ const Header = (headerData: HeaderProps) => {
 
   return (
     <header className="bg-global-primary border-primary flex items-center justify-between border-b px-4">
-      <h1 className="text-primary py-4 text-2xl font-extrabold">Thomas Abadie</h1>
+      <h1 className="text-primary py-4 text-xl font-extrabold">Thomas Abadie</h1>
       <nav>
         <ul className="flex gap-4 p-0">
           {navList.map((item) => (
             <li key={item.id} className="uppercase">
-              <Link to={item.path} className="text-primary p-2 text-xl font-semibold">
+              <Link to={item.path} className="text-primary p-2 text-lg font-semibold">
                 {item.name}
               </Link>
             </li>
