@@ -40,7 +40,7 @@ const WeatherAbout = () => {
   }, []);
 
   return (
-    <>
+    <section className="hidden flex-col items-center sm:flex">
       {weather ? (
         <>
           <p className="text-center font-semibold">
@@ -58,14 +58,14 @@ const WeatherAbout = () => {
             </p>
           ) : (
             <p>
-              {weatherContent[language].nightTime} -{weather?.current?.temperature_2m}°C
+              {weatherContent[language].nightTime} - {weather?.current?.temperature_2m}°C
             </p>
           )}
         </>
       ) : (
         <p>Loading ...</p>
       )}
-    </>
+    </section>
   );
 };
 

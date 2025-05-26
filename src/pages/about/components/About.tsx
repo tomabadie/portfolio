@@ -7,9 +7,9 @@ const About = (aboutData: AboutProps) => {
   const aboutDataList = aboutData[language];
 
   return (
-    <div className="flex justify-around">
+    <div className="flex flex-col items-center gap-4 px-2 sm:flex-row sm:justify-around lg:gap-0">
       <SocialAbout />
-      <section className="bg-global-secondary border-primary text-primary flex w-1/2 flex-col items-center justify-around gap-3 rounded-2xl border py-3">
+      <section className="bg-global-secondary border-primary text-primary flex flex-col items-center justify-around gap-3 rounded-2xl border py-3 lg:w-1/2">
         <h2 className="my-2 text-center text-xl font-bold">About me</h2>
         {aboutDataList.map((item) => (
           <section key={item.id} className="px-8">

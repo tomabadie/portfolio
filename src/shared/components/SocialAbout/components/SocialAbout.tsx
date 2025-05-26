@@ -15,9 +15,9 @@ const SocialAbout = () => {
       <SocialLinks
         aboutPage={true}
         socialLinksList={socialLinksList}
-        socialLinksClassName="flex flex-col gap-3 items-center"
+        socialLinksClassName="flex sm:flex-col gap-3 items-center"
       />
-      <hr className="border-primary my-2 w-2/3" />
+      <hr className="border-primary my-2 hidden w-2/3 sm:block" />
       <WeatherAbout />
     </section>
   );
