@@ -26,7 +26,7 @@ const LanguageToggle = () => {
         </button>
         <button
           type="button"
-          className="text-primary border-primary hover:bg-btn-primary-hover-light hover:dark:hover:bg-btn-primary-hover-dark block cursor-pointer rounded-lg border px-3 py-2 font-semibold transition"
+          className="text-primary border-primary hover:bg-btn-primary-hover-light dark:hover:bg-btn-primary-hover-dark block cursor-pointer rounded-lg border px-3 py-2 font-semibold transition"
           onClick={() => {
             setLanguage('fr');
           }}
