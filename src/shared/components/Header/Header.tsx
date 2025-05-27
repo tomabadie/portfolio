@@ -16,8 +16,11 @@ const Header = (headerData: HeaderProps) => {
       <nav>
         <ul className="flex gap-4 p-0">
           {navList.map((item) => (
-            <li key={item.id} className="uppercase">
-              <Link to={item.path} className="text-primary p-2 text-lg font-semibold">
+            <li key={item.id} className="p-2 uppercase">
+              <Link
+                to={item.path}
+                className="text-primary after:bg-text-primary-light dark:after:bg-text-primary-dark relative block w-fit p-0 text-lg font-semibold after:absolute after:block after:h-[1px] after:w-full after:origin-center after:scale-x-0 after:transition after:duration-300 after:content-[''] hover:after:scale-x-100"
+              >
                 {item.name}
               </Link>
             </li>
