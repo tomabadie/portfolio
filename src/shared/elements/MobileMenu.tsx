@@ -1,7 +1,12 @@
 import { Description, Dialog, DialogPanel } from '@headlessui/react';
 import { useState } from 'react';
+import type { NavigationItemProps } from '../components/Header/data/headerType';
 
-const MobileMenu = () => {
+export interface MobileMenuProps {
+  navList: NavigationItemProps[];
+}
+
+const MobileMenu = ({ navList }: MobileMenuProps) => {
   const [isOpen, setIsOpen] = useState<boolean>(false);
 
   return (
@@ -40,15 +45,17 @@ const MobileMenu = () => {
       </button>
       <Dialog open={isOpen} onClose={() => setIsOpen(false)} className="relative z-50">
         <div className="fixed inset-0 flex h-screen w-screen items-center justify-center">
-          <DialogPanel className="bg-global-primary text-primary flex h-full w-full flex-col justify-center space-y-4 border px-12">
+          <DialogPanel className="bg-global-primary text-primary flex h-full w-full items-center justify-center space-y-4 border px-12">
             <Description>Navigation</Description>
-            <p>Navigation</p>
+            <ul className="flex flex-col items-start justify-center gap-10">
+              <li>Menu 1</li>
+              <li>Menu 2</li>
+              <li>Menu 3</li>
+              <li>Menu 4</li>
+            </ul>
             <div className="flex gap-4">
               <button type="button" onClick={() => setIsOpen(false)}>
                 Cancel
-              </button>
-              <button type="button" onClick={() => setIsOpen(false)}>
-                Deactivate
               </button>
             </div>
           </DialogPanel>
