@@ -1,3 +1,4 @@
+import { Description, Dialog, DialogPanel } from '@headlessui/react';
 import { useState } from 'react';
 
 const MobileMenu = () => {
@@ -7,7 +8,7 @@ const MobileMenu = () => {
     <div className="flex items-center justify-center md:hidden">
       <button
         type="button"
-        className="group relative cursor-pointer"
+        className="group relative z-60 cursor-pointer"
         onClick={() => setIsOpen(!isOpen)}
       >
         <div
@@ -37,6 +38,22 @@ const MobileMenu = () => {
           </div>
         </div>
       </button>
+      <Dialog open={isOpen} onClose={() => setIsOpen(false)} className="relative z-50">
+        <div className="fixed inset-0 flex h-screen w-screen items-center justify-center">
+          <DialogPanel className="bg-global-primary text-primary flex h-full w-full flex-col justify-center space-y-4 border px-12">
+            <Description>Navigation</Description>
+            <p>Navigation</p>
+            <div className="flex gap-4">
+              <button type="button" onClick={() => setIsOpen(false)}>
+                Cancel
+              </button>
+              <button type="button" onClick={() => setIsOpen(false)}>
+                Deactivate
+              </button>
+            </div>
+          </DialogPanel>
+        </div>
+      </Dialog>
     </div>
   );
 };
