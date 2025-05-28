@@ -1,16 +1,13 @@
 import { Dialog, DialogPanel } from '@headlessui/react';
-import { useState } from 'react';
 import { NavLink } from 'react-router';
 import type { MobileMenuProps } from './mobileMenutype';
 
-const MobileMenu = ({ navList }: MobileMenuProps) => {
-  const [isMenuOpen, setIsMenuOpen] = useState<boolean>(false);
-
+const MobileMenu = ({ navList, isMenuOpen, setIsMenuOpen }: MobileMenuProps) => {
   return (
     <div className="flex items-center justify-center md:hidden">
       <button
         type="button"
-        className="group relative z-50 cursor-pointer"
+        className="group relative cursor-pointer"
         onClick={() => setIsMenuOpen(!isMenuOpen)}
       >
         <div
@@ -46,8 +43,8 @@ const MobileMenu = ({ navList }: MobileMenuProps) => {
         transition
         className="relative z-40"
       >
-        <div className="fixed inset-0 flex h-screen w-screen items-center justify-center transition duration-300 ease-out data-closed:opacity-0">
-          <DialogPanel className="bg-global-primary text-primary flex h-full w-full items-center justify-center space-y-4 border px-12">
+        <div className="fixed inset-0 flex h-dvh w-dvw items-center justify-center transition duration-300 ease-out data-closed:opacity-0">
+          <DialogPanel className="bg-global-primary text-primary mt-[60px] flex h-[calc(100dvh-60px)] w-full items-center justify-center px-12">
             <ul className="flex flex-col items-start justify-center gap-14">
               {navList.map((item) => (
                 <li key={item.id} className="uppercase">
