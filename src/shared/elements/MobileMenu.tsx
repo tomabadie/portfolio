@@ -45,21 +45,23 @@ const MobileMenu = ({ navList, isMenuOpen, setIsMenuOpen }: MobileMenuProps) => 
       >
         <div className="fixed inset-0 flex h-dvh w-dvw items-center justify-center transition duration-300 ease-out data-closed:opacity-0">
           <DialogPanel className="bg-global-primary text-primary mt-[60px] flex h-[calc(100dvh-60px)] w-full items-center justify-center px-12">
-            <ul className="flex flex-col items-start justify-center gap-14">
-              {navList.map((item) => (
-                <li key={item.id} className="uppercase">
-                  <NavLink
-                    to={item.path}
-                    className={({ isActive }) =>
-                      `${isActive && 'dark:text-btn-primary-hover-dark text-secondary-light'} text-primary rounded-xl px-2 py-1 text-xl font-semibold`
-                    }
-                    onClick={() => setIsMenuOpen(false)}
-                  >
-                    {item.name}
-                  </NavLink>
-                </li>
-              ))}
-            </ul>
+            <nav>
+              <ul className="flex flex-col items-start justify-center gap-14">
+                {navList.map((item) => (
+                  <li key={item.id} className="uppercase">
+                    <NavLink
+                      to={item.path}
+                      className={({ isActive }) =>
+                        `${isActive && 'dark:text-btn-primary-hover-dark text-secondary-light'} text-primary rounded-xl px-2 py-1 text-xl font-semibold`
+                      }
+                      onClick={() => setIsMenuOpen(false)}
+                    >
+                      {item.name}
+                    </NavLink>
+                  </li>
+                ))}
+              </ul>
+            </nav>
           </DialogPanel>
         </div>
       </Dialog>
