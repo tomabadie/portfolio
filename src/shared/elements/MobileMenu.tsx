@@ -1,63 +1,68 @@
-import { Description, Dialog, DialogPanel } from '@headlessui/react';
+import { Dialog, DialogPanel } from '@headlessui/react';
 import { useState } from 'react';
-import type { NavigationItemProps } from '../components/Header/data/headerType';
-
-export interface MobileMenuProps {
-  navList: NavigationItemProps[];
-}
+import { NavLink } from 'react-router';
+import type { MobileMenuProps } from './mobileMenutype';
 
 const MobileMenu = ({ navList }: MobileMenuProps) => {
-  const [isOpen, setIsOpen] = useState<boolean>(false);
+  const [isMenuOpen, setIsMenuOpen] = useState<boolean>(false);
 
   return (
     <div className="flex items-center justify-center md:hidden">
       <button
         type="button"
-        className="group relative z-60 cursor-pointer"
-        onClick={() => setIsOpen(!isOpen)}
+        className="group relative z-50 cursor-pointer"
+        onClick={() => setIsMenuOpen(!isMenuOpen)}
       >
         <div
-          className={`border-primary bg-gobal-secondary bg-global-secondary relative flex h-[40px] w-[40px] transform items-center justify-center overflow-hidden rounded-full border shadow-md transition-all duration-200 hover:shadow-[0_0_12px_4px_var(--color-btn-primary-hover-light)] dark:hover:shadow-[0_0_12px_4px_var(--color-btn-primary-hover-dark)] ${isOpen && 'shadow-[0_0_12px_4px_var(--color-btn-primary-hover-light)] dark:shadow-[0_0_12px_4px_var(--color-btn-primary-hover-dark)]'}`}
+          className={`border-primary bg-gobal-secondary bg-global-secondary relative flex h-[40px] w-[40px] transform items-center justify-center overflow-hidden rounded-full border shadow-md transition-all duration-200 hover:shadow-[0_0_12px_4px_var(--color-btn-primary-hover-light)] dark:hover:shadow-[0_0_12px_4px_var(--color-btn-primary-hover-dark)] ${isMenuOpen && 'shadow-[0_0_12px_4px_var(--color-btn-primary-hover-light)] dark:shadow-[0_0_12px_4px_var(--color-btn-primary-hover-dark)]'}`}
         >
           <div className="flex h-[20px] w-[20px] origin-center transform flex-col justify-between overflow-hidden transition-all duration-300">
             <div
-              className={`bg-text-primary-light dark:bg-text-primary-dark h-[2px] w-7 origin-left transform transition-all delay-100 duration-300 ${isOpen && 'translate-y-6'} `}
+              className={`bg-text-primary-light dark:bg-text-primary-dark h-[2px] w-7 origin-left transform transition-all delay-100 duration-300 ${isMenuOpen && 'translate-y-6'} `}
             />
             <div
-              className={`bg-text-primary-light dark:bg-text-primary-dark h-[2px] w-7 transform rounded transition-all delay-75 duration-300 ${isOpen && 'translate-y-6'}`}
+              className={`bg-text-primary-light dark:bg-text-primary-dark h-[2px] w-7 transform rounded transition-all delay-75 duration-300 ${isMenuOpen && 'translate-y-6'}`}
             />
             <div
-              className={`bg-text-primary-light dark:bg-text-primary-dark h-[2px] w-7 origin-left transform transition-all duration-300 ${isOpen && 'translate-y-6'}`}
+              className={`bg-text-primary-light dark:bg-text-primary-dark h-[2px] w-7 origin-left transform transition-all duration-300 ${isMenuOpen && 'translate-y-6'}`}
             />
 
             <div
-              className={`absolute top-5 flex w-0 -translate-x-10 transform items-center justify-between transition-all duration-500 ${isOpen && 'w-12 translate-x-0'} `}
+              className={`absolute top-5 flex w-0 -translate-x-10 transform items-center justify-between transition-all duration-500 ${isMenuOpen && 'w-12 translate-x-0'} `}
             >
               <div
-                className={`bg-text-primary-light dark:bg-text-primary-dark absolute h-[2px] w-5 rotate-0 transform transition-all delay-300 duration-500 ${isOpen && 'rotate-45'}`}
+                className={`bg-text-primary-light dark:bg-text-primary-dark absolute h-[2px] w-5 rotate-0 transform transition-all delay-300 duration-500 ${isMenuOpen && 'rotate-45'}`}
               />
               <div
-                className={`bg-text-primary-light dark:bg-text-primary-dark absolute h-[2px] w-5 -rotate-0 transform transition-all delay-300 duration-500 ${isOpen && '-rotate-45'}`}
+                className={`bg-text-primary-light dark:bg-text-primary-dark absolute h-[2px] w-5 -rotate-0 transform transition-all delay-300 duration-500 ${isMenuOpen && '-rotate-45'}`}
               />
             </div>
           </div>
         </div>
       </button>
-      <Dialog open={isOpen} onClose={() => setIsOpen(false)} className="relative z-50">
-        <div className="fixed inset-0 flex h-screen w-screen items-center justify-center">
+      <Dialog
+        open={isMenuOpen}
+        onClose={() => setIsMenuOpen(false)}
+        transition
+        className="relative z-40"
+      >
+        <div className="fixed inset-0 flex h-screen w-screen items-center justify-center transition duration-300 ease-out data-closed:opacity-0">
           <DialogPanel className="bg-global-primary text-primary flex h-full w-full items-center justify-center space-y-4 border px-12">
-            <Description>Navigation</Description>
-            <ul className="flex flex-col items-start justify-center gap-10">
-              <li>Menu 1</li>
-              <li>Menu 2</li>
-              <li>Menu 3</li>
-              <li>Menu 4</li>
+            <ul className="flex flex-col items-start justify-center gap-14">
+              {navList.map((item) => (
+                <li key={item.id} className="uppercase">
+                  <NavLink
+                    to={item.path}
+                    className={({ isActive }) =>
+                      `${isActive && 'dark:text-btn-primary-hover-dark text-secondary-light'} text-primary rounded-xl px-2 py-1 text-xl font-semibold`
+                    }
+                    onClick={() => setIsMenuOpen(false)}
+                  >
+                    {item.name}
+                  </NavLink>
+                </li>
+              ))}
             </ul>
-            <div className="flex gap-4">
-              <button type="button" onClick={() => setIsOpen(false)}>
-                Cancel
-              </button>
-            </div>
           </DialogPanel>
         </div>
       </Dialog>
