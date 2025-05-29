@@ -41,9 +41,9 @@ const MobileMenu = ({ navList, isMenuOpen, setIsMenuOpen }: MobileMenuProps) => 
         open={isMenuOpen}
         onClose={() => setIsMenuOpen(false)}
         transition
-        className="relative z-40"
+        className="relative z-40 transition duration-300 ease-out data-closed:opacity-0"
       >
-        <div className="fixed inset-0 flex h-dvh w-dvw items-center justify-center transition duration-300 ease-out data-closed:opacity-0">
+        <div className="fixed inset-0 flex h-dvh w-dvw items-center justify-center">
           <DialogPanel className="bg-global-primary text-primary mt-[60px] flex h-[calc(100dvh-60px)] w-full items-center justify-center px-12">
             <nav>
               <ul className="flex flex-col items-start justify-center gap-14">
