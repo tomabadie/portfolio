@@ -1,7 +1,7 @@
 import SocialLinks from '../SocialLinks/SocialLinks';
 import { socialLinksList } from '../SocialLinks/socialLinksData';
 
-const SocialGLobal = () => {
+const SocialGlobal = () => {
   return (
     <div className="">
       <SocialLinks
@@ -12,4 +12,4 @@ const SocialGLobal = () => {
   );
 };
 
-export default SocialGLobal;
+export default SocialGlobal;

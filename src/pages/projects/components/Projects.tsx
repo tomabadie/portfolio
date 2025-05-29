@@ -1,9 +1,9 @@
-import SocialGLobal from '../../../components/social/SocialGlobal/SocialGLobal';
+import SocialGlobal from '../../../components/social/SocialGlobal/SocialGLobal';
 
 const Projects = () => {
   return (
     <div className="flex flex-col items-center gap-4 px-2 sm:flex-row sm:items-start sm:justify-around lg:gap-0 xl:justify-center xl:gap-20">
-      <SocialGLobal />
+      <SocialGlobal />
       <section className="transition-theme bg-global-secondary border-primary text-primary flex flex-col items-center justify-around gap-3 rounded-2xl border py-3 md:w-lg lg:w-2xl">
         <h2 className="transition-theme my-2 text-center text-xl font-bold">PROJECTS SECTION</h2>
         <article className="px-4 sm:px-8">
