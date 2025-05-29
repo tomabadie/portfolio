@@ -13,9 +13,9 @@ const Header = (headerData: HeaderProps) => {
   const [isMenuOpen, setIsMenuOpen] = useState<boolean>(false);
 
   return (
-    <header className="bg-global-primary border-primary flex items-center justify-between border-b px-4">
+    <header className="bg-global-primary border-primary transition-theme flex items-center justify-between border-b px-4">
       <MobileMenu navList={navList} isMenuOpen={isMenuOpen} setIsMenuOpen={setIsMenuOpen} />
-      <h1 className="text-primary py-4 text-xl font-extrabold">Thomas Abadie</h1>
+      <h1 className="transition-theme text-primary py-4 text-xl font-extrabold">Thomas Abadie</h1>
       <DesktopMenu navList={navList} />
       <div className={`flex items-center gap-4 ${isMenuOpen && 'hidden'}`}>
         <LanguageToggle />
