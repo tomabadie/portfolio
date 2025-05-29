@@ -10,7 +10,7 @@ function App() {
   return (
     <>
       <Header en={navDataEn} fr={navDataFr} />
-      <main className="bg-global-primary min-h-[calc(100vh-68px-24px)] py-8">
+      <main className="bg-global-primary min-h-[calc(100vh-68px-24px)] py-4 md:py-8">
         <Outlet />
       </main>
       <Footer />

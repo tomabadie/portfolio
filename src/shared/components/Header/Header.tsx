@@ -1,30 +1,23 @@
-import { Link } from 'react-router';
-
 import LanguageToggle from '../Language/LanguageToggle';
 import ThemeToggle from '../Theme/ThemeToggle';
 
+import { useState } from 'react';
+import DesktopMenu from '../../elements/DesktopMenu';
+import MobileMenu from '../../elements/MobileMenu';
 import { useLanguage } from '../Language/LanguageContext';
-import type { HeaderProps } from './data/headerType';
+import type { HeaderProps, NavigationItemProps } from './data/headerType';
 
 const Header = (headerData: HeaderProps) => {
   const { language } = useLanguage();
-  const navList = headerData[language];
+  const navList: NavigationItemProps[] = headerData[language];
+  const [isMenuOpen, setIsMenuOpen] = useState<boolean>(false);
 
   return (
     <header className="bg-global-primary border-primary flex items-center justify-between border-b px-4">
+      <MobileMenu navList={navList} isMenuOpen={isMenuOpen} setIsMenuOpen={setIsMenuOpen} />
       <h1 className="text-primary py-4 text-xl font-extrabold">Thomas Abadie</h1>
-      <nav>
-        <ul className="flex gap-4 p-0">
-          {navList.map((item) => (
-            <li key={item.id} className="uppercase">
-              <Link to={item.path} className="text-primary p-2 text-lg font-semibold">
-                {item.name}
-              </Link>
-            </li>
-          ))}
-        </ul>
-      </nav>
-      <div className="flex items-center gap-4">
+      <DesktopMenu navList={navList} />
+      <div className={`flex items-center gap-4 ${isMenuOpen && 'hidden'}`}>
         <LanguageToggle />
         <ThemeToggle />
       </div>
