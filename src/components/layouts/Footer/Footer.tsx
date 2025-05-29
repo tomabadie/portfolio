@@ -1,4 +1,4 @@
-import { useLanguage } from '../Language/LanguageContext';
+import { useLanguage } from '../../../contexts/LanguageContext';
 
 const Footer = () => {
   const { language } = useLanguage();

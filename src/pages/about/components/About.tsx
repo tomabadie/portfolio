@@ -1,5 +1,5 @@
-import { useLanguage } from '../../../shared/components/Language/LanguageContext';
-import SocialAbout from '../../../shared/components/SocialAbout/components/SocialAbout';
+import SocialAbout from '../../../components/social/SocialAbout/SocialAbout';
+import { useLanguage } from '../../../contexts/LanguageContext';
 import type { AboutProps } from '../data/aboutType';
 
 const About = (aboutData: AboutProps) => {

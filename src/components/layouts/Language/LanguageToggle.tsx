@@ -1,6 +1,6 @@
 import { Popover, PopoverButton, PopoverPanel } from '@headlessui/react';
 import { GrLanguage } from 'react-icons/gr';
-import { useLanguage } from './LanguageContext';
+import { useLanguage } from '../../../contexts/LanguageContext';
 
 const LanguageToggle = () => {
   const { setLanguage } = useLanguage();

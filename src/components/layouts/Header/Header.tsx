@@ -2,9 +2,9 @@ import LanguageToggle from '../Language/LanguageToggle';
 import ThemeToggle from '../Theme/ThemeToggle';
 
 import { useState } from 'react';
-import DesktopMenu from '../../elements/DesktopMenu';
-import MobileMenu from '../../elements/MobileMenu';
-import { useLanguage } from '../Language/LanguageContext';
+import { useLanguage } from '../../../contexts/LanguageContext';
+import DesktopMenu from '../../navigation/DesktopMenu/DesktopMenu';
+import MobileMenu from '../../navigation/MobileMenu/MobileMenu';
 import type { HeaderProps, NavigationItemProps } from './data/headerType';
 
 const Header = (headerData: HeaderProps) => {

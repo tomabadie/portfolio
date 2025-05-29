@@ -1,4 +1,4 @@
-import IconWrapper from './IconWrapper';
+import IconWrapper from '../../ui/IconWrapper';
 import type { SocialLinksListProps } from './socialLinksType';
 
 const SocialLinks = ({

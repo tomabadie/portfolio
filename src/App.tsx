@@ -1,10 +1,9 @@
 import { Outlet } from 'react-router';
 
-import Footer from '../shared/components/Footer/Footer';
-import Header from '../shared/components/Header/Header';
-
-import { navDataEn } from '../shared/components/Header/data/navData.en';
-import { navDataFr } from '../shared/components/Header/data/navData.fr';
+import Footer from './components/layouts/Footer/Footer';
+import Header from './components/layouts/Header/Header';
+import { navDataEn } from './components/layouts/Header/data/navData.en';
+import { navDataFr } from './components/layouts/Header/data/navData.fr';
 
 function App() {
   return (
