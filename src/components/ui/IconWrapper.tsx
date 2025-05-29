@@ -2,7 +2,7 @@ export type VariantsProps = 'primary' | 'secondary' | 'basic';
 
 const iconVariants: Record<VariantsProps, string> = {
   primary:
-    'text-primary hover:bg-btn-primary-hover-light hover:dark:hover:bg-btn-primary-hover-dark border-primary rounded-lg transition-theme',
+    'text-primary hover:bg-btn-primary-hover-light hover:dark:hover:bg-btn-primary-hover-dark border-primary rounded-lg transition-theme hover:duration-150 hover:after:duration-150',
   secondary: '',
   basic: 'text-primary transition-theme',
 };
