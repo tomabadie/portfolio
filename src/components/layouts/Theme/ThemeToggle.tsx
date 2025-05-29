@@ -1,6 +1,6 @@
 import { Within } from '@theme-toggles/react'; /* React 19.x : npm install --legacy-peer-deps @theme-toggles/react */
 import '@theme-toggles/react/css/Within.css';
-import { useTheme } from './ThemeContext';
+import { useTheme } from '../../../contexts/ThemeContext';
 
 const ThemeToggle: React.FC = () => {
   const { theme, toggleTheme } = useTheme();

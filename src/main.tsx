@@ -1,18 +1,15 @@
 import { StrictMode } from 'react';
 /* import { createRoot } from "react-dom/client"; */
-
 import ReactDOM from 'react-dom/client';
 import { RouterProvider, createBrowserRouter } from 'react-router';
 
-import { LanguageProvider } from './shared/components/Language/LanguageContext.tsx';
-import { ThemeProvider } from './shared/components/Theme/ThemeContext.tsx';
+import { LanguageProvider } from './contexts/LanguageContext.tsx';
+import { ThemeProvider } from './contexts/ThemeContext.tsx';
 
 // page components
 
+import App from './App.tsx';
 import './index.css';
-
-import App from './app/App.tsx';
-
 import About from './pages/about/components/About.tsx';
 import Contact from './pages/contact/components/Contact.tsx';
 import Projects from './pages/projects/components/Projects.tsx';

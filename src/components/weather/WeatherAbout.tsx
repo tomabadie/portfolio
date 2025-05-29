@@ -1,6 +1,6 @@
 import { useEffect, useState } from 'react';
-import { useLanguage } from '../components/Language/LanguageContext';
-import IconWrapper from './IconWrapper';
+import { useLanguage } from '../../contexts/LanguageContext';
+import IconWrapper from '../ui/IconWrapper';
 import { mapSvg, weatherContent, weatherIconsList } from './weatherAboutData';
 import type { WeatherIconFn, WeatherIconProps, WeatherResponse } from './weatherAboutType';
 

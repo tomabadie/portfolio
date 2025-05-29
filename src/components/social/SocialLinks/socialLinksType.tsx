@@ -1,5 +1,5 @@
 import type { SVGProps } from 'react';
-import type { VariantsProps } from './IconWrapper';
+import type { VariantsProps } from '../../ui/IconWrapper';
 
 export interface SocialLinksListProps {
   aboutPage?: boolean;

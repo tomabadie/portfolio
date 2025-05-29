@@ -1,4 +1,4 @@
-import type { NavigationItemProps } from '../components/Header/data/headerType';
+import type { NavigationItemProps } from '../../layouts/Header/data/headerType';
 
 export interface MobileMenuProps {
   navList: NavigationItemProps[];

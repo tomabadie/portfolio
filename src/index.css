@@ -64,6 +64,12 @@
 }
 
 @layer components {
+  .transition-theme {
+    transition-property: color, background-color, border-color, text-decoration-color, fill, stroke;
+    transition-duration: 300ms;
+    transition-timing-function: ease-in-out;
+  }
+
   .text-primary {
     color: var(--color-text-primary-light);
   }
