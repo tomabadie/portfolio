@@ -1,14 +1,14 @@
-import SocialGlobal from '../../../components/social/SocialGlobal/SocialGLobal';
+import SocialGlobal from '../../../components/social/SocialGlobal/SocialGlobal';
 
 const Contact = () => {
   return (
-    <div className="flex flex-col items-center gap-4 px-2 sm:flex-row sm:items-start sm:justify-around lg:gap-0 xl:justify-center xl:gap-20">
+    <div className="flex flex-col items-center gap-4 px-4 sm:flex-row sm:items-start">
       <SocialGlobal />
-      <section className="transition-theme bg-global-secondary border-primary text-primary flex flex-col items-center justify-around gap-3 rounded-2xl border py-3 md:w-lg lg:w-2xl">
+      <section className="transition-theme bg-global-secondary border-primary text-primary flex flex-col items-center justify-around gap-3 rounded-2xl border py-3 sm:mx-auto md:max-w-6xl md:min-w-xl">
         <h2 className="transition-theme my-2 text-center text-xl font-bold">CONTACT SECTION</h2>
         <article className="px-4 sm:px-8">
           <h3 className="text-l transition-theme my-2 font-bold">Article 1</h3>
-          <p>
+          <p className="transition-theme text-primary max-w-[80ch]">
             Lorem ipsum dolor sit, amet consectetur adipisicing elit. Repellat, esse, tempore iure
             est quas temporibus fugit eligendi maxime sapiente laboriosam incidunt error
             praesentium. Eaque consequatur aliquam in, ad quibusdam eos mollitia ullam enim eum
