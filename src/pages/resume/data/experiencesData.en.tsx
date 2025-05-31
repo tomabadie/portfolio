@@ -5,27 +5,28 @@ export const experiencesDataEN: ExperienceProps[] = [
     id: 'wildcodeschool-2025',
     type: 'training',
     company: 'Wild Code School & Self-training',
+    link: 'https://www.wildcodeschool.com/',
     position: 'Full-Stack Developer',
     location: 'Remote',
     startDate: '01/2025',
     endDate: '08/2025',
     duration: '5 months',
     context:
-      'Intensive full-stack web development training combining a remote bootcamp and self-learning to strengthen technical skills.',
+      'Intensive full-stack web development training combining a remote bootcamp and self-learning to push further and strengthen my technical skills.',
     description:
       'Accelerated learning of front-end and back-end technologies through real-world projects, technical challenges, teamwork and personal projects in addition to mandatory assignments.',
     achievements: [
       'Built dynamic web applications using React and TypeScript',
       'Developed REST APIs with Express.js and MySQL',
-      'Designed responsive user interfaces',
+      'Designed responsive and accessible user interfaces',
       'Used Tailwind CSS for personal projects',
-      'Managed group projects with GitHub and agile methodology',
+      'Managed group projects with Git/GitHub and agile methodology',
     ],
     technologies: {
       languages: ['HTML', 'CSS', 'JavaScript', 'TypeScript'],
-      frameworks: ['React', 'Express'],
+      frameworks: ['React', 'Express', 'Tailwind CSS'],
       databases: ['MySQL'],
-      tools: ['Tailwind CSS', 'Git', 'GitHub', 'Trello', 'Excalidraw', 'Figma'],
+      tools: ['Git', 'GitHub', 'Trello', 'Excalidraw', 'Figma'],
     },
     keywords: [
       'web development',
@@ -42,6 +43,7 @@ export const experiencesDataEN: ExperienceProps[] = [
   },
   {
     id: 'rectorat-2017-2024',
+    type: 'job',
     company: 'Rectorat de Bordeaux',
     link: 'https://www.ac-bordeaux.fr/',
     position: 'Teacher – Math, Science and Technology',
@@ -50,7 +52,7 @@ export const experiencesDataEN: ExperienceProps[] = [
     endDate: '08/2024',
     duration: '7 years',
     context:
-      'Teaching in vocational high schools and secondary schools for the French Ministry of National Education.',
+      'Teaching in high schools and secondary schools for the French Ministry of National Education.',
     description:
       'Delivered scientific and technical knowledge to a wide range of students, provided individualized support and implemented innovative teaching projects.',
     achievements: [
@@ -64,7 +66,7 @@ export const experiencesDataEN: ExperienceProps[] = [
       'mathematics',
       'science',
       'technology',
-      'national education',
+      'education',
       'pedagogy',
       'digital learning',
       'Bordeaux',
@@ -72,6 +74,7 @@ export const experiencesDataEN: ExperienceProps[] = [
   },
   {
     id: 'watever-2016',
+    type: 'job',
     company: 'Watever',
     link: 'https://watever.org/',
     position: 'Project Manager',
@@ -82,14 +85,15 @@ export const experiencesDataEN: ExperienceProps[] = [
     context:
       'A French nonprofit composed of professionals and enthusiasts in maritime sectors, development, boating and solidarity. Its goal is to improve living conditions for vulnerable populations living along coastlines and major rivers.',
     description:
-      'Development of a vocational training center in naval construction in Bangladesh. Deployment on-site was canceled due to safety concerns.',
+      'Development of a training center in naval construction in Bangladesh. Deployment on-site was canceled due to safety concerns.',
     achievements: [
-      'Designed pedagogical content for a vocational training curriculum',
+      'Designed pedagogical content for a training curriculum',
       'Created technical and educational materials',
     ],
     keywords: [
       'humanitarian project',
-      'vocational training',
+      'training',
+      'education',
       'boatbuilding',
       'pedagogy',
       'development',
@@ -99,6 +103,7 @@ export const experiencesDataEN: ExperienceProps[] = [
   },
   {
     id: 'sabrosa-rain-2015',
+    type: 'job',
     company: 'Sabrosa Rain',
     link: 'https://www.linkedin.com/company/sabrosa-rain-advanced-technologies-pvt-ltd/',
     position: 'Project Manager',
@@ -120,6 +125,7 @@ export const experiencesDataEN: ExperienceProps[] = [
     },
     keywords: [
       'project management',
+      'engineering',
       'catamaran',
       'Sri Lanka',
       'boatbuilding',
@@ -131,6 +137,7 @@ export const experiencesDataEN: ExperienceProps[] = [
   },
   {
     id: 'baff-2013',
+    type: 'internship',
     company: 'Building A Future Foundation',
     link: 'https://www.baffoundation.com/en/',
     position: 'Project Manager',
@@ -153,7 +160,7 @@ export const experiencesDataEN: ExperienceProps[] = [
       tools: ['AutoCAD', 'Rhinoceros', 'Catia'],
     },
     keywords: [
-      'engineering internship',
+      'engineering',
       'Sri Lanka',
       'shipyard',
       'continuous improvement',
@@ -166,6 +173,7 @@ export const experiencesDataEN: ExperienceProps[] = [
   },
   {
     id: 'ufscar-2012',
+    type: 'internship',
     company: 'UFSCar - Polymer Lab',
     link: 'https://www.ufscar.br/',
     position: 'Researcher',

@@ -5,7 +5,7 @@ export const experiencesDataFR: ExperienceProps[] = [
     id: 'wildcodeschool-2025',
     type: 'formation',
     company: 'Wild Code School & Autoformation',
-    link: '',
+    link: 'https://www.wildcodeschool.com/',
     position: 'Développeur full-stack',
     location: 'Remote',
     startDate: '01/2025',
@@ -24,9 +24,9 @@ export const experiencesDataFR: ExperienceProps[] = [
     ],
     technologies: {
       languages: ['HTML', 'CSS', 'JavaScript', 'TypeScript'],
-      frameworks: ['React', 'Express'],
+      frameworks: ['React', 'Express', 'Tailwind CSS'],
       databases: ['MySQL'],
-      tools: ['Tailwind CSS', 'Git', 'GitHub', 'Trello', 'Excalidraw', 'Figma'],
+      tools: ['Git', 'GitHub', 'Trello', 'Excalidraw', 'Figma'],
     },
     keywords: [
       'développement web',
@@ -125,6 +125,7 @@ export const experiencesDataFR: ExperienceProps[] = [
     },
     keywords: [
       'chef de projet',
+      'ingénieur',
       'catamaran',
       'Sri Lanka',
       'production navale',
@@ -159,7 +160,7 @@ export const experiencesDataFR: ExperienceProps[] = [
       tools: ['AutoCAD', 'Rhinoceros', 'Catia'],
     },
     keywords: [
-      'stage ingénieur',
+      'ingénieur',
       'Sri Lanka',
       'chantier naval',
       'amélioration continue',

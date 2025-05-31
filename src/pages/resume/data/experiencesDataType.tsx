@@ -6,7 +6,7 @@ export interface ExperienceProps {
     | 'formation'
     | 'bénévolat'
     | 'job'
-    | 'intership'
+    | 'internship'
     | 'training'
     | 'volunteering';
   company: string;
