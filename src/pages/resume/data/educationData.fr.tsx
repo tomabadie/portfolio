@@ -1,0 +1,93 @@
+import type { EducationProps } from './educationDataType';
+
+export const educationDataFR: EducationProps[] = [
+  {
+    id: 'polytech-2013',
+    type: 'formation',
+    company: 'Polytech Grenoble',
+    link: 'https://www.polytech-grenoble.fr/',
+    position: 'Diplôme d’ingénieur en Matériaux',
+    location: 'Grenoble, France',
+    startDate: '',
+    endDate: '2013',
+    duration: '',
+    context:
+      'Spécialité Matériaux de Polytech Grenoble - INP, UGA, formant des ingénieurs généralistes en science et génie des matériaux, capables d’appréhender les différentes familles de matériaux et leurs procédés de mise en œuvre.',
+    description:
+      'Formation scientifique pluridisciplinaire basée sur la thermodynamique, la cristallochimie, la mécanique, la physique, la chimie et l’électrochimie, appliquée aux matériaux métalliques, polymères, céramiques, composites, semi-conducteurs et bio-matériaux. L’objectif est de former des ingénieurs capables de sélectionner, caractériser et mettre en œuvre les matériaux les plus adaptés selon leur usage, en tenant compte des normes de qualité et des enjeux industriels ou environnementaux.',
+    achievements: [
+      'Maîtrise des propriétés et procédés des matériaux (élaboration, caractérisation, sélection)',
+      'Projets d’application en lien avec l’industrie',
+      'Stages dans un environnement industriel',
+    ],
+    technologies: {
+      tools: ['Matlab', 'SolidWorks', 'Ansys'],
+    },
+    keywords: [
+      'matériaux',
+      'ingénieur',
+      'céramiques',
+      'polymères',
+      'composites',
+      'caractérisation',
+      'innovation',
+      'sciences appliquées',
+      'procédés',
+    ],
+  },
+  {
+    id: 'bilan-competences-2024',
+    type: 'formation',
+    company: 'Bilan de compétences',
+    link: '',
+    position: 'Réorientation vers le développement web',
+    location: 'France',
+    endDate: '2024',
+    context:
+      'Démarche d’analyse de compétences et d’objectifs professionnels ayant conduit à une reconversion vers les métiers du développement web.',
+    description:
+      'Travail sur les motivations, les aptitudes, les besoins d’apprentissage et l’adéquation avec les métiers numériques. Résultat : un projet professionnel clair et structuré.',
+    achievements: [
+      'Clarification du projet de reconversion',
+      'Évaluation des compétences transférables',
+      'Validation du choix de formation en développement web',
+    ],
+    keywords: ['bilan de compétences', 'réorientation', 'reconversion', 'numérique'],
+  },
+  {
+    id: 'codecademy-wcs-2025',
+    type: 'formation',
+    company: 'Codecademy & Wild Code School',
+    link: 'https://www.wildcodeschool.com/',
+    position: 'Développeur full-stack',
+    location: 'Remote',
+    endDate: '08/2025',
+    duration: '5 mois',
+    context:
+      'Parcours hybride de formation combinant autoformation sur Codecademy et bootcamp intensif à la Wild Code School.',
+    description:
+      'Approfondissement des compétences web front-end et back-end à travers des cours guidés, des projets réels, du travail en équipe et des projets personnels.',
+    achievements: [
+      'Création d’applications avec logique métier complexe',
+      'Utilisation de React, TypeScript, Tailwind',
+      'Développement d’API REST avec Express et bases de données SQL',
+    ],
+    technologies: {
+      languages: ['HTML', 'CSS', 'JavaScript', 'TypeScript'],
+      frameworks: ['React', 'Express', 'Tailwind CSS'],
+      databases: ['MySQL'],
+      tools: ['Git', 'GitHub', 'Figma', 'Trello'],
+    },
+    keywords: [
+      'développement web',
+      'front end',
+      'back end',
+      'full-stack',
+      'bootcamp',
+      'React',
+      'Express',
+      'autonomie',
+      'projets web',
+    ],
+  },
+];
