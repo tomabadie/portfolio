@@ -17,8 +17,8 @@ import Resume from './pages/resume/components/Resume.tsx';
 
 // content
 
-import { aboutDataEn } from './pages/about/data/aboutData.en.tsx';
-import { aboutDataFr } from './pages/about/data/aboutData.fr.tsx';
+import { aboutDataEn } from './pages/about/data/aboutData.en.ts';
+import { aboutDataFr } from './pages/about/data/aboutData.fr.ts';
 
 // router creation
 
