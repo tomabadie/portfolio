@@ -1,6 +1,6 @@
 import { Dialog, DialogPanel } from '@headlessui/react';
 import { NavLink } from 'react-router';
-import type { MobileMenuProps } from './mobileMenutype';
+import type { MobileMenuProps } from './mobileMenuType';
 
 const MobileMenu = ({ navList, isMenuOpen, setIsMenuOpen }: MobileMenuProps) => {
   return (
