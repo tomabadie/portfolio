@@ -9,8 +9,8 @@ const Skills = forwardRef<HTMLElement, SkillsProps>(({ visible }, ref) => {
   const skillsList = language === 'en' ? skillsDataEN : skillsDataFR;
 
   return (
-    <section ref={ref} className="border-primary rounded-lg border px-2 py-1">
-      <h3 className="border-b-orange-accent-light dark:border-b-orange-accent-dark mb-2 w-fit border-b-2 font-bold">
+    <section ref={ref} className="border-primary transition-theme rounded-lg border px-2 py-1">
+      <h3 className="border-b-accent-light dark:border-b-accent-dark transition-theme mb-2 w-fit border-b-2 font-bold">
         {language === 'en' ? 'Skills' : 'Compétences'}
       </h3>
       <ul className="flex flex-col">
@@ -22,10 +22,10 @@ const Skills = forwardRef<HTMLElement, SkillsProps>(({ visible }, ref) => {
               To use later : rank by category
               <span className="border border-purple-500">{skill.category}</span>
               */}
-              <div className="border-orange-accent-light dark:border-orange-accent-dark h-2.5 w-full rounded-full border p-0.5">
+              <div className="border-accent-light dark:border-accent-dark transition-theme h-2.5 w-full rounded-full border p-0.5">
                 <div
                   style={{ width: visible ? `${skill.level}%` : 0 }}
-                  className="bg-orange-accent-light dark:bg-orange-accent-dark mr-auto h-full rounded-full transition-[width] duration-2000 ease-in-out"
+                  className="bg-accent-light dark:bg-accent-dark transition-theme mr-auto h-full rounded-full transition-[width] duration-2000 ease-in-out"
                 />
               </div>
             </li>

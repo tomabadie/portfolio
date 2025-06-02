@@ -35,10 +35,13 @@
   --color-toggle-dark: var(--color-primary-dark);
   --color-btn-primary-hover-dark: oklch(40% 0.15 250);
 
-  --color-blue-accent-light: oklch(80% 0.09 250);
-  --color-blue-accent-dark: oklch(45% 0.18 250);
-  --color-orange-accent-light: oklch(75% 0.12 45);
-  --color-orange-accent-dark: oklch(55% 0.14 45);
+  /* Accent  */
+  /* blue */
+  --color-accent-light: oklch(70% 0.18 250);
+  --color-accent-dark: oklch(45% 0.18 250);
+  /* orange */
+  /* --color-accent-light: oklch(75% 0.12 45);
+  --color-accent-dark: oklch(55% 0.14 45); */
 
   /* Colors extra - cf notes mac */
 }
