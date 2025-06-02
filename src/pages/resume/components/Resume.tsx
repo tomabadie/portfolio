@@ -1,3 +1,4 @@
+import { useEffect, useRef, useState } from 'react';
 import SocialGlobal from '../../../components/social/SocialGlobal/SocialGlobal';
 import Education from './Education';
 import Languages from './Languages';
@@ -6,6 +7,29 @@ import Skills from './Skills';
 import WorkExperiences from './WorkExperiences';
 
 const Resume = () => {
+  const langRef = useRef<HTMLDivElement>(null);
+  const [langVisible, setLangVisible] = useState(false);
+
+  useEffect(() => {
+    const observer = new IntersectionObserver(
+      ([entry]) => {
+        if (entry.isIntersecting) {
+          setLangVisible(true);
+          observer.disconnect();
+        }
+      },
+      {
+        threshold: 0.2,
+      }
+    );
+
+    if (langRef.current) {
+      observer.observe(langRef.current);
+    }
+
+    return () => observer.disconnect();
+  }, []);
+
   return (
     <div className="flex flex-col items-center gap-4 px-4 sm:flex-row sm:items-start">
       <SocialGlobal />
@@ -18,7 +42,7 @@ const Resume = () => {
           <WorkExperiences />
           <Skills />
           <Personality />
-          <Languages />
+          <Languages visible={langVisible} ref={langRef} />
         </div>
       </section>
     </div>

@@ -37,9 +37,9 @@ export const personalityDataEN: PersonalityItem[] = [
 ];
 
 export const languagesDataEN: LanguageLevel[] = [
-  { id: 'fr', name: 'French', level: 6 },
-  { id: 'en', name: 'English', level: 5 },
-  { id: 'es', name: 'Spanish', level: 5 },
-  { id: 'pt', name: 'Portuguese', level: 3 },
-  { id: 'it', name: 'Italian', level: 2 },
+  { id: 'fr', name: 'French', levelEu: 'C2', levelNumb: 6 },
+  { id: 'en', name: 'English', levelEu: 'C1', levelNumb: 5 },
+  { id: 'es', name: 'Spanish', levelEu: 'C1', levelNumb: 5 },
+  { id: 'pt', name: 'Portuguese', levelEu: 'B1', levelNumb: 3 },
+  { id: 'it', name: 'Italian', levelEu: 'A2', levelNumb: 2 },
 ];

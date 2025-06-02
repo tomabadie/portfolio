@@ -14,5 +14,10 @@ export interface PersonalityItem {
 export interface LanguageLevel {
   id: string;
   name: string;
-  level: number;
+  levelEu: string;
+  levelNumb: number;
+}
+
+export interface LanguagesProps {
+  visible: boolean;
 }
