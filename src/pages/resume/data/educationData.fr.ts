@@ -2,59 +2,6 @@ import type { EducationProps } from './educationDataType';
 
 export const educationDataFR: EducationProps[] = [
   {
-    id: 'polytech-2013',
-    type: 'formation',
-    company: 'Polytech Grenoble',
-    link: 'https://www.polytech-grenoble.fr/',
-    position: 'Diplôme d’ingénieur en Matériaux',
-    location: 'Grenoble, France',
-    startDate: '',
-    endDate: '2013',
-    duration: '',
-    context:
-      'Spécialité Matériaux de Polytech Grenoble - INP, UGA, formant des ingénieurs généralistes en science et génie des matériaux, capables d’appréhender les différentes familles de matériaux et leurs procédés de mise en œuvre.',
-    description:
-      'Formation scientifique pluridisciplinaire basée sur la thermodynamique, la cristallochimie, la mécanique, la physique, la chimie et l’électrochimie, appliquée aux matériaux métalliques, polymères, céramiques, composites, semi-conducteurs et bio-matériaux. L’objectif est de former des ingénieurs capables de sélectionner, caractériser et mettre en œuvre les matériaux les plus adaptés selon leur usage, en tenant compte des normes de qualité et des enjeux industriels ou environnementaux.',
-    achievements: [
-      'Maîtrise des propriétés et procédés des matériaux (élaboration, caractérisation, sélection)',
-      'Projets d’application en lien avec l’industrie',
-      'Stages dans un environnement industriel',
-    ],
-    technologies: {
-      tools: ['Matlab', 'SolidWorks', 'Ansys'],
-    },
-    keywords: [
-      'matériaux',
-      'ingénieur',
-      'céramiques',
-      'polymères',
-      'composites',
-      'caractérisation',
-      'innovation',
-      'sciences appliquées',
-      'procédés',
-    ],
-  },
-  {
-    id: 'bilan-competences-2024',
-    type: 'formation',
-    company: 'Bilan de compétences',
-    link: '',
-    position: 'Réorientation vers le développement web',
-    location: 'France',
-    endDate: '2024',
-    context:
-      'Démarche d’analyse de compétences et d’objectifs professionnels ayant conduit à une reconversion vers les métiers du développement web.',
-    description:
-      'Travail sur les motivations, les aptitudes, les besoins d’apprentissage et l’adéquation avec les métiers numériques. Résultat : un projet professionnel clair et structuré.',
-    achievements: [
-      'Clarification du projet de reconversion',
-      'Évaluation des compétences transférables',
-      'Validation du choix de formation en développement web',
-    ],
-    keywords: ['bilan de compétences', 'réorientation', 'reconversion', 'numérique'],
-  },
-  {
     id: 'codecademy-wcs-2025',
     type: 'formation',
     company: 'Codecademy & Wild Code School',
@@ -88,6 +35,59 @@ export const educationDataFR: EducationProps[] = [
       'Express',
       'autonomie',
       'projets web',
+    ],
+  },
+  {
+    id: 'bilan-competences-2024',
+    type: 'formation',
+    company: 'Bilan de compétences',
+    link: '',
+    position: 'Réorientation vers le développement web',
+    location: 'France',
+    endDate: '2024',
+    context:
+      'Démarche d’analyse de compétences et d’objectifs professionnels ayant conduit à une reconversion vers les métiers du développement web.',
+    description:
+      'Travail sur les motivations, les aptitudes, les besoins d’apprentissage et l’adéquation avec les métiers numériques. Résultat : un projet professionnel clair et structuré.',
+    achievements: [
+      'Clarification du projet de reconversion',
+      'Évaluation des compétences transférables',
+      'Validation du choix de formation en développement web',
+    ],
+    keywords: ['bilan de compétences', 'réorientation', 'reconversion', 'numérique'],
+  },
+  {
+    id: 'polytech-2013',
+    type: 'formation',
+    company: 'Polytech Grenoble',
+    link: 'https://www.polytech-grenoble.fr/',
+    position: 'Diplôme d’ingénieur en Matériaux',
+    location: 'Grenoble, France',
+    startDate: '',
+    endDate: '2013',
+    duration: '',
+    context:
+      'Spécialité Matériaux de Polytech Grenoble - INP, UGA, formant des ingénieurs généralistes en science et génie des matériaux, capables d’appréhender les différentes familles de matériaux et leurs procédés de mise en œuvre.',
+    description:
+      'Formation scientifique pluridisciplinaire basée sur la thermodynamique, la cristallochimie, la mécanique, la physique, la chimie et l’électrochimie, appliquée aux matériaux métalliques, polymères, céramiques, composites, semi-conducteurs et bio-matériaux. L’objectif est de former des ingénieurs capables de sélectionner, caractériser et mettre en œuvre les matériaux les plus adaptés selon leur usage, en tenant compte des normes de qualité et des enjeux industriels ou environnementaux.',
+    achievements: [
+      'Maîtrise des propriétés et procédés des matériaux (élaboration, caractérisation, sélection)',
+      'Projets d’application en lien avec l’industrie',
+      'Stages dans un environnement industriel',
+    ],
+    technologies: {
+      tools: ['Matlab', 'SolidWorks', 'Ansys'],
+    },
+    keywords: [
+      'matériaux',
+      'ingénieur',
+      'céramiques',
+      'polymères',
+      'composites',
+      'caractérisation',
+      'innovation',
+      'sciences appliquées',
+      'procédés',
     ],
   },
 ];
