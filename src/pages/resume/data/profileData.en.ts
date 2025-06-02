@@ -1,6 +1,6 @@
-import type { LanguageLevel, PersonalityItem, Skill } from './profileDataType';
+import type { HardSkill, LanguageLevel, SoftSkill } from './profileDataType';
 
-export const skillsDataEN: Skill[] = [
+export const skillsDataEN: HardSkill[] = [
   { id: 'html', label: 'HTML', category: 'language' },
   { id: 'css', label: 'CSS', category: 'language' },
   { id: 'javascript', label: 'JavaScript', category: 'language' },
@@ -22,7 +22,7 @@ export const skillsDataEN: Skill[] = [
   { id: 'docker', label: 'Docker', category: 'tool' },
 ];
 
-export const personalityDataEN: PersonalityItem[] = [
+export const softSkillsDataEN: SoftSkill[] = [
   { id: 'analytical-creative', label: 'Analytical and creative thinking' },
   { id: 'autonomy', label: 'Autonomy' },
   { id: 'organization', label: 'Sense of organization' },
@@ -31,7 +31,7 @@ export const personalityDataEN: PersonalityItem[] = [
   { id: 'curiosity', label: 'Curiosity and eagerness to learn' },
   { id: 'problem-anticipation', label: 'Problem anticipation' },
   { id: 'sociability', label: 'Sociability' },
-  { id: 'rigor', label: 'Rigor' },
+  { id: 'methodical', label: 'Methodical and detail-oriented' },
   { id: 'scientific-culture', label: 'Scientific background' },
   { id: 'multicultural', label: 'Multicultural experiences' },
 ];

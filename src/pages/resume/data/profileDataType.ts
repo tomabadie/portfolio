@@ -1,4 +1,4 @@
-export interface Skill {
+export interface HardSkill {
   id: string;
   label: string;
   category: 'language' | 'framework' | 'tool' | 'method';
@@ -6,7 +6,7 @@ export interface Skill {
   icon?: string;
 }
 
-export interface PersonalityItem {
+export interface SoftSkill {
   id: string;
   label: string;
 }

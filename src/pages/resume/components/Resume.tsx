@@ -2,8 +2,8 @@ import { useEffect, useRef, useState } from 'react';
 import SocialGlobal from '../../../components/social/SocialGlobal/SocialGlobal';
 import Education from './Education';
 import Languages from './Languages';
-import Personality from './Personality';
 import Skills from './Skills';
+import SoftSkills from './SoftSkills';
 import WorkExperiences from './WorkExperiences';
 
 const Resume = () => {
@@ -41,7 +41,7 @@ const Resume = () => {
           <Education />
           <WorkExperiences />
           <Skills />
-          <Personality />
+          <SoftSkills />
           <Languages visible={langVisible} ref={langRef} />
         </div>
       </section>
