@@ -10,7 +10,9 @@ const Languages = forwardRef<HTMLDivElement, LanguagesProps>(({ visible }, ref) 
 
   return (
     <div ref={ref} className="border-primary rounded-lg border px-2 py-1">
-      <h3 className="font-bold">{language === 'en' ? 'Languages' : 'Langues'}</h3>
+      <h3 className="border-b-orange-accent-light dark:border-b-orange-accent-dark mb-2 w-fit border-b-2 font-bold">
+        {language === 'en' ? 'Languages' : 'Langues'}
+      </h3>
       <div className="flex flex-wrap justify-center p-2">
         {languagesList.map((lang) => {
           const dashOffset = 251 * (1 - lang.levelNumb / 6);

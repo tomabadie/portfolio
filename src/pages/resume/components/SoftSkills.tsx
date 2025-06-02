@@ -8,7 +8,9 @@ const SoftSkills = () => {
 
   return (
     <div className="border-primary rounded-lg border px-2 py-1">
-      <h3 className="font-bold">{language === 'en' ? 'Soft Skills' : 'Personnalité'}</h3>
+      <h3 className="border-b-orange-accent-light dark:border-b-orange-accent-dark mb-2 w-fit border-b-2 font-bold">
+        {language === 'en' ? 'Soft Skills' : 'Personnalité'}
+      </h3>
       <ul className="flex flex-row flex-wrap justify-between">
         {softSkillsList.map((skill) => {
           return (
