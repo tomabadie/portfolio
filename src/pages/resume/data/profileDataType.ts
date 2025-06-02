@@ -6,6 +6,10 @@ export interface HardSkill {
   icon?: string;
 }
 
+export interface SkillsProps {
+  visible: boolean;
+}
+
 export interface SoftSkill {
   id: string;
   label: string;

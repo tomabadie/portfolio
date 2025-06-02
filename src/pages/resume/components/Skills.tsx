@@ -1,13 +1,15 @@
+import { forwardRef } from 'react';
 import { useLanguage } from '../../../contexts/LanguageContext';
 import { skillsDataEN } from '../data/profileData.en';
 import { skillsDataFR } from '../data/profileData.fr';
+import type { SkillsProps } from '../data/profileDataType';
 
-const Skills = () => {
+const Skills = forwardRef<HTMLElement, SkillsProps>(({ visible }, ref) => {
   const { language } = useLanguage();
   const skillsList = language === 'en' ? skillsDataEN : skillsDataFR;
 
   return (
-    <div className="border-primary rounded-lg border px-2 py-1">
+    <section ref={ref} className="border-primary rounded-lg border px-2 py-1">
       <h3 className="border-b-orange-accent-light dark:border-b-orange-accent-dark mb-2 w-fit border-b-2 font-bold">
         {language === 'en' ? 'Skills' : 'Compétences'}
       </h3>
@@ -22,16 +24,16 @@ const Skills = () => {
               */}
               <div className="border-orange-accent-light dark:border-orange-accent-dark h-2.5 w-full rounded-full border p-0.5">
                 <div
-                  className="bg-orange-accent-light dark:bg-orange-accent-dark mr-auto h-full rounded-full"
-                  style={{ width: `${skill.level}%` }}
+                  style={{ width: visible ? `${skill.level}%` : 0 }}
+                  className="bg-orange-accent-light dark:bg-orange-accent-dark mr-auto h-full rounded-full transition-[width] duration-2000 ease-in-out"
                 />
               </div>
             </li>
           );
         })}
       </ul>
-    </div>
+    </section>
   );
-};
+});
 
 export default Skills;

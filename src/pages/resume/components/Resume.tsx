@@ -7,8 +7,30 @@ import SoftSkills from './SoftSkills';
 import WorkExperiences from './WorkExperiences';
 
 const Resume = () => {
-  const langRef = useRef<HTMLDivElement>(null);
+  const skillsRef = useRef<HTMLElement>(null);
+  const langRef = useRef<HTMLElement>(null);
+  const [skillsVisible, setSkillsVisible] = useState(false);
   const [langVisible, setLangVisible] = useState(false);
+
+  useEffect(() => {
+    const observer = new IntersectionObserver(
+      ([entry]) => {
+        if (entry.isIntersecting) {
+          setSkillsVisible(true);
+          observer.disconnect();
+        }
+      },
+      {
+        threshold: 0.2,
+      }
+    );
+
+    if (skillsRef.current) {
+      observer.observe(skillsRef.current);
+    }
+
+    return () => observer.disconnect();
+  }, []);
 
   useEffect(() => {
     const observer = new IntersectionObserver(
@@ -19,7 +41,7 @@ const Resume = () => {
         }
       },
       {
-        threshold: 0.2,
+        threshold: 1,
       }
     );
 
@@ -40,7 +62,7 @@ const Resume = () => {
         <div>
           <Education />
           <WorkExperiences />
-          <Skills />
+          <Skills visible={skillsVisible} ref={skillsRef} />
           <SoftSkills />
           <Languages visible={langVisible} ref={langRef} />
         </div>
