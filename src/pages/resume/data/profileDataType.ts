@@ -2,7 +2,7 @@ export interface HardSkill {
   id: string;
   label: string;
   category: 'language' | 'framework' | 'tool' | 'method';
-  level?: 1 | 2 | 3;
+  level: number;
   icon?: string;
 }
 
