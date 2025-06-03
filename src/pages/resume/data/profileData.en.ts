@@ -23,17 +23,18 @@ export const skillsDataEN: HardSkill[] = [
 ];
 
 export const softSkillsDataEN: SoftSkill[] = [
-  { id: 'analytical-creative', label: 'Analytical and creative thinking' },
-  { id: 'autonomy', label: 'Autonomy' },
-  { id: 'organization', label: 'Sense of organization' },
-  { id: 'adaptability', label: 'Adaptability' },
-  { id: 'teamwork', label: 'Teamwork' },
-  { id: 'curiosity', label: 'Curiosity and eagerness to learn' },
-  { id: 'problem-anticipation', label: 'Problem anticipation' },
-  { id: 'sociability', label: 'Sociability' },
-  { id: 'methodical', label: 'Methodical and detail-oriented' },
-  { id: 'scientific-culture', label: 'Scientific background' },
-  { id: 'multicultural', label: 'Multicultural experiences' },
+  { id: 'analytical-creative', label: 'Analytical and creative thinking', long: true },
+  { id: 'autonomy', label: 'Autonomy', long: false },
+  { id: 'organization', label: 'Sense of organization', long: false },
+  { id: 'adaptability', label: 'Adaptability', long: false },
+  { id: 'teamwork', label: 'Teamwork', long: false },
+  { id: 'curiosity', label: 'Curiosity', long: false },
+  { id: 'problem-anticipation', label: 'Problem anticipation', long: false },
+  { id: 'sociability', label: 'Sociability', long: false },
+  { id: 'methodical', label: 'Methodical', long: false },
+  { id: 'detail-oriented', label: 'Detail-oriented', long: false },
+  { id: 'scientific-culture', label: 'Scientific background', long: false },
+  { id: 'multicultural', label: 'Multicultural experiences', long: true },
 ];
 
 export const languagesDataEN: LanguageLevel[] = [

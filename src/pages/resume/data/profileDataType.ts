@@ -13,6 +13,7 @@ export interface SkillsProps {
 export interface SoftSkill {
   id: string;
   label: string;
+  long: boolean;
 }
 
 export interface LanguageLevel {

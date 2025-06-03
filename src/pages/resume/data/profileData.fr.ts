@@ -22,17 +22,18 @@ export const skillsDataFR: HardSkill[] = [
 ];
 
 export const softSkillsDataFR: SoftSkill[] = [
-  { id: 'analytical-creative', label: 'Pensée analytique et créative' },
-  { id: 'autonomy', label: 'Autonomie' },
-  { id: 'organization', label: 'Sens de l’organisation' },
-  { id: 'adaptability', label: 'Capacité d’adaptation' },
-  { id: 'teamwork', label: 'Travail en équipe' },
-  { id: 'curiosity', label: 'Curiosité et soif d’apprentissage' },
-  { id: 'problem-anticipation', label: 'Anticipation des problèmes' },
-  { id: 'sociability', label: 'Sociabilité' },
-  { id: 'methodical', label: 'Méthodique et sens du détail' },
-  { id: 'scientific-culture', label: 'Culture scientifique' },
-  { id: 'multicultural', label: 'Expériences multiculturelles' },
+  { id: 'analytical-creative', label: 'Pensée analytique et créative', long: true },
+  { id: 'autonomy', label: 'Autonomie', long: false },
+  { id: 'organization', label: 'Sens de l’organisation', long: false },
+  { id: 'adaptability', label: 'Capacité d’adaptation', long: false },
+  { id: 'teamwork', label: 'Travail en équipe', long: false },
+  { id: 'curiosity', label: 'Curiosité', long: false },
+  { id: 'problem-anticipation', label: 'Anticipation des problèmes', long: true },
+  { id: 'sociability', label: 'Sociabilité', long: false },
+  { id: 'methodical', label: 'Méthodique', long: false },
+  { id: 'detail-oriented', label: 'Sens du détail', long: false },
+  { id: 'scientific-culture', label: 'Culture scientifique', long: false },
+  { id: 'multicultural', label: 'Expériences multiculturelles', long: true },
 ];
 
 export const languagesDataFR: LanguageLevel[] = [

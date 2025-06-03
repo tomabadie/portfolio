@@ -19,15 +19,12 @@ const WorkExperiences = () => {
           return (
             <li key={item.id} className="relative -ms-1.5 flex items-start gap-4">
               <span className="border-accent-light dark:border-accent-dark bg-global-secondary transition-theme size-3 shrink-0 rounded-full border-2" />
-
               <div className="-mt-2">
-                <time className="text-secondary text-xs/none font-medium">
+                <time className="text-secondary transition-theme text-xs/none font-medium">
                   {startYear === endYear ? endYear : `${startYear} – ${endYear}`} - {item.duration}
                 </time>
-
-                <h3 className="text-lg font-bold">{item.company}</h3>
-
-                <p className="text-secondary mt-0.5 text-sm">{item.position}</p>
+                <h3 className="transition-theme text-lg font-bold">{item.company}</h3>
+                <p className="text-secondary transition-theme mt-0.5 text-sm">{item.position}</p>
               </div>
             </li>
           );

@@ -11,10 +11,13 @@ const SoftSkills = () => {
       <h3 className="border-b-accent-light dark:border-b-accent-dark mb-2 w-fit border-b-2 font-bold">
         {language === 'en' ? 'Soft Skills' : 'Personnalité'}
       </h3>
-      <ul className="flex flex-row flex-wrap justify-between">
+      <ul className="grid grid-flow-row auto-rows-auto grid-cols-3 justify-between gap-2">
         {softSkillsList.map((skill) => {
           return (
-            <li key={skill.id} className="border-primary min-w-28 rounded-sm border px-1">
+            <li
+              key={skill.id}
+              className={`border-primary w-fit rounded-sm border px-1 ${skill.long ? 'row-span-2' : 'row-span-3'} justify-self-center`}
+            >
               {skill.label}
             </li>
           );
