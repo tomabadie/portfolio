@@ -1,3 +1,5 @@
+import type { Technology } from './educationDataType';
+
 export interface ExperienceProps {
   id: string;
   type:
@@ -19,12 +21,6 @@ export interface ExperienceProps {
   context?: string;
   description: string;
   achievements: string[];
-  technologies?: {
-    languages?: string[];
-    frameworks?: string[];
-    libraries?: string[];
-    databases?: string[];
-    tools?: string[];
-  };
+  stack?: Technology[];
   keywords: string[];
 }

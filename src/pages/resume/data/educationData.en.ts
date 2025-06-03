@@ -34,7 +34,7 @@ export const educationDataEN: EducationProps[] = [
       },
       {
         name: 'Tools',
-        content: ['Git', 'GitHub', 'Figma', 'Trello'],
+        content: ['Git', 'GitHub', 'Excalidraw', 'Figma', 'Trello'],
       },
     ],
     keywords: [

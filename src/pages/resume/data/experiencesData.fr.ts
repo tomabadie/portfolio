@@ -22,12 +22,24 @@ export const experiencesDataFR: ExperienceProps[] = [
       'Utilisation de Tailwind sur les projets personnels',
       'Gestion de projets en groupe avec GitHub et méthodologie agile',
     ],
-    technologies: {
-      languages: ['HTML', 'CSS', 'JavaScript', 'TypeScript'],
-      frameworks: ['React', 'Express', 'Tailwind CSS'],
-      databases: ['MySQL'],
-      tools: ['Git', 'GitHub', 'Trello', 'Excalidraw', 'Figma'],
-    },
+    stack: [
+      {
+        name: 'Languages',
+        content: ['HTML', 'CSS', 'JavaScript', 'TypeScript'],
+      },
+      {
+        name: 'Frameworks',
+        content: ['React', 'Express', 'Tailwind CSS'],
+      },
+      {
+        name: 'Databases',
+        content: ['MySQL'],
+      },
+      {
+        name: 'Outils',
+        content: ['Git', 'GitHub', 'Excalidraw', 'Figma', 'Trello'],
+      },
+    ],
     keywords: [
       'développement web',
       'front end',
@@ -120,9 +132,12 @@ export const experiencesDataFR: ExperienceProps[] = [
       'Mise en place de processus de contrôle qualité',
       'Prospection commerciale et développement de partenariats',
     ],
-    technologies: {
-      tools: ['AutoCAD', 'Rhinoceros', 'Gantt'],
-    },
+    stack: [
+      {
+        name: 'Outils',
+        content: ['AutoCAD', 'Rhinoceros', 'Catia', 'Gantt'],
+      },
+    ],
     keywords: [
       'chef de projet',
       'ingénieur',
@@ -156,9 +171,12 @@ export const experiencesDataFR: ExperienceProps[] = [
       'Contrôle qualité et résolution de problèmes techniques sur les prototypes',
       `Etude mécanique d'un composite bio-polymère en vue d'une utilisation en production`,
     ],
-    technologies: {
-      tools: ['AutoCAD', 'Rhinoceros', 'Catia'],
-    },
+    stack: [
+      {
+        name: 'Outils',
+        content: ['AutoCAD', 'Rhinoceros', 'Catia', 'Gantt'],
+      },
+    ],
     keywords: [
       'ingénieur',
       'Sri Lanka',

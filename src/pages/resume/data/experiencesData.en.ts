@@ -22,12 +22,24 @@ export const experiencesDataEN: ExperienceProps[] = [
       'Used Tailwind CSS for personal projects',
       'Managed group projects with Git/GitHub and agile methodology',
     ],
-    technologies: {
-      languages: ['HTML', 'CSS', 'JavaScript', 'TypeScript'],
-      frameworks: ['React', 'Express', 'Tailwind CSS'],
-      databases: ['MySQL'],
-      tools: ['Git', 'GitHub', 'Trello', 'Excalidraw', 'Figma'],
-    },
+    stack: [
+      {
+        name: 'Languages',
+        content: ['HTML', 'CSS', 'JavaScript', 'TypeScript'],
+      },
+      {
+        name: 'Frameworks',
+        content: ['React', 'Express', 'Tailwind CSS'],
+      },
+      {
+        name: 'Databases',
+        content: ['MySQL'],
+      },
+      {
+        name: 'Tools',
+        content: ['Git', 'GitHub', 'Excalidraw', 'Figma', 'Trello'],
+      },
+    ],
     keywords: [
       'web development',
       'front-end',
@@ -120,9 +132,12 @@ export const experiencesDataEN: ExperienceProps[] = [
       'Implemented quality control processes',
       'Conducted commercial prospection and developed partnerships',
     ],
-    technologies: {
-      tools: ['AutoCAD', 'Rhinoceros', 'Gantt'],
-    },
+    stack: [
+      {
+        name: 'Tools',
+        content: ['AutoCAD', 'Rhinoceros', 'Catia', 'Gantt'],
+      },
+    ],
     keywords: [
       'project management',
       'engineering',
@@ -156,9 +171,12 @@ export const experiencesDataEN: ExperienceProps[] = [
       'Performed quality control and resolved technical issues on prototypes',
       'Studied a bio-polymer composite for potential production use',
     ],
-    technologies: {
-      tools: ['AutoCAD', 'Rhinoceros', 'Catia'],
-    },
+    stack: [
+      {
+        name: 'Tools',
+        content: ['AutoCAD', 'Rhinoceros', 'Catia', 'Gantt'],
+      },
+    ],
     keywords: [
       'engineering',
       'Sri Lanka',

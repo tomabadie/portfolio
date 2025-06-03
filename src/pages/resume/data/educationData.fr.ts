@@ -34,7 +34,7 @@ export const educationDataFR: EducationProps[] = [
       },
       {
         name: 'Outils',
-        content: ['Git', 'GitHub', 'Figma', 'Trello'],
+        content: ['Git', 'GitHub', 'Excalidraw', 'Figma', 'Trello'],
       },
     ],
 
