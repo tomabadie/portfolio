@@ -1,3 +1,8 @@
+export interface Technology {
+  name: string;
+  content: string[];
+}
+
 export interface EducationProps {
   id: string;
   type: 'formation' | 'training';
@@ -11,12 +16,6 @@ export interface EducationProps {
   context?: string;
   description: string;
   achievements: string[];
-  technologies?: {
-    languages?: string[];
-    frameworks?: string[];
-    libraries?: string[];
-    databases?: string[];
-    tools?: string[];
-  };
+  technologies?: Technology[];
   keywords: string[];
 }

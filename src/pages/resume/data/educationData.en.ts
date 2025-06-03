@@ -19,12 +19,24 @@ export const educationDataEN: EducationProps[] = [
       'Used React, TypeScript, and Tailwind',
       'Developed REST APIs with Express and SQL databases',
     ],
-    technologies: {
-      languages: ['HTML', 'CSS', 'JavaScript', 'TypeScript'],
-      frameworks: ['React', 'Express', 'Tailwind CSS'],
-      databases: ['MySQL'],
-      tools: ['Git', 'GitHub', 'Figma', 'Trello'],
-    },
+    technologies: [
+      {
+        name: 'Languages',
+        content: ['HTML', 'CSS', 'JavaScript', 'TypeScript'],
+      },
+      {
+        name: 'Frameworks',
+        content: ['React', 'Express', 'Tailwind CSS'],
+      },
+      {
+        name: 'Databases',
+        content: ['MySQL'],
+      },
+      {
+        name: 'Tools',
+        content: ['Git', 'GitHub', 'Figma', 'Trello'],
+      },
+    ],
     keywords: [
       'web development',
       'front end',
@@ -48,7 +60,7 @@ export const educationDataEN: EducationProps[] = [
     context:
       'A reflective process to assess skills and career goals, leading to a professional transition into web development.',
     description:
-      'Exploration of motivations, transferable skills, learning needs, and compatibility with digital careers. Result: a clear, structured professional project.',
+      'Exploration of motivations, transferable skills, learning needs, and compatibility with digital careers. Result: A clear, structured professional project.',
     achievements: [
       'Clarification of career goals',
       'Evaluation of transferable skills',
@@ -75,9 +87,12 @@ export const educationDataEN: EducationProps[] = [
       'Team-based applied projects in collaboration with industry',
       'Internships in industrial environments',
     ],
-    technologies: {
-      tools: ['Matlab', 'SolidWorks', 'Ansys'],
-    },
+    technologies: [
+      {
+        name: 'Tools',
+        content: ['Matlab', 'SolidWorks', 'Ansys'],
+      },
+    ],
     keywords: [
       'materials',
       'engineering',

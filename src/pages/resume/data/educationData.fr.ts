@@ -19,12 +19,25 @@ export const educationDataFR: EducationProps[] = [
       'Utilisation de React, TypeScript, Tailwind',
       'Développement d’API REST avec Express et bases de données SQL',
     ],
-    technologies: {
-      languages: ['HTML', 'CSS', 'JavaScript', 'TypeScript'],
-      frameworks: ['React', 'Express', 'Tailwind CSS'],
-      databases: ['MySQL'],
-      tools: ['Git', 'GitHub', 'Figma', 'Trello'],
-    },
+    technologies: [
+      {
+        name: 'Languages',
+        content: ['HTML', 'CSS', 'JavaScript', 'TypeScript'],
+      },
+      {
+        name: 'Frameworks',
+        content: ['React', 'Express', 'Tailwind CSS'],
+      },
+      {
+        name: 'Databases',
+        content: ['MySQL'],
+      },
+      {
+        name: 'Outils',
+        content: ['Git', 'GitHub', 'Figma', 'Trello'],
+      },
+    ],
+
     keywords: [
       'développement web',
       'front end',
@@ -75,9 +88,12 @@ export const educationDataFR: EducationProps[] = [
       'Projets d’application en lien avec l’industrie',
       'Stages dans un environnement industriel',
     ],
-    technologies: {
-      tools: ['Matlab', 'SolidWorks', 'Ansys'],
-    },
+    technologies: [
+      {
+        name: 'Outils',
+        content: ['Matlab', 'SolidWorks', 'Ansys'],
+      },
+    ],
     keywords: [
       'matériaux',
       'ingénieur',
