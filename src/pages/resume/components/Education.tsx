@@ -1,5 +1,14 @@
-import { Description, Dialog, DialogPanel, DialogTitle } from '@headlessui/react';
+import {
+  Description,
+  Dialog,
+  DialogPanel,
+  DialogTitle,
+  Disclosure,
+  DisclosureButton,
+  DisclosurePanel,
+} from '@headlessui/react';
 import { useState } from 'react';
+import { ChevronDownIcon, CloseIcon } from '../../../components/ui/Icons';
 import { useLanguage } from '../../../contexts/LanguageContext';
 import { educationDataEN } from '../data/educationData.en';
 import { educationDataFR } from '../data/educationData.fr';
@@ -43,57 +52,107 @@ const Education = () => {
       </ul>
       <Dialog open={isOpen} onClose={() => setIsOpen(false)} className="relative z-50">
         <div className="fixed inset-0 flex w-screen items-center justify-center p-4">
-          <DialogPanel className="border-primary bg-global-primary max-w-lg space-y-4 rounded-2xl border p-12">
-            <DialogTitle className="text-primary font-bold">{focusedItem?.company}</DialogTitle>
-            <Description className={'text-primary'}>{focusedItem?.position}</Description>
+          <DialogPanel className="border-primary bg-global-secondary mr-[calc(theme(spacing.4)-env(safe-area-inset-right))] max-w-4xl space-y-4 overflow-y-auto rounded-2xl border-3 p-12">
+            <div className="flex items-center justify-between">
+              <a href={focusedItem?.link} target="_blank" rel="noopener noreferrer">
+                <DialogTitle className="text-primary transition-theme border-accent-light dark:border-accent-dark rounded-sm border-2 p-2 font-bold uppercase hover:shadow-[0_0_12px_4px_var(--color-btn-primary-hover-light)] dark:hover:shadow-[0_0_12px_4px_var(--color-btn-primary-hover-dark)]">
+                  {focusedItem?.company}
+                </DialogTitle>
+              </a>
+              <button type="button" onClick={() => setIsOpen(false)}>
+                <CloseIcon className="border-primary dark:stroke-primary-dark stroke-primary-light transition-theme h-10 w-10 cursor-pointer rounded-full border shadow-[0_0_12px_4px_var(--color-btn-primary-hover-light)] dark:shadow-[0_0_12px_4px_var(--color-btn-primary-hover-dark)]" />
+              </button>
+            </div>
+            <Description className={'text-primary'}>
+              {focusedItem?.position} - {focusedItem?.location} - {focusedItem?.duration}
+            </Description>
+            <hr className="text-primary" />
+
+            {/* Description */}
+
             <p className="text-primary">{focusedItem?.description}</p>
-            <h4 className="text-primary dark:border-b-accent-dark border-b-accent-light w-fit border-b">
-              Technologies
-            </h4>
-            <ul className="text-secondary">
-              {focusedItem?.achievements.map((achievement) => {
-                return <li key={achievement}>{achievement}</li>;
-              })}
-            </ul>
 
-            <h4 className="text-primary dark:border-b-accent-dark border-b-accent-light w-fit border-b">
-              Technologies
-            </h4>
-            <div className="text-secondary flex justify-between">
-              <ul>
-                <h4>{language === 'en' ? 'Languages' : 'Languages'}</h4>
-                {focusedItem?.technologies?.languages?.map((language) => {
-                  return <li key={language}>{language}</li>;
-                })}
-              </ul>
-              <ul>
-                <h4>{language === 'en' ? 'Frameworks' : 'Frameworks'}</h4>
-                {focusedItem?.technologies?.frameworks?.map((framework) => {
-                  return <li key={framework}>{framework}</li>;
-                })}
-              </ul>
-              <ul>
-                <h4>{language === 'en' ? 'Databases' : 'Base de données'}</h4>
-                {focusedItem?.technologies?.databases?.map((database) => {
-                  return <li key={database}>{database}</li>;
-                })}
-              </ul>
-              <ul>
-                <h4>{language === 'en' ? 'Tools' : 'Outils'}</h4>
-                {focusedItem?.technologies?.tools?.map((tool) => {
-                  return <li key={tool}>{tool}</li>;
-                })}
-              </ul>
-            </div>
+            {/* Achievements */}
 
-            <div className="flex gap-4">
-              <button type="button" onClick={() => setIsOpen(false)}>
-                Cancel
-              </button>
-              <button type="button" onClick={() => setIsOpen(false)}>
-                Deactivate
-              </button>
-            </div>
+            <Disclosure>
+              {({ open }) => (
+                <>
+                  <DisclosureButton className={'flex cursor-pointer items-center gap-2'}>
+                    <h3 className="text-primary transition-theme dark:border-b-accent-dark border-b-accent-light w-fit border-b-2">
+                      {language === 'en' ? 'Achievements' : 'Réalisations'}
+                    </h3>
+                    <ChevronDownIcon
+                      isOpen={open}
+                      className="dark:stroke-primary-dark stroke-primary-light h-5 w-5"
+                    />
+                  </DisclosureButton>
+                  <DisclosurePanel>
+                    <ul className="text-secondary list-inside list-disc">
+                      {focusedItem?.achievements.map((achievement) => {
+                        return <li key={achievement}>{achievement}</li>;
+                      })}
+                    </ul>
+                  </DisclosurePanel>
+                </>
+              )}
+            </Disclosure>
+
+            {/* Stack */}
+
+            <Disclosure>
+              {({ open }) => (
+                <>
+                  <DisclosureButton className={'flex cursor-pointer items-center gap-2'}>
+                    <h3 className="text-primary dark:border-b-accent-dark transition-theme border-b-accent-light w-fit border-b-2">
+                      Stack
+                    </h3>
+                    <ChevronDownIcon
+                      isOpen={open}
+                      className="dark:stroke-primary-dark stroke-primary-light h-5 w-5"
+                    />
+                  </DisclosureButton>
+                  <DisclosurePanel>
+                    <div className="text-secondary flex justify-between">
+                      {focusedItem?.stack?.map((technology) => {
+                        return (
+                          <ul key={technology.name}>
+                            <h4>{technology.name}</h4>
+                            {technology?.content.map((item) => {
+                              return (
+                                <li key={item} className="list-inside list-disc text-sm">
+                                  {item}
+                                </li>
+                              );
+                            })}
+                          </ul>
+                        );
+                      })}
+                    </div>
+                  </DisclosurePanel>
+                </>
+              )}
+            </Disclosure>
+
+            {/* Context */}
+
+            <Disclosure>
+              {({ open }) => (
+                <>
+                  <DisclosureButton className={'flex cursor-pointer items-center gap-2'}>
+                    <h3 className="text-primary dark:border-b-accent-dark transition-theme border-b-accent-light w-fit border-b-2">
+                      {language === 'en' ? 'Context' : 'Contexte'}
+                    </h3>
+                    <ChevronDownIcon
+                      isOpen={open}
+                      className="dark:stroke-primary-dark stroke-primary-light h-5 w-5"
+                    />
+                  </DisclosureButton>
+                  <DisclosurePanel>
+                    <p className="text-secondary">{focusedItem?.context}</p>
+                  </DisclosurePanel>
+                </>
+              )}
+            </Disclosure>
           </DialogPanel>
         </div>
       </Dialog>

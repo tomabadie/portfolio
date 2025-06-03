@@ -19,7 +19,7 @@ export const educationDataEN: EducationProps[] = [
       'Used React, TypeScript, and Tailwind',
       'Developed REST APIs with Express and SQL databases',
     ],
-    technologies: [
+    stack: [
       {
         name: 'Languages',
         content: ['HTML', 'CSS', 'JavaScript', 'TypeScript'],
@@ -87,7 +87,7 @@ export const educationDataEN: EducationProps[] = [
       'Team-based applied projects in collaboration with industry',
       'Internships in industrial environments',
     ],
-    technologies: [
+    stack: [
       {
         name: 'Tools',
         content: ['Matlab', 'SolidWorks', 'Ansys'],

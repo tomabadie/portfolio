@@ -16,6 +16,6 @@ export interface EducationProps {
   context?: string;
   description: string;
   achievements: string[];
-  technologies?: Technology[];
+  stack?: Technology[];
   keywords: string[];
 }

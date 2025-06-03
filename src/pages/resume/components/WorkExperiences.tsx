@@ -7,7 +7,7 @@ const WorkExperiences = () => {
   const experiencesList = language === 'en' ? experiencesDataEN : experiencesDataFR;
 
   return (
-    <div className="border-primary transition-theme rounded-lg border px-2 py-1">
+    <section className="border-primary transition-theme rounded-lg border px-2 py-1">
       <h3 className="border-b-accent-light dark:border-b-accent-dark transition-theme mb-2 w-fit border-b-2 font-bold">
         {language === 'en' ? 'Work experiences' : 'Expériences'}
       </h3>
@@ -23,14 +23,16 @@ const WorkExperiences = () => {
                 <time className="text-secondary transition-theme text-xs/none font-medium">
                   {startYear === endYear ? endYear : `${startYear} – ${endYear}`} - {item.duration}
                 </time>
-                <h3 className="transition-theme text-lg font-bold">{item.company}</h3>
+                <h3 className="hover:text-accent-light dark:hover:text-accent-dark transition-theme cursor-pointer text-lg font-bold">
+                  {item.company}
+                </h3>
                 <p className="text-secondary transition-theme mt-0.5 text-sm">{item.position}</p>
               </div>
             </li>
           );
         })}
       </ul>
-    </div>
+    </section>
   );
 };
 
