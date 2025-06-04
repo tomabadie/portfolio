@@ -8,7 +8,8 @@ export const educationDataEN: EducationProps[] = [
     link: 'https://www.wildcodeschool.com/',
     position: 'Full-Stack Web Developer',
     location: 'Remote',
-    endDate: '08/2025',
+    startDate: '2025/01',
+    endDate: '2025/08',
     duration: '5 months',
     context:
       'Hybrid training combining self-paced learning on Codecademy and an intensive bootcamp at Wild Code School.',
@@ -56,7 +57,8 @@ export const educationDataEN: EducationProps[] = [
     link: '',
     position: 'Career shift to web development',
     location: 'France',
-    endDate: '2024',
+    startDate: '2024/06',
+    endDate: '2024/06',
     context:
       'A reflective process to assess skills and career goals, leading to a professional transition into web development.',
     description:
@@ -75,9 +77,9 @@ export const educationDataEN: EducationProps[] = [
     link: 'https://www.polytech-grenoble.fr/',
     position: 'Engineering Degree in Materials Science',
     location: 'Grenoble, France',
-    startDate: '',
-    endDate: '2013',
-    duration: '',
+    startDate: '2013/09',
+    endDate: '2013/09',
+    duration: '5 years',
     context:
       'Materials specialization at Polytech Grenoble - INP, UGA, training generalist engineers with a specialization in materials science, with the ability to work on all types of materials and their manufacturing processes.',
     description:

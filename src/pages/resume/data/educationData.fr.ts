@@ -8,7 +8,8 @@ export const educationDataFR: EducationProps[] = [
     link: 'https://www.wildcodeschool.com/',
     position: 'Développeur full-stack',
     location: 'Remote',
-    endDate: '08/2025',
+    startDate: '2025/01',
+    endDate: '2025/08',
     duration: '5 mois',
     context:
       'Parcours hybride de formation combinant autoformation sur Codecademy et bootcamp intensif à la Wild Code School.',
@@ -57,7 +58,8 @@ export const educationDataFR: EducationProps[] = [
     link: '',
     position: 'Réorientation vers le développement web',
     location: 'France',
-    endDate: '2024',
+    startDate: '2024/06',
+    endDate: '2024/06',
     context:
       'Démarche d’analyse de compétences et d’objectifs professionnels ayant conduit à une reconversion vers les métiers du développement web.',
     description:
@@ -76,9 +78,9 @@ export const educationDataFR: EducationProps[] = [
     link: 'https://www.polytech-grenoble.fr/',
     position: 'Diplôme d’ingénieur en Matériaux',
     location: 'Grenoble, France',
-    startDate: '',
-    endDate: '2013',
-    duration: '',
+    startDate: '2013/09',
+    endDate: '2013/09',
+    duration: '5 ans',
     context:
       'Spécialité Matériaux de Polytech Grenoble - INP, UGA, formant des ingénieurs généralistes en science et génie des matériaux, capables d’appréhender les différentes familles de matériaux et leurs procédés de mise en œuvre.',
     description:

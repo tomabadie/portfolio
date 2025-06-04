@@ -16,7 +16,7 @@ export interface ExperienceProps {
   position: string;
   location: string;
   startDate: string;
-  endDate?: string;
+  endDate: string;
   duration?: string;
   context?: string;
   description: string;

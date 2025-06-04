@@ -31,12 +31,18 @@ const Education = () => {
       </h3>
       <ul className="before:bg-border-primary-light dark:before:bg-border-primary-dark transition-theme relative space-y-8 pl-1 before:absolute before:-ml-px before:h-full before:w-0.5 before:rounded-full">
         {educationList.map((item) => {
+          const startYear = item.startDate.split('/')[0];
+          const endYear = item.endDate ? item.endDate.split('/')[0] : startYear;
+
           return (
             <li key={item.id} className="relative -ms-1.5 flex items-start gap-4">
               <span className="border-accent-light dark:border-accent-dark bg-global-secondary transition-theme size-3 shrink-0 rounded-full border-2" />
 
               <div className="-mt-2">
-                <time className="text-secondary text-xs/none font-medium">{item.endDate}</time>
+                <time className="text-secondary text-xs/none font-medium">
+                  {startYear === endYear ? endYear : `${startYear} - ${endYear}`}{' '}
+                  {item.duration && ` - ${item.duration}`}
+                </time>
 
                 <button type="button" className="block" onClick={() => handleClick(item)}>
                   <h3 className="hover:text-accent-light dark:hover:text-accent-dark transition-theme cursor-pointer text-lg font-bold">
@@ -52,7 +58,7 @@ const Education = () => {
       </ul>
       <Dialog open={isOpen} onClose={() => setIsOpen(false)} className="relative z-50">
         <div className="fixed inset-0 flex w-screen items-center justify-center p-4">
-          <DialogPanel className="border-primary bg-global-secondary mr-[calc(theme(spacing.4)-env(safe-area-inset-right))] max-w-4xl space-y-4 overflow-y-auto rounded-2xl border-3 p-12">
+          <DialogPanel className="border-primary bg-global-secondary mr-[calc(theme(spacing.4)-env(safe-area-inset-right))] max-h-[80dvh] max-w-4xl space-y-4 overflow-y-auto rounded-2xl border-3 p-12">
             <div className="flex items-center justify-between">
               <a href={focusedItem?.link} target="_blank" rel="noopener noreferrer">
                 <DialogTitle className="text-primary transition-theme border-accent-light dark:border-accent-dark rounded-sm border-2 p-2 font-bold uppercase hover:shadow-[0_0_12px_4px_var(--color-btn-primary-hover-light)] dark:hover:shadow-[0_0_12px_4px_var(--color-btn-primary-hover-dark)]">
@@ -63,14 +69,20 @@ const Education = () => {
                 <CloseIcon className="border-primary dark:stroke-primary-dark stroke-primary-light transition-theme h-10 w-10 cursor-pointer rounded-full border shadow-[0_0_12px_4px_var(--color-btn-primary-hover-light)] dark:shadow-[0_0_12px_4px_var(--color-btn-primary-hover-dark)]" />
               </button>
             </div>
-            <Description className={'text-primary'}>
-              {focusedItem?.position} - {focusedItem?.location} - {focusedItem?.duration}
-            </Description>
+
+            {/* banner */}
+            <div className="text-primary grid grid-cols-1 gap-2 md:grid-cols-2">
+              <span className="">{focusedItem?.position}</span>
+              <span className="" />
+              <span className="">{focusedItem?.duration}</span>
+              <span className="">{focusedItem?.location}</span>
+            </div>
+
             <hr className="text-primary" />
 
             {/* Description */}
 
-            <p className="text-primary">{focusedItem?.description}</p>
+            <Description className={'text-primary'}> {focusedItem?.description}</Description>
 
             {/* Achievements */}
 

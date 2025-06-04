@@ -10,8 +10,8 @@ export interface EducationProps {
   link: string;
   position: string;
   location: string;
-  startDate?: string;
-  endDate?: string;
+  startDate: string;
+  endDate: string;
   duration?: string;
   context?: string;
   description: string;
