@@ -55,7 +55,7 @@ export const educationDataFR: EducationProps[] = [
     id: 'bilan-competences-2024',
     type: 'formation',
     company: 'Bilan de compétences',
-    link: '',
+    link: 'https://www.evolutis-landes.fr/',
     position: 'Réorientation vers le développement web',
     location: 'France',
     startDate: '2024/06',

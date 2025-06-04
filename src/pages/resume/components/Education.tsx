@@ -8,7 +8,14 @@ import {
   DisclosurePanel,
 } from '@headlessui/react';
 import { useState } from 'react';
-import { ChevronDownIcon, CloseIcon } from '../../../components/ui/Icons';
+import {
+  ChevronDownIcon,
+  CloseIcon,
+  CompanyIcon,
+  DurationIcon,
+  LocationIcon,
+  SchoolIcon,
+} from '../../../components/ui/Icons';
 import { useLanguage } from '../../../contexts/LanguageContext';
 import { educationDataEN } from '../data/educationData.en';
 import { educationDataFR } from '../data/educationData.fr';
@@ -71,11 +78,25 @@ const Education = () => {
             </div>
 
             {/* banner */}
+
             <div className="text-primary grid grid-cols-1 gap-2 md:grid-cols-2">
-              <span className="">{focusedItem?.position}</span>
-              <span className="" />
-              <span className="">{focusedItem?.duration}</span>
-              <span className="">{focusedItem?.location}</span>
+              <div className="flex gap-2">
+                {focusedItem?.type === 'formation' || focusedItem?.type === 'training' ? (
+                  <SchoolIcon className="h-6 w-6 stroke-current" />
+                ) : (
+                  <CompanyIcon className="h-6 w-6 stroke-current" />
+                )}
+                <span className="font-bold">{focusedItem?.position}</span>
+              </div>
+              <span className="hidden sm:block" />
+              <div className="flex gap-2">
+                <DurationIcon className="h-6 w-6 stroke-current" />
+                <span>{focusedItem?.duration || '/'}</span>
+              </div>
+              <div className="flex gap-2">
+                <LocationIcon className="h-6 w-6 stroke-current" />
+                <span>{focusedItem?.location}</span>
+              </div>
             </div>
 
             <hr className="text-primary" />

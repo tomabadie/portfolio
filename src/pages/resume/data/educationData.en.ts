@@ -54,7 +54,7 @@ export const educationDataEN: EducationProps[] = [
     id: 'bilan-competences-2024',
     type: 'training',
     company: 'Career Assessment',
-    link: '',
+    link: 'https://www.evolutis-landes.fr/',
     position: 'Career shift to web development',
     location: 'France',
     startDate: '2024/06',
