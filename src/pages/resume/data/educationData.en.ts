@@ -1,6 +1,6 @@
-import type { EducationProps } from './educationDataType';
+import type { TimelineItem } from './timelineDataType';
 
-export const educationDataEN: EducationProps[] = [
+export const educationDataEN: TimelineItem[] = [
   {
     id: 'codecademy-wcs-2025',
     type: 'training',
@@ -92,7 +92,7 @@ export const educationDataEN: EducationProps[] = [
     stack: [
       {
         name: 'Tools',
-        content: ['Matlab', 'SolidWorks', 'Ansys'],
+        content: ['Matlab', 'SolidWorks', 'Catia', 'Ansys'],
       },
     ],
     keywords: [

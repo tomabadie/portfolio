@@ -1,4 +1,4 @@
-export interface Technology {
+/* export interface Technology {
   name: string;
   content: string[];
 }
@@ -19,3 +19,4 @@ export interface EducationProps {
   stack?: Technology[];
   keywords: string[];
 }
+ */

@@ -1,6 +1,9 @@
-/* import type { Technology } from './educationDataType';
+export interface Technology {
+  name: string;
+  content: string[];
+}
 
-export interface ExperienceProps {
+export interface TimelineItem {
   id: string;
   type:
     | 'emploi'
@@ -24,4 +27,13 @@ export interface ExperienceProps {
   stack?: Technology[];
   keywords: string[];
 }
- */
+
+export interface TimelineProps {
+  timelineList: TimelineItem[];
+}
+
+export interface TimelineDialogProps {
+  isOpen: boolean;
+  setIsOpen: React.Dispatch<React.SetStateAction<boolean>>;
+  focusedItem: TimelineItem | null;
+}

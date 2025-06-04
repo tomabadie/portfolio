@@ -1,6 +1,6 @@
-import type { ExperienceProps } from './experiencesDataType';
+import type { TimelineItem } from './timelineDataType';
 
-export const experiencesDataFR: ExperienceProps[] = [
+export const experiencesDataFR: TimelineItem[] = [
   {
     id: 'wildcodeschool-2025',
     type: 'formation',
