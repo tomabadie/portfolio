@@ -2,11 +2,12 @@ import { Disclosure, DisclosureButton, DisclosurePanel } from '@headlessui/react
 import SocialAbout from '../../../components/social/SocialAbout/SocialAbout';
 import { ChevronDownIcon } from '../../../components/ui/Icons';
 import { useLanguage } from '../../../contexts/LanguageContext';
-import type { AboutProps } from '../data/aboutType';
+import { aboutDataEn } from '../data/aboutData.en';
+import { aboutDataFr } from '../data/aboutData.fr';
 
-const About = (aboutData: AboutProps) => {
+const About = () => {
   const { language } = useLanguage();
-  const aboutDataList = aboutData[language];
+  const aboutDataList = language === 'en' ? aboutDataEn : aboutDataFr;
 
   return (
     <div className="flex flex-col items-center gap-4 px-2 sm:flex-row sm:items-start sm:justify-around lg:gap-0 xl:justify-center xl:gap-20">
