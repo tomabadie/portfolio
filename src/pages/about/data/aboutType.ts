@@ -8,8 +8,3 @@ export interface AboutItemProps {
   title: string;
   content: AboutParagraphProps[];
 }
-
-export interface AboutProps {
-  en: AboutItemProps[];
-  fr: AboutItemProps[];
-}
