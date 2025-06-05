@@ -37,3 +37,11 @@ export interface TimelineDialogProps {
   setIsOpen: React.Dispatch<React.SetStateAction<boolean>>;
   focusedItem: TimelineItem | null;
 }
+
+export interface WorkExperiencesProps {
+  className: string;
+}
+
+export interface EducationProps {
+  className: string;
+}

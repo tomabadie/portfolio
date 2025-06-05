@@ -7,6 +7,7 @@ export interface HardSkill {
 }
 
 export interface SkillsProps {
+  className: string;
   visible: boolean;
 }
 
@@ -14,6 +15,10 @@ export interface SoftSkill {
   id: string;
   label: string;
   long: boolean;
+}
+
+export interface SoftSkillsProps {
+  className: string;
 }
 
 export interface LanguageLevel {
@@ -24,5 +29,6 @@ export interface LanguageLevel {
 }
 
 export interface LanguagesProps {
+  className: string;
   visible: boolean;
 }

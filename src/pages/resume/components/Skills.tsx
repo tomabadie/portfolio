@@ -4,16 +4,19 @@ import { skillsDataEN } from '../data/profileData.en';
 import { skillsDataFR } from '../data/profileData.fr';
 import type { SkillsProps } from '../data/profileDataType';
 
-const Skills = forwardRef<HTMLElement, SkillsProps>(({ visible }, ref) => {
+const Skills = forwardRef<HTMLElement, SkillsProps>(({ className, visible }, ref) => {
   const { language } = useLanguage();
   const skillsList = language === 'en' ? skillsDataEN : skillsDataFR;
 
   return (
-    <section ref={ref} className="border-primary transition-theme rounded-lg border px-2 py-1">
-      <h3 className="border-b-accent-light dark:border-b-accent-dark transition-theme mb-2 w-fit border-b-2 font-bold">
+    <section
+      ref={ref}
+      className={`border-primary transition-theme rounded-lg border px-2 py-2 ${className} `}
+    >
+      <h3 className="border-b-accent-light dark:border-b-accent-dark transition-theme mb-4 w-fit border-b-2 font-bold">
         {language === 'en' ? 'Skills' : 'Compétences'}
       </h3>
-      <ul className="flex flex-col">
+      <ul className="grid grid-cols-2 gap-2">
         {skillsList.map((skill) => {
           return (
             <li key={skill.id} className="py-2">
