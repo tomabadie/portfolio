@@ -19,6 +19,7 @@ import Resume from './pages/resume/components/Resume.tsx';
 
 import { aboutDataEn } from './pages/about/data/aboutData.en.ts';
 import { aboutDataFr } from './pages/about/data/aboutData.fr.ts';
+import NotFound from './pages/notFound/NotFound.tsx';
 
 // router creation
 
@@ -27,7 +28,7 @@ const router = createBrowserRouter([
     element: <App />,
     children: [
       {
-        path: '/',
+        path: '/about',
         element: <About en={aboutDataEn} fr={aboutDataFr} />,
       },
       {
@@ -41,6 +42,10 @@ const router = createBrowserRouter([
       {
         path: '/contact',
         element: <Contact />,
+      },
+      {
+        path: '*',
+        element: <NotFound />,
       },
     ],
   },
