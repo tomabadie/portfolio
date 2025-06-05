@@ -12,12 +12,10 @@ import App from './App.tsx';
 import './index.css';
 import About from './pages/about/components/About.tsx';
 import Contact from './pages/contact/components/Contact.tsx';
+import Home from './pages/home/Home.tsx';
+import NotFound from './pages/notFound/NotFound.tsx';
 import Projects from './pages/projects/components/Projects.tsx';
 import Resume from './pages/resume/components/Resume.tsx';
-
-// content
-
-import NotFound from './pages/notFound/NotFound.tsx';
 
 // router creation
 
@@ -25,6 +23,10 @@ const router = createBrowserRouter([
   {
     element: <App />,
     children: [
+      {
+        path: '/',
+        element: <Home />,
+      },
       {
         path: '/about',
         element: <About />,
