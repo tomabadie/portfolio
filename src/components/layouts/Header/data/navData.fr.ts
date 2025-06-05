@@ -4,7 +4,7 @@ export const navDataFr: NavigationItemProps[] = [
   {
     id: 'nav-1',
     name: 'À propos',
-    path: '/',
+    path: '/about',
   },
   {
     id: 'nav-2',
