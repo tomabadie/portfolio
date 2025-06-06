@@ -21,17 +21,17 @@ const Home = () => {
       <h2 className="text-primary transition-theme border border-amber-400 text-5xl uppercase">
         {language === 'en' ? 'Explore' : 'Exploration'}
       </h2>
-      <p>
+      <p className="">
         {language === 'en'
           ? 'A clear view into my developer journey'
           : `Une porte d'entrée vers mon univers de développeur.`}
       </p>
 
-      <fieldset className="flex h-[50dvh] w-[80vw] justify-center gap-3 border border-green-500">
+      <fieldset className="flex h-[50dvh] w-[80vw] items-center justify-center gap-3 border border-green-500">
         {navList.map((navItem, index) => (
           <label
             key={navItem.id}
-            className={`cursor-pointer rounded-lg transition-all duration-300 ease-in-out ${getSizes(index)}`}
+            className={`flex h-full cursor-pointer items-center rounded-lg transition-all duration-300 ease-in-out ${getSizes(index)}`}
             style={{
               backgroundColor: `rgb(${Math.floor(Math.random() * 250)},${Math.floor(Math.random() * 250)},${Math.floor(Math.random() * 250)})`,
             }}
@@ -42,8 +42,11 @@ const Home = () => {
               value={navItem.name}
               checked={selected === navItem}
               onChange={() => setSelected(navItem)}
-              className="h-full w-full cursor-pointer"
+              className="sr-only h-full w-full cursor-pointer"
             />
+            <p className="rotate-270 border bg-purple-500 text-4xl">{navItem.name}</p>
+            <p> {index === navList.indexOf(selected) && navItem.info}</p>{' '}
+            {/* Needs to be improved */}
           </label>
         ))}
       </fieldset>
