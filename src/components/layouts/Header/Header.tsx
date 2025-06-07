@@ -6,8 +6,8 @@ import { Link } from 'react-router';
 import { useLanguage } from '../../../contexts/LanguageContext';
 import DesktopMenu from '../../navigation/DesktopMenu/DesktopMenu';
 import MobileMenu from '../../navigation/MobileMenu/MobileMenu';
-import { navDataEn } from './data/navData.en';
-import { navDataFr } from './data/navData.fr';
+import { navDataEn } from '../../navigation/data/navData.en';
+import { navDataFr } from '../../navigation/data/navData.fr';
 
 const Header = () => {
   const { language } = useLanguage();
