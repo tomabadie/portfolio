@@ -4,6 +4,7 @@ import type { NavigationItemProps } from '../../components/layouts/Header/data/h
 
 import { navDataEn } from '../../components/navigation/data/navData.en';
 import { navDataFr } from '../../components/navigation/data/navData.fr';
+import IconWrapper from '../../components/ui/IconWrapper';
 import { ArrowRightIcon } from '../../components/ui/Icons';
 import { useLanguage } from '../../contexts/LanguageContext';
 
@@ -48,17 +49,21 @@ const Home = () => {
               onClick={() => (selected === navItem ? setSelected(null) : setSelected(navItem))}
               className="sr-only cursor-pointer border"
             />
-            <div className="flex flex-col items-center gap-1">
-              <p className="text-primary text-center text-2xl leading-none tracking-widest uppercase">
+            <div className="flex h-full flex-col items-center justify-between gap-2 p-2">
+              <IconWrapper variant={navItem.iconVariant} wrapperClassName="h-10 w-10">
+                {navItem.iconSvg}
+              </IconWrapper>
+              <p className="text-primary text-center text-3xl leading-none tracking-widest uppercase">
                 {navItem.name.split('').map((char: string, i: number) => (
                   <span key={`${i}-${char}`} className="block">
                     {char === ' ' ? <span className="opacity-0">·</span> : char}
                   </span>
                 ))}
               </p>
+              <span className="opacity-0">·</span>
             </div>
             {selected === navItem && (
-              <div className="flex h-1/3 flex-col justify-between">
+              <div className="flex h-1/3 flex-col justify-between px-4">
                 <p className="text-primary"> {navItem.info}</p>
                 <Link className="ml-auto" to={navItem.path}>
                   <span className="bg-primary absolute h-12 w-12 animate-ping rounded-full opacity-30" />
