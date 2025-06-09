@@ -1,9 +1,11 @@
+import type { Technology } from '../../resume/data/timelineDataType';
+
 export interface ProjectProps {
   id: string;
-  title: string;
+  name: string;
   shortDescription: string;
   detailedDescription: string;
-  technologies: string[];
+  stack: Technology[];
   tags: string[];
   repoLink: string;
   demoLink?: string;

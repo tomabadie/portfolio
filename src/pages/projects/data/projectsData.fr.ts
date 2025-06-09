@@ -3,20 +3,24 @@ import type { ProjectProps } from './projectsDataType';
 export const projectsDataFR: ProjectProps[] = [
   {
     id: 'portfolio',
-    title: 'Portfolio personnel',
+    name: 'Portfolio personnel',
     shortDescription:
       'Site portfolio moderne, responsive et minimaliste pour valoriser mon profil et mes projets.',
     detailedDescription:
       'Développé entièrement en solo, ce site met en avant mes compétences, mon parcours et mes projets. J’y ai intégré Tailwind et organisé une structure de composants réutilisables pour un rendu clair, moderne, scalable et accessible.',
-    technologies: [
-      'HTML',
-      'CSS',
-      'JavaScript',
-      'React',
-      'Tailwind',
-      'ESLint',
-      'Prettier',
-      'Headless UI',
+    stack: [
+      {
+        name: 'Languages',
+        content: ['HTML', 'CSS', 'JavaScript'],
+      },
+      {
+        name: 'Frameworks',
+        content: ['React', 'Tailwind'],
+      },
+      {
+        name: 'Outils',
+        content: ['ESLint', 'Prettier', 'Vite', 'Headless UI'],
+      },
     ],
     tags: ['Portfolio', 'Frontend', 'Tailwind', 'Projet solo'],
     repoLink: 'https://github.com/tomabadie/portfolio',
@@ -35,21 +39,28 @@ export const projectsDataFR: ProjectProps[] = [
   },
   {
     id: 'seazn',
-    title: 'SeazN',
+    name: 'SeazN',
     shortDescription:
       'Application web collaborative de recettes enrichies avec des dimensions nutrition, écologie et coût pour un quotidien plus responsable.',
     detailedDescription:
       'Projet full stack réalisé en équipe de 4 développeurs en formation. Inspiré des sites de recettes classiques, cette application pousse plus loin l’expérience utilisateur grâce à une notation nutritionnelle et environnementale, une gestion de compte multi-niveaux (visiteur, abonné, premium, admin), et des fonctionnalités personnalisées. Le projet est conçu pour être scalable, structuré autour d’un monorepo avec des API externes et une architecture propre.',
-    technologies: [
-      'HTML',
-      'CSS',
-      'JavaScript',
-      'React',
-      'Vite',
-      'Express',
-      'MySQL',
-      'TypeScript',
-      'Biome',
+    stack: [
+      {
+        name: 'Languages',
+        content: ['HTML', 'CSS', 'JavaScript', 'TypeScript'],
+      },
+      {
+        name: 'Frameworks',
+        content: ['React', 'Express'],
+      },
+      {
+        name: 'Databases',
+        content: ['MySQL'],
+      },
+      {
+        name: 'Outils',
+        content: ['Biome', 'Monorepo'],
+      },
     ],
     tags: ['Full Stack', 'Projet en équipe', 'Recettes', 'Responsable', 'Nutrition', 'Écologie'],
     repoLink: '',
@@ -68,12 +79,25 @@ export const projectsDataFR: ProjectProps[] = [
   },
   {
     id: 'codewarts',
-    title: 'CodeWarts',
+    name: 'CodeWarts',
     shortDescription:
       'Prototype ludique de quiz autour de la thématique Harry Potter, réalisé en 48h.',
     detailedDescription:
       "Conçu lors d’un hackathon interne à la promo, CodeWarts est une application fun pour apprendre à coder en répondant à des quiz dans un univers inspiré d’Harry Potter avec des clins d'oeil à nos formateurs. L’équipe a livré un MVP fonctionnel en 48h avec routes et affichage dynamique.",
-    technologies: ['HTML', 'CSS', 'JavaScript', 'React', 'Biome'],
+    stack: [
+      {
+        name: 'Languages',
+        content: ['HTML', 'CSS', 'JavaScript'],
+      },
+      {
+        name: 'Frameworks',
+        content: ['React'],
+      },
+      {
+        name: 'Outils',
+        content: ['Biome', 'Vite'],
+      },
+    ],
     tags: ['Quiz', 'Hackathon', 'Code', 'Harry Potter', 'Fun'],
     repoLink: 'https://github.com/tomabadie/protojam_codewarts',
     demoLink: 'https://protojam-codewarts.vercel.app/',
@@ -93,21 +117,24 @@ export const projectsDataFR: ProjectProps[] = [
   },
   {
     id: 'savor-safari',
-    title: 'Savor Safari',
+    name: 'Savor Safari',
     shortDescription:
       'Tour du monde culinaire avec carte interactive et recettes liées à chaque pays.',
     detailedDescription:
       'Application de groupe réalisée autour d’un concept de cuisine internationale. L’interface est centrée sur une carte interactive permettant d’accéder à des recettes par pays, issues d’une API externe. J’ai pris en charge seul la carte, le responsive, la sélection de pays et la résolution de bugs. J’ai également contribué à l’idée initiale du projet, à la recherche de l’API adaptée et à la co-conception du design global.',
-    technologies: [
-      'HTML',
-      'CSS',
-      'JavaScript',
-      'React',
-      'Biome',
-      'Monorepo',
-      'Fetch API',
-      'React Simple Maps',
-      'ThemealDB',
+    stack: [
+      {
+        name: 'Languages',
+        content: ['HTML', 'CSS', 'JavaScript'],
+      },
+      {
+        name: 'Frameworks',
+        content: ['React'],
+      },
+      {
+        name: 'Outils',
+        content: ['Biome', 'Monorepo', 'Fetch API', 'React Simple Maps', 'ThemealDB', 'Vite'],
+      },
     ],
     tags: ['Recettes', 'API', 'Carte interactive', 'International'],
     repoLink: 'https://github.com/tomabadie/JS-WestDevs-P2-SavorSafari',
@@ -126,12 +153,25 @@ export const projectsDataFR: ProjectProps[] = [
 
   {
     id: 'weather-app',
-    title: 'Weather App',
+    name: 'Weather App',
     shortDescription:
       'Application météo rapide en React à partir d’un fichier CSV de stations météo.',
     detailedDescription:
       "Réalisé en autonomie pendant un atelier libre de 3h, ce projet visait à apprendre à utiliser Fetch. J'ai volontairement choisi de le complexifier avec des données de stations non classiques (CSV) pour générer une interface météo interactive. L’algorithme d’affichage météo est partiellement implémenté.",
-    technologies: ['HTML', 'CSS', 'JavaScript', 'React', 'Vite', 'Biome'],
+    stack: [
+      {
+        name: 'Languages',
+        content: ['HTML', 'CSS', 'JavaScript'],
+      },
+      {
+        name: 'Frameworks',
+        content: ['React'],
+      },
+      {
+        name: 'Outils',
+        content: ['Biome', 'Vite'],
+      },
+    ],
     tags: ['Météo', 'Fetch', 'CSV', 'React', 'Projet rapide'],
     repoLink: 'https://github.com/tomabadie/weather_app',
     contributions: [
@@ -147,11 +187,24 @@ export const projectsDataFR: ProjectProps[] = [
   },
   {
     id: 'solar-system',
-    title: 'Solar System',
+    name: 'Solar System',
     shortDescription:
       'Exploration des planètes et satellites via une API Open Data, travail pratique réalisé en quelques heures par deux développeurs en formation.',
     detailedDescription: `Ce projet consistait à intégrer rapidement une API et structurer l'information dans une interface React claire. Réalisé en binôme en une journée, il met en valeur la structuration et l'affichage dynamique de données.`,
-    technologies: ['HTML', 'CSS', 'JavaScript', 'React', 'Vite', 'Biome', 'Fetch API'],
+    stack: [
+      {
+        name: 'Languages',
+        content: ['HTML', 'CSS', 'JavaScript'],
+      },
+      {
+        name: 'Frameworks',
+        content: ['React'],
+      },
+      {
+        name: 'Outils',
+        content: ['Biome', 'Vite', 'Fetch API'],
+      },
+    ],
     tags: ['Planètes', 'API', 'React', 'Données spatiales'],
     repoLink: 'https://github.com/tomabadie/solar-system',
     contributions: [
@@ -166,12 +219,21 @@ export const projectsDataFR: ProjectProps[] = [
   },
   {
     id: 'click-dev-revamp',
-    title: 'Click dev’ (refonte solo)',
+    name: 'Click dev’ (refonte solo)',
     shortDescription:
       'Un quiz HTML/CSS/JavaScript entièrement fonctionnel, conçu à l’origine en groupe puis refondu en solo pour en améliorer la structure, le design et la propreté du code.',
     detailedDescription:
       "Travail de groupe réalisé après seulement trois semaines de formation. Au sein du projet de groupe, j'avais développé la structure globale, header, footer, le style global, l’algo du quiz et les sets de questions. J’ai ensuite repris le code en solo pour proposer une version plus propre et recentrée sur l’essentiel : la page d’accueil et le quiz. J’ai conservé les parties que j'avais codées, supprimé deux pages, puis puis nettoyé le style et recodé la page d'acceuil pour un rendu professionnel.",
-    technologies: ['HTML', 'CSS', 'JavaScript', 'Vite', 'Biome'],
+    stack: [
+      {
+        name: 'Languages',
+        content: ['HTML', 'CSS', 'JavaScript'],
+      },
+      {
+        name: 'Outils',
+        content: ['Biome'],
+      },
+    ],
     tags: ['Quiz', 'Algo', 'Refonte', 'Dark/Light mode', 'Responsive'],
     repoLink: 'https://github.com/tonpseudo/click-dev-refonte',
     demoLink: 'https://click-dev-refonte.vercel.app',
