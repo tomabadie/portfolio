@@ -43,7 +43,20 @@
   /* --color-accent-light: oklch(75% 0.12 45);
   --color-accent-dark: oklch(55% 0.14 45); */
 
-  /* Colors extra - cf notes mac */
+  /* Animations */
+
+  --animate-fade-in-delay: fade-in-delay 1.5s ease-in-out;
+
+  @keyframes fade-in-delay {
+    0% {
+      opacity: 0;
+      transform: translateY(10px);
+    }
+    100% {
+      opacity: 1;
+      transform: translateY(0px);
+    }
+  }
 }
 
 @layer base {
