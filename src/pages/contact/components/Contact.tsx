@@ -1,12 +1,15 @@
 import SocialGlobal from '../../../components/social/SocialGlobal/SocialGlobal';
+import { useLanguage } from '../../../contexts/LanguageContext';
 
 const Contact = () => {
+  const { language } = useLanguage();
+
   return (
     <div className="flex flex-col items-center gap-4 px-4 sm:flex-row sm:items-start">
       <SocialGlobal />
       <section className="transition-theme bg-global-secondary border-primary text-primary flex flex-col items-center justify-around gap-3 rounded-2xl border px-4 py-3 sm:mx-auto md:max-w-6xl md:min-w-xl">
         <h2 className="transition-theme border-primary my-2 w-full border-b-2 pb-2 text-xl font-bold">
-          CONTACT SECTION
+          {language === 'en' ? 'Reach out' : 'Contactez-moi'}
         </h2>
         <article className="px-4 sm:px-8">
           <h3 className="text-l transition-theme my-2 font-bold">Article 1</h3>

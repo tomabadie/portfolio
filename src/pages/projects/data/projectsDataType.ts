@@ -14,4 +14,9 @@ export interface ProjectProps {
     fromGroupProject?: boolean;
     comment?: string;
   };
+  inProgress?: boolean;
+}
+
+export interface ProjectCardProps {
+  project: ProjectProps;
 }
