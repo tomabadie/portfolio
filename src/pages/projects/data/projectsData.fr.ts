@@ -18,8 +18,8 @@ export const projectsDataFR: ProjectProps[] = [
         content: ['React', 'Tailwind'],
       },
       {
-        name: 'Outils',
-        content: ['ESLint', 'Prettier', 'Vite', 'Headless UI'],
+        name: 'Tools',
+        content: ['ESLint', 'Prettier', 'Vite', 'Excalidraw', 'HeadlessUI'],
       },
     ],
     tags: ['Portfolio', 'Frontend', 'Tailwind', 'Projet solo'],
@@ -59,7 +59,7 @@ export const projectsDataFR: ProjectProps[] = [
       },
       {
         name: 'Tools',
-        content: ['Biome', 'Monorepo'],
+        content: ['Biome', 'Monorepo', 'Excalidraw', 'Figma'],
       },
     ],
     tags: ['Full Stack', 'Projet en équipe', 'Recettes', 'Responsable', 'Nutrition', 'Écologie'],
@@ -133,7 +133,16 @@ export const projectsDataFR: ProjectProps[] = [
       },
       {
         name: 'Tools',
-        content: ['Biome', 'Monorepo', 'Fetch API', 'React Simple Maps', 'ThemealDB', 'Vite'],
+        content: [
+          'Biome',
+          'Monorepo',
+          'Vite',
+          'Excalidraw',
+          'Figma',
+          'Fetch API',
+          'React Simple Maps',
+          'ThemealDB',
+        ],
       },
     ],
     tags: ['Recettes', 'API', 'Carte interactive', 'International'],
@@ -231,7 +240,7 @@ export const projectsDataFR: ProjectProps[] = [
       },
       {
         name: 'Tools',
-        content: ['Biome'],
+        content: ['Biome', 'Excalidraw', 'Figma'],
       },
     ],
     tags: ['Quiz', 'Algo', 'Refonte', 'Dark/Light mode', 'Responsive'],

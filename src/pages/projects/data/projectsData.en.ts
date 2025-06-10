@@ -19,7 +19,7 @@ export const projectsDataEn: ProjectProps[] = [
       },
       {
         name: 'Tools',
-        content: ['ESLint', 'Prettier', 'Vite', 'Headless UI'],
+        content: ['ESLint', 'Prettier', 'Vite', 'Excalidraw', 'HeadlessUI'],
       },
     ],
     tags: ['Portfolio', 'Frontend', 'Tailwind', 'Solo project'],
@@ -59,7 +59,7 @@ export const projectsDataEn: ProjectProps[] = [
       },
       {
         name: 'Tools',
-        content: ['Biome', 'Monorepo'],
+        content: ['Biome', 'Monorepo', 'Excalidraw', 'Figma'],
       },
     ],
     tags: ['Full Stack', 'Team Project', 'Recipes', 'Sustainability', 'Nutrition', 'Ecology'],
@@ -132,7 +132,16 @@ export const projectsDataEn: ProjectProps[] = [
       },
       {
         name: 'Tools',
-        content: ['Biome', 'Monorepo', 'Fetch API', 'React Simple Maps', 'ThemealDB', 'Vite'],
+        content: [
+          'Biome',
+          'Monorepo',
+          'Vite',
+          'Excalidraw',
+          'Figma',
+          'Fetch API',
+          'React Simple Maps',
+          'ThemealDB',
+        ],
       },
     ],
     tags: ['Recipes', 'API', 'Interactive map', 'International'],
@@ -229,7 +238,7 @@ export const projectsDataEn: ProjectProps[] = [
       },
       {
         name: 'Tools',
-        content: ['Biome'],
+        content: ['Biome', 'Excalidraw', 'Figma'],
       },
     ],
     tags: ['Quiz', 'Algorithm', 'Revamp', 'Dark/Light mode', 'Responsive'],
