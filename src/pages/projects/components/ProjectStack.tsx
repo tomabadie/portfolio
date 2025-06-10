@@ -16,7 +16,7 @@ const ProjectStack = ({ list }: { list: string[] }) => {
             >
               {skillsIcons[item.toLowerCase()]}
             </IconWrapper>
-            <span className="text-secondary-light dark:text-secondary-dark bg-bg-global-secondary absolute top-full mt-1 scale-0 rounded-sm px-2 py-1 text-xs opacity-0 shadow transition-all duration-200 group-hover:scale-100 group-hover:opacity-100">
+            <span className="text-secondary-light dark:text-secondary-dark border-primary bg-global-primary absolute top-full mt-1 scale-0 rounded-sm border px-2 py-1 text-xs opacity-0 shadow transition-all duration-200 group-hover:scale-100 group-hover:opacity-100">
               {item}
             </span>
           </div>

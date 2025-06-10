@@ -21,4 +21,12 @@ export interface ProjectProps {
 
 export interface ProjectCardProps {
   project: ProjectProps;
+  setIsOpen: React.Dispatch<React.SetStateAction<boolean>>;
+  setFocusedProject: React.Dispatch<React.SetStateAction<ProjectProps | null>>;
+}
+
+export interface ProjectDialogProps {
+  isOpen: boolean;
+  setIsOpen: React.Dispatch<React.SetStateAction<boolean>>;
+  focusedProject: ProjectProps | null;
 }

@@ -1,12 +1,17 @@
+import { useState } from 'react';
 import SocialGlobal from '../../../components/social/SocialGlobal/SocialGlobal';
 import { useLanguage } from '../../../contexts/LanguageContext';
 import { projectsDataEn } from '../data/projectsData.en';
 import { projectsDataFR } from '../data/projectsData.fr';
+import type { ProjectProps } from '../data/projectsDataType';
 import ProjectCard from './ProjectCard';
+import ProjectDialog from './ProjectDialog';
 
 const Projects = () => {
   const { language } = useLanguage();
   const projectsList = language === 'en' ? projectsDataEn : projectsDataFR;
+  const [isOpen, setIsOpen] = useState<boolean>(false);
+  const [focusedProject, setFocusedProject] = useState<ProjectProps | null>(null);
 
   return (
     <div className="flex flex-col items-center gap-4 px-4 sm:flex-row sm:items-start">
@@ -16,9 +21,15 @@ const Projects = () => {
           {language === 'en' ? 'My projects' : 'Réalisations'}
         </h2>
         {projectsList.map((project) => (
-          <ProjectCard key={project.id} project={project} />
+          <ProjectCard
+            key={project.id}
+            project={project}
+            setIsOpen={setIsOpen}
+            setFocusedProject={setFocusedProject}
+          />
         ))}
       </section>
+      <ProjectDialog isOpen={isOpen} setIsOpen={setIsOpen} focusedProject={focusedProject} />
     </div>
   );
 };

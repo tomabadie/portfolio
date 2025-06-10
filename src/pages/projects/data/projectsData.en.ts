@@ -63,7 +63,7 @@ export const projectsDataEn: ProjectProps[] = [
       },
     ],
     tags: ['Full Stack', 'Team Project', 'Recipes', 'Sustainability', 'Nutrition', 'Ecology'],
-    repoLink: '',
+    repoLink: 'https://github.com/wildcodeschool-2025-03/JS-WestDevs-P3-SeazN',
     contributions: [
       'Defined the concept and features with a user- and product-driven approach',
       'Built a feature prioritization board based on value and implementation difficulty',
