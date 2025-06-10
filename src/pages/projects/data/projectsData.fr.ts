@@ -32,7 +32,7 @@ export const projectsDataFR: ProjectProps[] = [
       'Conservation des icônes en self-custody pour garder la main et éviter les dépendances',
     ],
     context: {
-      type: 'projet personnel',
+      type: 'Projet personnel',
       solo: true,
     },
     inProgress: true,
@@ -72,7 +72,7 @@ export const projectsDataFR: ProjectProps[] = [
       'Recherche et intégration d’APIs pour les données nutritionnelles et écologiques (en cours)',
     ],
     context: {
-      type: 'projet de groupe',
+      type: 'Projet de groupe',
       solo: false,
     },
     inProgress: true,
@@ -109,7 +109,7 @@ export const projectsDataFR: ProjectProps[] = [
       'Correction du code de collègues',
     ],
     context: {
-      type: 'hackathon',
+      type: 'Hackathon 48h - Projet de groupe',
       solo: false,
       comment:
         'Participation active sur la structure, l’UX/UI et la logique de jeu. Projet réalisé en 48h.',
@@ -145,7 +145,7 @@ export const projectsDataFR: ProjectProps[] = [
       'Support technique et débogage',
     ],
     context: {
-      type: 'projet de groupe',
+      type: 'Projet de groupe',
       solo: false,
       comment: 'Travail sur la carte interactive, le responsive mobile et le debug.',
     },
@@ -180,7 +180,7 @@ export const projectsDataFR: ProjectProps[] = [
       'Déploiement partiel de l’algorithme météo : à terminer',
     ],
     context: {
-      type: 'atelier libre',
+      type: 'Atelier libre de 3h',
       solo: true,
     },
     inProgress: true,
@@ -213,7 +213,7 @@ export const projectsDataFR: ProjectProps[] = [
       'Structuration rapide du projet en binôme',
     ],
     context: {
-      type: 'exercice pédagogique',
+      type: 'Atelier libre de 3h',
       solo: false,
     },
   },
@@ -223,7 +223,7 @@ export const projectsDataFR: ProjectProps[] = [
     shortDescription:
       'Un quiz HTML/CSS/JavaScript entièrement fonctionnel, conçu à l’origine en groupe puis refondu en solo pour en améliorer la structure, le design et la propreté du code.',
     detailedDescription:
-      "Travail de groupe réalisé après seulement trois semaines de formation. Au sein du projet de groupe, j'avais développé la structure globale, header, footer, le style global, l’algo du quiz et les sets de questions. J’ai ensuite repris le code en solo pour proposer une version plus propre et recentrée sur l’essentiel : la page d’accueil et le quiz. J’ai conservé les parties que j'avais codées, supprimé deux pages, puis puis nettoyé le style et recodé la page d'acceuil pour un rendu professionnel.",
+      "Travail de groupe réalisé après seulement trois semaines de formation. Au sein du projet de groupe, j'avais développé la structure globale, header, footer, le style global, l’algo du quiz et les sets de questions. J’ai ensuite repris le code en solo pour proposer une version plus propre et recentrée sur l’essentiel : la page d’accueil et le quiz. J’ai conservé les parties que j'avais codées, supprimé deux pages, puis recodé la page d'acceuil pour un rendu professionnel.",
     stack: [
       {
         name: 'Languages',
@@ -238,7 +238,7 @@ export const projectsDataFR: ProjectProps[] = [
     repoLink: 'https://github.com/tonpseudo/click-dev-refonte',
     demoLink: 'https://click-dev-refonte.vercel.app',
     contributions: [
-      'Reprise intégrale du projet en solo à partir de la version initiale en groupe',
+      'Refonte du projet en solo à partir de la version initiale en groupe',
       'Nettoyage du code',
       'Développement du cœur fonctionnel : algorithme du quiz et sélection aléatoire des questions',
       'Création de 8 sets de 50 questions (10 aléatoires à chaque lancement)',
@@ -246,7 +246,7 @@ export const projectsDataFR: ProjectProps[] = [
       "Aide à l'implémentation du dark/light mode",
     ],
     context: {
-      type: 'refonte',
+      type: 'Refonte',
       solo: true,
       fromGroupProject: true,
       comment: 'Projet initialement en groupe (4 personnes), retravaillé seul.',

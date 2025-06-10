@@ -32,7 +32,7 @@ export const projectsDataEn: ProjectProps[] = [
       'Self-hosted icons to avoid external dependencies and keep full control',
     ],
     context: {
-      type: 'personal project',
+      type: 'Personal project',
       solo: true,
     },
     inProgress: true,
@@ -72,7 +72,7 @@ export const projectsDataEn: ProjectProps[] = [
       'Researched and began integrating external APIs for nutrition and environmental data',
     ],
     context: {
-      type: 'final bootcamp project',
+      type: 'Group project',
       solo: false,
     },
     inProgress: true,
@@ -108,7 +108,7 @@ export const projectsDataEn: ProjectProps[] = [
       "Fixed teammates' code",
     ],
     context: {
-      type: 'hackathon',
+      type: 'Hackathon 48h - Group project',
       solo: false,
       comment:
         'Active participation in structure, UX/UI, and game logic. Project built in 48 hours.',
@@ -144,7 +144,7 @@ export const projectsDataEn: ProjectProps[] = [
       'Technical support and debugging',
     ],
     context: {
-      type: 'group project',
+      type: 'Group project',
       solo: false,
       comment: 'Worked on interactive map, mobile responsiveness, and debugging code.',
     },
@@ -177,7 +177,7 @@ export const projectsDataEn: ProjectProps[] = [
       'Partial implementation of the weather display algorithm (to be completed)',
     ],
     context: {
-      type: 'open workshop',
+      type: 'Open workshop 3h',
       solo: true,
     },
     inProgress: true,
@@ -211,7 +211,7 @@ export const projectsDataEn: ProjectProps[] = [
       'Rapid project structuring in a pair programming context',
     ],
     context: {
-      type: 'educational exercise',
+      type: 'Open workshop 6h',
       solo: false,
     },
   },
@@ -221,7 +221,7 @@ export const projectsDataEn: ProjectProps[] = [
     shortDescription:
       'A fully functional HTML/CSS/JavaScript quiz, originally built as a team project then revamped solo to improve structure, design, and code quality.',
     detailedDescription:
-      'Group project initiated after only three weeks of training. In the group version, I developed the overall structure, header, footer, global style, quiz algorithm, and all sets of questions. I later took over the codebase on my own to offer a cleaner version focused on the essentials: the homepage and the quiz. I kept the parts I had written, removed two pages, cleaned up the styling, and recoded the homepage for a more professional look.',
+      'Group project initiated after only three weeks of training. In the group version, I developed the overall structure, header, footer, global style, quiz algorithm, and all sets of questions. I later took over the codebase on my own to offer a cleaner version focused on the essentials: the homepage and the quiz. I kept the parts I had written, removed two pages and recoded the homepage for a more professional look.',
     stack: [
       {
         name: 'Languages',
@@ -236,7 +236,7 @@ export const projectsDataEn: ProjectProps[] = [
     repoLink: 'https://github.com/tonpseudo/click-dev-refonte',
     demoLink: 'https://click-dev-refonte.vercel.app',
     contributions: [
-      'Complete solo revamp based on the initial group version',
+      'Solo revamp based on the initial group version',
       'Code cleanup',
       'Development of the core logic: quiz algorithm and random question selection',
       'Creation of 8 sets of 50 questions (10 random used per game)',
@@ -244,7 +244,7 @@ export const projectsDataEn: ProjectProps[] = [
       'Helped other trainees implement dark/light mode',
     ],
     context: {
-      type: 'revamp',
+      type: 'Revamp',
       solo: true,
       fromGroupProject: true,
       comment: 'Originally a group project (4 people), later reworked solo.',

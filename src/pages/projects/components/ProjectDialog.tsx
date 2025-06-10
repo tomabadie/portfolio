@@ -7,16 +7,18 @@ import {
   DisclosureButton,
   DisclosurePanel,
 } from '@headlessui/react';
+import IconWrapper from '../../../components/ui/IconWrapper';
 import {
   ChevronDownIcon,
   CloseIcon,
-  CompanyIcon,
-  DurationIcon,
-  LocationIcon,
-  SchoolIcon,
+  GithubIcon,
+  GroupIcon,
+  LinkIcon,
+  UserIcon,
 } from '../../../components/ui/Icons';
 import { useLanguage } from '../../../contexts/LanguageContext';
 import type { ProjectDialogProps } from '../data/projectsDataType';
+import ProjectStack from './ProjectStack';
 
 const ProjectDialog = ({ isOpen, setIsOpen, focusedProject }: ProjectDialogProps) => {
   const { language } = useLanguage();
@@ -25,6 +27,7 @@ const ProjectDialog = ({ isOpen, setIsOpen, focusedProject }: ProjectDialogProps
     <Dialog open={isOpen} onClose={() => setIsOpen(false)} className="relative z-50">
       <div className="fixed inset-0 flex w-screen items-center justify-center p-4">
         <DialogPanel className="border-primary bg-global-secondary max-h-[80dvh] max-w-4xl space-y-4 overflow-y-auto rounded-2xl border-3 p-3 sm:p-8 lg:p-12">
+          {/* Title and button */}
           <div className="flex flex-col gap-5 sm:flex-row sm:items-center sm:justify-between">
             <DialogTitle className="text-primary transition-theme border-accent-light dark:border-accent-dark rounded-sm border-2 p-2 font-bold uppercase hover:shadow-[0_0_12px_4px_var(--color-btn-primary-hover-light)] dark:hover:shadow-[0_0_12px_4px_var(--color-btn-primary-hover-dark)]">
               {focusedProject?.name}
@@ -39,58 +42,45 @@ const ProjectDialog = ({ isOpen, setIsOpen, focusedProject }: ProjectDialogProps
             </button>
           </div>
 
-          {/* banner */}
+          {/* Links */}
+          <div className="flex gap-2">
+            <a href={focusedProject?.demoLink} target="_blank" rel="noopener noreferrer">
+              <IconWrapper
+                variant="primary"
+                wrapperClassName="cursor-pointer shadow-sm/30 dark:shadow-sm/50 dark:shadow-btn-primary-hover-dark border w-8 h-8"
+              >
+                <LinkIcon className="h-6 w-6 stroke-current" />
+              </IconWrapper>
+            </a>
+            <a href={focusedProject?.repoLink} target="_blank" rel="noopener noreferrer">
+              <IconWrapper
+                variant="primary"
+                wrapperClassName="cursor-pointer shadow-sm/30 dark:shadow-sm/50 dark:shadow-btn-primary-hover-dark border w-8 h-8"
+              >
+                <GithubIcon className="h-6 w-6 stroke-current" />
+              </IconWrapper>
+            </a>
+          </div>
 
-          <div className="text-primary grid grid-cols-1 gap-2 md:grid-cols-2">
-            <div className="flex gap-2">
-              {focusedItem?.type === 'formation' || focusedItem?.type === 'training' ? (
-                <SchoolIcon className="h-6 w-6 stroke-current" />
-              ) : (
-                <CompanyIcon className="h-6 w-6 stroke-current" />
-              )}
-              <span className="font-bold">{focusedItem?.position}</span>
-            </div>
-            <span className="hidden sm:block" />
-            <div className="flex gap-2">
-              <DurationIcon className="h-6 w-6 stroke-current" />
-              <span>{focusedItem?.duration || '/'}</span>
-            </div>
-            <div className="flex gap-2">
-              <LocationIcon className="h-6 w-6 stroke-current" />
-              <span>{focusedItem?.location}</span>
-            </div>
+          {/* Banner */}
+
+          <div className="text-primary transition-theme flex gap-2">
+            {focusedProject?.context.solo === true ? (
+              <UserIcon className="h-6 w-6 stroke-current" />
+            ) : (
+              <GroupIcon className="h-6 w-6 stroke-current" />
+            )}
+            <span className="font-bold">{focusedProject?.context.type}</span>
           </div>
 
           <hr className="text-primary" />
 
           {/* Description */}
 
-          <Description className={'text-primary'}> {focusedItem?.description}</Description>
-
-          {/* Achievements */}
-
-          <Disclosure>
-            {({ open }) => (
-              <>
-                <DisclosureButton className={'flex cursor-pointer items-center gap-2'}>
-                  <h3 className="text-primary transition-theme dark:border-b-accent-dark border-b-accent-light w-fit border-b-2">
-                    {language === 'en' ? 'Achievements' : 'Réalisations'}
-                  </h3>
-                  <ChevronDownIcon
-                    isOpen={open}
-                    className="dark:stroke-primary-dark stroke-primary-light h-5 w-5"
-                  />
-                </DisclosureButton>
-                <DisclosurePanel>
-                  <ul className="text-secondary list-inside list-disc">
-                    {focusedItem?.achievements.map((achievement) => {
-                      return <li key={achievement}>{achievement}</li>;
-                    })}
-                  </ul>
-                </DisclosurePanel>
-              </>
-            )}
-          </Disclosure>
+          <Description className={'text-primary'}>
+            {' '}
+            {focusedProject?.detailedDescription}
+          </Description>
 
           {/* Stack */}
 
@@ -107,19 +97,13 @@ const ProjectDialog = ({ isOpen, setIsOpen, focusedProject }: ProjectDialogProps
                   />
                 </DisclosureButton>
                 <DisclosurePanel>
-                  <div className="text-secondary flex justify-between">
-                    {focusedItem?.stack?.map((technology) => {
+                  <div className="text-secondary flex flex-col justify-between gap-2">
+                    {focusedProject?.stack?.map((technology) => {
                       return (
-                        <ul key={technology.name}>
-                          <h4>{technology.name}</h4>
-                          {technology?.content.map((item) => {
-                            return (
-                              <li key={item} className="list-inside list-disc text-sm">
-                                {item}
-                              </li>
-                            );
-                          })}
-                        </ul>
+                        <div key={technology.name} className="flex">
+                          <h4>{technology.name} :</h4>
+                          <ProjectStack list={technology.content} />
+                        </div>
                       );
                     })}
                   </div>
@@ -128,14 +112,14 @@ const ProjectDialog = ({ isOpen, setIsOpen, focusedProject }: ProjectDialogProps
             )}
           </Disclosure>
 
-          {/* Context */}
+          {/* Contributions */}
 
           <Disclosure>
             {({ open }) => (
               <>
                 <DisclosureButton className={'flex cursor-pointer items-center gap-2'}>
-                  <h3 className="text-primary dark:border-b-accent-dark transition-theme border-b-accent-light w-fit border-b-2">
-                    {language === 'en' ? 'Context' : 'Contexte'}
+                  <h3 className="text-primary transition-theme dark:border-b-accent-dark border-b-accent-light w-fit border-b-2">
+                    {language === 'en' ? 'Contributions' : 'Contributions'}
                   </h3>
                   <ChevronDownIcon
                     isOpen={open}
@@ -143,7 +127,11 @@ const ProjectDialog = ({ isOpen, setIsOpen, focusedProject }: ProjectDialogProps
                   />
                 </DisclosureButton>
                 <DisclosurePanel>
-                  <p className="text-secondary">{focusedItem?.context}</p>
+                  <ul className="text-secondary list-inside list-disc">
+                    {focusedProject?.contributions.map((contribution) => {
+                      return <li key={contribution}>{contribution}</li>;
+                    })}
+                  </ul>
                 </DisclosurePanel>
               </>
             )}

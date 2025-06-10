@@ -42,7 +42,7 @@ const ProjectCard = ({ project, setIsOpen, setFocusedProject }: ProjectCardProps
               <LinkIcon className="h-6 w-6 stroke-current" />
             </IconWrapper>
           </a>
-          <a href={project.demoLink} target="_blank" rel="noopener noreferrer">
+          <a href={project.repoLink} target="_blank" rel="noopener noreferrer">
             <IconWrapper
               variant="primary"
               wrapperClassName="cursor-pointer shadow-sm/30 dark:shadow-sm/50 dark:shadow-btn-primary-hover-dark border w-8 h-8"
@@ -54,15 +54,15 @@ const ProjectCard = ({ project, setIsOpen, setFocusedProject }: ProjectCardProps
         {/* Description */}
         <p className="transition-theme text-primary max-w-[80ch]">{project.shortDescription}</p>
         {/* Stack */}
-        <div className="flex">
+        <ul className="flex">
           {project.stack.map((type) => {
             return (
-              <div key={type.name} className="flex">
+              <li key={type.name} className="flex">
                 {type.name !== 'Tools' && <ProjectStack list={type.content} />}
-              </div>
+              </li>
             );
           })}
-        </div>
+        </ul>
       </div>
     </article>
   );
