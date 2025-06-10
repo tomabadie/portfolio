@@ -80,7 +80,7 @@ export const projectsDataEn: ProjectProps[] = [
   {
     id: 'codewarts',
     name: 'CodeWarts',
-    shortDescription: 'Fun quiz prototype with a Harry Potter theme, built in 48 hours.',
+    shortDescription: 'Playful quiz prototype with a Harry Potter theme, built in 48 hours.',
     detailedDescription:
       'Built during an internal hackathon, CodeWarts is a fun app to learn coding through themed quizzes inspired by the Harry Potter universe with nods to our instructors. The team delivered a functional MVP in 48 hours, with routing and dynamic quiz display.',
     stack: [

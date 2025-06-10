@@ -58,7 +58,7 @@ export const projectsDataFR: ProjectProps[] = [
         content: ['MySQL'],
       },
       {
-        name: 'Outils',
+        name: 'Tools',
         content: ['Biome', 'Monorepo'],
       },
     ],
@@ -94,7 +94,7 @@ export const projectsDataFR: ProjectProps[] = [
         content: ['React'],
       },
       {
-        name: 'Outils',
+        name: 'Tools',
         content: ['Biome', 'Vite'],
       },
     ],
@@ -132,7 +132,7 @@ export const projectsDataFR: ProjectProps[] = [
         content: ['React'],
       },
       {
-        name: 'Outils',
+        name: 'Tools',
         content: ['Biome', 'Monorepo', 'Fetch API', 'React Simple Maps', 'ThemealDB', 'Vite'],
       },
     ],
@@ -168,7 +168,7 @@ export const projectsDataFR: ProjectProps[] = [
         content: ['React'],
       },
       {
-        name: 'Outils',
+        name: 'Tools',
         content: ['Biome', 'Vite'],
       },
     ],
@@ -201,7 +201,7 @@ export const projectsDataFR: ProjectProps[] = [
         content: ['React'],
       },
       {
-        name: 'Outils',
+        name: 'Tools',
         content: ['Biome', 'Vite', 'Fetch API'],
       },
     ],
@@ -230,7 +230,7 @@ export const projectsDataFR: ProjectProps[] = [
         content: ['HTML', 'CSS', 'JavaScript'],
       },
       {
-        name: 'Outils',
+        name: 'Tools',
         content: ['Biome'],
       },
     ],
