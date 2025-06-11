@@ -3,6 +3,7 @@ import type { Technology } from '../../resume/data/timelineDataType';
 export interface ProjectProps {
   id: string;
   name: string;
+  img: string;
   shortDescription: string;
   detailedDescription: string;
   stack: Technology[];
@@ -23,6 +24,7 @@ export interface ProjectCardProps {
   project: ProjectProps;
   setIsOpen: React.Dispatch<React.SetStateAction<boolean>>;
   setFocusedProject: React.Dispatch<React.SetStateAction<ProjectProps | null>>;
+  index: number;
 }
 
 export interface ProjectDialogProps {

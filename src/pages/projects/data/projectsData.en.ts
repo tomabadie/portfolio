@@ -4,6 +4,7 @@ export const projectsDataEn: ProjectProps[] = [
   {
     id: 'portfolio',
     name: 'Personal Portfolio',
+    img: '/assets/img/projects/portfolio_dark.webp',
     shortDescription:
       'Modern, responsive, minimalist portfolio site showcasing my profile and projects.',
     detailedDescription:
@@ -40,6 +41,7 @@ export const projectsDataEn: ProjectProps[] = [
   {
     id: 'seazn',
     name: 'SeazN',
+    img: '/assets/img/projects/seazn.webp',
     shortDescription:
       'Collaborative recipe web app enriched with nutrition, ecology, and cost metrics for a more responsible daily cooking experience.',
     detailedDescription:
@@ -80,6 +82,7 @@ export const projectsDataEn: ProjectProps[] = [
   {
     id: 'codewarts',
     name: 'CodeWarts',
+    img: '/assets/img/projects/codewarts.webp',
     shortDescription: 'Playful quiz prototype with a Harry Potter theme, built in 48 hours.',
     detailedDescription:
       'Built during an internal hackathon, CodeWarts is a fun app to learn coding through themed quizzes inspired by the Harry Potter universe with nods to our instructors. The team delivered a functional MVP in 48 hours, with routing and dynamic quiz display.',
@@ -117,6 +120,7 @@ export const projectsDataEn: ProjectProps[] = [
   {
     id: 'savor-safari',
     name: 'Savor Safari',
+    img: '/assets/img/projects/savor_safari.webp',
     shortDescription:
       'A culinary world tour with interactive map and recipes linked to each country.',
     detailedDescription:
@@ -161,6 +165,7 @@ export const projectsDataEn: ProjectProps[] = [
   {
     id: 'weather-app',
     name: 'Weather App',
+    img: '/assets/img/projects/weather_app.webp',
     shortDescription: 'Quick React weather app based on a CSV file of weather stations.',
     detailedDescription:
       'Built solo during a 3-hours open workshop, this project aimed to practice using Fetch. I intentionally made it more complex by choosing non-standard stations data (CSV) to generate an interactive weather interface. The weather display algorithm is partially implemented.',
@@ -194,6 +199,7 @@ export const projectsDataEn: ProjectProps[] = [
   {
     id: 'solar-system',
     name: 'Solar System',
+    img: '/assets/img/projects/solar_system.webp',
     shortDescription:
       'Planet and satellite exploration using an Open Data API, built in a few hours by two developers in training.',
     detailedDescription:
@@ -227,6 +233,7 @@ export const projectsDataEn: ProjectProps[] = [
   {
     id: 'click-dev-revamp',
     name: 'Click dev’ (solo revamp)',
+    img: '/assets/img/projects/clickdev_dark.webp',
     shortDescription:
       'A fully functional HTML/CSS/JavaScript quiz, originally built as a team project then revamped solo to improve structure, design, and code quality.',
     detailedDescription:

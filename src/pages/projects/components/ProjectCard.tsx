@@ -4,8 +4,9 @@ import { useLanguage } from '../../../contexts/LanguageContext';
 import type { ProjectCardProps, ProjectProps } from '../data/projectsDataType';
 import ProjectStack from './ProjectStack';
 
-const ProjectCard = ({ project, setIsOpen, setFocusedProject }: ProjectCardProps) => {
+const ProjectCard = ({ project, setIsOpen, setFocusedProject, index }: ProjectCardProps) => {
   const { language } = useLanguage();
+  const isEven = index % 2 === 0;
 
   const handleClick = (project: ProjectProps) => {
     setIsOpen(true);
@@ -13,12 +14,23 @@ const ProjectCard = ({ project, setIsOpen, setFocusedProject }: ProjectCardProps
   };
 
   return (
-    <article className="border-primary grid w-full grid-cols-1 grid-rows-1 gap-2 rounded-lg border px-2 py-2 md:grid-cols-2">
-      <div className="row-start-1 rounded-md bg-purple-200 text-amber-500">
-        Image {/* AJOUTER IMAGE ICI */}
-      </div>
+    <article
+      className={`border-primary flex w-full flex-col gap-2 rounded-lg border px-2 py-2 ${isEven ? 'md:flex-row' : 'md:flex-row-reverse'} `}
+    >
+      <button
+        type="button"
+        className="border-primary flex cursor-pointer items-center justify-center rounded-md border p-1 md:max-w-[min(50%,384px)]"
+        onClick={() => handleClick(project)}
+      >
+        <img
+          className="text-secondary h-full w-full object-cover"
+          alt={project.name}
+          src={project.img}
+          loading="lazy"
+        />
+      </button>
 
-      <div className="row-start-1 flex flex-col gap-2">
+      <div className="flex flex-col gap-2">
         {/* Name */}
         <div className="flex flex-wrap items-center gap-2">
           <button type="button" onClick={() => handleClick(project)}>

@@ -4,6 +4,7 @@ export const projectsDataFR: ProjectProps[] = [
   {
     id: 'portfolio',
     name: 'Portfolio personnel',
+    img: '/assets/img/projects/portfolio_dark.webp',
     shortDescription:
       'Site portfolio moderne, responsive et minimaliste pour valoriser mon profil et mes projets.',
     detailedDescription:
@@ -40,6 +41,7 @@ export const projectsDataFR: ProjectProps[] = [
   {
     id: 'seazn',
     name: 'SeazN',
+    img: '/assets/img/projects/seazn.webp',
     shortDescription:
       'Application web collaborative de recettes enrichies avec des dimensions nutrition, écologie et coût pour un quotidien plus responsable.',
     detailedDescription:
@@ -80,6 +82,7 @@ export const projectsDataFR: ProjectProps[] = [
   {
     id: 'codewarts',
     name: 'CodeWarts',
+    img: '/assets/img/projects/codewarts.webp',
     shortDescription:
       'Prototype ludique de quiz autour de la thématique Harry Potter, réalisé en 48h.',
     detailedDescription:
@@ -118,6 +121,7 @@ export const projectsDataFR: ProjectProps[] = [
   {
     id: 'savor-safari',
     name: 'Savor Safari',
+    img: '/assets/img/projects/savor_safari.webp',
     shortDescription:
       'Tour du monde culinaire avec carte interactive et recettes liées à chaque pays.',
     detailedDescription:
@@ -163,6 +167,7 @@ export const projectsDataFR: ProjectProps[] = [
   {
     id: 'weather-app',
     name: 'Weather App',
+    img: '/assets/img/projects/weather_app.webp',
     shortDescription:
       'Application météo rapide en React à partir d’un fichier CSV de stations météo.',
     detailedDescription:
@@ -197,6 +202,7 @@ export const projectsDataFR: ProjectProps[] = [
   {
     id: 'solar-system',
     name: 'Solar System',
+    img: '/assets/img/projects/solar_system.webp',
     shortDescription:
       'Exploration des planètes et satellites via une API Open Data, travail pratique réalisé en quelques heures par deux développeurs en formation.',
     detailedDescription: `Ce projet consistait à intégrer rapidement une API et structurer l'information dans une interface React claire. Réalisé en binôme en une journée, il met en valeur la structuration et l'affichage dynamique de données.`,
@@ -229,6 +235,7 @@ export const projectsDataFR: ProjectProps[] = [
   {
     id: 'click-dev-revamp',
     name: 'Click dev’ (refonte solo)',
+    img: '/assets/img/projects/clickdev_dark.webp',
     shortDescription:
       'Un quiz HTML/CSS/JavaScript entièrement fonctionnel, conçu à l’origine en groupe puis refondu en solo pour en améliorer la structure, le design et la propreté du code.',
     detailedDescription:

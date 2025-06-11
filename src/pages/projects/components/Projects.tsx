@@ -20,9 +20,10 @@ const Projects = () => {
         <h2 className="transition-theme border-primary my-2 w-full border-b-2 pb-2 text-xl font-bold">
           {language === 'en' ? 'My projects' : 'Réalisations'}
         </h2>
-        {projectsList.map((project) => (
+        {projectsList.map((project, index) => (
           <ProjectCard
             key={project.id}
+            index={index}
             project={project}
             setIsOpen={setIsOpen}
             setFocusedProject={setFocusedProject}
