@@ -97,12 +97,12 @@ const ProjectDialog = ({ isOpen, setIsOpen, focusedProject }: ProjectDialogProps
                   />
                 </DisclosureButton>
                 <DisclosurePanel>
-                  <div className="text-secondary flex flex-col justify-between gap-2">
-                    {focusedProject?.stack?.map((technology) => {
+                  <div className="flex flex-col justify-between gap-2">
+                    {focusedProject?.stack?.map((type) => {
                       return (
-                        <div key={technology.name} className="flex">
-                          <h4>{technology.name} :</h4>
-                          <ProjectStack list={technology.content} />
+                        <div key={type.name} className="flex flex-col gap-0.5">
+                          <h4>{type.name} : </h4>
+                          <ProjectStack type={type} variant="names" />
                         </div>
                       );
                     })}
@@ -127,7 +127,7 @@ const ProjectDialog = ({ isOpen, setIsOpen, focusedProject }: ProjectDialogProps
                   />
                 </DisclosureButton>
                 <DisclosurePanel>
-                  <ul className="text-secondary list-inside list-disc">
+                  <ul className="list-inside list-disc">
                     {focusedProject?.contributions.map((contribution) => {
                       return <li key={contribution}>{contribution}</li>;
                     })}

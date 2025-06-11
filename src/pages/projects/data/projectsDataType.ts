@@ -30,3 +30,8 @@ export interface ProjectDialogProps {
   setIsOpen: React.Dispatch<React.SetStateAction<boolean>>;
   focusedProject: ProjectProps | null;
 }
+
+export interface ProjectStackProps {
+  type: Technology;
+  variant: 'icons' | 'names';
+}

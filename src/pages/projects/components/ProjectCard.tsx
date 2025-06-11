@@ -20,9 +20,9 @@ const ProjectCard = ({ project, setIsOpen, setFocusedProject }: ProjectCardProps
 
       <div className="row-start-1 flex flex-col gap-2">
         {/* Name */}
-        <div className="flex items-center gap-2">
+        <div className="flex flex-wrap items-center gap-2">
           <button type="button" onClick={() => handleClick(project)}>
-            <h3 className="transition-theme hover:text-accent-light dark:hover:text-accent-dark cursor-pointer text-lg font-bold">
+            <h3 className="transition-theme hover:text-accent-light dark:hover:text-accent-dark cursor-pointer text-start text-lg font-bold">
               {project.name}
             </h3>
           </button>
@@ -54,11 +54,11 @@ const ProjectCard = ({ project, setIsOpen, setFocusedProject }: ProjectCardProps
         {/* Description */}
         <p className="transition-theme text-primary max-w-[80ch]">{project.shortDescription}</p>
         {/* Stack */}
-        <ul className="flex">
+        <ul className="flex flex-wrap">
           {project.stack.map((type) => {
             return (
               <li key={type.name} className="flex">
-                {type.name !== 'Tools' && <ProjectStack list={type.content} />}
+                {type.name !== 'Tools' && <ProjectStack type={type} variant="icons" />}
               </li>
             );
           })}
