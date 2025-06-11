@@ -57,7 +57,7 @@ const ProjectCard = ({ project, setIsOpen, setFocusedProject }: ProjectCardProps
         <ul className="flex flex-wrap">
           {project.stack.map((type) => {
             return (
-              <li key={type.name} className="flex">
+              <li key={type.name} className="text-secondary flex">
                 {type.name !== 'Tools' && <ProjectStack type={type} variant="icons" />}
               </li>
             );
