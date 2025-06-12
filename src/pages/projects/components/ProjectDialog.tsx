@@ -7,7 +7,8 @@ import {
   DisclosureButton,
   DisclosurePanel,
 } from '@headlessui/react';
-import { motion } from 'motion/react';
+import { AnimatePresence, motion } from 'motion/react';
+import { Fragment } from 'react/jsx-runtime';
 import { ChevronDownIcon, CloseIcon, GroupIcon, UserIcon } from '../../../components/ui/Icons';
 import StackList from '../../../components/ui/StackList';
 import { useLanguage } from '../../../contexts/LanguageContext';
@@ -88,18 +89,26 @@ const ProjectDialog = ({ isOpen, setIsOpen, focusedProject }: ProjectDialogProps
                     className="dark:stroke-primary-dark stroke-primary-light h-5 w-5"
                   />
                 </DisclosureButton>
-                <DisclosurePanel>
-                  <div className="flex flex-col justify-between gap-2">
-                    {focusedProject?.stack?.map((type) => {
-                      return (
-                        <div key={type.name} className="text-secondary flex flex-col gap-0.5">
-                          <h4>{type.name} : </h4>
-                          <StackList type={type} styleVariant="names" orientationVariant="row" />
-                        </div>
-                      );
-                    })}
-                  </div>
-                </DisclosurePanel>
+                <AnimatePresence mode="wait" initial={false}>
+                  {open && (
+                    <DisclosurePanel static as={Fragment}>
+                      <div className="flex flex-col justify-between gap-2">
+                        {focusedProject?.stack?.map((type) => {
+                          return (
+                            <div key={type.name} className="text-secondary flex flex-col gap-0.5">
+                              <h4>{type.name} : </h4>
+                              <StackList
+                                type={type}
+                                styleVariant="names"
+                                orientationVariant="row"
+                              />
+                            </div>
+                          );
+                        })}
+                      </div>
+                    </DisclosurePanel>
+                  )}
+                </AnimatePresence>
               </>
             )}
           </Disclosure>
@@ -118,27 +127,31 @@ const ProjectDialog = ({ isOpen, setIsOpen, focusedProject }: ProjectDialogProps
                     className="dark:stroke-primary-dark stroke-primary-light h-5 w-5"
                   />
                 </DisclosureButton>
-                <DisclosurePanel>
-                  <motion.ul
-                    className="text-secondary list-inside list-disc"
-                    variants={animatedList}
-                    initial="hidden"
-                    animate="visible"
-                    exit="hidden"
-                  >
-                    {focusedProject?.contributions.map((contribution) => {
-                      return (
-                        <motion.li
-                          key={contribution}
-                          variants={animatedListItem}
-                          className="opacity-0"
-                        >
-                          {contribution}
-                        </motion.li>
-                      );
-                    })}
-                  </motion.ul>
-                </DisclosurePanel>
+                <AnimatePresence mode="wait" initial={false}>
+                  {open && (
+                    <DisclosurePanel static as={Fragment}>
+                      <motion.ul
+                        className="text-secondary list-inside list-disc"
+                        variants={animatedList}
+                        initial="hidden"
+                        animate="visible"
+                        exit="hidden"
+                      >
+                        {focusedProject?.contributions.map((contribution) => {
+                          return (
+                            <motion.li
+                              key={contribution}
+                              variants={animatedListItem}
+                              className="opacity-0"
+                            >
+                              {contribution}
+                            </motion.li>
+                          );
+                        })}
+                      </motion.ul>
+                    </DisclosurePanel>
+                  )}
+                </AnimatePresence>
               </>
             )}
           </Disclosure>

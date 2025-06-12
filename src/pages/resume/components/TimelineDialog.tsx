@@ -7,7 +7,8 @@ import {
   DisclosureButton,
   DisclosurePanel,
 } from '@headlessui/react';
-import { motion } from 'motion/react';
+import { AnimatePresence, motion } from 'motion/react';
+import { Fragment } from 'react/jsx-runtime';
 import {
   ChevronDownIcon,
   CloseIcon,
@@ -99,27 +100,31 @@ const TimelineDialog = ({ isOpen, setIsOpen, focusedItem }: TimelineDialogProps)
                     className="dark:stroke-primary-dark stroke-primary-light h-5 w-5"
                   />
                 </DisclosureButton>
-                <DisclosurePanel>
-                  <motion.ul
-                    className="text-secondary list-inside list-disc"
-                    variants={animatedList}
-                    initial="hidden"
-                    animate="visible"
-                    exit="hidden"
-                  >
-                    {focusedItem?.achievements.map((achievement) => {
-                      return (
-                        <motion.li
-                          key={achievement}
-                          variants={animatedListItem}
-                          className="opacity-0"
-                        >
-                          {achievement}
-                        </motion.li>
-                      );
-                    })}
-                  </motion.ul>
-                </DisclosurePanel>
+                <AnimatePresence mode="wait" initial={false}>
+                  {open && (
+                    <DisclosurePanel static as={Fragment}>
+                      <motion.ul
+                        className="text-secondary list-inside list-disc"
+                        variants={animatedList}
+                        initial="hidden"
+                        animate="visible"
+                        exit="hidden"
+                      >
+                        {focusedItem?.achievements.map((achievement) => {
+                          return (
+                            <motion.li
+                              key={achievement}
+                              variants={animatedListItem}
+                              className="opacity-0"
+                            >
+                              {achievement}
+                            </motion.li>
+                          );
+                        })}
+                      </motion.ul>
+                    </DisclosurePanel>
+                  )}
+                </AnimatePresence>
               </>
             )}
           </Disclosure>
@@ -138,18 +143,26 @@ const TimelineDialog = ({ isOpen, setIsOpen, focusedItem }: TimelineDialogProps)
                     className="dark:stroke-primary-dark stroke-primary-light h-5 w-5"
                   />
                 </DisclosureButton>
-                <DisclosurePanel>
-                  <div className="text-secondary flex flex-col justify-between gap-2">
-                    {focusedItem?.stack?.map((type) => {
-                      return (
-                        <div key={type.name}>
-                          <h4>{type.name} :</h4>
-                          <StackList type={type} styleVariant="names" orientationVariant="row" />
-                        </div>
-                      );
-                    })}
-                  </div>
-                </DisclosurePanel>
+                <AnimatePresence mode="wait" initial={false}>
+                  {open && (
+                    <DisclosurePanel static as={Fragment}>
+                      <div className="text-secondary flex flex-col justify-between gap-2">
+                        {focusedItem?.stack?.map((type) => {
+                          return (
+                            <div key={type.name}>
+                              <h4>{type.name} :</h4>
+                              <StackList
+                                type={type}
+                                styleVariant="names"
+                                orientationVariant="row"
+                              />
+                            </div>
+                          );
+                        })}
+                      </div>
+                    </DisclosurePanel>
+                  )}
+                </AnimatePresence>
               </>
             )}
           </Disclosure>

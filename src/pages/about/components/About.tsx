@@ -1,4 +1,6 @@
 import { Disclosure, DisclosureButton, DisclosurePanel } from '@headlessui/react';
+import { AnimatePresence, motion } from 'motion/react';
+import { Fragment } from 'react/jsx-runtime';
 import SocialAbout from '../../../components/social/SocialAbout/SocialAbout';
 import { ChevronDownIcon } from '../../../components/ui/Icons';
 import { useLanguage } from '../../../contexts/LanguageContext';
@@ -8,6 +10,20 @@ import { aboutDataFr } from '../data/aboutData.fr';
 const About = () => {
   const { language } = useLanguage();
   const aboutDataList = language === 'en' ? aboutDataEn : aboutDataFr;
+
+  const containerVariants = {
+    hidden: {},
+    visible: {
+      transition: {
+        staggerChildren: 0.05,
+      },
+    },
+  };
+
+  const itemVariants = {
+    hidden: { opacity: 0, y: 4 },
+    visible: { opacity: 1, y: 0 },
+  };
 
   return (
     <div className="flex flex-col items-center gap-4 px-2 sm:flex-row sm:items-start sm:justify-around lg:gap-0 xl:justify-center xl:gap-20">
@@ -30,13 +46,30 @@ const About = () => {
                       className="dark:stroke-primary-dark stroke-primary-light h-5 w-5"
                     />
                   </DisclosureButton>
-                  <DisclosurePanel>
-                    {item.content.map((paragraph) => (
-                      <p key={paragraph.id} className="transition-theme text-primary max-w-[80ch]">
-                        {paragraph.content} <br />
-                      </p>
-                    ))}
-                  </DisclosurePanel>
+                  <AnimatePresence mode="wait" initial={false}>
+                    {open && (
+                      <DisclosurePanel static as={Fragment}>
+                        <motion.div
+                          variants={containerVariants}
+                          initial={{ clipPath: 'inset(0% 0% 100% 0%)' }}
+                          animate={{ clipPath: 'inset(0% 0% 0% 0%)' }}
+                          exit={{ clipPath: 'inset(0% 0% 100% 0%)' }}
+                          transition={{ duration: 0.3 }}
+                          className="origin-top"
+                        >
+                          {item.content.map((paragraph) => (
+                            <motion.p
+                              key={paragraph.id}
+                              variants={itemVariants}
+                              className="transition-theme text-primary max-w-[80ch]"
+                            >
+                              {paragraph.content} <br />
+                            </motion.p>
+                          ))}
+                        </motion.div>
+                      </DisclosurePanel>
+                    )}
+                  </AnimatePresence>
                 </>
               )}
             </Disclosure>
