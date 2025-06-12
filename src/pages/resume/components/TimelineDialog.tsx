@@ -7,6 +7,7 @@ import {
   DisclosureButton,
   DisclosurePanel,
 } from '@headlessui/react';
+import { motion } from 'motion/react';
 import {
   ChevronDownIcon,
   CloseIcon,
@@ -15,11 +16,27 @@ import {
   LocationIcon,
   SchoolIcon,
 } from '../../../components/ui/Icons';
+import StackList from '../../../components/ui/StackList';
 import { useLanguage } from '../../../contexts/LanguageContext';
 import type { TimelineDialogProps } from '../data/timelineDataType';
 
 const TimelineDialog = ({ isOpen, setIsOpen, focusedItem }: TimelineDialogProps) => {
   const { language } = useLanguage();
+
+  const animatedList = {
+    hidden: { opacity: 0 },
+    visible: {
+      opacity: 1,
+      transition: {
+        staggerChildren: 0.1,
+      },
+    },
+  };
+
+  const animatedListItem = {
+    hidden: { opacity: 0, y: 10 },
+    visible: { opacity: 1, y: 0, transition: { duration: 0.3 } },
+  };
 
   return (
     <Dialog open={isOpen} onClose={() => setIsOpen(false)} className="relative z-50">
@@ -83,11 +100,25 @@ const TimelineDialog = ({ isOpen, setIsOpen, focusedItem }: TimelineDialogProps)
                   />
                 </DisclosureButton>
                 <DisclosurePanel>
-                  <ul className="text-secondary list-inside list-disc">
+                  <motion.ul
+                    className="text-secondary list-inside list-disc"
+                    variants={animatedList}
+                    initial="hidden"
+                    animate="visible"
+                    exit="hidden"
+                  >
                     {focusedItem?.achievements.map((achievement) => {
-                      return <li key={achievement}>{achievement}</li>;
+                      return (
+                        <motion.li
+                          key={achievement}
+                          variants={animatedListItem}
+                          className="opacity-0"
+                        >
+                          {achievement}
+                        </motion.li>
+                      );
                     })}
-                  </ul>
+                  </motion.ul>
                 </DisclosurePanel>
               </>
             )}
@@ -108,19 +139,13 @@ const TimelineDialog = ({ isOpen, setIsOpen, focusedItem }: TimelineDialogProps)
                   />
                 </DisclosureButton>
                 <DisclosurePanel>
-                  <div className="text-secondary flex justify-between">
-                    {focusedItem?.stack?.map((technology) => {
+                  <div className="text-secondary flex flex-col justify-between gap-2">
+                    {focusedItem?.stack?.map((type) => {
                       return (
-                        <ul key={technology.name}>
-                          <h4>{technology.name}</h4>
-                          {technology?.content.map((item) => {
-                            return (
-                              <li key={item} className="list-inside list-disc text-sm">
-                                {item}
-                              </li>
-                            );
-                          })}
-                        </ul>
+                        <div key={type.name}>
+                          <h4>{type.name} :</h4>
+                          <StackList type={type} styleVariant="names" orientationVariant="row" />
+                        </div>
                       );
                     })}
                   </div>
