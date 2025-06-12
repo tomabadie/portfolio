@@ -1,3 +1,5 @@
+import { motion, useInView } from 'motion/react';
+import { useRef } from 'react';
 import { useLanguage } from '../../../contexts/LanguageContext';
 import { softSkillsDataEN } from '../data/profileData.en';
 import { softSkillsDataFR } from '../data/profileData.fr';
@@ -7,20 +9,48 @@ const SoftSkills = ({ className }: SoftSkillsProps) => {
   const { language } = useLanguage();
   const softSkillsList = language === 'en' ? softSkillsDataEN : softSkillsDataFR;
 
+  const ref = useRef(null);
+  const isInView = useInView(ref, { once: true });
+
+  const animatedList = {
+    hidden: { opacity: 0 },
+    visible: {
+      opacity: 1,
+      transition: {
+        staggerChildren: 0.1,
+      },
+    },
+  };
+
+  const animatedListItem = {
+    hidden: { opacity: 0, y: 10 },
+    visible: { opacity: 1, y: 0, transition: { duration: 0.3 } },
+  };
+
   return (
     <section className={`border-primary transition-theme rounded-lg border px-2 py-2 ${className}`}>
       <h3 className="border-b-accent-light dark:border-b-accent-dark mb-2 w-fit border-b-2 font-bold">
         {language === 'en' ? 'Soft Skills' : 'Personnalité'}
       </h3>
-      <ul className="grid list-inside list-disc grid-cols-2 gap-2">
+      <motion.ul
+        ref={ref}
+        className="grid list-inside list-disc grid-cols-2 gap-2"
+        variants={animatedList}
+        initial="hidden"
+        animate={isInView ? 'visible' : 'hidden'}
+      >
         {softSkillsList.map((skill) => {
           return (
-            <li key={skill.id} className="w-fit justify-self-start rounded-sm px-1">
+            <motion.li
+              key={skill.id}
+              className="w-fit justify-self-start rounded-sm px-1 opacity-0"
+              variants={animatedListItem}
+            >
               {skill.label}
-            </li>
+            </motion.li>
           );
         })}
-      </ul>
+      </motion.ul>
     </section>
   );
 };
