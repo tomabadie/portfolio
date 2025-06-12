@@ -251,8 +251,7 @@ export const projectsDataFR: ProjectProps[] = [
       },
     ],
     tags: ['Quiz', 'Algo', 'Refonte', 'Dark/Light mode', 'Responsive'],
-    repoLink: 'https://github.com/tonpseudo/click-dev-refonte',
-    demoLink: 'https://click-dev-refonte.vercel.app',
+    repoLink: 'https://github.com/tomabadie/click-dev',
     contributions: [
       'Refonte du projet en solo à partir de la version initiale en groupe',
       'Nettoyage du code',
