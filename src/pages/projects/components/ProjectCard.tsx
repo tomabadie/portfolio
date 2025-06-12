@@ -15,19 +15,21 @@ const ProjectCard = ({ project, setIsOpen, setFocusedProject, index }: ProjectCa
 
   return (
     <article
-      className={`border-primary flex w-full flex-col gap-2 rounded-lg border px-2 py-2 ${isEven ? 'md:flex-row' : 'md:flex-row-reverse'} `}
+      className={`border-primary flex w-full flex-col gap-2 rounded-lg border px-2 py-2 lg:gap-8 ${isEven ? 'md:flex-row' : 'md:flex-row-reverse'} `}
     >
       <button
         type="button"
-        className="border-primary flex cursor-pointer items-center justify-center rounded-md border p-1 md:max-w-[min(50%,384px)]"
+        className="border-primary flex cursor-pointer items-center justify-center overflow-hidden rounded-md border md:max-w-[min(50%,750px)]"
         onClick={() => handleClick(project)}
       >
-        <img
-          className="text-secondary h-full w-full object-cover"
-          alt={project.name}
-          src={project.img}
-          loading="lazy"
-        />
+        <div className="aspect-[2850/1800] w-full">
+          <img
+            className="text-secondary h-full w-full object-cover transition-transform duration-300 hover:scale-102"
+            alt={project.name}
+            src={project.img}
+            loading="lazy"
+          />
+        </div>
       </button>
 
       <div className="flex flex-col gap-2">
