@@ -7,14 +7,30 @@ import {
   DisclosureButton,
   DisclosurePanel,
 } from '@headlessui/react';
+import { motion } from 'motion/react';
 import { ChevronDownIcon, CloseIcon, GroupIcon, UserIcon } from '../../../components/ui/Icons';
+import StackList from '../../../components/ui/StackList';
 import { useLanguage } from '../../../contexts/LanguageContext';
 import type { ProjectDialogProps } from '../data/projectsDataType';
 import ProjectLinks from './ProjectLinks';
-import ProjectStack from './ProjectStack';
 
 const ProjectDialog = ({ isOpen, setIsOpen, focusedProject }: ProjectDialogProps) => {
   const { language } = useLanguage();
+
+  const animatedList = {
+    hidden: { opacity: 0 },
+    visible: {
+      opacity: 1,
+      transition: {
+        staggerChildren: 0.1,
+      },
+    },
+  };
+
+  const animatedListItem = {
+    hidden: { opacity: 0, y: 10 },
+    visible: { opacity: 1, y: 0, transition: { duration: 0.3 } },
+  };
 
   return (
     <Dialog open={isOpen} onClose={() => setIsOpen(false)} className="relative z-50">
@@ -78,7 +94,7 @@ const ProjectDialog = ({ isOpen, setIsOpen, focusedProject }: ProjectDialogProps
                       return (
                         <div key={type.name} className="text-secondary flex flex-col gap-0.5">
                           <h4>{type.name} : </h4>
-                          <ProjectStack type={type} variant="names" />
+                          <StackList type={type} styleVariant="names" orientationVariant="row" />
                         </div>
                       );
                     })}
@@ -103,11 +119,25 @@ const ProjectDialog = ({ isOpen, setIsOpen, focusedProject }: ProjectDialogProps
                   />
                 </DisclosureButton>
                 <DisclosurePanel>
-                  <ul className="text-secondary list-inside list-disc">
+                  <motion.ul
+                    className="text-secondary list-inside list-disc"
+                    variants={animatedList}
+                    initial="hidden"
+                    animate="visible"
+                    exit="hidden"
+                  >
                     {focusedProject?.contributions.map((contribution) => {
-                      return <li key={contribution}>{contribution}</li>;
+                      return (
+                        <motion.li
+                          key={contribution}
+                          variants={animatedListItem}
+                          className="opacity-0"
+                        >
+                          {contribution}
+                        </motion.li>
+                      );
                     })}
-                  </ul>
+                  </motion.ul>
                 </DisclosurePanel>
               </>
             )}
