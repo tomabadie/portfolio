@@ -8,8 +8,8 @@ export interface ProjectProps {
   detailedDescription: string;
   stack: Technology[];
   tags: string[];
-  repoLink: string;
   demoLink?: string;
+  repoLink: string;
   contributions: string[];
   context: {
     type: string;
@@ -36,4 +36,9 @@ export interface ProjectDialogProps {
 export interface ProjectStackProps {
   type: Technology;
   variant: 'icons' | 'names';
+}
+
+export interface ProjectLinksProps {
+  demoLink: string | undefined;
+  repoLink: string | undefined;
 }

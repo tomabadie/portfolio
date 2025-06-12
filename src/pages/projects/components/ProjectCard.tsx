@@ -1,7 +1,6 @@
-import IconWrapper from '../../../components/ui/IconWrapper';
-import { GithubIcon, LinkIcon } from '../../../components/ui/Icons';
 import { useLanguage } from '../../../contexts/LanguageContext';
 import type { ProjectCardProps, ProjectProps } from '../data/projectsDataType';
+import ProjectLinks from './ProjectLinks';
 import ProjectStack from './ProjectStack';
 
 const ProjectCard = ({ project, setIsOpen, setFocusedProject, index }: ProjectCardProps) => {
@@ -47,28 +46,8 @@ const ProjectCard = ({ project, setIsOpen, setFocusedProject, index }: ProjectCa
           )}
         </div>
         {/* Links */}
-        <div className="flex gap-2">
-          {project.demoLink && (
-            <a href={project.demoLink} target="_blank" rel="noopener noreferrer">
-              <IconWrapper
-                variant="primary"
-                wrapperClassName="cursor-pointer shadow-sm/30 dark:shadow-sm/50 dark:shadow-btn-primary-hover-dark border w-8 h-8"
-              >
-                <LinkIcon className="h-6 w-6 stroke-current" />
-              </IconWrapper>
-            </a>
-          )}
-          {project.repoLink && (
-            <a href={project.repoLink} target="_blank" rel="noopener noreferrer">
-              <IconWrapper
-                variant="primary"
-                wrapperClassName="cursor-pointer shadow-sm/30 dark:shadow-sm/50 dark:shadow-btn-primary-hover-dark border w-8 h-8"
-              >
-                <GithubIcon className="h-6 w-6 stroke-current" />
-              </IconWrapper>
-            </a>
-          )}
-        </div>
+        <ProjectLinks demoLink={project.demoLink} repoLink={project.repoLink} />
+
         {/* Description */}
         <p className="transition-theme text-primary max-w-[80ch]">{project.shortDescription}</p>
         {/* Stack */}

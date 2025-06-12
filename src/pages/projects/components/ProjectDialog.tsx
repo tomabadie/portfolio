@@ -7,17 +7,10 @@ import {
   DisclosureButton,
   DisclosurePanel,
 } from '@headlessui/react';
-import IconWrapper from '../../../components/ui/IconWrapper';
-import {
-  ChevronDownIcon,
-  CloseIcon,
-  GithubIcon,
-  GroupIcon,
-  LinkIcon,
-  UserIcon,
-} from '../../../components/ui/Icons';
+import { ChevronDownIcon, CloseIcon, GroupIcon, UserIcon } from '../../../components/ui/Icons';
 import { useLanguage } from '../../../contexts/LanguageContext';
 import type { ProjectDialogProps } from '../data/projectsDataType';
+import ProjectLinks from './ProjectLinks';
 import ProjectStack from './ProjectStack';
 
 const ProjectDialog = ({ isOpen, setIsOpen, focusedProject }: ProjectDialogProps) => {
@@ -43,24 +36,7 @@ const ProjectDialog = ({ isOpen, setIsOpen, focusedProject }: ProjectDialogProps
           </div>
 
           {/* Links */}
-          <div className="flex gap-2">
-            <a href={focusedProject?.demoLink} target="_blank" rel="noopener noreferrer">
-              <IconWrapper
-                variant="primary"
-                wrapperClassName="cursor-pointer shadow-sm/30 dark:shadow-sm/50 dark:shadow-btn-primary-hover-dark border w-8 h-8"
-              >
-                <LinkIcon className="h-6 w-6 stroke-current" />
-              </IconWrapper>
-            </a>
-            <a href={focusedProject?.repoLink} target="_blank" rel="noopener noreferrer">
-              <IconWrapper
-                variant="primary"
-                wrapperClassName="cursor-pointer shadow-sm/30 dark:shadow-sm/50 dark:shadow-btn-primary-hover-dark border w-8 h-8"
-              >
-                <GithubIcon className="h-6 w-6 stroke-current" />
-              </IconWrapper>
-            </a>
-          </div>
+          <ProjectLinks demoLink={focusedProject?.demoLink} repoLink={focusedProject?.repoLink} />
 
           {/* Banner */}
 
