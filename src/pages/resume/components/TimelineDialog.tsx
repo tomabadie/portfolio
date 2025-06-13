@@ -7,7 +7,7 @@ import {
   DisclosureButton,
   DisclosurePanel,
 } from '@headlessui/react';
-import { AnimatePresence, motion } from 'motion/react';
+import { AnimatePresence, motion, useReducedMotion } from 'motion/react';
 import { Fragment } from 'react/jsx-runtime';
 import {
   ChevronDownIcon,
@@ -22,6 +22,7 @@ import { useLanguage } from '../../../contexts/LanguageContext';
 import type { TimelineDialogProps } from '../data/timelineDataType';
 
 const TimelineDialog = ({ isOpen, setIsOpen, focusedItem }: TimelineDialogProps) => {
+  const shouldReduceMotion = useReducedMotion();
   const { language } = useLanguage();
 
   const animatedList = {
@@ -36,7 +37,7 @@ const TimelineDialog = ({ isOpen, setIsOpen, focusedItem }: TimelineDialogProps)
 
   const animatedListItem = {
     hidden: { opacity: 0, y: 10 },
-    visible: { opacity: 1, y: 0, transition: { duration: 0.3 } },
+    visible: { opacity: 1, y: 0 },
   };
 
   return (
@@ -115,6 +116,7 @@ const TimelineDialog = ({ isOpen, setIsOpen, focusedItem }: TimelineDialogProps)
                             <motion.li
                               key={achievement}
                               variants={animatedListItem}
+                              transition={shouldReduceMotion ? { duration: 0 } : { duration: 0.3 }}
                               className="opacity-0"
                             >
                               {achievement}

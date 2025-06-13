@@ -1,5 +1,5 @@
 import { Disclosure, DisclosureButton, DisclosurePanel } from '@headlessui/react';
-import { AnimatePresence, motion } from 'motion/react';
+import { AnimatePresence, motion, useReducedMotion } from 'motion/react';
 import { Fragment } from 'react/jsx-runtime';
 import SocialAbout from '../../../components/social/SocialAbout/SocialAbout';
 import { ChevronDownIcon } from '../../../components/ui/Icons';
@@ -8,6 +8,7 @@ import { aboutDataEn } from '../data/aboutData.en';
 import { aboutDataFr } from '../data/aboutData.fr';
 
 const About = () => {
+  const shouldReduceMotion = useReducedMotion();
   const { language } = useLanguage();
   const aboutDataList = language === 'en' ? aboutDataEn : aboutDataFr;
 
@@ -54,7 +55,7 @@ const About = () => {
                           initial={{ clipPath: 'inset(0% 0% 100% 0%)' }}
                           animate={{ clipPath: 'inset(0% 0% 0% 0%)' }}
                           exit={{ clipPath: 'inset(0% 0% 100% 0%)' }}
-                          transition={{ duration: 0.3 }}
+                          transition={shouldReduceMotion ? { duration: 0 } : { duration: 0.3 }}
                           className="origin-top"
                         >
                           {item.content.map((paragraph) => (

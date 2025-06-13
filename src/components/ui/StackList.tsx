@@ -1,4 +1,4 @@
-import { motion } from 'motion/react';
+import { motion, useReducedMotion } from 'motion/react';
 import type { Technology } from '../../pages/resume/data/timelineDataType';
 import IconWrapper from './IconWrapper';
 import { skillsIcons } from './iconsData';
@@ -10,6 +10,7 @@ export interface StackListProps {
 }
 
 const StackList = ({ type, styleVariant, orientationVariant }: StackListProps) => {
+  const shouldReduceMotion = useReducedMotion();
   const animatedList = {
     hidden: { opacity: 0 },
     visible: {
@@ -24,11 +25,11 @@ const StackList = ({ type, styleVariant, orientationVariant }: StackListProps) =
     orientationVariant === 'row'
       ? {
           hidden: { opacity: 0, x: -10 },
-          visible: { opacity: 1, x: 0, transition: { duration: 0.3 } },
+          visible: { opacity: 1, x: 0 },
         }
       : {
           hidden: { opacity: 0, y: 10 },
-          visible: { opacity: 1, y: 0, transition: { duration: 0.3 } },
+          visible: { opacity: 1, y: 0 },
         };
 
   return (
@@ -58,8 +59,9 @@ const StackList = ({ type, styleVariant, orientationVariant }: StackListProps) =
           return (
             <motion.li
               key={item}
-              className={`flex items-center justify-center flex-${orientationVariant} `}
               variants={animatedListItem}
+              transition={shouldReduceMotion ? { duration: 0 } : { duration: 0.3 }}
+              className={`flex items-center justify-center flex-${orientationVariant} `}
             >
               <span className="border-primary bg-global-primary transition-theme text-secondary rounded-sm border px-2 py-1 text-xs shadow">
                 {item}

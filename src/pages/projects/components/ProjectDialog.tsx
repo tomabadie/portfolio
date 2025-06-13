@@ -7,7 +7,7 @@ import {
   DisclosureButton,
   DisclosurePanel,
 } from '@headlessui/react';
-import { AnimatePresence, motion } from 'motion/react';
+import { AnimatePresence, motion, useReducedMotion } from 'motion/react';
 import { Fragment } from 'react/jsx-runtime';
 import { ChevronDownIcon, CloseIcon, GroupIcon, UserIcon } from '../../../components/ui/Icons';
 import StackList from '../../../components/ui/StackList';
@@ -16,6 +16,7 @@ import type { ProjectDialogProps } from '../data/projectsDataType';
 import ProjectLinks from './ProjectLinks';
 
 const ProjectDialog = ({ isOpen, setIsOpen, focusedProject }: ProjectDialogProps) => {
+  const shouldReduceMotion = useReducedMotion();
   const { language } = useLanguage();
 
   const animatedList = {
@@ -30,7 +31,7 @@ const ProjectDialog = ({ isOpen, setIsOpen, focusedProject }: ProjectDialogProps
 
   const animatedListItem = {
     hidden: { opacity: 0, y: 10 },
-    visible: { opacity: 1, y: 0, transition: { duration: 0.3 } },
+    visible: { opacity: 1, y: 0 },
   };
 
   return (
@@ -142,6 +143,7 @@ const ProjectDialog = ({ isOpen, setIsOpen, focusedProject }: ProjectDialogProps
                             <motion.li
                               key={contribution}
                               variants={animatedListItem}
+                              transition={shouldReduceMotion ? { duration: 0 } : { duration: 0.3 }}
                               className="opacity-0"
                             >
                               {contribution}

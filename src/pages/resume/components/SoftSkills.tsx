@@ -1,4 +1,4 @@
-import { motion, useInView } from 'motion/react';
+import { motion, useInView, useReducedMotion } from 'motion/react';
 import { useRef } from 'react';
 import { useLanguage } from '../../../contexts/LanguageContext';
 import { softSkillsDataEN } from '../data/profileData.en';
@@ -6,6 +6,7 @@ import { softSkillsDataFR } from '../data/profileData.fr';
 import type { SoftSkillsProps } from '../data/profileDataType';
 
 const SoftSkills = ({ className }: SoftSkillsProps) => {
+  const shouldReduceMotion = useReducedMotion();
   const { language } = useLanguage();
   const softSkillsList = language === 'en' ? softSkillsDataEN : softSkillsDataFR;
 
@@ -24,7 +25,7 @@ const SoftSkills = ({ className }: SoftSkillsProps) => {
 
   const animatedListItem = {
     hidden: { opacity: 0, y: 10 },
-    visible: { opacity: 1, y: 0, transition: { duration: 0.3 } },
+    visible: { opacity: 1, y: 0 },
   };
 
   return (
@@ -45,6 +46,7 @@ const SoftSkills = ({ className }: SoftSkillsProps) => {
               key={skill.id}
               className="w-fit justify-self-start rounded-sm px-1 opacity-0"
               variants={animatedListItem}
+              transition={shouldReduceMotion ? { duration: 0 } : { duration: 0.3 }}
             >
               {skill.label}
             </motion.li>
