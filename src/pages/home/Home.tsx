@@ -63,7 +63,7 @@ const Home = () => {
               </div>
               {selected === navItem && (
                 <div className="animate-fade-in-delay flex h-1/3 items-center justify-between gap-5 px-4 motion-reduce:animate-none md:flex-col">
-                  <p className="text-primary transition-theme motion-reduce:transition-none">
+                  <p className="text-primary transition-theme motion-reduce:transition-none md:text-xl">
                     {' '}
                     {navItem.info}
                   </p>
