@@ -16,7 +16,7 @@ const Home = () => {
   const isDesktop = useMediaQuery('(min-width: 768px)');
 
   return (
-    <div className="flex h-[calc(100vh-61px-37px)] flex-col items-center gap-4 px-2 md:h-fit md:justify-around">
+    <div className="m:h-[calc(100dvh-61px-37px-16px-16px)] flex h-[calc(100dvh-61px-37px-32px-32px)] flex-col items-center gap-4 px-2 md:justify-start">
       <h2 className="text-primary transition-theme border-primary border-b-2 px-10 pb-2 text-3xl font-semibold uppercase motion-reduce:transition-none sm:text-4xl">
         {language === 'en' ? 'Explore' : 'Exploration'}
       </h2>
@@ -26,13 +26,13 @@ const Home = () => {
           : `Une porte d'entrée vers mon univers de développeur.`}
       </p>
 
-      <fieldset className="flex h-full w-full flex-col items-center justify-center gap-3 sm:w-[80vw] md:h-[60dvh] md:flex-row">
+      <fieldset className="flex h-full w-full flex-col items-center justify-center gap-3 sm:w-[80vw] md:max-h-100 md:flex-row">
         {navList.map((navItem) => {
           const isSelected = selected === navItem;
           return (
             <label
               key={navItem.id}
-              className="transition-theme bg-global-secondary border-primary border-primary flex h-full cursor-pointer flex-col items-center justify-around rounded-lg border transition-all duration-700 ease-in-out motion-reduce:transition-none md:flex-row"
+              className="transition-theme bg-global-secondary border-primary flex h-full cursor-pointer flex-col items-center justify-around rounded-lg transition-all duration-700 ease-in-out motion-reduce:transition-none md:flex-row"
               style={{
                 width: isDesktop ? (isSelected ? '55%' : '15%') : '100%',
                 height: !isDesktop ? (isSelected ? '55%' : '15%') : '100%',
@@ -44,7 +44,7 @@ const Home = () => {
                 value={navItem.name}
                 checked={selected === navItem}
                 onClick={() => (selected === navItem ? setSelected(null) : setSelected(navItem))}
-                className="sr-only cursor-pointer border"
+                className="sr-only cursor-pointer"
               />
               <div className="flex items-center justify-between gap-2 p-2 md:h-full md:flex-col">
                 <IconWrapper variant={navItem.iconVariant} wrapperClassName="h-10 w-10">
@@ -62,7 +62,7 @@ const Home = () => {
                 <span className="opacity-0">·</span>
               </div>
               {selected === navItem && (
-                <div className="animate-fade-in-delay flex h-1/3 items-center justify-between gap-5 px-4 md:flex-col">
+                <div className="animate-fade-in-delay flex h-1/3 items-center justify-between gap-5 px-4 motion-reduce:animate-none md:flex-col">
                   <p className="text-primary transition-theme motion-reduce:transition-none">
                     {' '}
                     {navItem.info}
