@@ -17,10 +17,10 @@ const Home = () => {
 
   return (
     <div className="flex h-[calc(100vh-61px-37px)] flex-col items-center gap-4 px-2 md:h-fit md:justify-around">
-      <h2 className="text-primary transition-theme border-primary border-b-2 px-10 pb-2 text-3xl font-semibold uppercase sm:text-4xl">
+      <h2 className="text-primary transition-theme border-primary border-b-2 px-10 pb-2 text-3xl font-semibold uppercase motion-reduce:transition-none sm:text-4xl">
         {language === 'en' ? 'Explore' : 'Exploration'}
       </h2>
-      <p className="text-primary transition-theme text-center">
+      <p className="text-primary transition-theme text-center motion-reduce:transition-none">
         {language === 'en'
           ? 'A clear view into my developer journey'
           : `Une porte d'entrée vers mon univers de développeur.`}
@@ -32,7 +32,7 @@ const Home = () => {
           return (
             <label
               key={navItem.id}
-              className="transition-theme bg-global-secondary border-primary border-primary flex h-full cursor-pointer flex-col items-center justify-around rounded-lg border transition-all duration-700 ease-in-out md:flex-row"
+              className="transition-theme bg-global-secondary border-primary border-primary flex h-full cursor-pointer flex-col items-center justify-around rounded-lg border transition-all duration-700 ease-in-out motion-reduce:transition-none md:flex-row"
               style={{
                 width: isDesktop ? (isSelected ? '55%' : '15%') : '100%',
                 height: !isDesktop ? (isSelected ? '55%' : '15%') : '100%',
@@ -50,7 +50,7 @@ const Home = () => {
                 <IconWrapper variant={navItem.iconVariant} wrapperClassName="h-10 w-10">
                   {navItem.iconSvg}
                 </IconWrapper>
-                <p className="text-primary transition-theme w-52 text-center text-2xl uppercase md:w-auto md:text-3xl md:leading-none md:tracking-widest">
+                <p className="text-primary transition-theme w-52 text-center text-2xl uppercase motion-reduce:transition-none md:w-auto md:text-3xl md:leading-none md:tracking-widest">
                   {isDesktop &&
                     navItem.name.split('').map((char: string, i: number) => (
                       <span key={`${i}-${char}`} className="block">
@@ -63,9 +63,12 @@ const Home = () => {
               </div>
               {selected === navItem && (
                 <div className="animate-fade-in-delay flex h-1/3 items-center justify-between gap-5 px-4 md:flex-col">
-                  <p className="text-primary transition-theme"> {navItem.info}</p>
+                  <p className="text-primary transition-theme motion-reduce:transition-none">
+                    {' '}
+                    {navItem.info}
+                  </p>
                   <Link className="ml-auto" to={navItem.path}>
-                    <span className="bg-primary transition-theme absolute h-12 w-12 animate-ping rounded-full opacity-20" />
+                    <span className="bg-primary transition-theme absolute h-12 w-12 animate-ping rounded-full opacity-20 motion-reduce:hidden" />
                     <ArrowRightIcon className="stroke-primary-light dark:stroke-primary-dark h-12 w-12" />
                   </Link>
                 </div>

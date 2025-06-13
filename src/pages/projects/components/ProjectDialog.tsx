@@ -40,7 +40,7 @@ const ProjectDialog = ({ isOpen, setIsOpen, focusedProject }: ProjectDialogProps
         <DialogPanel className="border-primary bg-global-secondary max-h-[80dvh] max-w-4xl space-y-4 overflow-y-auto rounded-2xl border-3 p-3 sm:p-8 lg:p-12">
           {/* Title and button */}
           <div className="flex flex-col gap-5 sm:flex-row sm:items-center sm:justify-between">
-            <DialogTitle className="text-primary transition-theme border-accent-light dark:border-accent-dark rounded-sm border-2 p-2 font-bold uppercase hover:shadow-[0_0_12px_4px_var(--color-btn-primary-hover-light)] dark:hover:shadow-[0_0_12px_4px_var(--color-btn-primary-hover-dark)]">
+            <DialogTitle className="text-primary transition-theme border-accent-light dark:border-accent-dark rounded-sm border-2 p-2 font-bold uppercase hover:shadow-[0_0_12px_4px_var(--color-btn-primary-hover-light)] motion-reduce:transition-none dark:hover:shadow-[0_0_12px_4px_var(--color-btn-primary-hover-dark)]">
               {focusedProject?.name}
             </DialogTitle>
 
@@ -49,7 +49,7 @@ const ProjectDialog = ({ isOpen, setIsOpen, focusedProject }: ProjectDialogProps
               type="button"
               onClick={() => setIsOpen(false)}
             >
-              <CloseIcon className="border-primary dark:stroke-primary-dark stroke-primary-light transition-theme h-10 w-10 cursor-pointer rounded-full border shadow-[0_0_12px_4px_var(--color-btn-primary-hover-light)] dark:shadow-[0_0_12px_4px_var(--color-btn-primary-hover-dark)]" />
+              <CloseIcon className="border-primary dark:stroke-primary-dark stroke-primary-light transition-theme h-10 w-10 cursor-pointer rounded-full border shadow-[0_0_12px_4px_var(--color-btn-primary-hover-light)] motion-reduce:transition-none dark:shadow-[0_0_12px_4px_var(--color-btn-primary-hover-dark)]" />
             </button>
           </div>
 
@@ -58,7 +58,7 @@ const ProjectDialog = ({ isOpen, setIsOpen, focusedProject }: ProjectDialogProps
 
           {/* Banner */}
 
-          <div className="text-primary transition-theme flex gap-2">
+          <div className="text-primary transition-theme flex gap-2 motion-reduce:transition-none">
             {focusedProject?.context.solo === true ? (
               <UserIcon className="h-6 w-6 stroke-current" />
             ) : (
@@ -82,7 +82,7 @@ const ProjectDialog = ({ isOpen, setIsOpen, focusedProject }: ProjectDialogProps
             {({ open }) => (
               <>
                 <DisclosureButton className={'flex cursor-pointer items-center gap-2'}>
-                  <h3 className="text-primary dark:border-b-accent-dark transition-theme border-b-accent-light w-fit border-b-2">
+                  <h3 className="text-primary dark:border-b-accent-dark transition-theme border-b-accent-light w-fit border-b-2 motion-reduce:transition-none">
                     Stack
                   </h3>
                   <ChevronDownIcon
@@ -96,7 +96,7 @@ const ProjectDialog = ({ isOpen, setIsOpen, focusedProject }: ProjectDialogProps
                       <div className="flex flex-col justify-between gap-2">
                         {focusedProject?.stack?.map((type) => {
                           return (
-                            <div key={type.name} className="text-secondary flex flex-col gap-0.5">
+                            <div key={type.name} className="text-primary flex flex-col gap-0.5">
                               <h4>{type.name} : </h4>
                               <StackList
                                 type={type}
@@ -120,7 +120,7 @@ const ProjectDialog = ({ isOpen, setIsOpen, focusedProject }: ProjectDialogProps
             {({ open }) => (
               <>
                 <DisclosureButton className={'flex cursor-pointer items-center gap-2'}>
-                  <h3 className="text-primary transition-theme dark:border-b-accent-dark border-b-accent-light w-fit border-b-2">
+                  <h3 className="text-primary transition-theme dark:border-b-accent-dark border-b-accent-light w-fit border-b-2 motion-reduce:transition-none">
                     {language === 'en' ? 'Contributions' : 'Contributions'}
                   </h3>
                   <ChevronDownIcon
@@ -132,8 +132,8 @@ const ProjectDialog = ({ isOpen, setIsOpen, focusedProject }: ProjectDialogProps
                   {open && (
                     <DisclosurePanel static as={Fragment}>
                       <motion.ul
-                        className="text-secondary list-inside list-disc"
-                        variants={animatedList}
+                        className="text-primary list-inside list-disc"
+                        variants={shouldReduceMotion ? undefined : animatedList}
                         initial="hidden"
                         animate="visible"
                         exit="hidden"

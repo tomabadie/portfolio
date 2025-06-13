@@ -10,9 +10,9 @@ const WorkExperiences = ({ className }: WorkExperiencesProps) => {
 
   return (
     <section
-      className={`border-primary transition-theme rounded-lg border px-2 py-2 ${className} `}
+      className={`border-primary transition-theme rounded-lg border px-2 py-2 motion-reduce:transition-none ${className} `}
     >
-      <h3 className="border-b-accent-light dark:border-b-accent-dark transition-theme mb-4 w-fit border-b-2 font-bold">
+      <h3 className="border-b-accent-light dark:border-b-accent-dark transition-theme mb-4 w-fit border-b-2 font-bold motion-reduce:transition-none">
         {language === 'en' ? 'Work experiences' : 'Expériences'}
       </h3>
       <Timeline timelineList={experiencesList} />

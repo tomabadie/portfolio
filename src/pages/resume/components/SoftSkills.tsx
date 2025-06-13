@@ -29,14 +29,16 @@ const SoftSkills = ({ className }: SoftSkillsProps) => {
   };
 
   return (
-    <section className={`border-primary transition-theme rounded-lg border px-2 py-2 ${className}`}>
+    <section
+      className={`border-primary transition-theme rounded-lg border px-2 py-2 motion-reduce:transition-none ${className}`}
+    >
       <h3 className="border-b-accent-light dark:border-b-accent-dark mb-2 w-fit border-b-2 font-bold">
         {language === 'en' ? 'Soft Skills' : 'Personnalité'}
       </h3>
       <motion.ul
         ref={ref}
         className="grid list-inside list-disc grid-cols-2 gap-2"
-        variants={animatedList}
+        variants={shouldReduceMotion ? undefined : animatedList}
         initial="hidden"
         animate={isInView ? 'visible' : 'hidden'}
       >

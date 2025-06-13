@@ -1,10 +1,11 @@
-import { motion } from 'motion/react';
+import { motion, useReducedMotion } from 'motion/react';
 import StackList from '../../../components/ui/StackList';
 import { useLanguage } from '../../../contexts/LanguageContext';
 import type { ProjectCardProps, ProjectProps } from '../data/projectsDataType';
 import ProjectLinks from './ProjectLinks';
 
 const ProjectCard = ({ project, setIsOpen, setFocusedProject, index }: ProjectCardProps) => {
+  const shouldReduceMotion = useReducedMotion();
   const { language } = useLanguage();
   const isEven = index % 2 === 0;
 
@@ -17,7 +18,7 @@ const ProjectCard = ({ project, setIsOpen, setFocusedProject, index }: ProjectCa
     <motion.article
       initial={{ opacity: 0, x: isEven ? 50 : -50 }}
       whileInView={{ opacity: 1, x: 0 }}
-      transition={{ duration: 0.6 }}
+      transition={shouldReduceMotion ? { duration: 0 } : { duration: 0.6 }}
       viewport={{ once: true }}
     >
       <article
@@ -42,12 +43,12 @@ const ProjectCard = ({ project, setIsOpen, setFocusedProject, index }: ProjectCa
           {/* Name */}
           <div className="flex flex-wrap items-center gap-2">
             <button type="button" onClick={() => handleClick(project)}>
-              <h3 className="transition-theme hover:text-accent-light dark:hover:text-accent-dark cursor-pointer text-start text-lg font-bold">
+              <h3 className="transition-theme hover:text-accent-light dark:hover:text-accent-dark cursor-pointer text-start text-lg font-bold motion-reduce:transition-none">
                 {project.name}
               </h3>
             </button>
             {project.inProgress && (
-              <span className="border-accent-light dark:border-accent-dark transition-theme h-fit rounded-full border px-2.5 py-0.5 text-xs font-medium">
+              <span className="border-accent-light dark:border-accent-dark transition-theme h-fit rounded-full border px-2.5 py-0.5 text-xs font-medium motion-reduce:transition-none">
                 {language === 'en' ? 'In progress' : 'En cours'}
               </span>
             )}
@@ -56,7 +57,9 @@ const ProjectCard = ({ project, setIsOpen, setFocusedProject, index }: ProjectCa
           <ProjectLinks demoLink={project.demoLink} repoLink={project.repoLink} />
 
           {/* Description */}
-          <p className="transition-theme text-primary max-w-[80ch]">{project.shortDescription}</p>
+          <p className="transition-theme text-primary max-w-[80ch] motion-reduce:transition-none">
+            {project.shortDescription}
+          </p>
           {/* Stack */}
           <ul className="flex flex-wrap">
             {project.stack.map((type) => {

@@ -35,7 +35,7 @@ const StackList = ({ type, styleVariant, orientationVariant }: StackListProps) =
   return (
     <motion.ul
       className={`flex flex-wrap ${styleVariant === 'names' && 'gap-2'} `}
-      variants={animatedList}
+      variants={shouldReduceMotion ? undefined : animatedList}
       initial="hidden"
       animate="visible"
       exit="hidden"
@@ -47,7 +47,7 @@ const StackList = ({ type, styleVariant, orientationVariant }: StackListProps) =
               <IconWrapper variant="basic" wrapperClassName="h-6 w-6 cursor-pointer text-secondary">
                 {skillsIcons[item.toLowerCase()]}
               </IconWrapper>
-              <span className="border-primary bg-global-primary absolute top-full z-20 mt-1 scale-0 rounded-sm border px-2 py-1 text-xs opacity-0 shadow transition-all duration-200 group-hover:scale-100 group-hover:opacity-100">
+              <span className="border-primary bg-global-primary absolute top-full z-20 mt-1 scale-0 rounded-sm border px-2 py-1 text-xs opacity-0 shadow transition-all duration-200 group-hover:scale-100 group-hover:opacity-100 motion-reduce:transition-none">
                 {item}
               </span>
             </li>
@@ -59,11 +59,11 @@ const StackList = ({ type, styleVariant, orientationVariant }: StackListProps) =
           return (
             <motion.li
               key={item}
-              variants={animatedListItem}
-              transition={shouldReduceMotion ? { duration: 0 } : { duration: 0.3 }}
+              variants={shouldReduceMotion ? undefined : animatedListItem}
+              transition={{ duration: 0.3 }}
               className={`flex items-center justify-center flex-${orientationVariant} `}
             >
-              <span className="border-primary bg-global-primary transition-theme text-secondary rounded-sm border px-2 py-1 text-xs shadow">
+              <span className="border-primary bg-global-primary transition-theme text-secondary rounded-sm border px-2 py-1 text-xs shadow motion-reduce:transition-none">
                 {item}
               </span>
             </motion.li>
