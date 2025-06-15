@@ -1,16 +1,19 @@
-import { forwardRef } from 'react';
+import { motion, useInView } from 'motion/react';
+import { useRef } from 'react';
 import { useLanguage } from '../../../contexts/LanguageContext';
 import { languagesDataEN } from '../data/profileData.en';
 import { languagesDataFR } from '../data/profileData.fr';
 import type { LanguagesProps } from '../data/profileDataType';
 
-const Languages = forwardRef<HTMLElement, LanguagesProps>(({ className, visible }, ref) => {
+const Languages = ({ className }: LanguagesProps) => {
   const { language } = useLanguage();
   const languagesList = language === 'en' ? languagesDataEN : languagesDataFR;
+  const sectionRef = useRef(null);
+  const isInView = useInView(sectionRef, { amount: 0.6, once: true });
 
   return (
-    <section
-      ref={ref}
+    <motion.section
+      ref={sectionRef}
       className={`border-primary transition-theme rounded-lg border px-2 py-2 motion-reduce:transition-none ${className} `}
     >
       <h3 className="border-b-accent-light dark:border-b-accent-dark transition-theme mb-4 w-fit border-b-2 font-bold motion-reduce:transition-none">
@@ -40,7 +43,7 @@ const Languages = forwardRef<HTMLElement, LanguagesProps>(({ className, visible 
                   r="40"
                   style={{
                     strokeDasharray: '251',
-                    strokeDashoffset: visible ? `${dashOffset}` : '251',
+                    strokeDashoffset: isInView ? `${dashOffset}` : '251',
                     strokeLinecap: 'round',
                   }}
                   className="stroke-accent-light dark:stroke-accent-dark transition-theme translate-50/100 overflow-visible fill-none stroke-4 transition-[stroke-dashoffset] duration-2000 ease-in-out motion-reduce:transition-none"
@@ -50,8 +53,8 @@ const Languages = forwardRef<HTMLElement, LanguagesProps>(({ className, visible 
           );
         })}
       </ul>
-    </section>
+    </motion.section>
   );
-});
+};
 
 export default Languages;
