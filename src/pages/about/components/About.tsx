@@ -38,7 +38,7 @@ const About = () => {
             <Disclosure>
               {({ open }) => (
                 <>
-                  <DisclosureButton className={'flex cursor-pointer items-center gap-2'}>
+                  <DisclosureButton data-cursor="hover" className={'flex items-center gap-2'}>
                     <h3 className="text-l transition-theme dark:border-b-accent-dark border-b-accent-light my-2 border-b-2 font-bold motion-reduce:transition-none">
                       {item.title}
                     </h3>

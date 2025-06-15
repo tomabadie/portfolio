@@ -20,6 +20,7 @@ const IconWrapper: React.FC<IconWrapperProps> = ({
   return (
     <>
       <span
+        data-cursor={variant === 'primary' && 'hover'}
         className={`transition-theme flex items-center justify-center motion-reduce:transition-none ${iconVariants[variant]} ${wrapperClassName}`}
       >
         {children}

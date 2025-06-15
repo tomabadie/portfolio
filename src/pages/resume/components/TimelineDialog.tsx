@@ -45,17 +45,24 @@ const TimelineDialog = ({ isOpen, setIsOpen, focusedItem }: TimelineDialogProps)
       <div className="fixed inset-0 flex w-screen items-center justify-center p-4">
         <DialogPanel className="border-primary bg-global-secondary max-h-[80dvh] max-w-4xl space-y-4 overflow-y-auto rounded-2xl border-3 p-3 sm:p-8 lg:p-12">
           <div className="flex flex-col gap-5 sm:flex-row sm:items-center sm:justify-between">
-            <a href={focusedItem?.link} target="_blank" rel="noopener noreferrer" className="w-fit">
+            <a
+              href={focusedItem?.link}
+              target="_blank"
+              rel="noopener noreferrer"
+              data-cursor="hover"
+              className="w-fit"
+            >
               <DialogTitle className="text-primary transition-theme border-accent-light dark:border-accent-dark rounded-sm border-2 p-2 font-bold uppercase hover:shadow-[0_0_12px_4px_var(--color-btn-primary-hover-light)] motion-reduce:transition-none dark:hover:shadow-[0_0_12px_4px_var(--color-btn-primary-hover-dark)]">
                 {focusedItem?.company}
               </DialogTitle>
             </a>
             <button
-              className="order-first mx-auto sm:order-none sm:mx-0"
               type="button"
+              data-cursor="hover"
+              className="order-first mx-auto sm:order-none sm:mx-0"
               onClick={() => setIsOpen(false)}
             >
-              <CloseIcon className="border-primary dark:stroke-primary-dark stroke-primary-light transition-theme h-10 w-10 cursor-pointer rounded-full border shadow-[0_0_12px_4px_var(--color-btn-primary-hover-light)] motion-reduce:transition-none dark:shadow-[0_0_12px_4px_var(--color-btn-primary-hover-dark)]" />
+              <CloseIcon className="border-primary dark:stroke-primary-dark stroke-primary-light transition-theme h-10 w-10 rounded-full border shadow-[0_0_12px_4px_var(--color-btn-primary-hover-light)] motion-reduce:transition-none dark:shadow-[0_0_12px_4px_var(--color-btn-primary-hover-dark)]" />
             </button>
           </div>
 
@@ -92,7 +99,7 @@ const TimelineDialog = ({ isOpen, setIsOpen, focusedItem }: TimelineDialogProps)
           <Disclosure>
             {({ open }) => (
               <>
-                <DisclosureButton className={'flex cursor-pointer items-center gap-2'}>
+                <DisclosureButton data-cursor="hover" className={'flex items-center gap-2'}>
                   <h3 className="text-primary transition-theme dark:border-b-accent-dark border-b-accent-light w-fit border-b-2 motion-reduce:transition-none">
                     {language === 'en' ? 'Achievements' : 'Réalisations'}
                   </h3>
@@ -136,7 +143,7 @@ const TimelineDialog = ({ isOpen, setIsOpen, focusedItem }: TimelineDialogProps)
           <Disclosure>
             {({ open }) => (
               <>
-                <DisclosureButton className={'flex cursor-pointer items-center gap-2'}>
+                <DisclosureButton data-cursor="hover" className={'flex items-center gap-2'}>
                   <h3 className="text-primary dark:border-b-accent-dark transition-theme border-b-accent-light w-fit border-b-2 motion-reduce:transition-none">
                     Stack
                   </h3>
@@ -174,7 +181,7 @@ const TimelineDialog = ({ isOpen, setIsOpen, focusedItem }: TimelineDialogProps)
           <Disclosure>
             {({ open }) => (
               <>
-                <DisclosureButton className={'flex cursor-pointer items-center gap-2'}>
+                <DisclosureButton data-cursor="hover" className={'flex items-center gap-2'}>
                   <h3 className="text-primary dark:border-b-accent-dark transition-theme border-b-accent-light w-fit border-b-2 motion-reduce:transition-none">
                     {language === 'en' ? 'Context' : 'Contexte'}
                   </h3>

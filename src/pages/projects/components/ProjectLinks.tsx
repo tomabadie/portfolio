@@ -9,7 +9,7 @@ const ProjectLinks = ({ demoLink, repoLink }: ProjectLinksProps) => {
         <a href={demoLink} target="_blank" rel="noopener noreferrer">
           <IconWrapper
             variant="primary"
-            wrapperClassName="cursor-pointer shadow-sm/30 dark:shadow-sm/50 dark:shadow-btn-primary-hover-dark border w-8 h-8"
+            wrapperClassName="shadow-sm/30 dark:shadow-sm/50 dark:shadow-btn-primary-hover-dark border w-8 h-8"
           >
             <LinkIcon className="h-6 w-6 stroke-current" />
           </IconWrapper>
@@ -19,7 +19,7 @@ const ProjectLinks = ({ demoLink, repoLink }: ProjectLinksProps) => {
         <a href={repoLink} target="_blank" rel="noopener noreferrer">
           <IconWrapper
             variant="primary"
-            wrapperClassName="cursor-pointer shadow-sm/30 dark:shadow-sm/50 dark:shadow-btn-primary-hover-dark border w-8 h-8"
+            wrapperClassName="shadow-sm/30 dark:shadow-sm/50 dark:shadow-btn-primary-hover-dark border w-8 h-8"
           >
             <GithubIcon className="h-6 w-6 stroke-current" />
           </IconWrapper>

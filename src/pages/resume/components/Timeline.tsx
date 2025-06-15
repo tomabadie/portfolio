@@ -29,7 +29,10 @@ const Timeline = ({ timelineList }: TimelineProps) => {
                 </time>
 
                 <button type="button" className="block" onClick={() => handleClick(item)}>
-                  <h3 className="hover:text-accent-light dark:hover:text-accent-dark transition-theme cursor-pointer text-start text-lg font-bold motion-reduce:transition-none">
+                  <h3
+                    data-cursor="hover"
+                    className="hover:text-accent-light dark:hover:text-accent-dark transition-theme text-start text-lg font-bold motion-reduce:transition-none"
+                  >
                     {item.company}
                   </h3>
                 </button>

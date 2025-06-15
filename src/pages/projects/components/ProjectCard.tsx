@@ -26,7 +26,8 @@ const ProjectCard = ({ project, setIsOpen, setFocusedProject, index }: ProjectCa
       >
         <button
           type="button"
-          className="border-primary flex cursor-pointer items-center justify-center overflow-hidden rounded-md border md:max-w-[min(50%,750px)]"
+          data-cursor="hover"
+          className="border-primary flex items-center justify-center overflow-hidden rounded-md border md:max-w-[min(50%,750px)]"
           onClick={() => handleClick(project)}
         >
           <div className="aspect-[2850/1800] w-full">
@@ -42,8 +43,8 @@ const ProjectCard = ({ project, setIsOpen, setFocusedProject, index }: ProjectCa
         <div className="flex flex-col gap-2">
           {/* Name */}
           <div className="flex flex-wrap items-center gap-2">
-            <button type="button" onClick={() => handleClick(project)}>
-              <h3 className="transition-theme hover:text-accent-light dark:hover:text-accent-dark cursor-pointer text-start text-lg font-bold motion-reduce:transition-none">
+            <button type="button" data-cursor="hover" onClick={() => handleClick(project)}>
+              <h3 className="transition-theme hover:text-accent-light dark:hover:text-accent-dark text-start text-lg font-bold motion-reduce:transition-none">
                 {project.name}
               </h3>
             </button>

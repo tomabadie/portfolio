@@ -7,7 +7,10 @@ const LanguageToggle = () => {
 
   return (
     <Popover>
-      <PopoverButton className="text-primary flex cursor-pointer content-center justify-center">
+      <PopoverButton
+        className="text-primary flex content-center justify-center"
+        data-cursor="hover"
+      >
         <GrLanguage size={24} />
       </PopoverButton>
       <PopoverPanel
@@ -17,7 +20,8 @@ const LanguageToggle = () => {
       >
         <button
           type="button"
-          className="text-primary border-primary hover:bg-btn-primary-hover-light dark:hover:bg-btn-primary-hover-dark block cursor-pointer rounded-lg border px-3 py-2 font-semibold transition"
+          data-cursor="hover"
+          className="text-primary border-primary hover:bg-btn-primary-hover-light dark:hover:bg-btn-primary-hover-dark block rounded-lg border px-3 py-2 font-semibold transition"
           onClick={() => {
             setLanguage('en');
           }}
@@ -26,7 +30,8 @@ const LanguageToggle = () => {
         </button>
         <button
           type="button"
-          className="text-primary border-primary hover:bg-btn-primary-hover-light dark:hover:bg-btn-primary-hover-dark block cursor-pointer rounded-lg border px-3 py-2 font-semibold transition"
+          data-cursor="hover"
+          className="text-primary border-primary hover:bg-btn-primary-hover-light dark:hover:bg-btn-primary-hover-dark block rounded-lg border px-3 py-2 font-semibold transition"
           onClick={() => {
             setLanguage('fr');
           }}

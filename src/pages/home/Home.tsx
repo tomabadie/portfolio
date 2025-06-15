@@ -32,7 +32,8 @@ const Home = () => {
           return (
             <label
               key={navItem.id}
-              className="transition-theme bg-global-secondary border-primary flex h-full cursor-pointer flex-col items-center justify-around rounded-lg transition-all duration-700 ease-in-out motion-reduce:transition-none md:flex-row"
+              data-cursor="hover"
+              className="transition-theme bg-global-secondary border-primary flex h-full flex-col items-center justify-around rounded-lg transition-all duration-700 ease-in-out motion-reduce:transition-none md:flex-row"
               style={{
                 width: isDesktop ? (isSelected ? '55%' : '15%') : '100%',
                 height: !isDesktop ? (isSelected ? '55%' : '15%') : '100%',
@@ -44,7 +45,7 @@ const Home = () => {
                 value={navItem.name}
                 checked={selected === navItem}
                 onClick={() => (selected === navItem ? setSelected(null) : setSelected(navItem))}
-                className="sr-only cursor-pointer"
+                className="sr-only"
               />
               <div className="flex items-center justify-between gap-2 p-2 md:h-full md:flex-col">
                 <IconWrapper variant={navItem.iconVariant} wrapperClassName="h-10 w-10">
@@ -67,7 +68,7 @@ const Home = () => {
                     {' '}
                     {navItem.info}
                   </p>
-                  <Link className="ml-auto" to={navItem.path}>
+                  <Link data-cursor="hover" className="ml-auto" to={navItem.path}>
                     <span className="bg-primary transition-theme absolute h-12 w-12 animate-ping rounded-full opacity-20 motion-reduce:hidden" />
                     <ArrowRightIcon className="stroke-primary-light dark:stroke-primary-dark h-12 w-12" />
                   </Link>

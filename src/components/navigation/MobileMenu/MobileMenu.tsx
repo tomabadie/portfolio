@@ -7,7 +7,8 @@ const MobileMenu = ({ navList, isMenuOpen, setIsMenuOpen }: MobileMenuProps) => 
     <div className="flex items-center justify-center md:hidden">
       <button
         type="button"
-        className="group relative cursor-pointer"
+        data-cursor="hover"
+        className="group relative"
         onClick={() => setIsMenuOpen(!isMenuOpen)}
       >
         <div
@@ -51,6 +52,7 @@ const MobileMenu = ({ navList, isMenuOpen, setIsMenuOpen }: MobileMenuProps) => 
                   <li key={item.id} className="uppercase">
                     <NavLink
                       to={item.path}
+                      data-cursor="hover"
                       className={({ isActive }) =>
                         `${isActive && 'dark:text-btn-primary-hover-dark text-secondary-light'} text-primary rounded-xl px-2 py-1 text-xl font-semibold`
                       }

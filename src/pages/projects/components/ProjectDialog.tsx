@@ -45,11 +45,12 @@ const ProjectDialog = ({ isOpen, setIsOpen, focusedProject }: ProjectDialogProps
             </DialogTitle>
 
             <button
-              className="order-first mx-auto sm:order-none sm:mx-0"
               type="button"
+              data-cursor="hover"
+              className="order-first mx-auto sm:order-none sm:mx-0"
               onClick={() => setIsOpen(false)}
             >
-              <CloseIcon className="border-primary dark:stroke-primary-dark stroke-primary-light transition-theme h-10 w-10 cursor-pointer rounded-full border shadow-[0_0_12px_4px_var(--color-btn-primary-hover-light)] motion-reduce:transition-none dark:shadow-[0_0_12px_4px_var(--color-btn-primary-hover-dark)]" />
+              <CloseIcon className="border-primary dark:stroke-primary-dark stroke-primary-light transition-theme h-10 w-10 rounded-full border shadow-[0_0_12px_4px_var(--color-btn-primary-hover-light)] motion-reduce:transition-none dark:shadow-[0_0_12px_4px_var(--color-btn-primary-hover-dark)]" />
             </button>
           </div>
 
@@ -81,7 +82,7 @@ const ProjectDialog = ({ isOpen, setIsOpen, focusedProject }: ProjectDialogProps
           <Disclosure>
             {({ open }) => (
               <>
-                <DisclosureButton className={'flex cursor-pointer items-center gap-2'}>
+                <DisclosureButton data-cursor="hover" className={'flex items-center gap-2'}>
                   <h3 className="text-primary dark:border-b-accent-dark transition-theme border-b-accent-light w-fit border-b-2 motion-reduce:transition-none">
                     Stack
                   </h3>
@@ -119,7 +120,7 @@ const ProjectDialog = ({ isOpen, setIsOpen, focusedProject }: ProjectDialogProps
           <Disclosure>
             {({ open }) => (
               <>
-                <DisclosureButton className={'flex cursor-pointer items-center gap-2'}>
+                <DisclosureButton data-cursor="hover" className={'flex items-center gap-2'}>
                   <h3 className="text-primary transition-theme dark:border-b-accent-dark border-b-accent-light w-fit border-b-2 motion-reduce:transition-none">
                     {language === 'en' ? 'Contributions' : 'Contributions'}
                   </h3>
