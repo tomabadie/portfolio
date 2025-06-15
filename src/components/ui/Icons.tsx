@@ -6,7 +6,7 @@ interface ChevronDownIcon {
 export const ChevronDownIcon = ({ isOpen, className }: ChevronDownIcon) => (
   <svg
     xmlns="http://www.w3.org/2000/svg"
-    className={`${className} transition-transform ${isOpen ? 'rotate-180' : ''} fill-none`}
+    className={`${className} transition-transform motion-reduce:transition-none ${isOpen ? 'rotate-180' : ''} fill-none`}
     viewBox="0 0 24 24"
     strokeWidth={1.5}
   >
@@ -22,7 +22,7 @@ interface IconProps {
 export const CloseIcon = ({ className }: IconProps) => (
   <svg
     xmlns="http://www.w3.org/2000/svg"
-    className={`${className} transition-theme fill-none`}
+    className={`${className} transition-theme fill-none motion-reduce:transition-none`}
     viewBox="0 0 24 24"
     strokeWidth={1.5}
   >
@@ -34,7 +34,7 @@ export const CloseIcon = ({ className }: IconProps) => (
 export const LocationIcon = ({ className }: IconProps) => (
   <svg
     xmlns="http://www.w3.org/2000/svg"
-    className={`${className} transition-theme fill-none`}
+    className={`${className} transition-theme fill-none motion-reduce:transition-none`}
     viewBox="0 0 24 24"
     strokeWidth={1.5}
   >
@@ -51,7 +51,7 @@ export const LocationIcon = ({ className }: IconProps) => (
 export const CompanyIcon = ({ className }: IconProps) => (
   <svg
     xmlns="http://www.w3.org/2000/svg"
-    className={`${className} transition-theme fill-none`}
+    className={`${className} transition-theme fill-none motion-reduce:transition-none`}
     viewBox="0 0 24 24"
     strokeWidth={1.5}
   >
@@ -68,7 +68,7 @@ export const CompanyIcon = ({ className }: IconProps) => (
 export const SchoolIcon = ({ className }: IconProps) => (
   <svg
     xmlns="http://www.w3.org/2000/svg"
-    className={`${className} transition-theme fill-none`}
+    className={`${className} transition-theme fill-none motion-reduce:transition-none`}
     viewBox="0 0 24 24"
     strokeWidth={1.5}
   >
@@ -85,7 +85,7 @@ export const SchoolIcon = ({ className }: IconProps) => (
 export const DurationIcon = ({ className }: IconProps) => (
   <svg
     xmlns="http://www.w3.org/2000/svg"
-    className={`${className} transition-theme fill-none`}
+    className={`${className} transition-theme fill-none motion-reduce:transition-none`}
     viewBox="0 0 24 24"
     strokeWidth={1.5}
   >
@@ -101,7 +101,7 @@ export const DurationIcon = ({ className }: IconProps) => (
 export const StarIcon = ({ className }: IconProps) => (
   <svg
     xmlns="http://www.w3.org/2000/svg"
-    className={`${className} transition-theme fill-none`}
+    className={`${className} transition-theme fill-none motion-reduce:transition-none`}
     viewBox="0 0 24 24"
     strokeWidth={1.5}
   >
@@ -117,7 +117,7 @@ export const StarIcon = ({ className }: IconProps) => (
 export const ArrowRightIcon = ({ className }: IconProps) => (
   <svg
     xmlns="http://www.w3.org/2000/svg"
-    className={`${className} transition-theme fill-none`}
+    className={`${className} transition-theme fill-none motion-reduce:transition-none`}
     viewBox="0 0 24 24"
     strokeWidth={1.5}
   >
@@ -133,7 +133,7 @@ export const ArrowRightIcon = ({ className }: IconProps) => (
 export const LinkIcon = ({ className }: IconProps) => (
   <svg
     xmlns="http://www.w3.org/2000/svg"
-    className={`${className} transition-theme fill-none stroke-current`}
+    className={`${className} transition-theme fill-none stroke-current motion-reduce:transition-none`}
     viewBox="0 0 24 24"
     strokeWidth={1.5}
   >
@@ -149,7 +149,7 @@ export const LinkIcon = ({ className }: IconProps) => (
 export const GithubIcon = ({ className }: IconProps) => (
   <svg
     xmlns="http://www.w3.org/2000/svg"
-    className={`${className} transition-theme fill-current`}
+    className={`${className} transition-theme fill-current motion-reduce:transition-none`}
     viewBox="0 0 496 512"
     strokeWidth={1.5}
   >
@@ -162,7 +162,7 @@ export const GithubIcon = ({ className }: IconProps) => (
 export const UserIcon = ({ className }: IconProps) => (
   <svg
     xmlns="http://www.w3.org/2000/svg"
-    className={`${className} transition-theme fill-none stroke-current`}
+    className={`${className} transition-theme fill-none stroke-current motion-reduce:transition-none`}
     viewBox="0 0 24 24"
     strokeWidth={1.5}
   >
@@ -178,7 +178,7 @@ export const UserIcon = ({ className }: IconProps) => (
 export const GroupIcon = ({ className }: IconProps) => (
   <svg
     xmlns="http://www.w3.org/2000/svg"
-    className={`${className} transition-theme fill-none stroke-current`}
+    className={`${className} transition-theme fill-none stroke-current motion-reduce:transition-none`}
     viewBox="0 0 24 24"
     strokeWidth={1.5}
   >

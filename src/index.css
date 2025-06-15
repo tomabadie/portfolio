@@ -16,7 +16,7 @@
   --color-text-invert-light: oklch(96.7% 0.001 286.375); /* zinc-100 */
   --color-primary-light: oklch(21% 0.006 285.885); /* zinc-900 */
   --color-secondary-light: oklch(70.5% 0.015 286.067); /* zinc-400 */
-  --color-accent-primary-light: oklch(37% 0.013 285.805); /* zinc-700 */
+  --color-accent-primary-light: oklch(70% 0.18 250);
   --color-bg-global-primary-light: oklch(98.5% 0 0); /* zinc-50 */
   --color-bg-global-secondary-light: oklch(96.7% 0.001 286.375); /* zinc-100 */
   --color-border-primary-light: oklch(87.1% 0.006 286.286); /* zinc-300 */
@@ -28,7 +28,7 @@
   --color-text-invert-dark: oklch(21% 0.006 285.885); /* zinc-900 */
   --color-primary-dark: oklch(96.7% 0.001 286.375); /* zinc-100 */
   --color-secondary-dark: oklch(87.1% 0.006 286.286); /* zinc-300 */
-  --color-accent-primary-dark: oklch(87.1% 0.006 286.286); /* zinc-300 */
+  --color-accent-primary-dark: oklch(45% 0.18 250);
   --color-bg-global-primary-dark: oklch(14.1% 0.005 285.823); /* zinc-950 */
   --color-bg-global-secondary-dark: oklch(21% 0.006 285.885); /* zinc-900 */
   --color-border-primary-dark: oklch(44.2% 0.017 285.786); /* zinc-600 */
@@ -68,9 +68,16 @@
   }
 
   body {
+    cursor: none;
     transition:
       background-color 0.3s ease,
       color 0.3s ease;
+
+    button,
+    a,
+    label {
+      cursor: none;
+    }
   }
 
   h1,

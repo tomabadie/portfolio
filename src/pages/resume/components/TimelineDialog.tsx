@@ -7,6 +7,8 @@ import {
   DisclosureButton,
   DisclosurePanel,
 } from '@headlessui/react';
+import { AnimatePresence, motion, useReducedMotion } from 'motion/react';
+import { Fragment } from 'react/jsx-runtime';
 import {
   ChevronDownIcon,
   CloseIcon,
@@ -15,28 +17,52 @@ import {
   LocationIcon,
   SchoolIcon,
 } from '../../../components/ui/Icons';
+import StackList from '../../../components/ui/StackList';
 import { useLanguage } from '../../../contexts/LanguageContext';
 import type { TimelineDialogProps } from '../data/timelineDataType';
 
 const TimelineDialog = ({ isOpen, setIsOpen, focusedItem }: TimelineDialogProps) => {
+  const shouldReduceMotion = useReducedMotion();
   const { language } = useLanguage();
+
+  const animatedList = {
+    hidden: { opacity: 0 },
+    visible: {
+      opacity: 1,
+      transition: {
+        staggerChildren: 0.1,
+      },
+    },
+  };
+
+  const animatedListItem = {
+    hidden: { opacity: 0, y: 10 },
+    visible: { opacity: 1, y: 0 },
+  };
 
   return (
     <Dialog open={isOpen} onClose={() => setIsOpen(false)} className="relative z-50">
       <div className="fixed inset-0 flex w-screen items-center justify-center p-4">
         <DialogPanel className="border-primary bg-global-secondary max-h-[80dvh] max-w-4xl space-y-4 overflow-y-auto rounded-2xl border-3 p-3 sm:p-8 lg:p-12">
           <div className="flex flex-col gap-5 sm:flex-row sm:items-center sm:justify-between">
-            <a href={focusedItem?.link} target="_blank" rel="noopener noreferrer" className="w-fit">
-              <DialogTitle className="text-primary transition-theme border-accent-light dark:border-accent-dark rounded-sm border-2 p-2 font-bold uppercase hover:shadow-[0_0_12px_4px_var(--color-btn-primary-hover-light)] dark:hover:shadow-[0_0_12px_4px_var(--color-btn-primary-hover-dark)]">
+            <a
+              href={focusedItem?.link}
+              target="_blank"
+              rel="noopener noreferrer"
+              data-cursor="hover"
+              className="w-fit"
+            >
+              <DialogTitle className="text-primary transition-theme border-accent-light dark:border-accent-dark rounded-sm border-2 p-2 font-bold uppercase hover:shadow-[0_0_12px_4px_var(--color-btn-primary-hover-light)] motion-reduce:transition-none dark:hover:shadow-[0_0_12px_4px_var(--color-btn-primary-hover-dark)]">
                 {focusedItem?.company}
               </DialogTitle>
             </a>
             <button
-              className="order-first mx-auto sm:order-none sm:mx-0"
               type="button"
+              data-cursor="hover"
+              className="order-first mx-auto sm:order-none sm:mx-0"
               onClick={() => setIsOpen(false)}
             >
-              <CloseIcon className="border-primary dark:stroke-primary-dark stroke-primary-light transition-theme h-10 w-10 cursor-pointer rounded-full border shadow-[0_0_12px_4px_var(--color-btn-primary-hover-light)] dark:shadow-[0_0_12px_4px_var(--color-btn-primary-hover-dark)]" />
+              <CloseIcon className="border-primary dark:stroke-primary-dark stroke-primary-light transition-theme h-10 w-10 rounded-full border shadow-[0_0_12px_4px_var(--color-btn-primary-hover-light)] motion-reduce:transition-none dark:shadow-[0_0_12px_4px_var(--color-btn-primary-hover-dark)]" />
             </button>
           </div>
 
@@ -73,8 +99,8 @@ const TimelineDialog = ({ isOpen, setIsOpen, focusedItem }: TimelineDialogProps)
           <Disclosure>
             {({ open }) => (
               <>
-                <DisclosureButton className={'flex cursor-pointer items-center gap-2'}>
-                  <h3 className="text-primary transition-theme dark:border-b-accent-dark border-b-accent-light w-fit border-b-2">
+                <DisclosureButton data-cursor="hover" className={'flex items-center gap-2'}>
+                  <h3 className="text-primary transition-theme dark:border-b-accent-dark border-b-accent-light w-fit border-b-2 motion-reduce:transition-none">
                     {language === 'en' ? 'Achievements' : 'Réalisations'}
                   </h3>
                   <ChevronDownIcon
@@ -82,13 +108,32 @@ const TimelineDialog = ({ isOpen, setIsOpen, focusedItem }: TimelineDialogProps)
                     className="dark:stroke-primary-dark stroke-primary-light h-5 w-5"
                   />
                 </DisclosureButton>
-                <DisclosurePanel>
-                  <ul className="text-secondary list-inside list-disc">
-                    {focusedItem?.achievements.map((achievement) => {
-                      return <li key={achievement}>{achievement}</li>;
-                    })}
-                  </ul>
-                </DisclosurePanel>
+                <AnimatePresence mode="wait" initial={false}>
+                  {open && (
+                    <DisclosurePanel static as={Fragment}>
+                      <motion.ul
+                        className="text-primary list-inside list-disc"
+                        variants={shouldReduceMotion ? undefined : animatedList}
+                        initial="hidden"
+                        animate="visible"
+                        exit="hidden"
+                      >
+                        {focusedItem?.achievements.map((achievement) => {
+                          return (
+                            <motion.li
+                              key={achievement}
+                              variants={animatedListItem}
+                              transition={shouldReduceMotion ? { duration: 0 } : { duration: 0.3 }}
+                              className="opacity-0"
+                            >
+                              {achievement}
+                            </motion.li>
+                          );
+                        })}
+                      </motion.ul>
+                    </DisclosurePanel>
+                  )}
+                </AnimatePresence>
               </>
             )}
           </Disclosure>
@@ -98,8 +143,8 @@ const TimelineDialog = ({ isOpen, setIsOpen, focusedItem }: TimelineDialogProps)
           <Disclosure>
             {({ open }) => (
               <>
-                <DisclosureButton className={'flex cursor-pointer items-center gap-2'}>
-                  <h3 className="text-primary dark:border-b-accent-dark transition-theme border-b-accent-light w-fit border-b-2">
+                <DisclosureButton data-cursor="hover" className={'flex items-center gap-2'}>
+                  <h3 className="text-primary dark:border-b-accent-dark transition-theme border-b-accent-light w-fit border-b-2 motion-reduce:transition-none">
                     Stack
                   </h3>
                   <ChevronDownIcon
@@ -107,24 +152,26 @@ const TimelineDialog = ({ isOpen, setIsOpen, focusedItem }: TimelineDialogProps)
                     className="dark:stroke-primary-dark stroke-primary-light h-5 w-5"
                   />
                 </DisclosureButton>
-                <DisclosurePanel>
-                  <div className="text-secondary flex justify-between">
-                    {focusedItem?.stack?.map((technology) => {
-                      return (
-                        <ul key={technology.name}>
-                          <h4>{technology.name}</h4>
-                          {technology?.content.map((item) => {
-                            return (
-                              <li key={item} className="list-inside list-disc text-sm">
-                                {item}
-                              </li>
-                            );
-                          })}
-                        </ul>
-                      );
-                    })}
-                  </div>
-                </DisclosurePanel>
+                <AnimatePresence mode="wait" initial={false}>
+                  {open && (
+                    <DisclosurePanel static as={Fragment}>
+                      <div className="text-primary flex flex-col justify-between gap-2">
+                        {focusedItem?.stack?.map((type) => {
+                          return (
+                            <div key={type.name}>
+                              <h4>{type.name} :</h4>
+                              <StackList
+                                type={type}
+                                styleVariant="names"
+                                orientationVariant="row"
+                              />
+                            </div>
+                          );
+                        })}
+                      </div>
+                    </DisclosurePanel>
+                  )}
+                </AnimatePresence>
               </>
             )}
           </Disclosure>
@@ -134,8 +181,8 @@ const TimelineDialog = ({ isOpen, setIsOpen, focusedItem }: TimelineDialogProps)
           <Disclosure>
             {({ open }) => (
               <>
-                <DisclosureButton className={'flex cursor-pointer items-center gap-2'}>
-                  <h3 className="text-primary dark:border-b-accent-dark transition-theme border-b-accent-light w-fit border-b-2">
+                <DisclosureButton data-cursor="hover" className={'flex items-center gap-2'}>
+                  <h3 className="text-primary dark:border-b-accent-dark transition-theme border-b-accent-light w-fit border-b-2 motion-reduce:transition-none">
                     {language === 'en' ? 'Context' : 'Contexte'}
                   </h3>
                   <ChevronDownIcon
@@ -144,7 +191,7 @@ const TimelineDialog = ({ isOpen, setIsOpen, focusedItem }: TimelineDialogProps)
                   />
                 </DisclosureButton>
                 <DisclosurePanel>
-                  <p className="text-secondary">{focusedItem?.context}</p>
+                  <p className="text-primary">{focusedItem?.context}</p>
                 </DisclosurePanel>
               </>
             )}

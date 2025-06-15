@@ -33,11 +33,6 @@ export interface ProjectDialogProps {
   focusedProject: ProjectProps | null;
 }
 
-export interface ProjectStackProps {
-  type: Technology;
-  variant: 'icons' | 'names';
-}
-
 export interface ProjectLinksProps {
   demoLink: string | undefined;
   repoLink: string | undefined;

@@ -4,7 +4,7 @@ import { socialLinksList } from '../SocialLinks/socialLinksData';
 
 const SocialAbout = () => {
   return (
-    <section className="bg-global-secondary border-primary text-primary transition-theme flex w-3xs flex-col items-center gap-4 rounded-2xl border py-4 sm:px-2">
+    <section className="bg-global-secondary border-primary text-primary transition-theme flex w-3xs flex-col items-center gap-4 rounded-2xl border py-4 motion-reduce:transition-none sm:px-2">
       <div className="mask-radial-from-40% mask-radial-at-center">
         <img
           src="/assets/img/avatar/IMG-20250327-WA0039.jpg"

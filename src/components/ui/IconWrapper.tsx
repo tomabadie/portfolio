@@ -2,7 +2,7 @@ export type VariantsProps = 'primary' | 'secondary' | 'basic';
 
 const iconVariants: Record<VariantsProps, string> = {
   primary:
-    'text-primary hover:bg-btn-primary-hover-light hover:dark:hover:bg-btn-primary-hover-dark border-primary rounded-lg  hover:duration-150 hover:after:duration-150',
+    'text-primary hover:bg-btn-primary-hover-light hover:dark:hover:bg-btn-primary-hover-dark border-primary rounded-lg  hover:duration-150 hover:after:duration-150 motion-reduce:transition-none',
   secondary: '',
   basic: 'text-primary',
 };
@@ -20,7 +20,8 @@ const IconWrapper: React.FC<IconWrapperProps> = ({
   return (
     <>
       <span
-        className={`transition-theme flex items-center justify-center ${iconVariants[variant]} ${wrapperClassName}`}
+        data-cursor={variant === 'primary' && 'hover'}
+        className={`transition-theme flex items-center justify-center motion-reduce:transition-none ${iconVariants[variant]} ${wrapperClassName}`}
       >
         {children}
       </span>

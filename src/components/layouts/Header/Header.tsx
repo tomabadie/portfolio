@@ -18,7 +18,12 @@ const Header = () => {
     <header className="bg-global-primary border-primary transition-theme flex items-center justify-between border-b px-4">
       <MobileMenu navList={navList} isMenuOpen={isMenuOpen} setIsMenuOpen={setIsMenuOpen} />
       <Link to={'/'}>
-        <h1 className="transition-theme text-primary py-4 text-xl font-extrabold">Thomas Abadie</h1>
+        <h1
+          className="transition-theme text-primary cursor-none py-4 text-xl font-extrabold"
+          data-cursor="hover"
+        >
+          Thomas Abadie
+        </h1>
       </Link>
       <DesktopMenu navList={navList} />
       <div className={`flex items-center gap-4 ${isMenuOpen && 'hidden'}`}>

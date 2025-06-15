@@ -8,7 +8,8 @@ const ThemeToggle: React.FC = () => {
   return (
     <Within
       type="button"
-      className="text-primary text-3xl"
+      data-cursor="hover"
+      className="text-primary !cursor-none text-3xl"
       toggled={theme === 'dark'}
       toggle={toggleTheme}
       duration={1250}
