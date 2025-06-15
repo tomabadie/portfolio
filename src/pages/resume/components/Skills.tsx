@@ -1,4 +1,4 @@
-import { motion, useInView } from 'motion/react';
+import { motion, useInView, useReducedMotion } from 'motion/react';
 import { useRef } from 'react';
 import { useLanguage } from '../../../contexts/LanguageContext';
 import { skillsDataEN } from '../data/profileData.en';
@@ -6,6 +6,7 @@ import { skillsDataFR } from '../data/profileData.fr';
 import type { SkillsProps } from '../data/profileDataType';
 
 const Skills = ({ className }: SkillsProps) => {
+  const shouldReduceMotion = useReducedMotion();
   const { language } = useLanguage();
   const skillsList = language === 'en' ? skillsDataEN : skillsDataFR;
   const sectionRef = useRef(null);
@@ -29,9 +30,13 @@ const Skills = ({ className }: SkillsProps) => {
               <span className="border border-purple-500">{skill.category}</span>
               */}
               <div className="border-accent-light dark:border-accent-dark transition-theme h-2.5 w-full rounded-full border p-0.5 motion-reduce:transition-none">
-                <div
-                  style={{ width: isInView ? `${skill.level}%` : 0 }}
-                  className="bg-accent-light dark:bg-accent-dark transition-theme mr-auto h-full rounded-full transition-[width] duration-2000 ease-in-out motion-reduce:transition-none"
+                <motion.div
+                  animate={{ width: isInView ? `${skill.level}%` : '0%' }}
+                  initial={{ width: '0%' }}
+                  transition={
+                    shouldReduceMotion ? { duration: 0 } : { duration: 2, ease: 'easeInOut' }
+                  }
+                  className="bg-accent-light dark:bg-accent-dark transition-theme mr-auto h-full rounded-full motion-reduce:transition-none"
                 />
               </div>
             </li>

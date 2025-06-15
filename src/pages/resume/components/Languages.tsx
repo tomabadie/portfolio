@@ -1,4 +1,4 @@
-import { motion, useInView } from 'motion/react';
+import { motion, useInView, useReducedMotion } from 'motion/react';
 import { useRef } from 'react';
 import { useLanguage } from '../../../contexts/LanguageContext';
 import { languagesDataEN } from '../data/profileData.en';
@@ -6,6 +6,7 @@ import { languagesDataFR } from '../data/profileData.fr';
 import type { LanguagesProps } from '../data/profileDataType';
 
 const Languages = ({ className }: LanguagesProps) => {
+  const shouldReduceMotion = useReducedMotion();
   const { language } = useLanguage();
   const languagesList = language === 'en' ? languagesDataEN : languagesDataFR;
   const sectionRef = useRef(null);
@@ -39,14 +40,16 @@ const Languages = ({ className }: LanguagesProps) => {
                   }}
                   className="translate-50/100 overflow-visible fill-none stroke-zinc-300 stroke-4"
                 />
-                <circle
+                <motion.circle
                   r="40"
-                  style={{
-                    strokeDasharray: '251',
-                    strokeDashoffset: isInView ? `${dashOffset}` : '251',
-                    strokeLinecap: 'round',
-                  }}
-                  className="stroke-accent-light dark:stroke-accent-dark transition-theme translate-50/100 overflow-visible fill-none stroke-4 transition-[stroke-dashoffset] duration-2000 ease-in-out motion-reduce:transition-none"
+                  strokeDasharray="251"
+                  strokeLinecap="round"
+                  initial={{ strokeDashoffset: 251 }}
+                  animate={{ strokeDashoffset: isInView ? dashOffset : 251 }}
+                  transition={
+                    shouldReduceMotion ? { duration: 0 } : { duration: 2, ease: 'easeInOut' }
+                  }
+                  className="stroke-accent-light dark:stroke-accent-dark transition-theme translate-50/100 overflow-visible fill-none stroke-4 motion-reduce:transition-none"
                 />
               </svg>
             </li>
