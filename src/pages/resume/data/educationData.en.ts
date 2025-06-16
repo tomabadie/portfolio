@@ -35,7 +35,7 @@ export const educationDataEN: TimelineItem[] = [
       },
       {
         name: 'Tools',
-        content: ['Git', 'GitHub', 'Excalidraw', 'Figma', 'Trello'],
+        content: ['Git', 'GitHub', 'Excalidraw', 'Figma', 'Trello', 'Motion'],
       },
     ],
     keywords: [
