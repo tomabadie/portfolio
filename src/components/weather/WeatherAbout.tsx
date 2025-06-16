@@ -46,7 +46,7 @@ const WeatherAbout = () => {
           <p className="text-center font-semibold">
             {weatherContent[language].title} <br /> Mimizan (France)
           </p>
-          <IconWrapper variant="basic" wrapperClassName="h-40">
+          <IconWrapper variant="plain" wrapperClassName="h-40">
             {mapSvg}
           </IconWrapper>
           <IconWrapper variant={weatherIcon?.iconVariant} wrapperClassName={weatherIconSize}>

@@ -25,10 +25,6 @@ const Skills = ({ className }: SkillsProps) => {
           return (
             <li key={skill.id} className="py-2">
               <h4 className="w-fit font-bold">{skill.label}</h4>
-              {/* 
-              To use later : rank by category
-              <span className="border border-purple-500">{skill.category}</span>
-              */}
               <div className="border-accent-light dark:border-accent-dark transition-theme h-2.5 w-full rounded-full border p-0.5 motion-reduce:transition-none">
                 <motion.div
                   animate={{ width: isInView ? `${skill.level}%` : '0%' }}

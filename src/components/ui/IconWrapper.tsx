@@ -9,7 +9,7 @@ const iconVariants: Record<VariantsProps, string> = {
 };
 
 export type IconWrapperProps = React.PropsWithChildren<{
-  variant: VariantsProps;
+  variant?: VariantsProps;
   wrapperClassName?: string;
 }>;
 

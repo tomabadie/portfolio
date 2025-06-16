@@ -16,7 +16,7 @@ const ProjectLinks = ({ demoLink, repoLink }: ProjectLinksProps) => {
           aria-label={language === 'en' ? 'Visit the live website' : 'Voir le site en ligne'}
         >
           <IconWrapper
-            variant="primary"
+            variant="square-link"
             wrapperClassName="shadow-sm/30 dark:shadow-sm/50 dark:shadow-btn-primary-hover-dark border w-8 h-8"
           >
             <LinkIcon className="h-6 w-6 stroke-current" />
@@ -33,7 +33,7 @@ const ProjectLinks = ({ demoLink, repoLink }: ProjectLinksProps) => {
           }
         >
           <IconWrapper
-            variant="primary"
+            variant="square-link"
             wrapperClassName="shadow-sm/30 dark:shadow-sm/50 dark:shadow-btn-primary-hover-dark border w-8 h-8"
           >
             <GithubIcon className="h-6 w-6 stroke-current" />

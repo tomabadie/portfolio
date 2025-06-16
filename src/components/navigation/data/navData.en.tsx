@@ -23,7 +23,7 @@ export const navDataEn: NavigationItemProps[] = [
         />
       </svg>
     ),
-    iconVariant: 'basic',
+    iconVariant: 'plain',
   },
   {
     id: 'nav-2',
@@ -57,7 +57,7 @@ export const navDataEn: NavigationItemProps[] = [
         </g>
       </svg>
     ),
-    iconVariant: 'basic',
+    iconVariant: 'plain',
   },
   {
     id: 'nav-3',
@@ -81,7 +81,7 @@ export const navDataEn: NavigationItemProps[] = [
         />
       </svg>
     ),
-    iconVariant: 'basic',
+    iconVariant: 'plain',
   },
   {
     id: 'nav-4',
@@ -106,6 +106,6 @@ export const navDataEn: NavigationItemProps[] = [
         />
       </svg>
     ),
-    iconVariant: 'basic',
+    iconVariant: 'plain',
   },
 ];

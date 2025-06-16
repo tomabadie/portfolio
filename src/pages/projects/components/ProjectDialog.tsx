@@ -9,6 +9,7 @@ import {
 } from '@headlessui/react';
 import { AnimatePresence, motion, useReducedMotion } from 'motion/react';
 import { Fragment } from 'react/jsx-runtime';
+import IconWrapper from '../../../components/ui/IconWrapper';
 import { ChevronDownIcon, CloseIcon, GroupIcon, UserIcon } from '../../../components/ui/Icons';
 import StackList from '../../../components/ui/StackList';
 import { useLanguage } from '../../../contexts/LanguageContext';
@@ -51,7 +52,12 @@ const ProjectDialog = ({ isOpen, setIsOpen, focusedProject }: ProjectDialogProps
               onClick={() => setIsOpen(false)}
               aria-label={language === 'en' ? 'Close window' : 'Fermer la fenêtre'}
             >
-              <CloseIcon className="border-primary dark:stroke-primary-dark stroke-primary-light transition-theme h-10 w-10 rounded-full border shadow-[0_0_12px_4px_var(--color-btn-primary-hover-light)] motion-reduce:transition-none dark:shadow-[0_0_12px_4px_var(--color-btn-primary-hover-dark)]" />
+              <IconWrapper
+                variant="rounded-button"
+                wrapperClassName="shadow-[0_0_12px_4px_var(--color-btn-primary-hover-light)] dark:shadow-[0_0_12px_4px_var(--color-btn-primary-hover-dark)] size-10"
+              >
+                <CloseIcon />
+              </IconWrapper>
             </button>
           </div>
 
