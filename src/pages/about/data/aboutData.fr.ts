@@ -8,7 +8,7 @@ export const aboutDataFr: AboutItemProps[] = [
       {
         id: 'home-1-parag-1',
         content:
-          'Développeur web fullstack en formation, je me spécialise dans la création d’applications web modernes et performantes. Actuellement en apprentissage au sein du parcours Full-Stack Engineer de Codecademy et d’un bootcamp intensif à la Wild Code School, je mets en pratique mes connaissances à travers des projets concrets, notamment des SaaS et des applications web dynamiques.',
+          'Développeur web fullstack en formation, je poursuis un bootcamp intensif à la Wild Code School tout en me formant activement de façon autonome (notamment avec Tailwind, Framer Motion, etc.). Curieux et impliqué, je conçois actuellement plusieurs applications fullstack, avec l’envie de créer des interfaces modernes, fluides et alignées avec des usages concrets.',
       },
     ],
   },
@@ -19,7 +19,7 @@ export const aboutDataFr: AboutItemProps[] = [
       {
         id: 'home-2-parag-1',
         content:
-          'Je maîtrise les bases du développement front-end et back-end, avec une stack technologique incluant HTML, CSS, JavaScript, React, Express.js et MySQL. J’accorde une grande importance à l’accessibilité, au responsive design et aux bonnes pratiques de développement. Mon objectif est de concevoir des applications intuitives, performantes et ancrées dans le réel, en alliant innovation et simplicité.',
+          'Je maîtrise les bases du développement front-end et back-end, avec une stack incluant HTML, CSS, JavaScript, React, Express.js et MySQL. J’accorde une grande importance à l’accessibilité, au responsive design et aux bonnes pratiques de développement. Je cherche avant tout à concevoir des interfaces intuitives, bien structurées et agréables à utiliser, en alliant rigueur technique et clarté d’usage.',
       },
     ],
   },
