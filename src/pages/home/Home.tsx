@@ -68,7 +68,16 @@ const Home = () => {
                     {' '}
                     {navItem.info}
                   </p>
-                  <Link data-cursor="hover" className="ml-auto" to={navItem.path}>
+                  <Link
+                    data-cursor="hover"
+                    className="ml-auto"
+                    to={navItem.path}
+                    aria-label={
+                      language === 'en'
+                        ? `Go to ${navItem.name} page`
+                        : `Accéder à la page ${navItem.name}`
+                    }
+                  >
                     <span className="bg-primary transition-theme absolute h-12 w-12 animate-ping rounded-full opacity-20 motion-reduce:hidden" />
                     <ArrowRightIcon className="stroke-primary-light dark:stroke-primary-dark h-12 w-12" />
                   </Link>

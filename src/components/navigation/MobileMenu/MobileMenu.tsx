@@ -1,8 +1,11 @@
 import { Dialog, DialogPanel } from '@headlessui/react';
 import { NavLink } from 'react-router';
+import { useLanguage } from '../../../contexts/LanguageContext';
 import type { MobileMenuProps } from './mobileMenuType';
 
 const MobileMenu = ({ navList, isMenuOpen, setIsMenuOpen }: MobileMenuProps) => {
+  const { language } = useLanguage();
+
   return (
     <div className="flex items-center justify-center md:hidden">
       <button
@@ -10,6 +13,17 @@ const MobileMenu = ({ navList, isMenuOpen, setIsMenuOpen }: MobileMenuProps) => 
         data-cursor="hover"
         className="group relative"
         onClick={() => setIsMenuOpen(!isMenuOpen)}
+        aria-label={
+          isMenuOpen
+            ? language === 'en'
+              ? 'Close mobile menu'
+              : 'Fermer le menu mobile'
+            : language === 'en'
+              ? 'Open mobile menu'
+              : 'Ouvrir le menu mobile'
+        }
+        aria-expanded={isMenuOpen}
+        aria-controls="mobile-menu-panel"
       >
         <div
           className={`border-primary bg-gobal-secondary bg-global-secondary relative flex h-[40px] w-[40px] transform items-center justify-center overflow-hidden rounded-full border shadow-md transition-all duration-200 hover:shadow-[0_0_12px_4px_var(--color-btn-primary-hover-light)] motion-reduce:transition-none dark:hover:shadow-[0_0_12px_4px_var(--color-btn-primary-hover-dark)] ${isMenuOpen && 'shadow-[0_0_12px_4px_var(--color-btn-primary-hover-light)] dark:shadow-[0_0_12px_4px_var(--color-btn-primary-hover-dark)]'}`}
@@ -45,7 +59,11 @@ const MobileMenu = ({ navList, isMenuOpen, setIsMenuOpen }: MobileMenuProps) => 
         className="relative z-40 transition duration-300 ease-out data-closed:opacity-0 motion-reduce:transition-none"
       >
         <div className="fixed inset-0 flex h-dvh w-dvw items-center justify-center">
-          <DialogPanel className="bg-global-primary text-primary mt-[60px] flex h-[calc(100dvh-60px)] w-full items-center justify-center px-12">
+          <DialogPanel
+            className="bg-global-primary text-primary mt-[60px] flex h-[calc(100dvh-60px)] w-full items-center justify-center px-12"
+            id="mobile-menu-panel"
+            aria-label={language === 'en' ? 'Mobile menu' : 'Menu mobile'}
+          >
             <nav>
               <ul className="flex flex-col items-start justify-center gap-14">
                 {navList.map((item) => (

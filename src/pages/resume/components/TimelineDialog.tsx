@@ -61,6 +61,7 @@ const TimelineDialog = ({ isOpen, setIsOpen, focusedItem }: TimelineDialogProps)
               data-cursor="hover"
               className="order-first mx-auto sm:order-none sm:mx-0"
               onClick={() => setIsOpen(false)}
+              aria-label={language === 'en' ? 'Close window' : 'Fermer la fenêtre'}
             >
               <CloseIcon className="border-primary dark:stroke-primary-dark stroke-primary-light transition-theme h-10 w-10 rounded-full border shadow-[0_0_12px_4px_var(--color-btn-primary-hover-light)] motion-reduce:transition-none dark:shadow-[0_0_12px_4px_var(--color-btn-primary-hover-dark)]" />
             </button>

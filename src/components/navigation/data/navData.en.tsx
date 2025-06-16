@@ -13,8 +13,9 @@ export const navDataEn: NavigationItemProps[] = [
         viewBox="0 0 24 24"
         strokeWidth={1}
         stroke="currentColor"
+        aria-hidden="true"
+        focusable="false"
       >
-        <title>About Icon</title>
         <path
           strokeLinecap="round"
           strokeLinejoin="round"
@@ -38,13 +39,14 @@ export const navDataEn: NavigationItemProps[] = [
         viewBox="0 0 512.000000 512.000000"
         preserveAspectRatio="xMidYMid meet"
         className="size-9"
+        aria-hidden="true"
+        focusable="false"
       >
         <g
           fill="currentColor"
           stroke="none"
           transform="translate(0.000000,512.000000) scale(0.100000,-0.100000)"
         >
-          <title>Resume Icon</title>
           {/* <a href="https://www.flaticon.com/fr/icones-gratuites/developpement-de-competence" title="développement de compétence icônes">Développement de compétence icônes créées par Karyative - Flaticon</a> */}
           <path d="M2445 5085 l-25 -24 0 -286 0 -286 25 -24 c29 -30 74 -32 106 -6 l24 19 0 297 0 297 -24 19 c-32 26 -77 24 -106 -6z" />
           <path d="M3683 4317 c-180 -180 -203 -207 -203 -236 0 -43 38 -81 82 -81 29 0 54 22 235 203 181 181 203 206 203 235 0 44 -38 82 -81 82 -29 0 -56 -23 -236 -203z" />
@@ -69,8 +71,9 @@ export const navDataEn: NavigationItemProps[] = [
         viewBox="0 0 24 24"
         strokeWidth={1}
         stroke="currentColor"
+        aria-hidden="true"
+        focusable="false"
       >
-        <title>Projects Icon</title>
         <path
           strokeLinecap="round"
           strokeLinejoin="round"
@@ -93,8 +96,9 @@ export const navDataEn: NavigationItemProps[] = [
         strokeWidth={1}
         stroke="currentColor"
         className="size-8"
+        aria-hidden="true"
+        focusable="false"
       >
-        <title>Contact Icon</title>
         <path
           strokeLinecap="round"
           strokeLinejoin="round"
