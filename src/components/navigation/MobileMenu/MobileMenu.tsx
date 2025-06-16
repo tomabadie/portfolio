@@ -1,4 +1,5 @@
 import { Dialog, DialogPanel } from '@headlessui/react';
+import { motion, useReducedMotion } from 'motion/react';
 import { NavLink } from 'react-router';
 import { useLanguage } from '../../../contexts/LanguageContext';
 import IconWrapper from '../../ui/IconWrapper';
@@ -7,6 +8,28 @@ import type { MobileMenuProps } from './mobileMenuType';
 
 const MobileMenu = ({ navList, isMenuOpen, setIsMenuOpen }: MobileMenuProps) => {
   const { language } = useLanguage();
+
+  const shouldReduceMotion = useReducedMotion();
+
+  const listVariants = {
+    open: {
+      transition: {
+        staggerChildren: 0.1,
+        delayChildren: 0.2,
+      },
+    },
+    closed: {
+      transition: {
+        staggerChildren: 0.05,
+        staggerDirection: -1,
+      },
+    },
+  };
+
+  const itemVariants = {
+    closed: { opacity: 0, y: 20 },
+    open: { opacity: 1, y: 0 },
+  };
 
   return (
     <div className="flex items-center justify-center md:hidden">
@@ -19,12 +42,19 @@ const MobileMenu = ({ navList, isMenuOpen, setIsMenuOpen }: MobileMenuProps) => 
         aria-expanded={isMenuOpen}
         aria-controls="mobile-menu-panel"
       >
-        <IconWrapper
-          variant="rounded-button"
-          wrapperClassName="p-1 hover:shadow-[0_0_12px_4px_var(--color-btn-primary-hover-light)] dark:hover:shadow-[0_0_12px_4px_var(--color-btn-primary-hover-dark)] size-10"
+        <motion.div
+          key={isMenuOpen ? 'close' : 'burger'}
+          initial={{ opacity: 0, scale: 0.5 }}
+          animate={{ opacity: 1, scale: 1 }}
+          transition={shouldReduceMotion ? { duration: 0 } : { duration: 0.2 }}
         >
-          <BurgerIcon />
-        </IconWrapper>
+          <IconWrapper
+            variant="rounded-button"
+            wrapperClassName="p-1 hover:shadow-[0_0_12px_4px_var(--color-btn-primary-hover-light)] dark:hover:shadow-[0_0_12px_4px_var(--color-btn-primary-hover-dark)] size-10"
+          >
+            {isMenuOpen ? <CloseIcon /> : <BurgerIcon />}
+          </IconWrapper>
+        </motion.div>
       </button>
 
       <Dialog
@@ -60,9 +90,18 @@ const MobileMenu = ({ navList, isMenuOpen, setIsMenuOpen }: MobileMenuProps) => 
             </div>
 
             <nav>
-              <ul className="flex flex-col items-start justify-center gap-14">
+              <motion.ul
+                className="flex flex-col items-start justify-center gap-14"
+                variants={shouldReduceMotion ? undefined : listVariants}
+                initial="closed"
+                animate="open"
+              >
                 {navList.map((item) => (
-                  <li key={item.id} className="uppercase">
+                  <motion.li
+                    key={item.id}
+                    className="uppercase"
+                    variants={shouldReduceMotion ? undefined : itemVariants}
+                  >
                     <NavLink
                       to={item.path}
                       data-cursor="hover"
@@ -73,9 +112,9 @@ const MobileMenu = ({ navList, isMenuOpen, setIsMenuOpen }: MobileMenuProps) => 
                     >
                       {item.name}
                     </NavLink>
-                  </li>
+                  </motion.li>
                 ))}
-              </ul>
+              </motion.ul>
             </nav>
           </DialogPanel>
         </div>
