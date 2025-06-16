@@ -16,7 +16,6 @@ const Header = () => {
 
   return (
     <header className="bg-global-primary border-primary transition-theme flex items-center justify-between border-b px-4">
-      <MobileMenu navList={navList} isMenuOpen={isMenuOpen} setIsMenuOpen={setIsMenuOpen} />
       <Link to={'/'}>
         <h1
           className="transition-theme text-primary cursor-none py-4 text-xl font-extrabold"
@@ -26,10 +25,11 @@ const Header = () => {
         </h1>
       </Link>
       <DesktopMenu navList={navList} />
-      <div className={`flex items-center gap-4 ${isMenuOpen && 'hidden'}`}>
-        <LanguageToggle />
+      <div className="order-first flex items-center gap-4 md:order-none md:flex-row-reverse">
         <ThemeToggle />
+        <LanguageToggle />
       </div>
+      <MobileMenu navList={navList} isMenuOpen={isMenuOpen} setIsMenuOpen={setIsMenuOpen} />
     </header>
   );
 };
