@@ -1,10 +1,10 @@
-import SocialGlobal from '../../../components/social/SocialGlobal/SocialGlobal';
-import { useLanguage } from '../../../contexts/LanguageContext';
-import Education from './Education';
-import Languages from './Languages';
-import Skills from './Skills';
-import SoftSkills from './SoftSkills';
-import WorkExperiences from './WorkExperiences';
+import SocialGlobal from '../../components/social/SocialGlobal/SocialGlobal';
+import { useLanguage } from '../../contexts/LanguageContext';
+import Education from './components/Education';
+import Languages from './components/Languages';
+import Skills from './components/Skills';
+import SoftSkills from './components/SoftSkills';
+import WorkExperiences from './components/WorkExperiences';
 
 const Resume = () => {
   const { language } = useLanguage();
