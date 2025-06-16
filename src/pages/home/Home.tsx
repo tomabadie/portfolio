@@ -26,7 +26,7 @@ const Home = () => {
           : `Une porte d'entrée vers mon univers de développeur.`}
       </p>
 
-      <fieldset className="flex h-full w-full flex-col items-center justify-center gap-3 sm:w-[80vw] md:max-h-100 md:flex-row">
+      <fieldset className="flex h-full w-full flex-col items-center justify-center gap-3 sm:w-[80dvw] md:max-h-100 md:flex-row">
         {navList.map((navItem) => {
           const isSelected = selected === navItem;
           return (
@@ -48,7 +48,10 @@ const Home = () => {
                 className="sr-only"
               />
               <div className="flex items-center justify-between gap-2 p-2 md:h-full md:flex-col">
-                <IconWrapper variant={navItem.iconVariant} wrapperClassName="h-10 w-10">
+                <IconWrapper
+                  variant={navItem.iconVariant}
+                  wrapperClassName="h-8 w-8 md:h-10 md:w-10"
+                >
                   {navItem.iconSvg}
                 </IconWrapper>
                 <p className="text-primary transition-theme w-52 text-center text-2xl uppercase motion-reduce:transition-none md:w-auto md:text-3xl md:leading-none md:tracking-widest">
@@ -64,13 +67,13 @@ const Home = () => {
               </div>
               {selected === navItem && (
                 <div className="animate-fade-in-delay flex h-1/3 items-center justify-between gap-5 px-4 motion-reduce:animate-none md:flex-col">
-                  <p className="text-primary transition-theme motion-reduce:transition-none md:text-xl">
+                  <p className="text-primary transition-theme text-sm motion-reduce:transition-none md:text-xl">
                     {' '}
                     {navItem.info}
                   </p>
                   <Link
                     data-cursor="hover"
-                    className="ml-auto"
+                    className="ml-auto grid grid-cols-1 grid-rows-1"
                     to={navItem.path}
                     aria-label={
                       language === 'en'
@@ -78,8 +81,8 @@ const Home = () => {
                         : `Accéder à la page ${navItem.name}`
                     }
                   >
-                    <span className="bg-primary transition-theme absolute h-12 w-12 animate-ping rounded-full opacity-20 motion-reduce:hidden" />
-                    <ArrowRightIcon className="stroke-primary-light dark:stroke-primary-dark h-12 w-12" />
+                    <span className="bg-primary transition-theme col-start-1 row-start-1 h-9 w-9 animate-ping self-center justify-self-center rounded-full opacity-15 motion-reduce:hidden" />
+                    <ArrowRightIcon className="stroke-primary-light dark:stroke-primary-dark col-start-1 row-start-1 h-12 w-12 self-center justify-self-center" />
                   </Link>
                 </div>
               )}
