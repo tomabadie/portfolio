@@ -150,6 +150,7 @@ export const projectsDataEn: ProjectProps[] = [
     ],
     tags: ['Recipes', 'API', 'Interactive map', 'International'],
     repoLink: 'https://github.com/tomabadie/JS-WestDevs-P2-SavorSafari',
+    demoLink: 'https://savorsafari.vercel.app/',
     contributions: [
       'Interactive map with react-simple-maps',
       'Dynamic country selection',
@@ -220,6 +221,7 @@ export const projectsDataEn: ProjectProps[] = [
     ],
     tags: ['Planets', 'API', 'React', 'Space data'],
     repoLink: 'https://github.com/tomabadie/solar-system',
+    demoLink: 'https://solarsystem-sigma-opal.vercel.app/',
     contributions: [
       'Integration of the Solar System OpenData API',
       'Dynamic display using React',
