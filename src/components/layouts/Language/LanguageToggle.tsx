@@ -16,12 +16,12 @@ const LanguageToggle = () => {
       <PopoverPanel
         transition
         anchor="bottom"
-        className="bg-global-secondary divide-border-primary grid divide-y rounded-lg text-sm/6 transition duration-200 ease-in-out [--anchor-gap:--spacing(6)] data-closed:-translate-y-1 data-closed:opacity-0"
+        className="divide-border-primary grid divide-y rounded-lg bg-none text-sm/6 transition duration-200 ease-in-out [--anchor-gap:--spacing(6)] data-closed:-translate-y-1 data-closed:opacity-0"
       >
         <button
           type="button"
           data-cursor="hover"
-          className="text-primary border-primary hover:bg-btn-primary-hover-light dark:hover:bg-btn-primary-hover-dark block rounded-lg border px-3 py-2 font-semibold transition"
+          className="text-primary bg-global-secondary border-primary hover:bg-btn-primary-hover-light dark:hover:bg-btn-primary-hover-dark block rounded-lg border px-3 py-2 font-semibold transition"
           onClick={() => {
             setLanguage('en');
           }}
@@ -31,7 +31,7 @@ const LanguageToggle = () => {
         <button
           type="button"
           data-cursor="hover"
-          className="text-primary border-primary hover:bg-btn-primary-hover-light dark:hover:bg-btn-primary-hover-dark block rounded-lg border px-3 py-2 font-semibold transition"
+          className="text-primary bg-global-secondary border-primary hover:bg-btn-primary-hover-light dark:hover:bg-btn-primary-hover-dark block rounded-lg border px-3 py-2 font-semibold transition"
           onClick={() => {
             setLanguage('fr');
           }}

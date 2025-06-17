@@ -10,12 +10,13 @@ import { ThemeProvider } from './contexts/ThemeContext.tsx';
 
 import App from './App.tsx';
 import './index.css';
-import About from './pages/about/components/About.tsx';
-import Contact from './pages/contact/components/Contact.tsx';
+
+import About from './pages/about/About.tsx';
+import Contact from './pages/contact/Contact.tsx';
 import Home from './pages/home/Home.tsx';
 import NotFound from './pages/notFound/NotFound.tsx';
-import Projects from './pages/projects/components/Projects.tsx';
-import Resume from './pages/resume/components/Resume.tsx';
+import Projects from './pages/projects/Projects.tsx';
+import Resume from './pages/resume/Resume.tsx';
 
 // router creation
 

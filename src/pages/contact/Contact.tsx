@@ -1,5 +1,5 @@
-import SocialGlobal from '../../../components/social/SocialGlobal/SocialGlobal';
-import { useLanguage } from '../../../contexts/LanguageContext';
+import SocialGlobal from '../../components/social/SocialGlobal/SocialGlobal';
+import { useLanguage } from '../../contexts/LanguageContext';
 
 const Contact = () => {
   const { language } = useLanguage();

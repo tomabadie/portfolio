@@ -1,11 +1,11 @@
 import { Disclosure, DisclosureButton, DisclosurePanel } from '@headlessui/react';
 import { AnimatePresence, motion, useReducedMotion } from 'motion/react';
 import { Fragment } from 'react/jsx-runtime';
-import SocialAbout from '../../../components/social/SocialAbout/SocialAbout';
-import { ChevronDownIcon } from '../../../components/ui/Icons';
-import { useLanguage } from '../../../contexts/LanguageContext';
-import { aboutDataEn } from '../data/aboutData.en';
-import { aboutDataFr } from '../data/aboutData.fr';
+import SocialAbout from '../../components/social/SocialAbout/SocialAbout';
+import { ChevronDownIcon } from '../../components/ui/Icons';
+import { useLanguage } from '../../contexts/LanguageContext';
+import { aboutDataEn } from './data/aboutData.en';
+import { aboutDataFr } from './data/aboutData.fr';
 
 const About = () => {
   const shouldReduceMotion = useReducedMotion();

@@ -1,11 +1,11 @@
 import { useState } from 'react';
-import SocialGlobal from '../../../components/social/SocialGlobal/SocialGlobal';
-import { useLanguage } from '../../../contexts/LanguageContext';
-import { projectsDataEn } from '../data/projectsData.en';
-import { projectsDataFR } from '../data/projectsData.fr';
-import type { ProjectProps } from '../data/projectsDataType';
-import ProjectCard from './ProjectCard';
-import ProjectDialog from './ProjectDialog';
+import SocialGlobal from '../../components/social/SocialGlobal/SocialGlobal';
+import { useLanguage } from '../../contexts/LanguageContext';
+import ProjectCard from './components/ProjectCard';
+import ProjectDialog from './components/ProjectDialog';
+import { projectsDataEn } from './data/projectsData.en';
+import { projectsDataFR } from './data/projectsData.fr';
+import type { ProjectProps } from './data/projectsDataType';
 
 const Projects = () => {
   const { language } = useLanguage();

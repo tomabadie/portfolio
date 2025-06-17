@@ -37,7 +37,7 @@ export const experiencesDataFR: TimelineItem[] = [
       },
       {
         name: 'Outils',
-        content: ['Git', 'GitHub', 'Excalidraw', 'Figma', 'Trello'],
+        content: ['Git', 'GitHub', 'Excalidraw', 'Figma', 'Trello', 'Motion'],
       },
     ],
     keywords: [

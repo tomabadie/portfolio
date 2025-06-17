@@ -8,7 +8,7 @@ export const aboutDataEn: AboutItemProps[] = [
       {
         id: 'home-1-parag-1',
         content:
-          'I’m a fullstack web developer in training, specializing in building modern and high-performance web applications. Currently enrolled in the Full-Stack Engineer program at Codecademy and an intensive bootcamp at Wild Code School, I put my knowledge into practice through concrete projects, including SaaS and dynamic web applications.',
+          "I'm a fullstack web developer in training, currently enrolled in an intensive bootcamp at Wild Code School while also learning independently (Tailwind, Framer Motion, etc.). Curious and committed, I'm currently building several fullstack applications with a strong focus on creating modern, fluid interfaces tailored to real-world use.",
       },
     ],
   },
@@ -19,7 +19,7 @@ export const aboutDataEn: AboutItemProps[] = [
       {
         id: 'home-2-parag-1',
         content:
-          'I have a solid foundation in both front-end and back-end development, working with a tech stack that includes HTML, CSS, JavaScript, React, Express.js, and MySQL. I place great importance on accessibility, responsive design, and best development practices. My goal is to create intuitive, high-performing, and real-world-driven applications that blend innovation with simplicity.',
+          'I have a solid foundation in both front-end and back-end development, working with a stack that includes HTML, CSS, JavaScript, React, Express.js, and MySQL. I place great importance on accessibility, responsive design, and clean development practices. Above all, I aim to build intuitive, well-structured, and user-friendly interfaces, combining technical rigor with clarity of use.',
       },
     ],
   },
