@@ -1,10 +1,14 @@
+import emailjs from '@emailjs/browser';
 import { useEffect, useState } from 'react';
 import SocialGlobal from '../../components/social/SocialGlobal/SocialGlobal';
+import Toast from '../../components/ui/Toast';
 import { useLanguage } from '../../contexts/LanguageContext';
 import type { ContactFormDataProps } from './data/contactType';
 
 const Contact = () => {
   const { language } = useLanguage();
+
+  const [toast, setToast] = useState<{ message: string; type: 'success' | 'error' } | null>(null);
 
   const [formData, setFormData] = useState<ContactFormDataProps>({
     name: '',
@@ -37,8 +41,30 @@ const Contact = () => {
     }));
   };
 
-  const handleSubmit = (event: React.FormEvent) => {
-    event.preventDefault();
+  const handleSubmit = async (e: React.FormEvent<HTMLFormElement>) => {
+    e.preventDefault();
+
+    try {
+      await emailjs.send(
+        'service_vgkqpup',
+        'template_9j8s85i',
+        { name: formData.name, email: formData.email, message: formData.message },
+        {
+          publicKey: '7uftDwFBfqwkFU4if',
+        }
+      );
+      setToast({
+        message: `${language === 'en' ? 'Message sent !' : 'Message envoyé !'}`,
+        type: 'success',
+      });
+      setFormData({ name: '', email: '', message: '' });
+    } catch (err) {
+      console.error(err);
+      setToast({
+        message: `${language === 'en' ? 'Failed to send message !' : `Erreur lors de l'envoi !`}`,
+        type: 'error',
+      });
+    }
   };
 
   return (
@@ -143,6 +169,7 @@ const Contact = () => {
           {/* Submit */}
           <button
             type="submit"
+            value="Send"
             data-cursor={isDisabled ? 'none' : 'hover'}
             disabled={isDisabled}
             className={`text-primary bg-global-primary border-primary ${!isDisabled && 'hover:bg-btn-primary-hover-light dark:hover:bg-btn-primary-hover-dark'} transition-theme ml-auto block w-30 rounded-lg border py-2 text-lg font-semibold ${isDisabled && 'cursor-not-allowed opacity-50 ring ring-red-400'}`}
@@ -150,6 +177,10 @@ const Contact = () => {
             {language === 'en' ? 'Send' : 'Envoyer'}
           </button>
         </form>
+        {/* Toast */}
+        {toast && (
+          <Toast message={toast.message} type={toast.type} onClose={() => setToast(null)} />
+        )}
       </section>
     </div>
   );
