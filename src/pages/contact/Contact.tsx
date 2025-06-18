@@ -76,6 +76,14 @@ const Contact = () => {
             <span className="text-primary bg-global-secondary transition-theme absolute inset-y-0 start-3 h-fit -translate-y-4 px-1 font-medium transition-transform peer-placeholder-shown:translate-y-2.5 peer-focus:-translate-y-4 motion-reduce:transition-none">
               Name *
             </span>
+            <p
+              aria-live="polite"
+              className="hidden px-2 text-xs text-red-700 peer-[&:user-invalid]:block"
+            >
+              {language === 'en'
+                ? 'Name must be between 2 and 50 characters'
+                : 'Le nom doit contenir entre 2 et 50 caractères'}
+            </p>
           </label>
 
           {/* Email */}
@@ -95,6 +103,12 @@ const Contact = () => {
             <span className="text-primary bg-global-secondary transition-theme absolute inset-y-0 start-3 h-fit -translate-y-4 px-1 font-medium transition-transform peer-placeholder-shown:translate-y-2.5 peer-focus:-translate-y-4 motion-reduce:transition-none">
               Email *
             </span>
+            <p
+              aria-live="polite"
+              className="hidden px-2 text-xs text-red-700 peer-[&:user-invalid]:block"
+            >
+              {language === 'en' ? 'Please enter a valid email' : 'Veuillez entrer un email valide'}
+            </p>
           </label>
 
           {/* Message */}
@@ -116,6 +130,14 @@ const Contact = () => {
               Message *
             </span>
             <span className="px-2 text-xs">{formData.message.length}/500</span>
+            <p
+              aria-live="polite"
+              className="hidden px-2 text-xs text-red-700 peer-[&:user-invalid]:block"
+            >
+              {language === 'en'
+                ? 'Message must be between 20 and 500 characters'
+                : 'Le message doit contenir entre 20 et 500 caractères'}
+            </p>
           </label>
 
           {/* Submit */}
@@ -123,7 +145,7 @@ const Contact = () => {
             type="submit"
             data-cursor={isDisabled ? 'none' : 'hover'}
             disabled={isDisabled}
-            className={`text-primary bg-global-secondary border-primary ${!isDisabled && 'hover:bg-btn-primary-hover-light dark:hover:bg-btn-primary-hover-dark'} transition-theme ml-auto block w-30 rounded-lg border py-2 text-lg font-semibold ${isDisabled && 'cursor-not-allowed opacity-50 ring ring-red-400'}`}
+            className={`text-primary bg-global-primary border-primary ${!isDisabled && 'hover:bg-btn-primary-hover-light dark:hover:bg-btn-primary-hover-dark'} transition-theme ml-auto block w-30 rounded-lg border py-2 text-lg font-semibold ${isDisabled && 'cursor-not-allowed opacity-50 ring ring-red-400'}`}
           >
             {language === 'en' ? 'Send' : 'Envoyer'}
           </button>
