@@ -8,7 +8,10 @@ import type { ContactFormDataProps } from './data/contactType';
 const Contact = () => {
   const { language } = useLanguage();
 
-  const [toast, setToast] = useState<{ message: string; type: 'success' | 'error' } | null>(null);
+  const [toast, setToast] = useState<{ message: string; type: 'success' | 'error' } | null>({
+    message: 'Failed to send your message !',
+    type: 'error',
+  });
 
   const [formData, setFormData] = useState<ContactFormDataProps>({
     name: '',
@@ -61,7 +64,7 @@ const Contact = () => {
     } catch (err) {
       console.error(err);
       setToast({
-        message: `${language === 'en' ? 'Failed to send message !' : `Erreur lors de l'envoi !`}`,
+        message: `${language === 'en' ? 'Failed to send your message !' : `Erreur lors de l'envoi !`}`,
         type: 'error',
       });
     }
@@ -179,7 +182,12 @@ const Contact = () => {
         </form>
         {/* Toast */}
         {toast && (
-          <Toast message={toast.message} type={toast.type} onClose={() => setToast(null)} />
+          <Toast
+            message={toast.message}
+            type={toast.type}
+            toastDuration={4000}
+            onClose={() => setToast(null)}
+          />
         )}
       </section>
     </div>
