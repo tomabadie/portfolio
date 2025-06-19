@@ -48,8 +48,8 @@ export const socialLinksList: SocialLinkProps[] = [
     id: '3',
     href: './assets/CV_Abadie_Fullstack.pdf',
     title: {
-      en: 'Download my resume',
-      fr: 'Télécharger mon CV',
+      en: 'Download my resume (PDF document)',
+      fr: 'Télécharger mon CV (Document PDF)',
     },
     iconSvg: (
       <svg

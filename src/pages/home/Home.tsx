@@ -27,6 +27,11 @@ const Home = () => {
       </p>
 
       <fieldset className="flex h-full w-full flex-col items-center justify-center gap-3 sm:w-[80dvw] md:max-h-100 md:flex-row">
+        <legend className="sr-only">
+          {language === 'en'
+            ? 'Website section selector on home page'
+            : "Sélecteur de section du site sur la page d'accueil"}
+        </legend>
         {navList.map((navItem) => {
           const isSelected = selected === navItem;
           return (
@@ -54,7 +59,7 @@ const Home = () => {
                 >
                   {navItem.iconSvg}
                 </IconWrapper>
-                <p className="text-primary transition-theme w-52 text-center text-2xl uppercase motion-reduce:transition-none md:w-auto md:text-3xl md:leading-none md:tracking-widest">
+                <h3 className="text-primary transition-theme w-52 text-center text-2xl uppercase motion-reduce:transition-none md:w-auto md:text-3xl md:leading-none md:tracking-widest">
                   {isDesktop &&
                     navItem.name.split('').map((char: string, i: number) => (
                       <span key={`${i}-${char}`} className="block">
@@ -62,7 +67,7 @@ const Home = () => {
                       </span>
                     ))}
                   {!isDesktop && navItem.name}
-                </p>
+                </h3>
                 <span className="opacity-0">·</span>
               </div>
               {selected === navItem && (
