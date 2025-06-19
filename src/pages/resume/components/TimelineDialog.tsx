@@ -69,6 +69,9 @@ const TimelineDialog = ({ isOpen, setIsOpen, focusedItem }: TimelineDialogProps)
                 wrapperClassName="shadow-[0_0_12px_4px_var(--color-btn-primary-hover-light)] dark:shadow-[0_0_12px_4px_var(--color-btn-primary-hover-dark)] size-10"
               >
                 <CloseIcon />
+                <span className="sr-only">
+                  {language === 'en' ? 'Close window' : 'Fermer la fenêtre'}
+                </span>
               </IconWrapper>
             </button>
           </div>
