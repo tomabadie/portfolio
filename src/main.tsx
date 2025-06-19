@@ -1,27 +1,22 @@
 import { StrictMode } from 'react';
 /* import { createRoot } from "react-dom/client"; */
-
 import ReactDOM from 'react-dom/client';
 import { RouterProvider, createBrowserRouter } from 'react-router';
 
-import { LanguageProvider } from './shared/components/Language/LanguageContext.tsx';
-import { ThemeProvider } from './shared/components/Theme/ThemeContext.tsx';
+import { LanguageProvider } from './contexts/LanguageContext.tsx';
+import { ThemeProvider } from './contexts/ThemeContext.tsx';
 
 // page components
 
+import App from './App.tsx';
 import './index.css';
 
-import App from './app/App.tsx';
-
-import About from './pages/about/components/About.tsx';
-import Contact from './pages/contact/components/Contact.tsx';
-import Projects from './pages/projects/components/Projects.tsx';
-import Resume from './pages/resume/components/Resume.tsx';
-
-// content
-
-import { aboutDataEn } from './pages/about/data/aboutData.en.tsx';
-import { aboutDataFr } from './pages/about/data/aboutData.fr.tsx';
+import About from './pages/about/About.tsx';
+import Contact from './pages/contact/Contact.tsx';
+import Home from './pages/home/Home.tsx';
+import NotFound from './pages/notFound/NotFound.tsx';
+import Projects from './pages/projects/Projects.tsx';
+import Resume from './pages/resume/Resume.tsx';
 
 // router creation
 
@@ -31,7 +26,11 @@ const router = createBrowserRouter([
     children: [
       {
         path: '/',
-        element: <About en={aboutDataEn} fr={aboutDataFr} />,
+        element: <Home />,
+      },
+      {
+        path: '/about',
+        element: <About />,
       },
       {
         path: '/resume',
@@ -44,6 +43,10 @@ const router = createBrowserRouter([
       {
         path: '/contact',
         element: <Contact />,
+      },
+      {
+        path: '*',
+        element: <NotFound />,
       },
     ],
   },

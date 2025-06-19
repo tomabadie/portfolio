@@ -6,8 +6,6 @@
   /* Fonts */
   --font-heading: 'Montserrat', sans-serif;
   --font-body: 'Inter', sans-serif;
-  --font-bis: 'Geist', sans-serif;
-  --font-ter: 'Satoshi-Variable', sans-serif;
 
   /* Colors */
 
@@ -16,7 +14,7 @@
   --color-text-invert-light: oklch(96.7% 0.001 286.375); /* zinc-100 */
   --color-primary-light: oklch(21% 0.006 285.885); /* zinc-900 */
   --color-secondary-light: oklch(70.5% 0.015 286.067); /* zinc-400 */
-  --color-accent-primary-light: oklch(37% 0.013 285.805); /* zinc-700 */
+  --color-accent-primary-light: oklch(70% 0.18 250);
   --color-bg-global-primary-light: oklch(98.5% 0 0); /* zinc-50 */
   --color-bg-global-secondary-light: oklch(96.7% 0.001 286.375); /* zinc-100 */
   --color-border-primary-light: oklch(87.1% 0.006 286.286); /* zinc-300 */
@@ -28,15 +26,35 @@
   --color-text-invert-dark: oklch(21% 0.006 285.885); /* zinc-900 */
   --color-primary-dark: oklch(96.7% 0.001 286.375); /* zinc-100 */
   --color-secondary-dark: oklch(87.1% 0.006 286.286); /* zinc-300 */
-  --color-accent-primary-dark: oklch(87.1% 0.006 286.286); /* zinc-300 */
-  /* --color-accent: oklch(70% 0.08 210);  */ /* alt version - cold blue */
+  --color-accent-primary-dark: oklch(45% 0.18 250);
   --color-bg-global-primary-dark: oklch(14.1% 0.005 285.823); /* zinc-950 */
   --color-bg-global-secondary-dark: oklch(21% 0.006 285.885); /* zinc-900 */
   --color-border-primary-dark: oklch(44.2% 0.017 285.786); /* zinc-600 */
   --color-toggle-dark: var(--color-primary-dark);
   --color-btn-primary-hover-dark: oklch(40% 0.15 250);
 
-  /* Colors extra - cf notes mac */
+  /* Accent  */
+  /* blue */
+  --color-accent-light: oklch(70% 0.18 250);
+  --color-accent-dark: oklch(45% 0.18 250);
+  /* orange */
+  /* --color-accent-light: oklch(75% 0.12 45);
+  --color-accent-dark: oklch(55% 0.14 45); */
+
+  /* Animations */
+
+  --animate-fade-in-delay: fade-in-delay 1.5s ease-in-out;
+
+  @keyframes fade-in-delay {
+    0% {
+      opacity: 0;
+      transform: translateY(10px);
+    }
+    100% {
+      opacity: 1;
+      transform: translateY(0px);
+    }
+  }
 }
 
 @layer base {
@@ -48,9 +66,18 @@
   }
 
   body {
+    cursor: none;
     transition:
       background-color 0.3s ease,
       color 0.3s ease;
+
+    button,
+    a,
+    label,
+    input,
+    textarea {
+      cursor: none;
+    }
   }
 
   h1,
@@ -64,6 +91,12 @@
 }
 
 @layer components {
+  .transition-theme {
+    transition-property: color, background-color, border-color, text-decoration-color, fill, stroke;
+    transition-duration: 300ms;
+    transition-timing-function: ease-in-out;
+  }
+
   .text-primary {
     color: var(--color-text-primary-light);
   }

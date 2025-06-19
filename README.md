@@ -1,54 +1,108 @@
-# React + TypeScript + Vite
+# Portfolio – Thomas Abadie
 
-This template provides a minimal setup to get React working in Vite with HMR and some ESLint rules.
+Welcome to my personal portfolio, available at [tomabadie.dev](https://www.tomabadie.dev).  
+It was designed to showcase my background, my projects, and my journey as a former materials science engineer and teacher, now transitioning into tech as a junior developer.
 
-Currently, two official plugins are available:
+---
 
-- [@vitejs/plugin-react](https://github.com/vitejs/vite-plugin-react/blob/main/packages/plugin-react/README.md) uses [Babel](https://babeljs.io/) for Fast Refresh
-- [@vitejs/plugin-react-swc](https://github.com/vitejs/vite-plugin-react-swc) uses [SWC](https://swc.rs/) for Fast Refresh
+## Overview
 
-## Expanding the ESLint configuration
+This project reflects my goal of creating a clean, fast, subtly animated, and above all, **accessible** user experience.  
+Although I’m still a beginner, I strive to follow best practices with a strong focus on **clean code**, **clear structure**, and **web accessibility** (contrast, ARIA labels, keyboard navigation…).
 
-If you are developing a production application, we recommend updating the configuration to enable type-aware lint rules:
+The site is fully handcrafted using React, TypeScript, Tailwind CSS, and Framer Motion.
 
-```js
-export default tseslint.config({
-  extends: [
-    // Remove ...tseslint.configs.recommended and replace with this
-    ...tseslint.configs.recommendedTypeChecked,
-    // Alternatively, use this for stricter rules
-    ...tseslint.configs.strictTypeChecked,
-    // Optionally, add this for stylistic rules
-    ...tseslint.configs.stylisticTypeChecked,
-  ],
-  languageOptions: {
-    // other options...
-    parserOptions: {
-      project: ['./tsconfig.node.json', './tsconfig.app.json'],
-      tsconfigRootDir: import.meta.dirname,
-    },
-  },
-})
+---
+
+## Live Demo
+
+[https://www.tomabadie.dev](https://www.tomabadie.dev)
+
+---
+
+## Tech Stack
+
+- [React 19](https://react.dev/)
+- [React Router 7](https://reactrouter.com/)
+- [TypeScript](https://www.typescriptlang.org/)
+- [Tailwind CSS 4.1](https://tailwindcss.com/)
+- [Framer Motion (motion@12)](https://motion.dev/) – animation library
+- [Headless UI](https://headlessui.com/) – for accessible dialogs and components
+- [EmailJS](https://www.emailjs.com/) – for emailing integration
+- [Vite](https://vitejs.dev/) – fast frontend build tool
+- [Vercel](https://vercel.com/) – for hosting and continuous deployment
+
+---
+
+## Features
+
+- **Multilingual support** – French and English
+- **Light/Dark mode** toggle with smooth transitions
+- **Custom animated cursor** with trailing effect
+- Landing page called **“Explore”**
+- **Projects** showcase with details on dialogs
+- **Interactive timeline** of work experience with details on dialogs
+- **Accessibility-first approach**:
+  - Semantic HTML
+  - ARIA labels
+  - Sufficient contrast ratios
+  - Visible focus states
+  - Full keyboard navigation
+
+---
+
+## Project Structure
+
+```txt
+├── src/
+│   ├── components/    # Reusable UI and layout components
+│   ├── contexts/      # Theme, language, and other global state
+│   ├── hooks/         # Custom hooks (cursor position, media queries)
+│   ├── pages/         # Portfolio pages (Home, About, Resume, etc.)
+│   └── styles/        # Tailwind and global CSS
 ```
 
-You can also install [eslint-plugin-react-x](https://github.com/Rel1cx/eslint-react/tree/main/packages/plugins/eslint-plugin-react-x) and [eslint-plugin-react-dom](https://github.com/Rel1cx/eslint-react/tree/main/packages/plugins/eslint-plugin-react-dom) for React-specific lint rules:
+---
 
-```js
-// eslint.config.js
-import reactX from 'eslint-plugin-react-x'
-import reactDom from 'eslint-plugin-react-dom'
+## Run Locally
 
-export default tseslint.config({
-  plugins: {
-    // Add the react-x and react-dom plugins
-    'react-x': reactX,
-    'react-dom': reactDom,
-  },
-  rules: {
-    // other rules...
-    // Enable its recommended typescript rules
-    ...reactX.configs['recommended-typescript'].rules,
-    ...reactDom.configs.recommended.rules,
-  },
-})
-```
+git clone https://github.com/tomabadie/portfolio.git
+cd portfolio
+npm install
+npm run dev
+
+## Credits
+
+This project was made possible thanks to many sources of inspiration and generous guidance.
+
+**Development inspiration and best practices**  
+[@Lokicoule](https://github.com/Lokicoule)
+
+**Mentoring and technical support during my training**  
+[@MrLootman](https://github.com/MrLootman)  
+[@Jeremy-Mrz](https://github.com/Jeremy-Mrz)
+
+Huge thanks to them for their kindness, guidance, and technical challenges.
+
+---
+
+## Learning Focus
+
+Beyond being a personal site, this portfolio is a learning ground.  
+It evolves as I grow, improve my skills, and receive feedback from others.
+
+---
+
+## License
+
+This project is licensed under the **MIT License**.
+
+---
+
+## Contact
+
+Get in touch:
+
+- Website: [https://www.tomabadie.dev](https://www.tomabadie.dev)
+- Email: abadie.thomas@gmail.com
+- GitHub: [@tomabadie](https://github.com/tomabadie)
