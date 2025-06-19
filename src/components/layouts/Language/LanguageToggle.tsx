@@ -1,6 +1,7 @@
 import { Popover, PopoverButton, PopoverPanel } from '@headlessui/react';
-import { GrLanguage } from 'react-icons/gr';
 import { useLanguage } from '../../../contexts/LanguageContext';
+import IconWrapper from '../../ui/IconWrapper';
+import { LanguageIcon } from '../../ui/Icons';
 
 const LanguageToggle = () => {
   const { setLanguage } = useLanguage();
@@ -11,7 +12,10 @@ const LanguageToggle = () => {
         className="text-primary flex content-center justify-center"
         data-cursor="hover"
       >
-        <GrLanguage size={24} />
+        <IconWrapper wrapperClassName="h-6 w-6">
+          {' '}
+          <LanguageIcon />{' '}
+        </IconWrapper>
       </PopoverButton>
       <PopoverPanel
         transition
