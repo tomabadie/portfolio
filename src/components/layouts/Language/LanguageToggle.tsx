@@ -11,6 +11,7 @@ const LanguageToggle = () => {
       <PopoverButton
         className="text-primary flex content-center justify-center"
         data-cursor="hover"
+        aria-label="Change language"
       >
         <IconWrapper wrapperClassName="h-6 w-6">
           {' '}
