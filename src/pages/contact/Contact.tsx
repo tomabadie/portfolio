@@ -8,10 +8,7 @@ import type { ContactFormDataProps } from './data/contactType';
 const Contact = () => {
   const { language } = useLanguage();
 
-  const [toast, setToast] = useState<{ message: string; type: 'success' | 'error' } | null>({
-    message: 'Failed to send your message !',
-    type: 'error',
-  });
+  const [toast, setToast] = useState<{ message: string; type: 'success' | 'error' } | null>(null);
 
   const [formData, setFormData] = useState<ContactFormDataProps>({
     name: '',
@@ -89,6 +86,7 @@ const Contact = () => {
           {/* Name */}
           <label htmlFor="Name" className="relative">
             <input
+              data-cursor="text"
               type="text"
               id="Name"
               name="name"
@@ -102,7 +100,10 @@ const Contact = () => {
               autoComplete="name"
               className="peer border-primary transition-theme focus:ring-accent-primary-light dark:focus:ring-accent-primary-dark w-full rounded border px-2 py-2.5 user-valid:border-green-600/40 user-invalid:border-red-700/40 focus:ring-2 focus:outline-none motion-reduce:transition-none lg:w-2/3"
             />
-            <span className="text-primary bg-global-secondary transition-theme absolute inset-y-0 start-3 h-fit -translate-y-4 px-1 font-medium transition-transform peer-placeholder-shown:translate-y-2.5 peer-focus:-translate-y-4 motion-reduce:transition-none">
+            <span
+              data-cursor="text"
+              className="text-primary bg-global-secondary transition-theme absolute inset-y-0 start-3 h-fit -translate-y-4 px-1 font-medium transition-transform peer-placeholder-shown:translate-y-2.5 peer-focus:-translate-y-4 motion-reduce:transition-none"
+            >
               Name *
             </span>
             <p
@@ -118,6 +119,7 @@ const Contact = () => {
           {/* Email */}
           <label htmlFor="Email" className="relative">
             <input
+              data-cursor="text"
               type="email"
               id="Email"
               name="email"
@@ -129,7 +131,10 @@ const Contact = () => {
               autoComplete="email"
               className="peer border-primary transition-theme focus:ring-accent-primary-light dark:focus:ring-accent-primary-dark w-full rounded border px-2 py-2.5 user-valid:border-green-600/40 user-invalid:border-red-700/40 focus:ring-2 focus:outline-none motion-reduce:transition-none lg:w-2/3"
             />
-            <span className="text-primary bg-global-secondary transition-theme absolute inset-y-0 start-3 h-fit -translate-y-4 px-1 font-medium transition-transform peer-placeholder-shown:translate-y-2.5 peer-focus:-translate-y-4 motion-reduce:transition-none">
+            <span
+              data-cursor="text"
+              className="text-primary bg-global-secondary transition-theme absolute inset-y-0 start-3 h-fit -translate-y-4 px-1 font-medium transition-transform peer-placeholder-shown:translate-y-2.5 peer-focus:-translate-y-4 motion-reduce:transition-none"
+            >
               Email *
             </span>
             <p
@@ -143,6 +148,7 @@ const Contact = () => {
           {/* Message */}
           <label htmlFor="Message" className="relative">
             <textarea
+              data-cursor="text"
               id="Message"
               name="message"
               aria-label="Message"
@@ -155,7 +161,10 @@ const Contact = () => {
               className="peer border-primary transition-theme focus:ring-accent-primary-light dark:focus:ring-accent-primary-dark w-full rounded border px-2 py-2.5 user-valid:border-green-600/40 user-invalid:border-red-700/40 focus:ring-2 focus:outline-none motion-reduce:transition-none"
               rows={7}
             />
-            <span className="text-primary bg-global-secondary transition-theme absolute inset-y-0 start-3 h-fit -translate-y-4 px-1 font-medium transition-transform peer-placeholder-shown:translate-y-2.5 peer-focus:-translate-y-4 motion-reduce:transition-none">
+            <span
+              data-cursor="text"
+              className="text-primary bg-global-secondary transition-theme absolute inset-y-0 start-3 h-fit -translate-y-4 px-1 font-medium transition-transform peer-placeholder-shown:translate-y-2.5 peer-focus:-translate-y-4 motion-reduce:transition-none"
+            >
               Message *
             </span>
             <span className="px-2 text-xs">{formData.message.length}/500</span>
