@@ -1,7 +1,7 @@
 import { Disclosure, DisclosureButton, DisclosurePanel } from '@headlessui/react';
 import { AnimatePresence, motion, useReducedMotion } from 'motion/react';
 import { Fragment } from 'react/jsx-runtime';
-import SocialAbout from '../../components/social/SocialAbout/SocialAbout';
+import SocialAbout from '../../components/social/SocialAbout';
 import { ChevronDownIcon } from '../../components/ui/Icons';
 import { useLanguage } from '../../contexts/LanguageContext';
 import { aboutDataEn } from './data/aboutData.en';

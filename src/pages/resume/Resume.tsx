@@ -1,4 +1,4 @@
-import SocialGlobal from '../../components/social/SocialGlobal/SocialGlobal';
+import SocialGlobal from '../../components/social/SocialGlobal';
 import { useLanguage } from '../../contexts/LanguageContext';
 import Education from './components/Education';
 import Languages from './components/Languages';

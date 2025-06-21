@@ -1,6 +1,6 @@
-import { useLanguage } from '../../../contexts/LanguageContext';
-import IconWrapper from '../../ui/IconWrapper';
-import type { SocialLinksListProps } from './socialLinksType';
+import { useLanguage } from '../../contexts/LanguageContext';
+import IconWrapper from '../ui/IconWrapper';
+import type { SocialLinksListProps } from './data/socialLinksType';
 
 const SocialLinks = ({
   aboutPage = false,
