@@ -1,5 +1,5 @@
-import SocialLinks from '../SocialLinks/SocialLinks';
-import { socialLinksList } from '../SocialLinks/socialLinksData';
+import SocialLinks from './SocialLinks';
+import { socialLinksList } from './data/socialLinksData';
 
 const SocialGlobal = () => {
   return (

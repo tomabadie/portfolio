@@ -1,6 +1,6 @@
 import emailjs from '@emailjs/browser';
 import { useEffect, useState } from 'react';
-import SocialGlobal from '../../components/social/SocialGlobal/SocialGlobal';
+import SocialGlobal from '../../components/social/SocialGlobal';
 import Toast from '../../components/ui/Toast';
 import { useLanguage } from '../../contexts/LanguageContext';
 import type { ContactFormDataProps } from './data/contactType';

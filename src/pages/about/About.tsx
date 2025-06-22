@@ -1,7 +1,7 @@
 import { Disclosure, DisclosureButton, DisclosurePanel } from '@headlessui/react';
 import { AnimatePresence, motion, useReducedMotion } from 'motion/react';
 import { Fragment } from 'react/jsx-runtime';
-import SocialAbout from '../../components/social/SocialAbout/SocialAbout';
+import SocialAbout from '../../components/social/SocialAbout';
 import { ChevronDownIcon } from '../../components/ui/Icons';
 import { useLanguage } from '../../contexts/LanguageContext';
 import { aboutDataEn } from './data/aboutData.en';
@@ -39,7 +39,7 @@ const About = () => {
               {({ open }) => (
                 <>
                   <DisclosureButton data-cursor="hover" className={'flex items-center gap-2'}>
-                    <h3 className="text-l transition-theme dark:border-b-accent-dark border-b-accent-light my-2 border-b-2 font-bold motion-reduce:transition-none">
+                    <h3 className="text-l transition-theme dark:border-b-accent-dark border-b-accent-light my-2 border-b-2 text-start font-bold motion-reduce:transition-none">
                       {item.title}
                     </h3>
                     <ChevronDownIcon

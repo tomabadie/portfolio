@@ -24,6 +24,7 @@ export const projectsDataFR: ProjectProps[] = [
       },
     ],
     tags: ['Portfolio', 'Frontend', 'Tailwind', 'Projet solo'],
+    demoLink: 'https://tomabadie.dev',
     repoLink: 'https://github.com/tomabadie/portfolio',
     contributions: [
       'Stack moderne : React, Tailwind, ESLint, Prettier, ...',

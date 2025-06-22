@@ -45,7 +45,7 @@ const CustomCursor = () => {
     <>
       {/* Cursor */}
       <motion.div
-        className={`bg-primary-light/30 dark:bg-primary-dark/30 border-primary-light dark:border-primary-dark pointer-events-none fixed top-0 left-0 z-60 ${cursorType === 'text' ? '' : 'size-2 rounded-full'} border-1`}
+        className={`bg-primary-light/30 dark:bg-primary-dark/30 border-primary-light dark:border-primary-dark pointer-events-none fixed top-0 left-0 z-60 pointer-coarse:hidden ${cursorType === 'text' ? '' : 'size-2 rounded-full'} border-1`}
         style={{
           x: cursorX,
           y: cursorY,
@@ -70,7 +70,7 @@ const CustomCursor = () => {
 
       {/* Circle */}
       <motion.div
-        className="border-primary pointer-events-none fixed top-0 left-0 z-60 size-16 rounded-full border-1"
+        className="border-primary pointer-events-none fixed top-0 left-0 z-60 size-16 rounded-full border-1 pointer-coarse:hidden"
         style={{ x: springX, y: springY, translateX: '-50%', translateY: '-50%' }}
         animate={
           cursorType === 'hover'

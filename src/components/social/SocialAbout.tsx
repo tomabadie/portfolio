@@ -1,6 +1,6 @@
-import WeatherAbout from '../../weather/WeatherAbout';
-import SocialLinks from '../SocialLinks/SocialLinks';
-import { socialLinksList } from '../SocialLinks/socialLinksData';
+import WeatherAbout from '../weather/WeatherAbout';
+import SocialLinks from './SocialLinks';
+import { socialLinksList } from './data/socialLinksData';
 
 const SocialAbout = () => {
   return (

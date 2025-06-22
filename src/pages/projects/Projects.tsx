@@ -1,5 +1,5 @@
 import { useState } from 'react';
-import SocialGlobal from '../../components/social/SocialGlobal/SocialGlobal';
+import SocialGlobal from '../../components/social/SocialGlobal';
 import { useLanguage } from '../../contexts/LanguageContext';
 import ProjectCard from './components/ProjectCard';
 import ProjectDialog from './components/ProjectDialog';

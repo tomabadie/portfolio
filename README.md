@@ -48,6 +48,7 @@ The site is fully handcrafted using React, TypeScript, Tailwind CSS, and Framer 
   - Sufficient contrast ratios
   - Visible focus states
   - Full keyboard navigation
+  - Skip to main
 
 ---
 
