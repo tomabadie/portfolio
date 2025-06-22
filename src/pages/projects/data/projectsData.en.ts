@@ -20,7 +20,7 @@ export const projectsDataEn: ProjectProps[] = [
       },
       {
         name: 'Tools',
-        content: ['Motion', 'ESLint', 'Prettier', 'Vite', 'Excalidraw', 'HeadlessUI'],
+        content: ['Framer Motion', 'ESLint', 'Prettier', 'Vite', 'Excalidraw', 'HeadlessUI'],
       },
     ],
     tags: ['Portfolio', 'Frontend', 'Tailwind', 'Solo project'],

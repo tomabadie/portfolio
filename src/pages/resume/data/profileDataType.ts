@@ -2,7 +2,6 @@ export interface HardSkill {
   id: string;
   label: string;
   category: 'language' | 'framework' | 'database' | 'tool' | 'method';
-  level: number;
   icon?: string;
 }
 

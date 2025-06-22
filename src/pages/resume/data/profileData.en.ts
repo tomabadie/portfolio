@@ -1,30 +1,30 @@
 import type { HardSkill, LanguageLevel, SoftSkill } from './profileDataType';
 
 export const skillsDataEN: HardSkill[] = [
-  { id: 'html', label: 'HTML', category: 'language', level: 90 },
-  { id: 'css', label: 'CSS', category: 'language', level: 75 },
-  { id: 'javascript', label: 'JavaScript', category: 'language', level: 75 },
-  { id: 'typescript', label: 'TypeScript', category: 'language', level: 65 },
+  { id: 'html', label: 'HTML', category: 'language' },
+  { id: 'css', label: 'CSS', category: 'language' },
+  { id: 'javascript', label: 'JavaScript', category: 'language' },
+  { id: 'typescript', label: 'TypeScript', category: 'language' },
 
-  { id: 'react', label: 'React', category: 'framework', level: 70 },
-  { id: 'tailwind', label: 'TailwindCSS', category: 'framework', level: 70 },
-  { id: 'node', label: 'Node.js', category: 'framework', level: 65 },
-  { id: 'express', label: 'Express.js', category: 'framework', level: 65 },
+  { id: 'react', label: 'React', category: 'framework' },
+  { id: 'tailwind', label: 'TailwindCSS', category: 'framework' },
+  { id: 'node', label: 'Node.js', category: 'framework' },
+  { id: 'express', label: 'Express.js', category: 'framework' },
 
-  { id: 'mysql', label: 'MySQL', category: 'database', level: 60 },
+  { id: 'mysql', label: 'MySQL', category: 'database' },
 
-  { id: 'git', label: 'Git', category: 'tool', level: 85 },
-  { id: 'github', label: 'GitHub', category: 'tool', level: 85 },
-  { id: 'framer-motion', label: 'Framer Motion', category: 'tool', level: 50 },
-  { id: 'tests', label: 'Mocha - Chai', category: 'tool', level: 15 },
-  { id: 'docker', label: 'Docker', category: 'tool', level: 15 },
+  { id: 'git', label: 'Git', category: 'tool' },
+  { id: 'github', label: 'GitHub', category: 'tool' },
+  { id: 'framer motion', label: 'Framer Motion', category: 'tool' },
+  { id: 'tests', label: 'Mocha - Chai', category: 'tool' },
+  { id: 'docker', label: 'Docker', category: 'tool' },
 
-  { id: 'responsive', label: 'Responsive', category: 'method', level: 75 },
-  { id: 'accessibility', label: 'Accessibility', category: 'method', level: 60 },
-  { id: 'agile', label: 'Agile', category: 'method', level: 65 },
-  { id: 'tdd', label: 'TDD', category: 'method', level: 15 },
-  { id: 'api', label: 'REST API', category: 'method', level: 70 },
-  { id: 'ci-cd', label: 'CI/CD', category: 'method', level: 15 },
+  { id: 'responsive', label: 'Responsive', category: 'method' },
+  { id: 'accessibility', label: 'Accessibility', category: 'method' },
+  { id: 'agile', label: 'Agile', category: 'method' },
+  { id: 'tdd', label: 'TDD', category: 'method' },
+  { id: 'api', label: 'REST API', category: 'method' },
+  { id: 'ci-cd', label: 'CI/CD', category: 'method' },
 ];
 
 export const softSkillsDataEN: SoftSkill[] = [

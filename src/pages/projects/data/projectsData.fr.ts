@@ -1,6 +1,6 @@
 import type { ProjectProps } from './projectsDataType';
 
-export const projectsDataFR: ProjectProps[] = [
+export const projectsDataFr: ProjectProps[] = [
   {
     id: 'portfolio',
     name: 'Portfolio personnel',
@@ -20,7 +20,7 @@ export const projectsDataFR: ProjectProps[] = [
       },
       {
         name: 'Tools',
-        content: ['Motion', 'ESLint', 'Prettier', 'Vite', 'Excalidraw', 'HeadlessUI'],
+        content: ['Framer Motion', 'ESLint', 'Prettier', 'Vite', 'Excalidraw', 'HeadlessUI'],
       },
     ],
     tags: ['Portfolio', 'Frontend', 'Tailwind', 'Projet solo'],
