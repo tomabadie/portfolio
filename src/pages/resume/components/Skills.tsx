@@ -69,7 +69,7 @@ const Skills = ({ className }: SkillsProps) => {
       </h3>
       {/* V2 - Projects display */}
       <motion.ul
-        className="grid grid-cols-2 gap-2"
+        className="grid grid-cols-3 gap-2"
         variants={shouldReduceMotion ? undefined : animatedList}
         initial="hidden"
         animate={isInView ? 'visible' : 'hidden'}
@@ -82,7 +82,7 @@ const Skills = ({ className }: SkillsProps) => {
           return (
             <motion.li
               key={id}
-              className="py-2"
+              className="border-accent-primary-light dark:border-accent-primary-dark rounded-sm border px-2 py-2"
               variants={animatedListItem}
               transition={shouldReduceMotion ? { duration: 0 } : { duration: 0.3 }}
             >

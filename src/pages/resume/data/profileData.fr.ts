@@ -7,8 +7,8 @@ export const skillsDataFR: HardSkill[] = [
 
   { id: 'react', label: 'React', category: 'framework' },
   { id: 'tailwind', label: 'TailwindCSS', category: 'framework' },
-  { id: 'node', label: 'Node.js', category: 'framework' },
-  { id: 'express', label: 'Express.js', category: 'framework' },
+  { id: 'node', label: 'Node', category: 'framework' },
+  { id: 'express', label: 'Express', category: 'framework' },
 
   { id: 'mysql', label: 'MySQL', category: 'database' },
 
@@ -17,12 +17,13 @@ export const skillsDataFR: HardSkill[] = [
   { id: 'framer motion', label: 'Framer Motion', category: 'tool' },
   { id: 'tests', label: 'Mocha - Chai', category: 'tool' },
   { id: 'docker', label: 'Docker', category: 'tool' },
+  { id: 'monorepo', label: 'Monorepo', category: 'tool' },
 
   { id: 'responsive', label: 'Responsive', category: 'method' },
   { id: 'accessibility', label: 'Accessibilité', category: 'method' },
   { id: 'agile', label: 'Agile', category: 'method' },
   { id: 'tdd', label: 'TDD', category: 'method' },
-  { id: 'api', label: 'API REST', category: 'method' },
+  { id: 'rest api', label: 'REST API', category: 'method' },
   { id: 'ci-cd', label: 'CI/CD', category: 'method' },
 ];
 
