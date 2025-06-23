@@ -37,10 +37,3 @@ export interface ProjectLinksProps {
   demoLink: string | undefined;
   repoLink: string | undefined;
 }
-
-export interface TechMap {
-  [key: string]: {
-    label: string;
-    projects: string[];
-  };
-}

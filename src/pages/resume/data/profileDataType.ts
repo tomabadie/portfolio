@@ -5,6 +5,21 @@ export interface HardSkill {
   icon?: string;
 }
 
+export interface SkillProjects {
+  label: string;
+  projects: string[];
+}
+
+export interface TechMap {
+  [key: string]: SkillProjects;
+}
+
+export interface SkillsDialogProps {
+  isOpen: boolean;
+  setIsOpen: React.Dispatch<React.SetStateAction<boolean>>;
+  focusedSkill: SkillProjects | null;
+}
+
 export interface SkillsProps {
   className: string;
 }
