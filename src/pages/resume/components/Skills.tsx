@@ -67,9 +67,9 @@ const Skills = ({ className }: SkillsProps) => {
       <h3 className="border-b-accent-light dark:border-b-accent-dark transition-theme mb-4 w-fit border-b-2 font-bold motion-reduce:transition-none">
         {language === 'en' ? 'Skills' : 'Compétences'}
       </h3>
-      {/* V2 - Projects display */}
+
       <motion.ul
-        className="grid grid-cols-3 gap-2"
+        className="grid grid-cols-2 gap-2 lg:grid-cols-3"
         variants={shouldReduceMotion ? undefined : animatedList}
         initial="hidden"
         animate={isInView ? 'visible' : 'hidden'}
@@ -82,55 +82,36 @@ const Skills = ({ className }: SkillsProps) => {
           return (
             <motion.li
               key={id}
-              className="border-accent-primary-light dark:border-accent-primary-dark rounded-sm border px-2 py-2"
+              data-cursor="hover"
+              className="border-primary hover:border-accent-primary-light transition-theme dark:hover:border-accent-primary-dark group rounded-sm border px-2 py-2 motion-reduce:transition-none"
               variants={animatedListItem}
               transition={shouldReduceMotion ? { duration: 0 } : { duration: 0.3 }}
             >
-              <h4
-                data-cursor="hover"
-                className="hover:text-accent-light dark:hover:text-accent-dark transition-theme w-fit font-bold motion-reduce:transition-none"
-              >
+              <h4 className="group-hover:text-accent-light dark:group-hover:text-accent-dark transition-theme w-fit font-bold motion-reduce:transition-none">
                 {skill.label}
               </h4>
               <ul className="list-inside list-disc">
-                {displayedProjects.map((project) => {
-                  return <li key={project}>{project}</li>;
-                })}
-                {extraCount !== 0 && (
-                  <span>
-                    {language === 'en'
-                      ? `and ${extraCount} more...`
-                      : `et ${extraCount} de plus...`}{' '}
-                  </span>
+                {skill.projects.length === 0 ? (
+                  <li>{language === 'en' ? 'Still learning' : 'En cours'}</li>
+                ) : (
+                  <>
+                    {displayedProjects.map((project) => {
+                      return <li key={project}>{project}</li>;
+                    })}
+                    {extraCount !== 0 && (
+                      <span>
+                        {language === 'en'
+                          ? `and ${extraCount} more...`
+                          : `et ${extraCount} de plus...`}{' '}
+                      </span>
+                    )}
+                  </>
                 )}
               </ul>
             </motion.li>
           );
         })}
       </motion.ul>
-
-      {/* 
-      V1 - Progress bars
-      <ul className="grid grid-cols-2 gap-2">
-        {skillsList.map((skill) => {
-          return (
-            <li key={skill.id} className="py-2">
-              <h4 className="w-fit font-bold">{skill.label}</h4>
-              <div className="border-accent-light dark:border-accent-dark transition-theme h-2.5 w-full rounded-full border p-0.5 motion-reduce:transition-none">
-                <motion.div
-                  animate={{ width: isInView ? `${skill.level}%` : '0%' }}
-                  initial={{ width: '0%' }}
-                  transition={
-                    shouldReduceMotion ? { duration: 0 } : { duration: 2, ease: 'easeInOut' }
-                  }
-                  className="bg-accent-light dark:bg-accent-dark transition-theme mr-auto h-full rounded-full motion-reduce:transition-none"
-                />
-              </div>
-            </li>
-          );
-        })}
-      </ul>
-      */}
     </motion.section>
   );
 };
