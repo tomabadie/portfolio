@@ -7,6 +7,7 @@ export interface HardSkill {
 
 export interface SkillProjects {
   label: string;
+  category: 'language' | 'framework' | 'database' | 'tool' | 'method';
   projects: string[];
 }
 
