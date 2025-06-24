@@ -4,7 +4,7 @@ export const educationDataEN: TimelineItem[] = [
   {
     id: 'codecademy-wcs-2025',
     type: 'training',
-    company: 'Codecademy & Wild Code School',
+    company: 'Wild Code School & Codecademy',
     link: 'https://www.wildcodeschool.com/',
     position: 'Full-Stack Web Developer',
     location: 'Remote',
@@ -22,20 +22,29 @@ export const educationDataEN: TimelineItem[] = [
     ],
     stack: [
       {
+        category: 'language',
         name: 'Languages',
         content: ['HTML', 'CSS', 'JavaScript', 'TypeScript'],
       },
       {
+        category: 'framework',
         name: 'Frameworks',
-        content: ['React', 'Express', 'Tailwind CSS'],
+        content: ['React', 'Express', 'TailwindCSS'],
       },
       {
+        category: 'database',
         name: 'Databases',
         content: ['MySQL'],
       },
       {
+        category: 'tool',
         name: 'Tools',
         content: ['Git', 'GitHub', 'Excalidraw', 'Figma', 'Trello', 'Motion'],
+      },
+      {
+        category: 'method',
+        name: 'Methods',
+        content: ['Responsive', 'Accessibility', 'Agile', 'REST API'],
       },
     ],
     keywords: [
@@ -91,6 +100,7 @@ export const educationDataEN: TimelineItem[] = [
     ],
     stack: [
       {
+        category: 'tool',
         name: 'Tools',
         content: ['Matlab', 'SolidWorks', 'Catia', 'Ansys'],
       },

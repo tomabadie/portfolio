@@ -1,6 +1,6 @@
 import { useEffect, useState } from 'react';
 import { useNavigate } from 'react-router';
-import SocialAbout from '../../components/social/SocialAbout/SocialAbout';
+import SocialAbout from '../../components/social/SocialAbout';
 import { useLanguage } from '../../contexts/LanguageContext';
 
 const NotFound = () => {

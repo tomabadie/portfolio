@@ -37,7 +37,7 @@ const SoftSkills = ({ className }: SoftSkillsProps) => {
       </h3>
       <motion.ul
         ref={ref}
-        className="grid list-inside list-disc grid-cols-2 gap-2"
+        className="grid list-inside list-disc grid-cols-2 gap-2 lg:grid-cols-3"
         variants={shouldReduceMotion ? undefined : animatedList}
         initial="hidden"
         animate={isInView ? 'visible' : 'hidden'}

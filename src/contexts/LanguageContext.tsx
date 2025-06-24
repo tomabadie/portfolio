@@ -11,10 +11,22 @@ interface LanguageContextType {
 const LanguageContext = createContext<LanguageContextType | undefined>(undefined);
 
 export const LanguageProvider: React.FC<{ children: React.ReactNode }> = ({ children }) => {
-  const [language, setLanguage] = useState<Language>('en');
+  const [language, setLanguage] = useState<Language>(() => {
+    if (typeof window !== 'undefined') {
+      const savedLanguage = localStorage.getItem('language') as Language | null;
+      if (savedLanguage === 'en' || savedLanguage === 'fr') {
+        return savedLanguage;
+      }
+      const browserLanguage = navigator.language || navigator.language[0];
+      return browserLanguage.startsWith('fr') ? 'fr' : 'en';
+    }
+
+    return 'en';
+  });
 
   useEffect(() => {
     document.documentElement.lang = language;
+    localStorage.setItem('language', language);
   }, [language]);
 
   /* 

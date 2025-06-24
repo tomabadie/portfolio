@@ -1,15 +1,15 @@
 import { useState } from 'react';
-import SocialGlobal from '../../components/social/SocialGlobal/SocialGlobal';
+import SocialGlobal from '../../components/social/SocialGlobal';
 import { useLanguage } from '../../contexts/LanguageContext';
 import ProjectCard from './components/ProjectCard';
 import ProjectDialog from './components/ProjectDialog';
 import { projectsDataEn } from './data/projectsData.en';
-import { projectsDataFR } from './data/projectsData.fr';
+import { projectsDataFr } from './data/projectsData.fr';
 import type { ProjectProps } from './data/projectsDataType';
 
 const Projects = () => {
   const { language } = useLanguage();
-  const projectsList = language === 'en' ? projectsDataEn : projectsDataFR;
+  const projectsList = language === 'en' ? projectsDataEn : projectsDataFr;
   const [isOpen, setIsOpen] = useState<boolean>(false);
   const [focusedProject, setFocusedProject] = useState<ProjectProps | null>(null);
 

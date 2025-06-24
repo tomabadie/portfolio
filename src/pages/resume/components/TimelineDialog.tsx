@@ -150,62 +150,66 @@ const TimelineDialog = ({ isOpen, setIsOpen, focusedItem }: TimelineDialogProps)
 
           {/* Stack */}
 
-          <Disclosure>
-            {({ open }) => (
-              <>
-                <DisclosureButton data-cursor="hover" className={'flex items-center gap-2'}>
-                  <h3 className="text-primary dark:border-b-accent-dark transition-theme border-b-accent-light w-fit border-b-2 motion-reduce:transition-none">
-                    Stack
-                  </h3>
-                  <ChevronDownIcon
-                    isOpen={open}
-                    className="dark:stroke-primary-dark stroke-primary-light h-5 w-5"
-                  />
-                </DisclosureButton>
-                <AnimatePresence mode="wait" initial={false}>
-                  {open && (
-                    <DisclosurePanel static as={Fragment}>
-                      <div className="text-primary flex flex-col justify-between gap-2">
-                        {focusedItem?.stack?.map((type) => {
-                          return (
-                            <div key={type.name}>
-                              <h4>{type.name} :</h4>
-                              <StackList
-                                type={type}
-                                styleVariant="names"
-                                orientationVariant="row"
-                              />
-                            </div>
-                          );
-                        })}
-                      </div>
-                    </DisclosurePanel>
-                  )}
-                </AnimatePresence>
-              </>
-            )}
-          </Disclosure>
+          {focusedItem?.stack && (
+            <Disclosure>
+              {({ open }) => (
+                <>
+                  <DisclosureButton data-cursor="hover" className={'flex items-center gap-2'}>
+                    <h3 className="text-primary dark:border-b-accent-dark transition-theme border-b-accent-light w-fit border-b-2 motion-reduce:transition-none">
+                      Stack
+                    </h3>
+                    <ChevronDownIcon
+                      isOpen={open}
+                      className="dark:stroke-primary-dark stroke-primary-light h-5 w-5"
+                    />
+                  </DisclosureButton>
+                  <AnimatePresence mode="wait" initial={false}>
+                    {open && (
+                      <DisclosurePanel static as={Fragment}>
+                        <div className="text-primary flex flex-col justify-between gap-2">
+                          {focusedItem?.stack?.map((type) => {
+                            return (
+                              <div key={type.name}>
+                                <h4>{type.name} :</h4>
+                                <StackList
+                                  type={type}
+                                  styleVariant="names"
+                                  orientationVariant="row"
+                                />
+                              </div>
+                            );
+                          })}
+                        </div>
+                      </DisclosurePanel>
+                    )}
+                  </AnimatePresence>
+                </>
+              )}
+            </Disclosure>
+          )}
 
           {/* Context */}
 
-          <Disclosure>
-            {({ open }) => (
-              <>
-                <DisclosureButton data-cursor="hover" className={'flex items-center gap-2'}>
-                  <h3 className="text-primary dark:border-b-accent-dark transition-theme border-b-accent-light w-fit border-b-2 motion-reduce:transition-none">
-                    {language === 'en' ? 'Context' : 'Contexte'}
-                  </h3>
-                  <ChevronDownIcon
-                    isOpen={open}
-                    className="dark:stroke-primary-dark stroke-primary-light h-5 w-5"
-                  />
-                </DisclosureButton>
-                <DisclosurePanel>
-                  <p className="text-primary">{focusedItem?.context}</p>
-                </DisclosurePanel>
-              </>
-            )}
-          </Disclosure>
+          {focusedItem?.context && (
+            <Disclosure>
+              {({ open }) => (
+                <>
+                  <DisclosureButton data-cursor="hover" className={'flex items-center gap-2'}>
+                    <h3 className="text-primary dark:border-b-accent-dark transition-theme border-b-accent-light w-fit border-b-2 motion-reduce:transition-none">
+                      {language === 'en' ? 'Context' : 'Contexte'}
+                    </h3>
+                    <ChevronDownIcon
+                      isOpen={open}
+                      className="dark:stroke-primary-dark stroke-primary-light h-5 w-5"
+                    />
+                  </DisclosureButton>
+                  <DisclosurePanel>
+                    <p className="text-primary">{focusedItem?.context}</p>
+                  </DisclosurePanel>
+                </>
+              )}
+            </Disclosure>
+          )}
         </DialogPanel>
       </div>
     </Dialog>
