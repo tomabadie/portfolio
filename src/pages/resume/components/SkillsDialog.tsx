@@ -12,7 +12,7 @@ const SkillsDialog = ({ isOpen, setIsOpen, focusedSkill }: SkillsDialogProps) =>
       <div className="fixed inset-0 flex w-screen items-center justify-center p-4">
         <DialogPanel className="border-primary bg-global-secondary max-h-[80dvh] w-[100dvw] max-w-4xl space-y-4 overflow-y-auto rounded-2xl border-3 p-3 sm:w-[80dvw] sm:p-8 lg:p-12">
           <div className="flex flex-col gap-5 sm:flex-row sm:items-center sm:justify-between">
-            <DialogTitle className="text-primary transition-theme border-accent-light dark:border-accent-dark rounded-sm border-2 p-2 font-bold uppercase motion-reduce:transition-none">
+            <DialogTitle className="text-primary transition-theme border-accent-light dark:border-accent-dark w-fit rounded-sm border-2 p-2 font-bold uppercase motion-reduce:transition-none">
               {focusedSkill?.label}
             </DialogTitle>
 
@@ -37,6 +37,22 @@ const SkillsDialog = ({ isOpen, setIsOpen, focusedSkill }: SkillsDialogProps) =>
 
           <hr className="text-primary" />
 
+          {/* Mobile - Simple */}
+          <div className="sm:hidden">
+            {focusedSkill?.projects.length === 0 ? (
+              <span className="text-primary">
+                {language === 'en' ? 'Currently learning' : "En cours d'apprentissage"}
+              </span>
+            ) : (
+              <ul className="text-primary list-inside list-disc">
+                {focusedSkill?.projects.map((project) => {
+                  return <li key={project}>{project}</li>;
+                })}
+              </ul>
+            )}
+          </div>
+
+          {/* Desktop - Octopus */}
           <div className="relative hidden min-h-[400px] w-full items-center justify-center py-4 sm:flex">
             <span className="text-primary border-primary bg-global-secondary absolute z-10 rounded-lg border px-6 py-3 text-lg font-semibold shadow-lg">
               {focusedSkill?.label}
