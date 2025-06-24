@@ -1,4 +1,5 @@
 export interface Technology {
+  category: 'language' | 'framework' | 'database' | 'tool' | 'method';
   name: string;
   content: string[];
 }

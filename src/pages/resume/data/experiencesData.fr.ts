@@ -24,20 +24,29 @@ export const experiencesDataFR: TimelineItem[] = [
     ],
     stack: [
       {
-        name: 'Languages',
+        category: 'language',
+        name: 'Langages',
         content: ['HTML', 'CSS', 'JavaScript', 'TypeScript'],
       },
       {
+        category: 'framework',
         name: 'Frameworks',
-        content: ['React', 'Express', 'Tailwind CSS'],
+        content: ['React', 'Express', 'TailwindCSS'],
       },
       {
-        name: 'Databases',
+        category: 'database',
+        name: 'Bases de données',
         content: ['MySQL'],
       },
       {
+        category: 'tool',
         name: 'Outils',
         content: ['Git', 'GitHub', 'Excalidraw', 'Figma', 'Trello', 'Motion'],
+      },
+      {
+        category: 'method',
+        name: 'Méthodes',
+        content: ['Responsive', 'Accessibility', 'Agile', 'REST API'],
       },
     ],
     keywords: [
@@ -134,6 +143,7 @@ export const experiencesDataFR: TimelineItem[] = [
     ],
     stack: [
       {
+        category: 'tool',
         name: 'Outils',
         content: ['AutoCAD', 'Rhinoceros', 'Catia', 'Gantt'],
       },
@@ -173,6 +183,7 @@ export const experiencesDataFR: TimelineItem[] = [
     ],
     stack: [
       {
+        category: 'tool',
         name: 'Outils',
         content: ['AutoCAD', 'Rhinoceros', 'Catia', 'Gantt'],
       },

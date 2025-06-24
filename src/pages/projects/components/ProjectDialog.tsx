@@ -41,7 +41,7 @@ const ProjectDialog = ({ isOpen, setIsOpen, focusedProject }: ProjectDialogProps
         <DialogPanel className="border-primary bg-global-secondary max-h-[80dvh] max-w-4xl space-y-4 overflow-y-auto rounded-2xl border-3 p-3 sm:p-8 lg:p-12">
           {/* Title and button */}
           <div className="flex flex-col gap-5 sm:flex-row sm:items-center sm:justify-between">
-            <DialogTitle className="text-primary transition-theme border-accent-light dark:border-accent-dark rounded-sm border-2 p-2 font-bold uppercase hover:shadow-[0_0_12px_4px_var(--color-btn-primary-hover-light)] motion-reduce:transition-none dark:hover:shadow-[0_0_12px_4px_var(--color-btn-primary-hover-dark)]">
+            <DialogTitle className="text-primary transition-theme border-accent-light dark:border-accent-dark rounded-sm border-2 p-2 font-bold uppercase motion-reduce:transition-none">
               {focusedProject?.name}
             </DialogTitle>
 

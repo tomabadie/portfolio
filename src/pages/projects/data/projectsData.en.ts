@@ -11,16 +11,33 @@ export const projectsDataEn: ProjectProps[] = [
       'Developed entirely solo, this site highlights my skills, background, and projects. I used Tailwind and a reusable component structure for a clean, modern, scalable, and accessible result.',
     stack: [
       {
+        category: 'language',
         name: 'Languages',
-        content: ['HTML', 'CSS', 'JavaScript'],
+        content: ['HTML', 'CSS', 'JavaScript', 'TypeScript'],
       },
       {
+        category: 'framework',
         name: 'Frameworks',
         content: ['React', 'Tailwind'],
       },
       {
+        category: 'tool',
         name: 'Tools',
-        content: ['Motion', 'ESLint', 'Prettier', 'Vite', 'Excalidraw', 'HeadlessUI'],
+        content: [
+          'Framer Motion',
+          'ESLint',
+          'Prettier',
+          'Vite',
+          'Excalidraw',
+          'HeadlessUI',
+          'Git',
+          'Github',
+        ],
+      },
+      {
+        category: 'method',
+        name: 'Methods',
+        content: ['Responsive', 'Accessibility', 'REST API'],
       },
     ],
     tags: ['Portfolio', 'Frontend', 'Tailwind', 'Solo project'],
@@ -49,20 +66,29 @@ export const projectsDataEn: ProjectProps[] = [
       'Full-stack project developed by a team of four web developers during our training program. Inspired by classic platforms, this app enhances the user experience with nutritional and environmental ratings, multi-level account access (visitor, free user, premium user, admin), and personalized features. Built to be scalable, it follows a clean monorepo architecture using external APIs and modern technologies.',
     stack: [
       {
+        category: 'language',
         name: 'Languages',
         content: ['HTML', 'CSS', 'JavaScript', 'TypeScript'],
       },
       {
+        category: 'framework',
         name: 'Frameworks',
-        content: ['React', 'Express'],
+        content: ['React', 'Express', 'Node'],
       },
       {
+        category: 'database',
         name: 'Databases',
         content: ['MySQL'],
       },
       {
+        category: 'tool',
         name: 'Tools',
-        content: ['Biome', 'Monorepo', 'Excalidraw', 'Figma'],
+        content: ['Biome', 'Monorepo', 'Excalidraw', 'Figma', 'Git', 'Github'],
+      },
+      {
+        category: 'method',
+        name: 'Methods',
+        content: ['Responsive', 'Accessibility', 'Agile', 'REST API'],
       },
     ],
     tags: ['Full Stack', 'Team Project', 'Recipes', 'Sustainability', 'Nutrition', 'Ecology'],
@@ -89,16 +115,24 @@ export const projectsDataEn: ProjectProps[] = [
       'Built during an internal hackathon, CodeWarts is a fun app to learn coding through themed quizzes inspired by the Harry Potter universe with nods to our instructors. The team delivered a functional MVP in 48 hours, with routing and dynamic quiz display.',
     stack: [
       {
+        category: 'language',
         name: 'Languages',
-        content: ['HTML', 'CSS', 'JavaScript'],
+        content: ['HTML', 'CSS', 'JavaScript', 'TypeScript'],
       },
       {
+        category: 'framework',
         name: 'Frameworks',
         content: ['React'],
       },
       {
+        category: 'tool',
         name: 'Tools',
-        content: ['Biome', 'Vite'],
+        content: ['Biome', 'Vite', 'Git', 'Github'],
+      },
+      {
+        category: 'method',
+        name: 'Methods',
+        content: ['Responsive', 'Accessibility'],
       },
     ],
     tags: ['Quiz', 'Hackathon', 'Code', 'Harry Potter', 'Fun'],
@@ -128,14 +162,17 @@ export const projectsDataEn: ProjectProps[] = [
       'Group project built around the concept of international cooking. The interface is centered on an interactive map that allows users to access country-specific recipes from an external API. I independently handled the map implementation, responsive design, country selection logic, and bug fixing. I also contributed to the initial project idea, the API selection, and the overall UI/UX design.',
     stack: [
       {
+        category: 'language',
         name: 'Languages',
-        content: ['HTML', 'CSS', 'JavaScript'],
+        content: ['HTML', 'CSS', 'JavaScript', 'TypeScript'],
       },
       {
+        category: 'framework',
         name: 'Frameworks',
         content: ['React'],
       },
       {
+        category: 'tool',
         name: 'Tools',
         content: [
           'Biome',
@@ -146,7 +183,14 @@ export const projectsDataEn: ProjectProps[] = [
           'Fetch API',
           'React Simple Maps',
           'ThemealDB',
+          'Git',
+          'Github',
         ],
+      },
+      {
+        category: 'method',
+        name: 'Methods',
+        content: ['Responsive', 'Accessibility', 'Agile', 'REST API'],
       },
     ],
     tags: ['Recipes', 'API', 'Interactive map', 'International'],
@@ -173,16 +217,24 @@ export const projectsDataEn: ProjectProps[] = [
       'Built solo during a 3-hours open workshop, this project aimed to practice using Fetch. I intentionally made it more complex by choosing non-standard stations data (CSV) to generate an interactive weather interface. The weather display algorithm is partially implemented.',
     stack: [
       {
+        category: 'language',
         name: 'Languages',
-        content: ['HTML', 'CSS', 'JavaScript'],
+        content: ['HTML', 'CSS', 'JavaScript', 'TypeScript'],
       },
       {
+        category: 'framework',
         name: 'Frameworks',
         content: ['React'],
       },
       {
+        category: 'tool',
         name: 'Tools',
-        content: ['Biome', 'Vite'],
+        content: ['Biome', 'Vite', 'Git', 'Github'],
+      },
+      {
+        category: 'method',
+        name: 'Methods',
+        content: ['Responsive', 'Accessibility', 'REST API'],
       },
     ],
     tags: ['Weather', 'Fetch', 'CSV', 'React', 'Quick project'],
@@ -208,16 +260,24 @@ export const projectsDataEn: ProjectProps[] = [
       'This project involved quickly integrating an API and organizing information in a clear React interface. Built in a duo in one day, it highlights rapid structuring and dynamic data rendering.',
     stack: [
       {
+        category: 'language',
         name: 'Languages',
-        content: ['HTML', 'CSS', 'JavaScript'],
+        content: ['HTML', 'CSS', 'JavaScript', 'TypeScript'],
       },
       {
+        category: 'framework',
         name: 'Frameworks',
         content: ['React'],
       },
       {
+        category: 'tool',
         name: 'Tools',
-        content: ['Biome', 'Vite', 'Fetch API'],
+        content: ['Biome', 'Vite', 'Fetch API', 'Git', 'Github'],
+      },
+      {
+        category: 'method',
+        name: 'Methods',
+        content: ['Responsive', 'Accessibility', 'REST API'],
       },
     ],
     tags: ['Planets', 'API', 'React', 'Space data'],
@@ -243,12 +303,19 @@ export const projectsDataEn: ProjectProps[] = [
       'Group project initiated after only three weeks of training. In the group version, I developed the overall structure, header, footer, global style, quiz algorithm, and all sets of questions. I later took over the codebase on my own to offer a cleaner version focused on the essentials: the homepage and the quiz. I kept the parts I had written, removed two pages and recoded the homepage for a more professional look.',
     stack: [
       {
+        category: 'language',
         name: 'Languages',
         content: ['HTML', 'CSS', 'JavaScript'],
       },
       {
+        category: 'tool',
         name: 'Tools',
-        content: ['Biome', 'Excalidraw', 'Figma'],
+        content: ['Biome', 'Excalidraw', 'Figma', 'Git', 'Github'],
+      },
+      {
+        category: 'method',
+        name: 'Methods',
+        content: ['Responsive', 'Accessibility', 'Agile'],
       },
     ],
     tags: ['Quiz', 'Algorithm', 'Revamp', 'Dark/Light mode', 'Responsive'],

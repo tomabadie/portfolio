@@ -1,6 +1,6 @@
 import type { ProjectProps } from './projectsDataType';
 
-export const projectsDataFR: ProjectProps[] = [
+export const projectsDataFr: ProjectProps[] = [
   {
     id: 'portfolio',
     name: 'Portfolio personnel',
@@ -11,16 +11,33 @@ export const projectsDataFR: ProjectProps[] = [
       'Développé entièrement en solo, ce site met en avant mes compétences, mon parcours et mes projets. J’y ai intégré Tailwind et organisé une structure de composants réutilisables pour un rendu clair, moderne, scalable et accessible.',
     stack: [
       {
+        category: 'language',
         name: 'Languages',
-        content: ['HTML', 'CSS', 'JavaScript'],
+        content: ['HTML', 'CSS', 'JavaScript', 'TypeScript'],
       },
       {
+        category: 'framework',
         name: 'Frameworks',
         content: ['React', 'Tailwind'],
       },
       {
+        category: 'tool',
         name: 'Tools',
-        content: ['Motion', 'ESLint', 'Prettier', 'Vite', 'Excalidraw', 'HeadlessUI'],
+        content: [
+          'Framer Motion',
+          'ESLint',
+          'Prettier',
+          'Vite',
+          'Excalidraw',
+          'HeadlessUI',
+          'Git',
+          'Github',
+        ],
+      },
+      {
+        category: 'method',
+        name: 'Methods',
+        content: ['Responsive', 'Accessibility', 'REST API'],
       },
     ],
     tags: ['Portfolio', 'Frontend', 'Tailwind', 'Projet solo'],
@@ -49,20 +66,29 @@ export const projectsDataFR: ProjectProps[] = [
       'Projet full stack réalisé en équipe de 4 développeurs en formation. Inspiré des sites de recettes classiques, cette application pousse plus loin l’expérience utilisateur grâce à une notation nutritionnelle et environnementale, une gestion de compte multi-niveaux (visiteur, abonné, premium, admin), et des fonctionnalités personnalisées. Le projet est conçu pour être scalable, structuré autour d’un monorepo avec des API externes et une architecture propre.',
     stack: [
       {
+        category: 'language',
         name: 'Languages',
         content: ['HTML', 'CSS', 'JavaScript', 'TypeScript'],
       },
       {
+        category: 'framework',
         name: 'Frameworks',
-        content: ['React', 'Express'],
+        content: ['React', 'Express', 'Node'],
       },
       {
+        category: 'database',
         name: 'Databases',
         content: ['MySQL'],
       },
       {
+        category: 'tool',
         name: 'Tools',
-        content: ['Biome', 'Monorepo', 'Excalidraw', 'Figma'],
+        content: ['Biome', 'Monorepo', 'Excalidraw', 'Figma', 'Git', 'Github'],
+      },
+      {
+        category: 'method',
+        name: 'Methods',
+        content: ['Responsive', 'Accessibility', 'Agile', 'REST API'],
       },
     ],
     tags: ['Full Stack', 'Projet en équipe', 'Recettes', 'Responsable', 'Nutrition', 'Écologie'],
@@ -90,16 +116,24 @@ export const projectsDataFR: ProjectProps[] = [
       "Conçu lors d’un hackathon interne à la promo, CodeWarts est une application fun pour apprendre à coder en répondant à des quiz dans un univers inspiré d’Harry Potter avec des clins d'oeil à nos formateurs. L’équipe a livré un MVP fonctionnel en 48h avec routes et affichage dynamique.",
     stack: [
       {
+        category: 'language',
         name: 'Languages',
-        content: ['HTML', 'CSS', 'JavaScript'],
+        content: ['HTML', 'CSS', 'JavaScript', 'TypeScript'],
       },
       {
+        category: 'framework',
         name: 'Frameworks',
         content: ['React'],
       },
       {
+        category: 'tool',
         name: 'Tools',
-        content: ['Biome', 'Vite'],
+        content: ['Biome', 'Vite', 'Git', 'Github'],
+      },
+      {
+        category: 'method',
+        name: 'Methods',
+        content: ['Responsive', 'Accessibility'],
       },
     ],
     tags: ['Quiz', 'Hackathon', 'Code', 'Harry Potter', 'Fun'],
@@ -129,14 +163,17 @@ export const projectsDataFR: ProjectProps[] = [
       'Application de groupe réalisée autour d’un concept de cuisine internationale. L’interface est centrée sur une carte interactive permettant d’accéder à des recettes par pays, issues d’une API externe. J’ai pris en charge seul la carte, le responsive, la sélection de pays et la résolution de bugs. J’ai également contribué à l’idée initiale du projet, à la recherche de l’API adaptée et à la co-conception du design global.',
     stack: [
       {
+        category: 'language',
         name: 'Languages',
-        content: ['HTML', 'CSS', 'JavaScript'],
+        content: ['HTML', 'CSS', 'JavaScript', 'TypeScript'],
       },
       {
+        category: 'framework',
         name: 'Frameworks',
         content: ['React'],
       },
       {
+        category: 'tool',
         name: 'Tools',
         content: [
           'Biome',
@@ -147,7 +184,14 @@ export const projectsDataFR: ProjectProps[] = [
           'Fetch API',
           'React Simple Maps',
           'ThemealDB',
+          'Git',
+          'Github',
         ],
+      },
+      {
+        category: 'method',
+        name: 'Methods',
+        content: ['Responsive', 'Accessibility', 'Agile', 'REST API'],
       },
     ],
     tags: ['Recettes', 'API', 'Carte interactive', 'International'],
@@ -176,16 +220,24 @@ export const projectsDataFR: ProjectProps[] = [
       "Réalisé en autonomie pendant un atelier libre de 3h, ce projet visait à apprendre à utiliser Fetch. J'ai volontairement choisi de le complexifier avec des données de stations non classiques (CSV) pour générer une interface météo interactive. L’algorithme d’affichage météo est partiellement implémenté.",
     stack: [
       {
+        category: 'language',
         name: 'Languages',
-        content: ['HTML', 'CSS', 'JavaScript'],
+        content: ['HTML', 'CSS', 'JavaScript', 'TypeScript'],
       },
       {
+        category: 'framework',
         name: 'Frameworks',
         content: ['React'],
       },
       {
+        category: 'tool',
         name: 'Tools',
-        content: ['Biome', 'Vite'],
+        content: ['Biome', 'Vite', 'Git', 'Github'],
+      },
+      {
+        category: 'method',
+        name: 'Methods',
+        content: ['Responsive', 'Accessibility', 'REST API'],
       },
     ],
     tags: ['Météo', 'Fetch', 'CSV', 'React', 'Projet rapide'],
@@ -210,16 +262,24 @@ export const projectsDataFR: ProjectProps[] = [
     detailedDescription: `Ce projet consistait à intégrer rapidement une API et structurer l'information dans une interface React claire. Réalisé en binôme en une journée, il met en valeur la structuration et l'affichage dynamique de données.`,
     stack: [
       {
+        category: 'language',
         name: 'Languages',
-        content: ['HTML', 'CSS', 'JavaScript'],
+        content: ['HTML', 'CSS', 'JavaScript', 'TypeScript'],
       },
       {
+        category: 'framework',
         name: 'Frameworks',
         content: ['React'],
       },
       {
+        category: 'tool',
         name: 'Tools',
-        content: ['Biome', 'Vite', 'Fetch API'],
+        content: ['Biome', 'Vite', 'Fetch API', 'Git', 'Github'],
+      },
+      {
+        category: 'method',
+        name: 'Methods',
+        content: ['Responsive', 'Accessibility', 'REST API'],
       },
     ],
     tags: ['Planètes', 'API', 'React', 'Données spatiales'],
@@ -245,12 +305,19 @@ export const projectsDataFR: ProjectProps[] = [
       "Travail de groupe réalisé après seulement trois semaines de formation. Au sein du projet de groupe, j'avais développé la structure globale, header, footer, le style global, l’algo du quiz et les sets de questions. J’ai ensuite repris le code en solo pour proposer une version plus propre et recentrée sur l’essentiel : la page d’accueil et le quiz. J’ai conservé les parties que j'avais codées, supprimé deux pages, puis recodé la page d'acceuil pour un rendu professionnel.",
     stack: [
       {
+        category: 'language',
         name: 'Languages',
         content: ['HTML', 'CSS', 'JavaScript'],
       },
       {
+        category: 'tool',
         name: 'Tools',
-        content: ['Biome', 'Excalidraw', 'Figma'],
+        content: ['Biome', 'Excalidraw', 'Figma', 'Git', 'Github'],
+      },
+      {
+        category: 'method',
+        name: 'Methods',
+        content: ['Responsive', 'Accessibility', 'Agile'],
       },
     ],
     tags: ['Quiz', 'Algo', 'Refonte', 'Dark/Light mode', 'Responsive'],

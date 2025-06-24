@@ -16,12 +16,13 @@ const Resume = () => {
         <h2 className="transition-theme border-primary my-2 w-full border-b-2 pb-2 text-xl font-bold motion-reduce:transition-none">
           {language === 'en' ? 'My journey' : 'Mon parcours'}
         </h2>
-        <div className="grid gap-2 md:grid-cols-2">
-          <WorkExperiences className="md:col-start-2 md:row-start-1" />
-          <Skills className="md:col-start-1 md:row-start-1" />
-          <Education className="md:col-start-2 md:row-start-2" />
-          <SoftSkills className="md:col-start-1 md:row-start-2" />
-          <Languages className="md:col-span-2 md:row-start-3" />
+        <div className="lg:grid-row-6 grid gap-2 md:grid-cols-2 md:grid-rows-8 lg:grid-rows-7">
+          {' '}
+          <WorkExperiences className="md:col-start-2 md:row-span-3 md:row-start-1" />
+          <Skills className="md:col-start-1 md:row-span-7 md:row-start-1 lg:row-span-5" />
+          <Education className="md:col-start-2 md:row-span-2 md:row-start-4" />
+          <SoftSkills className="md:col-start-2 md:row-span-2 md:row-start-6 lg:col-span-2 lg:row-span-1 lg:row-start-6" />
+          <Languages className="md:col-span-2 md:row-start-8 lg:row-start-7" />
         </div>
       </section>
     </div>
