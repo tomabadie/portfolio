@@ -90,7 +90,7 @@ const Skills = ({ className }: SkillsProps) => {
           animate={isInView ? 'visible' : 'hidden'}
         >
           {technologiesMap.map(([id, skill], index) => {
-            const maxProjectsDisplayed = 3;
+            const maxProjectsDisplayed = 0;
             const displayedProjects = skill.projects.slice(0, maxProjectsDisplayed);
             const extraCount = Math.max(skill.projects.length - maxProjectsDisplayed, 0);
             const isFirstWithoutProjects =
@@ -124,19 +124,27 @@ const Skills = ({ className }: SkillsProps) => {
                     </div>
                     <ul className="list-inside list-disc text-sm">
                       {skill.projects.length === 0 ? (
-                        <span>{language === 'en' ? 'Currently learning' : 'En cours'}</span>
+                        <span className="text-secondary">
+                          {language === 'en' ? 'currently learning' : 'en cours'}
+                        </span>
                       ) : (
                         <>
                           {displayedProjects.map((project) => {
                             return <li key={project}>{project}</li>;
                           })}
-                          {extraCount !== 0 && (
-                            <span>
-                              {language === 'en'
-                                ? `and ${extraCount} more...`
-                                : `et ${extraCount} de plus...`}{' '}
-                            </span>
-                          )}
+                          <div className="text-secondary grid">
+                            {extraCount !== 0 && language === 'en' ? (
+                              <Fragment>
+                                <span> {`${extraCount} projects`} </span>
+                                <span>see more...</span>
+                              </Fragment>
+                            ) : (
+                              <Fragment>
+                                <span> {`${extraCount} projets`} </span>
+                                <span>voir plus ...</span>
+                              </Fragment>
+                            )}
+                          </div>
                         </>
                       )}
                     </ul>

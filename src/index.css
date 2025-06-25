@@ -22,7 +22,7 @@
   --color-btn-primary-hover-light: oklch(85% 0.015 270);
 
   --color-text-primary-dark: var(--color-primary-dark); /* zinc-100 */
-  --color-text-secondary-dark: oklch(70.5% 0.015 286.067); /* zinc-400 */
+  --color-text-secondary-dark: oklch(87.1% 0.006 286.286); /* zinc-300 */
   --color-text-invert-dark: oklch(21% 0.006 285.885); /* zinc-900 */
   --color-primary-dark: oklch(96.7% 0.001 286.375); /* zinc-100 */
   --color-secondary-dark: oklch(87.1% 0.006 286.286); /* zinc-300 */
