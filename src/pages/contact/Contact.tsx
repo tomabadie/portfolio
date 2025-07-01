@@ -55,7 +55,7 @@ const Contact = () => {
         </p>
 
         <form
-          className="group flex w-full flex-col gap-8 py-4 md:w-xl lg:w-3xl"
+          className="group flex w-full flex-col gap-4 py-4 md:w-xl lg:w-3xl"
           action={handleSubmit}
         >
           {/* Name */}
@@ -81,7 +81,7 @@ const Contact = () => {
             </span>
             <p
               aria-live="polite"
-              className="transition-theme px-2 text-xs text-red-700 opacity-0 peer-[&:user-invalid]:opacity-100"
+              className="transition-theme invisible px-2 text-xs text-red-700 peer-[&:user-invalid]:visible"
             >
               {language === 'en'
                 ? 'Name must be between 2 and 50 characters'
@@ -109,7 +109,7 @@ const Contact = () => {
             </span>
             <p
               aria-live="polite"
-              className="transition-theme px-2 text-xs text-red-700 opacity-0 peer-[&:user-invalid]:opacity-100"
+              className="transition-theme invisible px-2 text-xs text-red-700 peer-[&:user-invalid]:visible"
             >
               {language === 'en' ? 'Please enter a valid email' : 'Veuillez entrer un email valide'}
             </p>
@@ -137,7 +137,7 @@ const Contact = () => {
             </span>
             <p
               aria-live="polite"
-              className="transition-theme px-2 text-xs text-red-700 opacity-0 peer-[&:user-invalid]:opacity-100"
+              className="transition-theme invisible px-2 text-xs text-red-700 peer-[&:user-invalid]:visible"
             >
               {language === 'en'
                 ? 'Message must be between 20 and 500 characters'
@@ -150,7 +150,7 @@ const Contact = () => {
             type="submit"
             value="Send"
             data-cursor="hover"
-            className="text-primary bg-global-primary border-primary hover:bg-btn-primary-hover-light dark:hover:bg-btn-primary-hover-dark transition-theme ml-auto block w-30 rounded-lg border py-2 text-lg font-semibold group-invalid:opacity-20"
+            className="text-primary bg-global-primary border-primary hover:bg-btn-primary-hover-light dark:hover:bg-btn-primary-hover-dark transition-theme ml-auto block w-30 rounded-lg border py-2 text-lg font-semibold group-invalid:pointer-events-none group-invalid:opacity-20"
           >
             {language === 'en' ? 'Send' : 'Envoyer'}
           </button>
