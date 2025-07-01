@@ -300,7 +300,7 @@ export const projectsDataFr: ProjectProps[] = [
     name: 'Click dev’ (refonte solo)',
     img: '/assets/img/projects/clickdev_dark.webp',
     shortDescription:
-      'Un quiz HTML/CSS/JavaScript entièrement fonctionnel, conçu à l’origine en groupe puis refondu en solo pour en améliorer la structure, le design et la propreté du code.',
+      'Un quiz HTML/CSS/JavaScript entièrement fonctionnel, conçu à l’origine en groupe puis retravaillé en solo pour en améliorer la structure, le design et la propreté du code.',
     detailedDescription:
       "Travail de groupe réalisé après seulement trois semaines de formation. Au sein du projet de groupe, j'avais développé la structure globale, header, footer, le style global, l’algo du quiz et les sets de questions. J’ai ensuite repris le code en solo pour proposer une version plus propre et recentrée sur l’essentiel : la page d’accueil et le quiz. J’ai conservé les parties que j'avais codées, supprimé deux pages, puis recodé la page d'acceuil pour un rendu professionnel.",
     stack: [
