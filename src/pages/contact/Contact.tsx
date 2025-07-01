@@ -9,52 +9,13 @@ const Contact = () => {
 
   const [toast, setToast] = useState<{ message: string; type: 'success' | 'error' } | null>(null);
 
-  /* const [formData, setFormData] = useState<ContactFormDataProps>({
-    name: '',
-    email: '',
-    message: '',
-  }); */
-
   const nameMin = 2;
   const nameMax = 50;
   const messageMin = 20;
   const messageMax = 500;
 
-  /* const [isDisabled, setIsDisabled] = useState(true); */
-
-  /* useEffect(() => {
-    const allValid =
-      formData.name.length >= nameMin &&
-      formData.name.length <= nameMax &&
-      /^((?!\.)[\w\-_.]*[^.])(@\w+)(\.\w+(\.\w+)?[^.\W])$/.test(formData.email) &&
-      formData.message.length >= messageMin &&
-      formData.message.length <= messageMax;
-    setIsDisabled(!allValid);
-  }, [formData]); */
-
-  /* const handleChange = (event: React.ChangeEvent<HTMLInputElement | HTMLTextAreaElement>) => {
-    const { name, value } = event.target;
-    setFormData((prevForm) => ({
-      ...prevForm,
-      [name]: value,
-    }));
-  }; */
-
   const handleSubmit = async (formData: FormData) => {
-    /* e.preventDefault(); */
-    /* console.log('formData :');
-    console.log(formData); */
     const formObj = Object.fromEntries(formData);
-    /*     const name = formData.get('name');
-    const email = formData.get('email');
-    const message = formData.get('message'); */
-    /* console.log('formObj :');
-    console.log(formObj); */
-
-    /* if (typeof name !== 'string' || typeof email !== 'string' || typeof message !== 'string') {
-      console.error('Invalid form data', { name, email, message });
-      return;
-    } */
 
     try {
       await emailjs.send(
@@ -69,7 +30,6 @@ const Contact = () => {
         message: `${language === 'en' ? 'Message sent !' : 'Message envoyé !'}`,
         type: 'success',
       });
-      /* setFormData({ name: '', email: '', message: '' }); */
     } catch (err) {
       console.error(err);
       setToast({
@@ -110,8 +70,6 @@ const Contact = () => {
               required
               minLength={nameMin}
               maxLength={nameMax}
-              /* value={formData.name} */
-              /* onChange={handleChange} */
               autoComplete="name"
               className="peer border-primary transition-theme focus:ring-accent-primary-light dark:focus:ring-accent-primary-dark w-full rounded border px-2 py-2.5 user-valid:border-green-600/40 user-invalid:border-red-700/40 focus:ring-2 focus:outline-none motion-reduce:transition-none lg:w-2/3"
             />
@@ -138,11 +96,8 @@ const Contact = () => {
               type="email"
               id="Email"
               name="email"
-              /* pattern="^((?!\.)[\w\-_.]*[^.])(@\w+)(\.\w+(\.\w+)?[^.\W])$" */
               placeholder=""
               required
-              /* value={formData.email} */
-              /* onChange={handleChange} */
               autoComplete="email"
               className="peer border-primary transition-theme focus:ring-accent-primary-light dark:focus:ring-accent-primary-dark w-full rounded border px-2 py-2.5 user-valid:border-green-600/40 user-invalid:border-red-700/40 focus:ring-2 focus:outline-none motion-reduce:transition-none lg:w-2/3"
             />
@@ -169,10 +124,8 @@ const Contact = () => {
               aria-label="Message"
               placeholder=""
               required
-              /* value={formData.message} */
               minLength={messageMin}
               maxLength={messageMax}
-              /* onChange={handleChange} */
               className="peer border-primary transition-theme focus:ring-accent-primary-light dark:focus:ring-accent-primary-dark w-full rounded border px-2 py-2.5 user-valid:border-green-600/40 user-invalid:border-red-700/40 focus:ring-2 focus:outline-none motion-reduce:transition-none"
               rows={7}
             />
@@ -197,7 +150,6 @@ const Contact = () => {
             type="submit"
             value="Send"
             data-cursor="hover"
-            /* disabled={isDisabled} */
             className="text-primary bg-global-primary border-primary hover:bg-btn-primary-hover-light dark:hover:bg-btn-primary-hover-dark transition-theme ml-auto block w-30 rounded-lg border py-2 text-lg font-semibold group-invalid:opacity-20"
           >
             {language === 'en' ? 'Send' : 'Envoyer'}
