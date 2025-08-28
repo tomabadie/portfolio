@@ -22,7 +22,7 @@ export const projectsDataFr: ProjectProps[] = [
       },
       {
         category: 'database',
-        name: 'Databases',
+        name: 'Bases de données',
         content: ['MySQL'],
       },
       {
@@ -32,12 +32,12 @@ export const projectsDataFr: ProjectProps[] = [
       },
       {
         category: 'tool',
-        name: 'Tools',
+        name: 'Outils',
         content: ['Monorepo', 'Vite', 'ESLint', 'Prettier', 'Git', 'Github', 'Excalidraw'],
       },
       {
         category: 'method',
-        name: 'Methods',
+        name: 'Méthodes',
         content: [
           'Responsive',
           'Accessibility',
@@ -97,7 +97,7 @@ export const projectsDataFr: ProjectProps[] = [
       },
       {
         category: 'tool',
-        name: 'Tools',
+        name: 'Outils',
         content: [
           'Framer Motion',
           'ESLint',
@@ -111,7 +111,7 @@ export const projectsDataFr: ProjectProps[] = [
       },
       {
         category: 'method',
-        name: 'Methods',
+        name: 'Méthodes',
         content: ['Responsive', 'Accessibility', 'REST API'],
       },
     ],
@@ -152,17 +152,17 @@ export const projectsDataFr: ProjectProps[] = [
       },
       {
         category: 'database',
-        name: 'Databases',
+        name: 'Bases de données',
         content: ['MySQL'],
       },
       {
         category: 'tool',
-        name: 'Tools',
+        name: 'Outils',
         content: ['Biome', 'Monorepo', 'Excalidraw', 'Figma', 'Git', 'Github'],
       },
       {
         category: 'method',
-        name: 'Methods',
+        name: 'Méthodes',
         content: ['Responsive', 'Accessibility', 'Agile', 'REST API'],
       },
     ],
@@ -203,12 +203,12 @@ export const projectsDataFr: ProjectProps[] = [
       },
       {
         category: 'tool',
-        name: 'Tools',
+        name: 'Outils',
         content: ['Biome', 'Vite', 'Git', 'Github'],
       },
       {
         category: 'method',
-        name: 'Methods',
+        name: 'Méthodes',
         content: ['Responsive', 'Accessibility'],
       },
     ],
@@ -250,7 +250,7 @@ export const projectsDataFr: ProjectProps[] = [
       },
       {
         category: 'tool',
-        name: 'Tools',
+        name: 'Outils',
         content: [
           'Biome',
           'Monorepo',
@@ -266,7 +266,7 @@ export const projectsDataFr: ProjectProps[] = [
       },
       {
         category: 'method',
-        name: 'Methods',
+        name: 'Méthodes',
         content: ['Responsive', 'Accessibility', 'Agile', 'REST API'],
       },
     ],
@@ -307,12 +307,12 @@ export const projectsDataFr: ProjectProps[] = [
       },
       {
         category: 'tool',
-        name: 'Tools',
+        name: 'Outils',
         content: ['Biome', 'Vite', 'Git', 'Github'],
       },
       {
         category: 'method',
-        name: 'Methods',
+        name: 'Méthodes',
         content: ['Responsive', 'Accessibility', 'REST API'],
       },
     ],
@@ -349,12 +349,12 @@ export const projectsDataFr: ProjectProps[] = [
       },
       {
         category: 'tool',
-        name: 'Tools',
+        name: 'Outils',
         content: ['Biome', 'Vite', 'Fetch API', 'Git', 'Github'],
       },
       {
         category: 'method',
-        name: 'Methods',
+        name: 'Méthodes',
         content: ['Responsive', 'Accessibility', 'REST API'],
       },
     ],
@@ -387,12 +387,12 @@ export const projectsDataFr: ProjectProps[] = [
       },
       {
         category: 'tool',
-        name: 'Tools',
+        name: 'Outils',
         content: ['Biome', 'Excalidraw', 'Figma', 'Git', 'Github'],
       },
       {
         category: 'method',
-        name: 'Methods',
+        name: 'Méthodes',
         content: ['Responsive', 'Accessibility', 'Agile'],
       },
     ],

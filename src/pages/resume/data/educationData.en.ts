@@ -16,9 +16,14 @@ export const educationDataEN: TimelineItem[] = [
     description:
       'In-depth learning of front-end and back-end web development through guided courses, real-world projects, teamwork, and personal projects.',
     achievements: [
-      'Built applications with complex business logic',
-      'Used React, TypeScript, and Tailwind',
-      'Developed REST APIs with Express and SQL databases',
+      'Built full-stack applications with complex business logic and modular architecture',
+      'Developed reusable React components and integrated TailwindCSS',
+      'Designed and implemented REST APIs with Express and SQL databases',
+      'Strictly typed forms using React Hook Form and Zod',
+      'Used modern UI libraries (Shadcn, Radix) for consistent interfaces',
+      'Collaborated in teams with Git/GitHub, version control and code reviews',
+      'Managed monorepo projects following best practices (ESLint, Prettier, tests)',
+      'Participated across full development cycle: design, implementation, debugging',
     ],
     stack: [
       {
@@ -29,7 +34,7 @@ export const educationDataEN: TimelineItem[] = [
       {
         category: 'framework',
         name: 'Frameworks',
-        content: ['React', 'Express', 'TailwindCSS'],
+        content: ['React', 'Express', 'Node', 'TailwindCSS'],
       },
       {
         category: 'database',
@@ -37,14 +42,31 @@ export const educationDataEN: TimelineItem[] = [
         content: ['MySQL'],
       },
       {
+        category: 'library',
+        name: 'Libraries',
+        content: ['Shadcn', 'Radix', 'TanStack Table', 'React Hook Form', 'Zod'],
+      },
+      {
         category: 'tool',
         name: 'Tools',
-        content: ['Git', 'GitHub', 'Excalidraw', 'Figma', 'Trello', 'Motion'],
+        content: [
+          'Git',
+          'GitHub',
+          'Excalidraw',
+          'Figma',
+          'Trello',
+          'Motion',
+          'Monorepo',
+          'Vite',
+          'ESLint',
+          'Prettier',
+          'Biome',
+        ],
       },
       {
         category: 'method',
         name: 'Methods',
-        content: ['Responsive', 'Accessibility', 'Agile', 'REST API'],
+        content: ['Responsive', 'Accessibility', 'Agile', 'REST API', 'CRUD'],
       },
     ],
     keywords: [
@@ -55,8 +77,12 @@ export const educationDataEN: TimelineItem[] = [
       'bootcamp',
       'React',
       'Express',
-      'self-learning',
-      'web projects',
+      'Node.js',
+      'TailwindCSS',
+      'REST API',
+      'autonomy',
+      'real-world projects',
+      'project management',
     ],
   },
   {
