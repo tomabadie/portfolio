@@ -1,13 +1,15 @@
+import type { TechnologyCategory } from './timelineDataType';
+
 export interface HardSkill {
   id: string;
   label: string;
-  category: 'language' | 'framework' | 'database' | 'tool' | 'method';
+  category: TechnologyCategory;
   icon?: string;
 }
 
 export interface SkillProjects {
   label: string;
-  category: 'language' | 'framework' | 'database' | 'tool' | 'method';
+  category: TechnologyCategory;
   projects: string[];
 }
 

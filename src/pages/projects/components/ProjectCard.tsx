@@ -66,9 +66,11 @@ const ProjectCard = ({ project, setIsOpen, setFocusedProject, index }: ProjectCa
             {project.stack.map((type) => {
               return (
                 <li key={type.name} className="text-secondary flex">
-                  {type.category !== 'tool' && type.category !== 'method' && (
-                    <StackList type={type} styleVariant="icons" orientationVariant="row" />
-                  )}
+                  {type.category !== 'tool' &&
+                    type.category !== 'method' &&
+                    type.category !== 'library' && (
+                      <StackList type={type} styleVariant="icons" orientationVariant="row" />
+                    )}
                 </li>
               );
             })}

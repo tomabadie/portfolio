@@ -13,6 +13,12 @@ export const skillsDataEN: HardSkill[] = [
 
   { id: 'mysql', label: 'MySQL', category: 'database' },
 
+  { id: 'shadcn', label: 'Shadcn', category: 'library' },
+  { id: 'radix', label: 'Radix', category: 'library' },
+  { id: 'tanstack table', label: 'TanStack Table', category: 'library' },
+  { id: 'react hook form', label: 'React Hook Form', category: 'library' },
+  { id: 'zod', label: 'Zod', category: 'library' },
+
   { id: 'git', label: 'Git', category: 'tool' },
   { id: 'github', label: 'GitHub', category: 'tool' },
   { id: 'framer motion', label: 'Framer Motion', category: 'tool' },
@@ -25,7 +31,7 @@ export const skillsDataEN: HardSkill[] = [
   { id: 'agile', label: 'Agile', category: 'method' },
   { id: 'tdd', label: 'TDD', category: 'method' },
   { id: 'rest api', label: 'REST API', category: 'method' },
-  { id: 'ci-cd', label: 'CI/CD', category: 'method' },
+  { id: 'ci/cd', label: 'CI/CD', category: 'method' },
 ];
 
 export const softSkillsDataEN: SoftSkill[] = [
