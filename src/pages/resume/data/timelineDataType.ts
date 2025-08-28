@@ -1,5 +1,13 @@
+export type TechnologyCategory =
+  | 'language'
+  | 'framework'
+  | 'database'
+  | 'library'
+  | 'tool'
+  | 'method';
+
 export interface Technology {
-  category: 'language' | 'framework' | 'database' | 'tool' | 'method';
+  category: TechnologyCategory;
   name: string;
   content: string[];
 }

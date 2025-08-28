@@ -2,13 +2,88 @@ import type { ProjectProps } from './projectsDataType';
 
 export const projectsDataFr: ProjectProps[] = [
   {
+    id: 'taverne',
+    name: 'Taverne',
+    img: '/assets/img/projects/tavern.webp',
+    shortDescription:
+      "Application de gestion de stocks et de carte dynamique pensée pour les bars disposant d'une large sélection de bières.",
+    detailedDescription:
+      'Projet en cours visant à faciliter la gestion des bars à bières avec une carte conséquente. L’application centralise les informations sur les bières, gère les stocks et génère automatiquement une carte claire et interactive. Elle inclut des comptes différenciés (user, admin, super-admin) et met l’accent sur la scalabilité pour répondre à de vrais besoins concrets. L’objectif est de fournir un outil ergonomique, fiable et adaptable, avec une architecture propre, un design responsive et des bonnes pratiques de développement full stack.',
+    stack: [
+      {
+        category: 'language',
+        name: 'Languages',
+        content: ['HTML', 'CSS', 'JavaScript', 'TypeScript'],
+      },
+      {
+        category: 'framework',
+        name: 'Frameworks',
+        content: ['React', 'Express', 'Node', 'Tailwind'],
+      },
+      {
+        category: 'database',
+        name: 'Bases de données',
+        content: ['MySQL'],
+      },
+      {
+        category: 'library',
+        name: 'Libraries',
+        content: ['Shadcn', 'Radix', 'TanStack Table', 'React Hook Form', 'Zod'],
+      },
+      {
+        category: 'tool',
+        name: 'Outils',
+        content: ['Monorepo', 'Vite', 'ESLint', 'Prettier', 'Git', 'Github', 'Excalidraw'],
+      },
+      {
+        category: 'method',
+        name: 'Méthodes',
+        content: [
+          'Responsive',
+          'Accessibility',
+          'REST API',
+          'CRUD',
+          'Strict form typing',
+          'Security middlewares',
+        ],
+      },
+    ],
+    tags: [
+      'Full Stack',
+      'Stocks',
+      'Bars à bières',
+      'Gestion',
+      'CRUD',
+      'UI/UX',
+      'Data Table',
+      'Forms',
+      'Real problem',
+    ],
+    repoLink: 'https://github.com/tomabadie/',
+    contributions: [
+      'Conception de l’architecture globale de l’application et modélisation de la base de données',
+      'Développement des composants frontend (interface de gestion, affichage dynamique de la carte des bières, dashboards filtrables, etc.)',
+      'Mise en place des routes backend pour le CRUD des bières, formats, bars et gestion des comptes (admin, super-admin)',
+      'Implémentation de formulaires robustes et typés avec React Hook Form et Zod',
+      'Affichage structuré et filtrable sur les dashboards grâce à TanStack Table',
+      'Travail sur l’ergonomie, la cohérence de l’UI et la navigation avec shadcn et Radix',
+      'Mise en place d’un monorepo avec une configuration ESLint/Prettier stricte pour éviter les régressions',
+      'Préparation de l’authentification et des middlewares de sécurité pour la vérification des données envoyées',
+    ],
+    context: {
+      type: 'Projet personnel',
+      solo: true,
+    },
+    inProgress: true,
+  },
+  {
     id: 'portfolio',
     name: 'Portfolio personnel',
     img: '/assets/img/projects/portfolio_dark.webp',
     shortDescription:
       'Site portfolio moderne, responsive et minimaliste pour valoriser mon profil et mes projets.',
     detailedDescription:
-      'Développé entièrement en solo, ce site met en avant mes compétences, mon parcours et mes projets. J’y ai intégré Tailwind et organisé une structure de composants réutilisables pour un rendu clair, moderne, scalable et accessible.',
+      'Développé entièrement en solo, ce site met en avant mes compétences, mon parcours et mes projets. J’y ai intégré Tailwind et organisé une structure de composants réutilisables pour un rendu clair, moderne, scalable et accessible. Le site est régulièrement maintenu à jour, notamment au niveau des données de parcours et de projets, afin de refléter fidèlement mon évolution.',
     stack: [
       {
         category: 'language',
@@ -22,7 +97,7 @@ export const projectsDataFr: ProjectProps[] = [
       },
       {
         category: 'tool',
-        name: 'Tools',
+        name: 'Outils',
         content: [
           'Framer Motion',
           'ESLint',
@@ -36,7 +111,7 @@ export const projectsDataFr: ProjectProps[] = [
       },
       {
         category: 'method',
-        name: 'Methods',
+        name: 'Méthodes',
         content: ['Responsive', 'Accessibility', 'REST API'],
       },
     ],
@@ -54,7 +129,7 @@ export const projectsDataFr: ProjectProps[] = [
       type: 'Projet personnel',
       solo: true,
     },
-    inProgress: true,
+    inProgress: false,
   },
   {
     id: 'seazn',
@@ -63,7 +138,7 @@ export const projectsDataFr: ProjectProps[] = [
     shortDescription:
       'Application web collaborative de recettes enrichies avec des dimensions nutrition, écologie et coût pour un quotidien plus responsable.',
     detailedDescription:
-      'Projet full stack réalisé en équipe de 4 développeurs en formation. Inspiré des sites de recettes classiques, cette application pousse plus loin l’expérience utilisateur grâce à une notation nutritionnelle et environnementale, une gestion de compte multi-niveaux (visiteur, abonné, premium, admin), et des fonctionnalités personnalisées. Le projet est conçu pour être scalable, structuré autour d’un monorepo avec des API externes et une architecture propre.',
+      'Projet full stack réalisé en équipe de 4 développeurs en formation (projet de fin de bootcamp). Inspiré des sites de recettes classiques, cette application enrichit l’expérience utilisateur grâce à une notation nutritionnelle et environnementale, une gestion de compte multi-niveaux (visiteur, abonné, premium, admin) et des fonctionnalités personnalisées. Conçu dans un monorepo avec une architecture modulaire, le projet intègre un backend Express et un frontend React. Bien que le projet ne soit plus maintenu, il a constitué une expérience riche en collaboration, bonnes pratiques de développement et gestion de projet.',
     stack: [
       {
         category: 'language',
@@ -77,34 +152,35 @@ export const projectsDataFr: ProjectProps[] = [
       },
       {
         category: 'database',
-        name: 'Databases',
+        name: 'Bases de données',
         content: ['MySQL'],
       },
       {
         category: 'tool',
-        name: 'Tools',
+        name: 'Outils',
         content: ['Biome', 'Monorepo', 'Excalidraw', 'Figma', 'Git', 'Github'],
       },
       {
         category: 'method',
-        name: 'Methods',
+        name: 'Méthodes',
         content: ['Responsive', 'Accessibility', 'Agile', 'REST API'],
       },
     ],
     tags: ['Full Stack', 'Projet en équipe', 'Recettes', 'Responsable', 'Nutrition', 'Écologie'],
-    repoLink: 'https://github.com/wildcodeschool-2025-03/JS-WestDevs-P3-SeazN',
+    repoLink: 'https://github.com/tomabadie/JS-WestDevs-P3-SeazN',
     contributions: [
-      'Définition du concept et des fonctionnalités selon une approche utilisateur et produit',
-      'Création d’un tableau de priorisation des features selon leur valeur et difficulté',
-      'Travail en équipe de 4 développeurs avec gestion de version collaborative (Git, monorepo)',
-      'Mise en place d’une architecture modulaire scalable (backend Express, frontend React + Vite)',
-      'Recherche et intégration d’APIs pour les données nutritionnelles et écologiques (en cours)',
+      'Initiation du concept de l’application et définition des fonctionnalités clés avec une approche orientée utilisateur',
+      'Réalisation du wireframe global de l’application et contribution à la conception de l’architecture de la base de données',
+      'Développement de quatre composants de visualisation de recettes (cards) réutilisables, adaptés à différents niveaux de détail et contextes d’affichage',
+      'Création complète de la page de recherche de recettes (frontend et backend) avec filtres avancés, pagination et optimisation des performances (debounce, etc)',
+      'Implémentation et amélioration de fonctionnalités essentielles (frontend et backend) : gestion des favoris, recettes par utilisateur, enrichissement et optimisation du schéma de base de données',
+      'Revue de code systématique (Pull Requests) et débogage continu pour garantir la qualité du projet et respecter les deadlines',
     ],
     context: {
       type: 'Projet de groupe',
       solo: false,
     },
-    inProgress: true,
+    inProgress: false,
   },
   {
     id: 'codewarts',
@@ -127,12 +203,12 @@ export const projectsDataFr: ProjectProps[] = [
       },
       {
         category: 'tool',
-        name: 'Tools',
+        name: 'Outils',
         content: ['Biome', 'Vite', 'Git', 'Github'],
       },
       {
         category: 'method',
-        name: 'Methods',
+        name: 'Méthodes',
         content: ['Responsive', 'Accessibility'],
       },
     ],
@@ -174,7 +250,7 @@ export const projectsDataFr: ProjectProps[] = [
       },
       {
         category: 'tool',
-        name: 'Tools',
+        name: 'Outils',
         content: [
           'Biome',
           'Monorepo',
@@ -190,7 +266,7 @@ export const projectsDataFr: ProjectProps[] = [
       },
       {
         category: 'method',
-        name: 'Methods',
+        name: 'Méthodes',
         content: ['Responsive', 'Accessibility', 'Agile', 'REST API'],
       },
     ],
@@ -231,12 +307,12 @@ export const projectsDataFr: ProjectProps[] = [
       },
       {
         category: 'tool',
-        name: 'Tools',
+        name: 'Outils',
         content: ['Biome', 'Vite', 'Git', 'Github'],
       },
       {
         category: 'method',
-        name: 'Methods',
+        name: 'Méthodes',
         content: ['Responsive', 'Accessibility', 'REST API'],
       },
     ],
@@ -273,12 +349,12 @@ export const projectsDataFr: ProjectProps[] = [
       },
       {
         category: 'tool',
-        name: 'Tools',
+        name: 'Outils',
         content: ['Biome', 'Vite', 'Fetch API', 'Git', 'Github'],
       },
       {
         category: 'method',
-        name: 'Methods',
+        name: 'Méthodes',
         content: ['Responsive', 'Accessibility', 'REST API'],
       },
     ],
@@ -302,7 +378,7 @@ export const projectsDataFr: ProjectProps[] = [
     shortDescription:
       'Un quiz HTML/CSS/JavaScript entièrement fonctionnel, conçu à l’origine en groupe puis retravaillé en solo pour en améliorer la structure, le design et la propreté du code.',
     detailedDescription:
-      "Travail de groupe réalisé après seulement trois semaines de formation. Au sein du projet de groupe, j'avais développé la structure globale, header, footer, le style global, l’algo du quiz et les sets de questions. J’ai ensuite repris le code en solo pour proposer une version plus propre et recentrée sur l’essentiel : la page d’accueil et le quiz. J’ai conservé les parties que j'avais codées, supprimé deux pages, puis recodé la page d'acceuil pour un rendu professionnel.",
+      "Travail de groupe réalisé après seulement trois semaines de formation. Au sein du projet de groupe, j'avais développé la structure globale, header, footer, le style global, l’algo du quiz et les sets de questions. J’ai ensuite repris le code en solo pour proposer une version plus propre et recentrée sur l’essentiel : la page d’accueil et le quiz. J’ai conservé les parties que j'avais codées, supprimé des parties annexes et simplifié l’ensemble pour obtenir une version fonctionnelle et cohérente.",
     stack: [
       {
         category: 'language',
@@ -311,12 +387,12 @@ export const projectsDataFr: ProjectProps[] = [
       },
       {
         category: 'tool',
-        name: 'Tools',
+        name: 'Outils',
         content: ['Biome', 'Excalidraw', 'Figma', 'Git', 'Github'],
       },
       {
         category: 'method',
-        name: 'Methods',
+        name: 'Méthodes',
         content: ['Responsive', 'Accessibility', 'Agile'],
       },
     ],
@@ -336,6 +412,6 @@ export const projectsDataFr: ProjectProps[] = [
       fromGroupProject: true,
       comment: 'Projet initialement en groupe (4 personnes), retravaillé seul.',
     },
-    inProgress: true,
+    inProgress: false,
   },
 ];

@@ -16,9 +16,14 @@ export const educationDataFR: TimelineItem[] = [
     description:
       'Approfondissement des compétences web front-end et back-end à travers des cours guidés, des projets réels, du travail en équipe et des projets personnels.',
     achievements: [
-      'Création d’applications avec logique métier complexe',
-      'Utilisation de React, TypeScript, Tailwind',
-      'Développement d’API REST avec Express et bases de données SQL',
+      'Création d’applications full-stack avec logique métier complexe et architecture modulaire',
+      'Développement de composants React réutilisables et intégration TailwindCSS',
+      'Conception et implémentation d’API REST avec Express et bases SQL',
+      'Typage strict des formulaires avec React Hook Form et Zod',
+      'Utilisation de bibliothèques UI modernes (Shadcn, Radix) pour interfaces cohérentes',
+      'Travail en équipe avec Git/GitHub, gestion de versions et revues de code',
+      'Gestion de projets en monorepo avec bonnes pratiques (ESLint, Prettier, tests)',
+      'Participation complète au cycle de développement : conception, implémentation, débogage',
     ],
     stack: [
       {
@@ -29,7 +34,7 @@ export const educationDataFR: TimelineItem[] = [
       {
         category: 'framework',
         name: 'Frameworks',
-        content: ['React', 'Express', 'TailwindCSS'],
+        content: ['React', 'Express', 'Node', 'TailwindCSS'],
       },
       {
         category: 'database',
@@ -37,14 +42,31 @@ export const educationDataFR: TimelineItem[] = [
         content: ['MySQL'],
       },
       {
+        category: 'library',
+        name: 'Libraries',
+        content: ['Shadcn', 'Radix', 'TanStack Table', 'React Hook Form', 'Zod'],
+      },
+      {
         category: 'tool',
         name: 'Outils',
-        content: ['Git', 'GitHub', 'Excalidraw', 'Figma', 'Trello', 'Motion'],
+        content: [
+          'Git',
+          'GitHub',
+          'Excalidraw',
+          'Figma',
+          'Trello',
+          'Motion',
+          'Monorepo',
+          'Vite',
+          'ESLint',
+          'Prettier',
+          'Biome',
+        ],
       },
       {
         category: 'method',
         name: 'Méthodes',
-        content: ['Responsive', 'Accessibility', 'Agile', 'REST API'],
+        content: ['Responsive', 'Accessibility', 'Agile', 'REST API', 'CRUD'],
       },
     ],
     keywords: [
@@ -55,8 +77,12 @@ export const educationDataFR: TimelineItem[] = [
       'bootcamp',
       'React',
       'Express',
+      'Node.js',
+      'TailwindCSS',
+      'API REST',
       'autonomie',
-      'projets web',
+      'projets concrets',
+      'gestion de projet',
     ],
   },
   {

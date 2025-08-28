@@ -2,13 +2,89 @@ import type { ProjectProps } from './projectsDataType';
 
 export const projectsDataEn: ProjectProps[] = [
   {
+    id: 'taverne',
+    name: 'Taverne',
+    img: '/assets/img/projects/tavern.webp',
+    shortDescription:
+      'Stock management and dynamic menu application designed for bars with a large selection of beers.',
+    detailedDescription:
+      'Ongoing project aimed at simplifying the management of bars with extensive beer menus. The application centralizes beer information, manages inventory, and automatically generates a clear and interactive menu. It includes differentiated accounts (user, admin, super-admin) and focuses on scalability to address real-world needs. The goal is to provide an ergonomic, reliable, and adaptable tool, with clean architecture, responsive design, and full stack best practices.',
+    stack: [
+      {
+        category: 'language',
+        name: 'Languages',
+        content: ['HTML', 'CSS', 'JavaScript', 'TypeScript'],
+      },
+      {
+        category: 'framework',
+        name: 'Frameworks',
+        content: ['React', 'Express', 'Node', 'Tailwind'],
+      },
+      {
+        category: 'database',
+        name: 'Databases',
+        content: ['MySQL'],
+      },
+      {
+        category: 'library',
+        name: 'Libraries',
+        content: ['Shadcn', 'Radix', 'TanStack Table', 'React Hook Form', 'Zod'],
+      },
+      {
+        category: 'tool',
+        name: 'Tools',
+        content: ['Monorepo', 'Vite', 'ESLint', 'Prettier', 'Git', 'Github', 'Excalidraw'],
+      },
+      {
+        category: 'method',
+        name: 'Methods',
+        content: [
+          'Responsive',
+          'Accessibility',
+          'REST API',
+          'CRUD',
+          'Strict form typing',
+          'Security middlewares',
+        ],
+      },
+    ],
+    tags: [
+      'Full Stack',
+      'Inventory',
+      'Beer Bars',
+      'Management',
+      'CRUD',
+      'UI/UX',
+      'Data Table',
+      'Forms',
+      'Scalable',
+      'Real problem',
+    ],
+    repoLink: 'https://github.com/tomabadie/',
+    contributions: [
+      'Design of the overall application architecture and database modeling',
+      'Development of frontend components (management interface, dynamic beer menu display, filterable dashboards, etc.)',
+      'Implementation of backend routes for CRUD operations on beers, formats, bars, and account management (user, admin, super-admin)',
+      'Creation of robust and strictly typed forms using React Hook Form and Zod',
+      'Structured and filterable dashboards using TanStack Table',
+      'Work on UI ergonomics, consistency, and navigation using Shadcn and Radix',
+      'Setup of a monorepo with strict ESLint/Prettier configuration to prevent regressions',
+      'Preparation of authentication and security middlewares for validating submitted data',
+    ],
+    context: {
+      type: 'Personal project',
+      solo: true,
+    },
+    inProgress: true,
+  },
+  {
     id: 'portfolio',
     name: 'Personal Portfolio',
     img: '/assets/img/projects/portfolio_dark.webp',
     shortDescription:
       'Modern, responsive, minimalist portfolio site showcasing my profile and projects.',
     detailedDescription:
-      'Developed entirely solo, this site highlights my skills, background, and projects. I used Tailwind and a reusable component structure for a clean, modern, scalable, and accessible result.',
+      'Developed entirely solo, this website showcases my skills, background, and projects. I integrated Tailwind and organized a structure of reusable components for a clean, modern, scalable, and accessible design. The site is regularly updated, particularly regarding project and career data, to accurately reflect my ongoing progress.',
     stack: [
       {
         category: 'language',
@@ -54,7 +130,7 @@ export const projectsDataEn: ProjectProps[] = [
       type: 'Personal project',
       solo: true,
     },
-    inProgress: true,
+    inProgress: false,
   },
   {
     id: 'seazn',
@@ -63,7 +139,7 @@ export const projectsDataEn: ProjectProps[] = [
     shortDescription:
       'Collaborative recipe web app enriched with nutrition, ecology, and cost metrics for a more responsible daily cooking experience.',
     detailedDescription:
-      'Full-stack project developed by a team of four web developers during our training program. Inspired by classic platforms, this app enhances the user experience with nutritional and environmental ratings, multi-level account access (visitor, free user, premium user, admin), and personalized features. Built to be scalable, it follows a clean monorepo architecture using external APIs and modern technologies.',
+      'Full-stack project developed in a team of four developers as part of a bootcamp capstone project. Inspired by traditional recipe websites, this application enhances the user experience with nutritional and environmental scoring, multi-level account management (visitor, subscriber, premium, admin), and personalized features. Built in a monorepo with a modular architecture, the project integrates an Express backend and a React frontend. Although the project is no longer maintained, it provided valuable experience in teamwork, best development practices, and project management.',
     stack: [
       {
         category: 'language',
@@ -92,19 +168,20 @@ export const projectsDataEn: ProjectProps[] = [
       },
     ],
     tags: ['Full Stack', 'Team Project', 'Recipes', 'Sustainability', 'Nutrition', 'Ecology'],
-    repoLink: 'https://github.com/wildcodeschool-2025-03/JS-WestDevs-P3-SeazN',
+    repoLink: 'https://github.com/tomabadie/JS-WestDevs-P3-SeazN',
     contributions: [
-      'Defined the concept and features with a user- and product-driven approach',
-      'Built a feature prioritization board based on value and implementation difficulty',
-      'Collaborated within a 4-person dev team using Git and a monorepo structure',
-      'Set up a modular and scalable architecture (Express backend, React + Vite frontend)',
-      'Researched and began integrating external APIs for nutrition and environmental data',
+      'Initiated the concept of the application and defined key features with a user-centered approach',
+      'Designed the global wireframe of the application and contributed to the database architecture',
+      'Developed four reusable recipe visualization components (cards) adapted to different levels of detail and display contexts',
+      'Implemented the complete recipe search page (frontend and backend) with advanced filters, pagination, and performance optimization (debounce, etc.)',
+      'Implemented and improved essential features (frontend and backend), including favorites management, user-specific recipes, and database schema enhancements',
+      'Performed systematic code reviews (Pull Requests) and continuous debugging to ensure code quality and meet project deadlines',
     ],
     context: {
       type: 'Group project',
       solo: false,
     },
-    inProgress: true,
+    inProgress: false,
   },
   {
     id: 'codewarts',
@@ -300,7 +377,7 @@ export const projectsDataEn: ProjectProps[] = [
     shortDescription:
       'A fully functional HTML/CSS/JavaScript quiz, originally built as a team project then revamped solo to improve structure, design, and code quality.',
     detailedDescription:
-      'Group project initiated after only three weeks of training. In the group version, I developed the overall structure, header, footer, global style, quiz algorithm, and all sets of questions. I later took over the codebase on my own to offer a cleaner version focused on the essentials: the homepage and the quiz. I kept the parts I had written, removed two pages and recoded the homepage for a more professional look.',
+      'Group project initiated after only three weeks of training. In the group version, I developed the overall structure, header, footer, global style, quiz algorithm, and all sets of questions. I later took over the codebase on my own to offer a cleaner version focused on the essentials: the homepage and the quiz. I kept the parts I had originally coded, removed some side features, and simplified the whole project to deliver a functional and consistent version.',
     stack: [
       {
         category: 'language',
@@ -334,6 +411,6 @@ export const projectsDataEn: ProjectProps[] = [
       fromGroupProject: true,
       comment: 'Originally a group project (4 people), later reworked solo.',
     },
-    inProgress: true,
+    inProgress: false,
   },
 ];

@@ -16,11 +16,14 @@ export const experiencesDataFR: TimelineItem[] = [
     description:
       'Apprentissage accéléré des technologies front-end et back-end à travers des projets concrets, des défis techniques, des collaborations en équipe et des projets personnels en plus de ceux imposés.',
     achievements: [
-      "Création d'applications web dynamiques avec React et TypeScript",
-      "Développement d'API REST avec Express.js et MySQL",
-      "Mise en place d'interfaces responsives",
-      'Utilisation de Tailwind sur les projets personnels',
-      'Gestion de projets en groupe avec GitHub et méthodologie agile',
+      'Création d’applications full-stack avec logique métier complexe et architecture modulaire',
+      'Développement de composants React réutilisables et intégration TailwindCSS',
+      'Conception et implémentation d’API REST avec Express et bases SQL',
+      'Typage strict des formulaires avec React Hook Form et Zod',
+      'Utilisation de bibliothèques UI modernes (Shadcn, Radix) pour interfaces cohérentes',
+      'Travail en équipe avec Git/GitHub, gestion de versions et revues de code',
+      'Gestion de projets en monorepo avec bonnes pratiques (ESLint, Prettier, tests)',
+      'Participation complète au cycle de développement : conception, implémentation, débogage',
     ],
     stack: [
       {
@@ -39,14 +42,31 @@ export const experiencesDataFR: TimelineItem[] = [
         content: ['MySQL'],
       },
       {
+        category: 'library',
+        name: 'Libraries',
+        content: ['Shadcn', 'Radix', 'TanStack Table', 'React Hook Form', 'Zod'],
+      },
+      {
         category: 'tool',
         name: 'Outils',
-        content: ['Git', 'GitHub', 'Excalidraw', 'Figma', 'Trello', 'Motion'],
+        content: [
+          'Git',
+          'GitHub',
+          'Excalidraw',
+          'Figma',
+          'Trello',
+          'Framer Motion',
+          'Monorepo',
+          'Vite',
+          'ESLint',
+          'Prettier',
+          'Biome',
+        ],
       },
       {
         category: 'method',
         name: 'Méthodes',
-        content: ['Responsive', 'Accessibility', 'Agile', 'REST API'],
+        content: ['Responsive', 'Accessibility', 'Agile', 'REST API', 'CRUD'],
       },
     ],
     keywords: [
@@ -56,10 +76,13 @@ export const experiencesDataFR: TimelineItem[] = [
       'full-stack',
       'bootcamp',
       'React',
+      'Express',
       'Node.js',
+      'TailwindCSS',
       'API REST',
       'autonomie',
       'projets concrets',
+      'gestion de projet',
     ],
   },
   {
