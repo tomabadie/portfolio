@@ -4,13 +4,13 @@ export const experiencesDataEN: TimelineItem[] = [
   {
     id: 'wildcodeschool-2025',
     type: 'training',
-    company: 'Wild Code School & Self-training',
+    company: 'Wild Code School & Freelance',
     link: 'https://www.wildcodeschool.com/',
     position: 'Full-Stack Developer',
     location: 'Remote',
     startDate: '2025/01',
     endDate: '2025/08',
-    duration: '5 months',
+    duration: '7 months',
     context:
       'Intensive full-stack web development training, combining a remote bootcamp and a self-paced learning path to strengthen technical skills.',
     description:
