@@ -10,7 +10,7 @@ export const educationDataFR: TimelineItem[] = [
     location: 'Remote',
     startDate: '2025/01',
     endDate: '2025/08',
-    duration: '5 mois',
+    duration: '6 mois',
     context:
       'Parcours hybride de formation combinant autoformation sur Codecademy et bootcamp intensif à la Wild Code School.',
     description:

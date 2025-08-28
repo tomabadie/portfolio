@@ -8,21 +8,22 @@ export const aboutDataEn: AboutItemProps[] = [
       {
         id: 'home-1-parag-1',
         content:
-          "I'm a fullstack web developer in training, currently enrolled in an intensive bootcamp at Wild Code School while also learning independently (Tailwind, Framer Motion, etc.). Curious and committed, I'm currently building several fullstack applications with a strong focus on creating modern, fluid interfaces tailored to real-world use.",
+          'Full-stack developer, former engineer and teacher, passionate about coding. Trained on modern technologies, I design and build robust, scalable, and user-friendly web applications. I am currently working on several full-stack projects, combining smooth interfaces with practical solutions tailored to users’ needs.',
       },
     ],
   },
   {
     id: 'home-2',
-    title: 'My skills',
+    title: 'My Skills',
     content: [
       {
         id: 'home-2-parag-1',
         content:
-          'I have a solid foundation in both front-end and back-end development, working with a stack that includes HTML, CSS, JavaScript, React, Express.js, and MySQL. I place great importance on accessibility, responsive design, and clean development practices. Above all, I aim to build intuitive, well-structured, and user-friendly interfaces, combining technical rigor with clarity of use.',
+          'I am proficient in front-end and back-end development with a modern stack including React, Node, Express, Tailwind, and TypeScript, as well as integrating recent libraries and tools (Framer Motion, TanStack Table, React Hook Form, Zod, Shadcn, Radix ...). I follow best practices: modular and scalable code, responsive design, accessibility, well-documented testing and iterations. My goal is to create intuitive, high-performance interfaces aligned with real user needs.',
       },
     ],
   },
+
   {
     id: 'home-3',
     title: 'Finding balance',
