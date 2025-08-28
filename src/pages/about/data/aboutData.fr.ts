@@ -8,7 +8,7 @@ export const aboutDataFr: AboutItemProps[] = [
       {
         id: 'home-1-parag-1',
         content:
-          'Développeur web fullstack en formation, je poursuis un bootcamp intensif à la Wild Code School tout en me formant activement de façon autonome (notamment avec Tailwind, Framer Motion, etc.). Curieux et impliqué, je conçois actuellement plusieurs applications fullstack, avec l’envie de créer des interfaces modernes, fluides et alignées avec des usages concrets.',
+          'Développeur full-stack, ancien ingénieur et enseignant, passionné par le code. Formé sur des technologies modernes, je conçois et développe des applications web robustes, scalables et ergonomiques. Je travaille actuellement sur plusieurs projets full-stack, alliant interfaces fluides et solutions concrètes adaptées aux besoins des utilisateurs.',
       },
     ],
   },
@@ -19,7 +19,7 @@ export const aboutDataFr: AboutItemProps[] = [
       {
         id: 'home-2-parag-1',
         content:
-          'Je maîtrise les bases du développement front-end et back-end, avec une stack incluant HTML, CSS, JavaScript, React, Express.js et MySQL. J’accorde une grande importance à l’accessibilité, au responsive design et aux bonnes pratiques de développement. Je cherche avant tout à concevoir des interfaces intuitives, bien structurées et agréables à utiliser, en alliant rigueur technique et clarté d’usage.',
+          'Je maîtrise le développement front-end et back-end avec une stack moderne incluant React, Node, Express, Tailwind et TypeScript, ainsi que l’intégration de bibliothèques et outils récents (Framer Motion, TanStack Table, React Hook Form, Zod, Shadcn, Radix ...). Je privilégie les bonnes pratiques : code modulaire et scalable, responsive design, accessibilité, tests et itérations bien documentées. Mon objectif est de créer des interfaces intuitives et performantes, alignées sur les usages réels des utilisateurs.',
       },
     ],
   },
