@@ -19,7 +19,7 @@ export const aboutDataFr: AboutItemProps[] = [
       {
         id: 'home-2-parag-1',
         content:
-          'Je maîtrise le développement front-end et back-end avec une stack moderne incluant React, Node, Express, Tailwind et TypeScript, ainsi que l’intégration de bibliothèques et outils récents (Framer Motion, TanStack Table, React Hook Form, Zod, Shadcn, Radix ...). Je privilégie les bonnes pratiques : code modulaire et scalable, responsive design, accessibilité, tests et itérations bien documentées. Mon objectif est de créer des interfaces intuitives et performantes, alignées sur les usages réels des utilisateurs.',
+          'Je maîtrise le développement front-end et back-end avec une stack moderne (TypeScript, React, Node.js, Express, Tailwind CSS...) ainsi que l’intégration de bibliothèques et outils récents (TanStack Query, React Hook Form, Zod, Shadcn/ui, Framer Motion...). Je privilégie les bonnes pratiques : architecture modulaire et scalable, responsive design, accessibilité (WCAG), tests automatisés et itérations bien documentées. Mon objectif est de créer des interfaces intuitives et performantes, alignées sur les usages réels des utilisateurs.',
       },
     ],
   },

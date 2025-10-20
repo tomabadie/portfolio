@@ -19,7 +19,7 @@ export const aboutDataEn: AboutItemProps[] = [
       {
         id: 'home-2-parag-1',
         content:
-          'I am proficient in front-end and back-end development with a modern stack including React, Node, Express, Tailwind, and TypeScript, as well as integrating recent libraries and tools (Framer Motion, TanStack Table, React Hook Form, Zod, Shadcn, Radix ...). I follow best practices: modular and scalable code, responsive design, accessibility, well-documented testing and iterations. My goal is to create intuitive, high-performance interfaces aligned with real user needs.',
+          'I am proficient in front-end and back-end development with a modern stack (TypeScript, React, Node.js, Express, Tailwind CSS...) as well as integrating recent tools and libraries (TanStack Query, React Hook Form, Zod, Shadcn/ui, Framer Motion...). I follow best practices: modular and scalable architecture, responsive design, accessibility (WCAG), automated testing and well-documented  iterations. My goal is to create intuitive, high-performance interfaces aligned with real user needs.',
       },
     ],
   },
