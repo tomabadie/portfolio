@@ -25,6 +25,10 @@ export const skillsDataEN: HardSkill[] = [
   { id: 'tests', label: 'Mocha - Chai', category: 'tool' },
   { id: 'docker', label: 'Docker', category: 'tool' },
   { id: 'monorepo', label: 'Monorepo', category: 'tool' },
+  { id: 'sentry', label: 'Sentry', category: 'tool' },
+  { id: 'uptimerobot', label: 'UptimeRobot', category: 'tool' },
+  { id: 'plausible', label: 'Plausible', category: 'tool' },
+  { id: 'cloudflare', label: 'Cloudflare', category: 'tool' },
 
   { id: 'responsive', label: 'Responsive', category: 'method' },
   { id: 'accessibility', label: 'Accessibility', category: 'method' },
